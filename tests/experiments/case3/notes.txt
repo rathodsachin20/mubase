@@ -1,0 +1,22 @@
+Postgres does not estimate the join size correctly when the foreign key has more than one columns.
+
+explain select * from partsupp ps, lineitem l where ps.ps_partkey=l.l_partkey and ps.ps_suppkey=l.l_suppkey;
+
+Here lineitem(partkey, suppkey) is a foreign key to partsupp(partkey, suppkey)
+
+alter table lineitem add constraint l_partsupp_fk foreign key(l_partkey, l_suppkey) references partsupp(ps_partkey,ps_suppkey);
+vacuum full analyze;
+
+
+Even then, as shown below, it mis-estimates the join size as 2401 when it should have been 6 Million!!
+
+Merge Join  (cost=3884489.20..3935521.73 rows=2401 width=302)
+   Merge Cond: (("outer".ps_partkey = "inner".l_partkey) AND ("outer".ps_suppkey = "inner".l_suppkey))
+   ->  Sort  (cost=363939.56..365939.56 rows=800000 width=150)
+         Sort Key: ps.ps_partkey, ps.ps_suppkey
+         ->  Seq Scan on partsupp ps  (cost=0.00..26316.00 rows=800000 width=150)
+   ->  Sort  (cost=3520549.64..3535552.67 rows=6001215 width=152)
+         Sort Key: l.l_partkey, l.l_suppkey
+         ->  Seq Scan on lineitem l  (cost=0.00..213648.15 rows=6001215 width=152)
+(8 rows)
+ 

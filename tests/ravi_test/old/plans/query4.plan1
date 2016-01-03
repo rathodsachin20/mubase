@@ -1,0 +1,20 @@
+Optimization Successful: Plan Cost = 102.861 Cost Limit = 102.861
+ 
+[EQCLASS5][PLANGRP0] UseCost = 0.0022 Plan Cost = 102.861 #Tuples = 4 #Blocks = 1
+| [ALG12] PROJECT< r1:r1c1 > Cost = 0
+| | [EQCLASS4][PLANGRP1] UseCost = 0.0022 Plan Cost = 102.861 #Tuples = 4 #Blocks = 1
+| | | [ALG11] BASICAPPLY< LeftSemiJoin > Cost = 0.0004
+| | | | [EQCLASS6][PLANGRP13] UseCost = 0.0022 Plan Cost = 51.4306 #Tuples = 4 #Blocks = 1
+| | | | | [ENF6] SORT< r1:r1c4 > Cost = 0.0008
+| | | | | | [EQCLASS6][PLANGRP9] UseCost = 0.0022 Plan Cost = 51.4298 #Tuples = 4 #Blocks = 1
+| | | | | | | [ALG5] SELECT< r1:r1c2 == 100 > Cost = 4.286
+| | | | | | | | [EQCLASS3][PLANGRP7] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | | | | | [ALG3] RELSCAN< r1 > Cost = 47.1438
+| | | | [EQCLASS2][PLANGRP2] UseCost = 0.0022 Plan Cost = 51.4298 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | | | [ALG2] PROJECT< r2:r2c1 > Cost = 0
+| | | | | | [EQCLASS1][PLANGRP3] UseCost = 0.0022 Plan Cost = 51.4298 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | | | | | [ALG1] SELECT< AND[ r2:r2c2 == 200 r2:r2c3 == r1:r1c4 ] > Cost = 4.286
+| | | | | | | | [EQCLASS0][PLANGRP4] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | | | | | [ALG0] RELSCAN< r2 > Cost = 47.1438
+ 
+

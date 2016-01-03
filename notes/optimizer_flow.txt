@@ -1,0 +1,116 @@
+Call sequence:
+--------------
+
+1. Optimizer_t *opt = instantiate the required optimizer impl.
+
+/*
+ * Static method to convert the Dali Parse tree to LQDAG. 
+ * This is not yet expanded.
+ */
+2. Equivalence_t *rootEq = Interface_t::ExpressionDAG(*opt);
+
+/*
+ * Does the following 3 operations.
+ *  a. Expands the rootEq node (ExpandDAG).
+ *  b. Generates the physical DAG from the expanded LQDAG.
+ *  c. Traverses the physical DAG and sets the best plan and cost.
+ */
+3. PlanGroup_t *pg = opt->FindBestPlan(rootEq, costLimit);
+   
+    // Inside opt->FindBestPlan() 
+    3.1 opt->ExpandDAG(rootEq);
+        - Straight forward as in the thesis. See Volcano_t::ExpandDAG
+        - In turn calls LogicalOp_t::Expand(memo);
+
+    3.2 If logical subsumption to be applied, apply it. 
+        opt->ExpandSubsumption()
+
+    3.3 pg = opt->FindBestPlan(rootEq, emptyReqProp, initTotalCost, 
+                               costLimit);
+    3.4 return pg;
+
+/*
+ * This method assumes that the rootEq node is already expanded.
+ */
+4. PlanGroup_t *pg = opt->FindBestPlan(rootEq, reqProp, totalCost, 
+                                       costLimit, isInpIndexed);
+    // obtain the PQDAG root corresponding to the (rootEq, reqProp), 
+    // create one if not already present
+    PlanGroup_t pg = rootEq->PlanGroup(reqProp);
+
+    Plan_t *bestPlan = FindBestPlan(planGroup, totalCost, costLimit, isInpIndexed)
+
+        4.1 Check if the best plan is already set (pg -> BestPlan() != NULL)
+            If BestPlan exists and it satisfies the costLimit return it.
+            If it does not satisfy the costLimit return null. 
+            If the plan is optimized for some other query (MQO) consider two
+            alternatives:
+                a. Materialization and Reuse 
+                b. Re-evaluation
+
+            If BestPlan does not exist. Start the optimization (4.2)
+
+        4.2 Start the optimization
+
+            Plan_t *bestAlgPlan = FindBestAlgPlan(pg, totalCost,
+                                                  costLimit, isInpIndex);
+            Plan_t *bestEnfPlan = FindBestEnfPlan(pg, totalCost,
+                                                  costLimit, isInpIndex);
+
+            bestPlan = cheaper of the bestAlgPlan and bestEnfPlab;
+                
+            pg->setBestPlan(bestPlan);
+            return bestPlan;
+
+
+5. FindBestAlgPlan(PlanGroup_t *pg, Cost_t *totalCost, Cost_t* costLimit, 
+                                                       int isInpIndex)
+
+    5.1  As in 4.1 check if the BestAlgPlan already exists and whether
+         it is for the same query or a previous query (MQO). If the BestAlgPlan
+         does not exist start the optimization as given in 5.2
+
+    5.2 Get the Equivalence Class associated with the plan group
+        Equivalence_t *eq = pg->EqClass();
+    
+    5.3 For each child logExpr (instance of LogicalOp_t) of eq do
+        logExpr->ApplyAlgorithms(pg, this (Optimizer_t), totalCost,
+                                 bestAlgplan, costLimit);
+
+    5.4 Go over all the covering plan groups. // Need to understand this.
+
+
+
+6. FindBestEnfPlan(PlanGroup_t *pg, Cost_t *totalCost, Cost_t* costLimit, 
+                                                       int isInpIndex)
+
+    6.1  As in 5.1 check if the BestEnfPlan already exists and whether
+         it is for the same query or a previous query (MQO). If the BestEnfPlan
+         does not exist start the optimization as given in 6.2
+
+    6.2 Apply the enforcers to relax the reqProp and recursively optimize
+        Updates bestEnfPlan, costLimit
+        ApplyEnforcers(planGroup, totalCost, bestEnfPlan, costLimit);
+
+    6.3 pg->setBestEnfPlan(bestEnfPlan)
+   
+    6.4 If bestEnfPlan->isFailed() return NULL else return bestEnfPlan
+
+
+7. ApplyEnforcers (PlanGroup_t *pg, Cost_t *totalCost, Plan_t *bestPlan, 
+                   Costval_t *costLimit) {
+
+   PropertyGroup_t *reqProp = pg->PropGroup();
+   reqPropList = reqProp->PropList();
+
+   For each PhyProp_t prop in reqPropList {
+        prop->Enforce(pg, this (Optimizer_t), totalCost, 
+                      bestEnfPlan, costLimit);
+   }
+}
+
+8. LogicalOp_t::ApplyAlgorithms(PlanGroup_t *pg, Optimizer_t *opt, 
+                                Cost_t *totalCost, Plant_t *bestAlgplan, 
+                                Cost_t *costLimit)
+
+

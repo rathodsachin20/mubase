@@ -1,0 +1,13 @@
+#!/bin/bash 
+for algo in volcano-ru greedy #volcano-nounif volcano-nounif-sh volcano-nounif-ru greedy-nounif
+do
+   for inp in compqr-1 compqr-2 compqr-3 compqr-4 compqr-5 compqr-6
+   do	    
+	echo PROC $inp
+	../perfeval-pruning-subs-index  "$algo" < TPCD/$inp
+	echo END
+        echo
+   done
+   echo
+done
+

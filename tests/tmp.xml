@@ -1,0 +1,442 @@
+<EQCLASS id="6" isCorrelated="false">
+  <LOGEXP id="0" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg=":r1c1"/>
+<RelArgRef relarg=":r2c1"/>
+<RelArgRef relarg=":r3c1"/>
+</PROJ_EXPRS>
+    <EQCLASS id="5" isCorrelated="false">
+      <LOGEXP id="1" op="SELECT">
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c3"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c1"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+        <EQCLASS id="4" isCorrelated="false">
+          <LOGEXP id="2" op="JOIN"> 
+<TRUE/>
+            <EQCLASS id="2" isCorrelated="false">
+              <LOGEXP id="3" op="JOIN"> 
+<TRUE/>
+                <EQCLASS id="0" isCorrelated="false">
+         <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+                <EQCLASS id="1" isCorrelated="false">
+         <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="3" isCorrelated="false">
+       <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="7" op="JOIN"> 
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c3"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c1"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+        <EQCLASS id="2" isCorrelated="false">
+          <LOGEXP id="3" op="JOIN"> 
+<TRUE/>
+            <EQCLASS id="0" isCorrelated="false">
+       <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="1" isCorrelated="false">
+       <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="3" isCorrelated="false">
+     <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="9" op="JOIN"> 
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c1"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+        <EQCLASS id="7" isCorrelated="false">
+          <LOGEXP id="8" op="SELECT">
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c3"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+            <EQCLASS id="2" isCorrelated="false">
+              <LOGEXP id="3" op="JOIN"> 
+<TRUE/>
+                <EQCLASS id="0" isCorrelated="false">
+         <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+                <EQCLASS id="1" isCorrelated="false">
+         <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+          <LOGEXP id="14" op="JOIN"> 
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c3"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+            <EQCLASS id="0" isCorrelated="false">
+       <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="1" isCorrelated="false">
+       <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="3" isCorrelated="false">
+     <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="13" op="JOIN"> 
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c3"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+        <EQCLASS id="8" isCorrelated="false">
+          <LOGEXP id="12" op="JOIN"> 
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c1"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+            <EQCLASS id="3" isCorrelated="false">
+       <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="0" isCorrelated="false">
+       <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="1" isCorrelated="false">
+     <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+

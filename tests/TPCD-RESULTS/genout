@@ -1,0 +1,6 @@
+#!/bin/sh -x
+
+SCRIPTS/genperf-tpcd >| OUT/out-tpcd
+SCRIPTS/genperf-tpcd-comp >| OUT/out-tpcd-comp
+SCRIPTS/genperf-stag >| OUT/out-stag
+SCRIPTS/genperf-nomqo >| OUT/out-nomqo

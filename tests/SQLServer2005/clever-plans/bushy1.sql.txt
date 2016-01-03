@@ -1,0 +1,1 @@
+select * from R1 inner merge join R2 on (R1.c3=R2.c3 and R1.c4=R2.c4 and R1.c5=R2.c5 and R1.c6=R2.c6 and R1.c1=R2.c1 and R1.c2=R2.c2) inner merge join (R3 inner merge join R4 on (R3.c1=R4.c1 and R3.c2=R4.c2 and R3.c3=R4.c3 and R3.c4=R4.c4 and R3.c5=R4.c5 and R3.c6=R4.c6)) on (R1.c3=R4.c3 and R1.c4=R4.c4 and R1.c1=R4.c1 and R1.c2=R4.c2 and R1.c5=R4.c5 and R1.c6=R4.c6)

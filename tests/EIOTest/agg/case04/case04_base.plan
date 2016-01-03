@@ -1,0 +1,10 @@
+Optimization Successful: Plan Cost = 1934.62 Cost Limit = 1934.62
+
+[EQCLASS1][PLANGRP1] UseCost = 38.5968 Plan Cost = 1934.62 #Tuples = 6e+06 #Blocks = 17544
+| [ENF2] SORT< r1:r1c1 r1:r1c2 r1:r1c3 > Cost = 185.967
+| | [EQCLASS1][PLANGRP0] UseCost = 38.5968 Plan Cost = 1748.65 #Tuples = 6e+06 #Blocks = 17544
+| | | [ALG1] AGGREGATEHASH< MIN(:r1c2) | :r1c1 :r1c3 > Cost = 1277.22
+| | | | [EQCLASS0][PLANGRP2] UseCost = 471.429 Plan Cost = 471.429 #Tuples = 6e+06 #Blocks = 214286
+| | | | | [ALG0] RELSCAN< r1 > Cost = 471.429
+
+

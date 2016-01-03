@@ -1,0 +1,278 @@
+::::::::::::::
+disjoint-1
+::::::::::::::
+select sp.sp_sno, sp.sp_pno
+from s,ss,sp,spsp
+where sp.sp_sno = s.s_no and sp.sp_sno = ss.ss_no and s.s_no = ss.ss_no
+and spsp.spsp_no = sp.sp_sno;
+
+select sp1.sp1_sno, sp1.sp1_pno
+from p,pp,sp1,psps
+where sp1.sp1_pno = p.p_no and sp1.sp1_pno = pp.pp_no and p.p_no = pp.pp_no
+and psps.psps_no = sp1.sp1_sno;
+
+::::::::::::::
+disjoint-2
+::::::::::::::
+select sp.sp_sno, sp.sp_pno
+from s,ss,sp,spsp
+where sp.sp_sno = s.s_no and sp.sp_sno = ss.ss_no and spsp.spsp_no = sp.sp_sno;
+
+select sp.sp_sno, sp.sp_pno
+from p,pp,sp,psps
+where sp.sp_pno = p.p_no and sp.sp_pno = pp.pp_no and psps.psps_no = sp.sp_sno;
+
+::::::::::::::
+disjoint-3
+::::::::::::::
+select sp.sp_sno, sp.sp_pno
+from s,ss,sp,spsp
+where sp.sp_sno = s.s_no and sp.sp_sno = ss.ss_no and s.s_no = ss.ss_no
+and spsp.spsp_no = sp.sp_sno;
+
+select sp1.sp1_sno, sp1.sp1_pno
+from p,pp,sp1,psps
+where sp1.sp1_pno = p.p_no and sp1.sp1_pno = pp.pp_no and
+p.p_no = pp.pp_no and psps.psps_no = sp1.sp1_sno;
+
+::::::::::::::
+disjoint-4
+::::::::::::::
+select sp.sp_sno, sp.sp_pno
+from s,ss,sp,spsp
+where sp.sp_sno = s.s_no and sp.sp_sno = ss.ss_no and spsp.spsp_no = sp.sp_sno;
+
+select sp1.sp1_sno, sp1.sp1_pno
+from p,pp,sp1,psps
+where sp1.sp1_pno = p.p_no and sp1.sp1_pno = pp.pp_no and
+psps.psps_no = sp1.sp1_sno;
+
+::::::::::::::
+overlap-1
+::::::::::::::
+select sp.sp_sno, sp.sp_pno
+from pp, s, sp, p
+where sp.sp_sno = s.s_no and sp.sp_pno = p.p_no and sp.sp_pno = pp.pp_no and
+s.s_city = p.p_city and p.p_no = pp.pp_no;
+
+select sp.sp_sno, sp.sp_pno
+from s, sp, p, ss
+where sp.sp_sno = s.s_no and sp.sp_pno = p.p_no and sp.sp_sno = ss.ss_no and
+s.s_city = p.p_city and s.s_no = ss.ss_no;
+::::::::::::::
+overlap-2
+::::::::::::::
+select sp.sp_sno, sp.sp_pno
+from pp, s, sp, p
+where sp.sp_sno = s.s_no and sp.sp_pno = p.p_no and sp.sp_pno = pp.pp_no and
+s.s_city = p.p_city and pp.pp_no = p.p_no;
+
+select sp.sp_sno, sp.sp_pno
+from s, sp, p, ss
+where sp.sp_sno = s.s_no and sp.sp_pno = p.p_no and sp.sp_sno = ss.ss_no and
+s.s_city = p.p_city and ss.ss_no = s.s_no;
+
+select sp.sp_sno,sp.sp_pno
+from s, sp, ss, pp
+where sp.sp_sno = s.s_no and sp.sp_sno = ss.ss_no and
+sp.sp_pno = pp.pp_no and s.s_no = ss.ss_no;
+
+::::::::::::::
+overlap-3
+::::::::::::::
+select sp.sp_sno, sp.sp_pno
+from pp, s, sp, p
+where sp.sp_sno = s.s_no and sp.sp_pno = p.p_no and sp.sp_pno = pp.pp_no and
+s.s_city = p.p_city and pp.pp_no = p.p_no;
+
+select sp.sp_sno, sp.sp_pno
+from s, sp, p, ss
+where sp.sp_sno = s.s_no and sp.sp_pno = p.p_no and sp.sp_sno = ss.ss_no and
+s.s_city = p.p_city and ss.ss_no = s.s_no;
+
+select sp.sp_sno,sp.sp_pno
+from s, sp, ss, pp
+where sp.sp_sno = s.s_no and sp.sp_sno = ss.ss_no and sp.sp_pno = pp.pp_no
+and ss.ss_no = s.s_no;
+
+select sp.sp_sno,sp.sp_pno
+from ss, sp, p, pp
+where sp.sp_sno = ss.ss_no and sp.sp_pno = p.p_no and sp.sp_pno = pp.pp_no and
+pp.pp_no = p.p_no;
+::::::::::::::
+overlap-4
+::::::::::::::
+select sp.sp_sno, sp.sp_pno
+from pp, s, sp, p
+where sp.sp_sno = s.s_no and sp.sp_pno = p.p_no and sp.sp_pno = pp.pp_no and
+s.s_city = p.p_city and pp.pp_no = p.p_no;
+
+select sp.sp_sno, sp.sp_pno
+from s, sp, p, ss
+where sp.sp_sno = s.s_no and sp.sp_pno = p.p_no and sp.sp_sno = ss.ss_no and
+s.s_city = p.p_city and ss.ss_no = s.s_no;
+
+select sp.sp_sno,sp.sp_pno
+from s, sp, ss, pp
+where sp.sp_sno = s.s_no and sp.sp_sno = ss.ss_no and sp.sp_pno = pp.pp_no and
+ss.ss_no = s.s_no;
+
+select sp.sp_sno,sp.sp_pno
+from ss, sp, p, pp
+where sp.sp_sno = ss.ss_no and sp.sp_pno = p.p_no and sp.sp_pno = pp.pp_no and
+pp.pp_no = p.p_no;
+
+select s.s_no,p.p_no
+from ss, s, p, pp
+where ss.ss_no = s.s_no and s.s_city = p.p_city and p.p_no = pp.pp_no;
+::::::::::::::
+pred-1
+::::::::::::::
+select s.s_no, ss.ss_no
+from s,p,ss,pp,sp
+where ss.ss_no = sp.sp_sno and sp.sp_pno = pp.pp_no and s.s_city = p.p_city and
+s.s_status > 100 and p.p_weight > 50;
+
+select s.s_no, ss.ss_no 
+from s,p,ss,sp
+where s.s_no = sp.sp_sno and sp.sp_pno = p.p_no and
+s.s_status > 50 and p.p_weight > 100; 
+::::::::::::::
+repeat-1
+::::::::::::::
+select pp.pp_no,  s.s_status
+from s, p, sp, pp, ss, spsp
+where s.s_city = p.p_city and sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and
+pp.pp_no = ss.ss_no and ss.ss_no = spsp.spsp_no; 
+
+select pp.pp_no,  s.s_status
+from s, p, sp, pp, ss, spsp
+where s.s_city = p.p_city and sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and
+pp.pp_no = ss.ss_no and ss.ss_no = spsp.spsp_no; 
+::::::::::::::
+repeat-2
+::::::::::::::
+select pp.pp_no, s.s_status
+from s,p,sp,pp,ss,spsp
+where s.s_city = p.p_city and sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and
+pp.pp_no = ss.ss_no and ss.ss_no = spsp.spsp_no; 
+
+select pp.pp_no, s.s_status
+from s,p,sp,pp,ss,spsp
+where s.s_city = p.p_city and sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and
+pp.pp_no = ss.ss_no and ss.ss_no = spsp.spsp_no; 
+
+select pp.pp_no, s.s_status
+from s,p,sp,pp,ss,spsp
+where s.s_city = p.p_city and sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and
+pp.pp_no = ss.ss_no and ss.ss_no = spsp.spsp_no; 
+::::::::::::::
+subset-1
+::::::::::::::
+select pp.pp_no, s.s_status
+from s, p, sp, pp, ss, spsp
+where s.s_city = p.p_city and sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno
+and pp.pp_no = ss.ss_no and ss.ss_no = spsp.spsp_no; 
+
+select pp.pp_no, s.s_status
+from s, p, sp, pp, ss
+where s.s_city = p.p_city and sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno
+and pp.pp_no = ss.ss_no; 
+::::::::::::::
+subset-2
+::::::::::::::
+select pp.pp_no, s.s_status
+from s, p, sp, pp, ss, spsp
+where s.s_city = p.p_city and sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno
+and pp.pp_no = ss.ss_no and ss.ss_no = spsp.spsp_no; 
+
+select pp.pp_no, s.s_status
+from s, p, sp, pp, ss
+where s.s_city = p.p_city and sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno
+and pp.pp_no = ss.ss_no; 
+
+select pp.pp_no, s.s_status
+from s, p, sp, pp
+where s.s_city = p.p_city and sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno;
+::::::::::::::
+subset-3
+::::::::::::::
+select pp.pp_no, s.s_status
+from s, sp, pp, ss, spsp
+where sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and
+pp.pp_no = ss.ss_no and ss.ss_no = spsp.spsp_no;
+
+select pp.pp_no, s.s_status
+from s, sp, pp, ss
+where sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and
+pp.pp_no = ss.ss_no;
+::::::::::::::
+subset-4
+::::::::::::::
+select pp.pp_no, s.s_status
+from s, sp, pp, ss, spsp
+where sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and
+pp.pp_no = ss.ss_no and ss.ss_no = spsp.spsp_no;
+
+select pp.pp_no, s.s_status
+from s, sp, pp, ss
+where sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and
+pp.pp_no = ss.ss_no;
+
+select pp.pp_no, s.s_status
+from s, sp, pp
+where sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno;
+::::::::::::::
+superset-1
+::::::::::::::
+select pp.pp_no, s.s_status
+from s, p, sp, pp, ss
+where s.s_city = p.p_city and sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and
+pp.pp_no = ss.ss_no; 
+
+select pp.pp_no, s.s_status
+from s, p, sp, pp, ss, spsp
+where s.s_city = p.p_city and sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and
+pp.pp_no = ss.ss_no and ss.ss_no = spsp.spsp_no;
+::::::::::::::
+superset-2
+::::::::::::::
+select pp.pp_no, s.s_status
+from s, p, sp, pp
+where s.s_city = p.p_city and sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno;
+
+select pp.pp_no, s.s_status
+from s, p, sp, pp, ss
+where s.s_city = p.p_city and sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and
+pp.pp_no = ss.ss_no; 
+
+select pp.pp_no, s.s_status
+from s, p, sp, pp, ss, spsp
+where s.s_city = p.p_city and sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and
+pp.pp_no = ss.ss_no and ss.ss_no = spsp.spsp_no;
+::::::::::::::
+superset-3
+::::::::::::::
+select pp.pp_no, s.s_status
+from s, sp, pp, ss
+where sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and pp.pp_no = ss.ss_no;
+
+select pp.pp_no, s.s_status
+from s, sp, pp, ss, spsp
+where sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and pp.pp_no = ss.ss_no
+and ss.ss_no = spsp.spsp_no; 
+::::::::::::::
+superset-4
+::::::::::::::
+select pp.pp_no, s.s_status
+from s, sp, pp
+where sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno;
+
+select pp.pp_no, s.s_status
+from s, sp, pp, ss
+where sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and pp.pp_no = ss.ss_no;
+
+select pp.pp_no, s.s_status
+from s, sp, pp, ss, spsp
+where sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and pp.pp_no = ss.ss_no
+and ss.ss_no = spsp.spsp_no; 

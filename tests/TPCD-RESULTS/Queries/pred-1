@@ -1,0 +1,9 @@
+select s.s_no
+from s,p,ss,sp
+where ss.ss_no = sp.sp_sno and s.s_city = p.p_city and
+s.s_no = ss.ss_no and s.s_no < 3000 and p.p_no < 10000;
+
+select s.s_no
+from s,p,pp,sp
+where sp.sp_pno = pp.pp_no and s.s_city = p.p_city and
+p.p_no = pp.pp_no and s.s_no < 2000 and p.p_no < 15000;

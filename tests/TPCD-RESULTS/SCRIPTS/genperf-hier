@@ -1,0 +1,12 @@
+#!/bin/sh -x 
+for algo in volcano volcano-sh volcano-ru greedy
+do
+   for inp in hier-1 rhier-1 hier-2 rhier-2 hier-3 rhier-3 hier-4 rhier-4 hier-5 rhier-5 hier-6 rhier-6 hier-7 rhier-7 hier-8 rhier-8 hier-9 rhier-9 hier-10 rhier-10
+   do	    
+	echo PROC $inp
+	../perfeval "$algo" < HIER/$inp
+	echo END
+        echo
+   done
+   echo
+done

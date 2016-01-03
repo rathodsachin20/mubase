@@ -1,0 +1,9 @@
+select ps_partkey
+from partsupp 
+where ps_partkey <= 20000
+  and ps_selkey < 50
+  and not ps_supplycost in (select ps1_supplycost 
+                            from partsupp1, supplier
+                            where s_suppkey = ps1_suppkey
+                              and ps_partkey = ps1_partkey
+                              and s_nationkey <> 13 );

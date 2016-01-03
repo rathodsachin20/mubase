@@ -1,0 +1,14 @@
+1. Maintain attribute equivalences as logical properties of the EQ nodes 
+   (along with the schema). Attribute equivalences are computed (at the same 
+   point as schema) based on the predicate applied (by unifying the input 
+   attribute equivalence classes). Given an attribute index in the schema 
+   it should be possible to access it's equivalence class in O(1). The
+   attribute equivalence class maintains the index (in the schema) of the
+   "head" attribute.
+
+   In future, we can also maintain a list of functional dependencies as
+   part of the LogProp.
+
+   Attribute equivalence classes and FDs help us reduce the order 
+   properties and order requirements to canonical form and compare.
+

@@ -1,0 +1,12 @@
+#!/bin/sh -x 
+for algo in volcano volcano-sh volcano-ru greedy
+do
+   for inp in jpq-2 jpq-4 jpq-6 jpq-8 jpq-10 
+   do	    
+	echo PROC $inp
+	../perfeval "$algo" < JPQ/$inp
+	echo END
+        echo
+   done
+   echo
+done

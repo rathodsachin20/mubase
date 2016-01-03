@@ -1,0 +1,1033 @@
+PROC stag-2
+NumBuffers = 1500
+ALGO Volcano
+LDAGUSR 30
+LDAGSYS 0
+fwd cost = 93.8575
+COST 93.8575
+USRT 140
+SYST 10
+PHYOPNODES 177
+PHYEQNODES 304
+LOGOPNODES 329
+EQUIVNODES 96
+END
+
+PROC stagr-2
+NumBuffers = 1500
+ALGO Volcano
+LDAGUSR 40
+LDAGSYS 0
+fwd cost = 93.8424
+COST 93.8424
+USRT 150
+SYST 0
+PHYOPNODES 180
+PHYEQNODES 304
+LOGOPNODES 329
+EQUIVNODES 96
+END
+
+PROC stag-6
+NumBuffers = 1500
+ALGO Volcano
+LDAGUSR 90
+LDAGSYS 0
+fwd cost = 288.581
+COST 288.581
+USRT 430
+SYST 10
+PHYOPNODES 514
+PHYEQNODES 862
+LOGOPNODES 973
+EQUIVNODES 276
+END
+
+PROC stagr-6
+NumBuffers = 1500
+ALGO Volcano
+LDAGUSR 80
+LDAGSYS 0
+fwd cost = 288.561
+COST 288.561
+USRT 430
+SYST 0
+PHYOPNODES 524
+PHYEQNODES 862
+LOGOPNODES 973
+EQUIVNODES 276
+END
+
+PROC stag-10
+NumBuffers = 1500
+ALGO Volcano
+LDAGUSR 180
+LDAGSYS 0
+fwd cost = 475.78
+COST 475.78
+USRT 690
+SYST 20
+PHYOPNODES 843
+PHYEQNODES 1421
+LOGOPNODES 1617
+EQUIVNODES 456
+END
+
+PROC stagr-10
+NumBuffers = 1500
+ALGO Volcano
+LDAGUSR 140
+LDAGSYS 20
+fwd cost = 475.811
+COST 475.811
+USRT 720
+SYST 40
+PHYOPNODES 847
+PHYEQNODES 1421
+LOGOPNODES 1617
+EQUIVNODES 456
+END
+
+PROC stag-14
+NumBuffers = 1500
+ALGO Volcano
+LDAGUSR 220
+LDAGSYS 10
+fwd cost = 670.983
+COST 670.983
+USRT 980
+SYST 10
+PHYOPNODES 1183
+PHYEQNODES 1980
+LOGOPNODES 2261
+EQUIVNODES 636
+END
+
+PROC stagr-14
+NumBuffers = 1500
+ALGO Volcano
+LDAGUSR 240
+LDAGSYS 0
+fwd cost = 670.967
+COST 670.967
+USRT 1010
+SYST 0
+PHYOPNODES 1187
+PHYEQNODES 1980
+LOGOPNODES 2261
+EQUIVNODES 636
+END
+
+PROC stag-18
+NumBuffers = 1500
+ALGO Volcano
+LDAGUSR 280
+LDAGSYS 10
+fwd cost = 865.706
+COST 865.706
+USRT 1160
+SYST 40
+PHYOPNODES 1523
+PHYEQNODES 2538
+LOGOPNODES 2905
+EQUIVNODES 816
+END
+
+PROC stagr-18
+NumBuffers = 1500
+ALGO Volcano
+LDAGUSR 310
+LDAGSYS 10
+fwd cost = 865.686
+COST 865.686
+USRT 1290
+SYST 30
+PHYOPNODES 1534
+PHYEQNODES 2538
+LOGOPNODES 2905
+EQUIVNODES 816
+END
+
+
+PROC stag-2
+NumBuffers = 1500
+ALGO Volcano-SH
+LDAGUSR 30
+LDAGSYS 0
+fwd cost = 93.8575
+PlanCost = 89.7193 MatCost = 1.176
+COST 90.8953
+USRT 140
+SYST 0
+PHYOPNODES 177
+PHYEQNODES 304
+LOGOPNODES 329
+EQUIVNODES 96
+END
+
+PROC stagr-2
+NumBuffers = 1500
+ALGO Volcano-SH
+LDAGUSR 30
+LDAGSYS 0
+fwd cost = 93.8424
+PlanCost = 89.7193 MatCost = 1.176
+COST 90.8953
+USRT 130
+SYST 0
+PHYOPNODES 180
+PHYEQNODES 304
+LOGOPNODES 329
+EQUIVNODES 96
+END
+
+PROC stag-6
+NumBuffers = 1500
+ALGO Volcano-SH
+LDAGUSR 90
+LDAGSYS 0
+fwd cost = 288.581
+PlanCost = 268.916 MatCost = 4.2252
+COST 273.141
+USRT 380
+SYST 0
+PHYOPNODES 514
+PHYEQNODES 862
+LOGOPNODES 973
+EQUIVNODES 276
+END
+
+PROC stagr-6
+NumBuffers = 1500
+ALGO Volcano-SH
+LDAGUSR 90
+LDAGSYS 0
+fwd cost = 288.561
+PlanCost = 268.916 MatCost = 4.2252
+COST 273.141
+USRT 430
+SYST 10
+PHYOPNODES 524
+PHYEQNODES 862
+LOGOPNODES 973
+EQUIVNODES 276
+END
+
+PROC stag-10
+NumBuffers = 1500
+ALGO Volcano-SH
+LDAGUSR 170
+LDAGSYS 0
+fwd cost = 475.78
+PlanCost = 444.66 MatCost = 6.8082
+COST 451.469
+USRT 690
+SYST 10
+PHYOPNODES 843
+PHYEQNODES 1421
+LOGOPNODES 1617
+EQUIVNODES 456
+END
+
+PROC stagr-10
+NumBuffers = 1500
+ALGO Volcano-SH
+LDAGUSR 160
+LDAGSYS 0
+fwd cost = 475.811
+PlanCost = 444.66 MatCost = 6.8082
+COST 451.469
+USRT 700
+SYST 10
+PHYOPNODES 847
+PHYEQNODES 1421
+LOGOPNODES 1617
+EQUIVNODES 456
+END
+
+PROC stag-14
+NumBuffers = 1500
+ALGO Volcano-SH
+LDAGUSR 220
+LDAGSYS 0
+fwd cost = 670.983
+PlanCost = 627.551 MatCost = 9.6264
+COST 637.177
+USRT 930
+SYST 10
+PHYOPNODES 1183
+PHYEQNODES 1980
+LOGOPNODES 2261
+EQUIVNODES 636
+END
+
+PROC stagr-14
+NumBuffers = 1500
+ALGO Volcano-SH
+LDAGUSR 260
+LDAGSYS 0
+fwd cost = 670.967
+PlanCost = 627.551 MatCost = 9.6264
+COST 637.177
+USRT 1030
+SYST 30
+PHYOPNODES 1187
+PHYEQNODES 1980
+LOGOPNODES 2261
+EQUIVNODES 636
+END
+
+PROC stag-18
+NumBuffers = 1500
+ALGO Volcano-SH
+LDAGUSR 330
+LDAGSYS 0
+fwd cost = 865.706
+PlanCost = 806.747 MatCost = 12.6756
+COST 819.423
+USRT 1280
+SYST 30
+PHYOPNODES 1523
+PHYEQNODES 2538
+LOGOPNODES 2905
+EQUIVNODES 816
+END
+
+PROC stagr-18
+NumBuffers = 1500
+ALGO Volcano-SH
+LDAGUSR 310
+LDAGSYS 0
+fwd cost = 865.686
+PlanCost = 806.747 MatCost = 12.6756
+COST 819.423
+USRT 1310
+SYST 30
+PHYOPNODES 1534
+PHYEQNODES 2538
+LOGOPNODES 2905
+EQUIVNODES 816
+END
+
+
+PROC stag-2
+NumBuffers = 1500
+ALGO Volcano-RU
+LDAGUSR 30
+LDAGSYS 0
+fwd cost = 88.963
+PlanCost = 88.9393 MatCost = 1.176
+COST 90.1153
+USRT 220
+SYST 0
+PHYOPNODES 230
+PHYEQNODES 304
+LOGOPNODES 329
+EQUIVNODES 96
+END
+
+PROC stagr-2
+NumBuffers = 1500
+ALGO Volcano-RU
+LDAGUSR 30
+LDAGSYS 0
+fwd cost = 89.7744
+PlanCost = 89.7797 MatCost = 1.176
+COST 90.9557
+USRT 180
+SYST 10
+PHYOPNODES 236
+PHYEQNODES 304
+LOGOPNODES 329
+EQUIVNODES 96
+END
+
+PROC stag-6
+NumBuffers = 1500
+ALGO Volcano-RU
+LDAGUSR 90
+LDAGSYS 0
+fwd cost = 254.412
+PlanCost = 254.362 MatCost = 4.2252
+COST 258.587
+USRT 580
+SYST 0
+PHYOPNODES 675
+PHYEQNODES 862
+LOGOPNODES 973
+EQUIVNODES 276
+END
+
+PROC stagr-6
+NumBuffers = 1500
+ALGO Volcano-RU
+LDAGUSR 90
+LDAGSYS 10
+fwd cost = 261.438
+PlanCost = 261.435 MatCost = 4.2252
+COST 265.66
+USRT 560
+SYST 10
+PHYOPNODES 685
+PHYEQNODES 862
+LOGOPNODES 973
+EQUIVNODES 276
+END
+
+PROC stag-10
+NumBuffers = 1500
+ALGO Volcano-RU
+LDAGUSR 180
+LDAGSYS 10
+fwd cost = 412.776
+PlanCost = 412.726 MatCost = 6.8082
+COST 419.534
+USRT 930
+SYST 20
+PHYOPNODES 1109
+PHYEQNODES 1421
+LOGOPNODES 1617
+EQUIVNODES 456
+END
+
+PROC stagr-10
+NumBuffers = 1500
+ALGO Volcano-RU
+LDAGUSR 170
+LDAGSYS 0
+fwd cost = 428.282
+PlanCost = 428.278 MatCost = 6.8082
+COST 435.086
+USRT 950
+SYST 10
+PHYOPNODES 1121
+PHYEQNODES 1421
+LOGOPNODES 1617
+EQUIVNODES 456
+END
+
+PROC stag-14
+NumBuffers = 1500
+ALGO Volcano-RU
+LDAGUSR 230
+LDAGSYS 0
+fwd cost = 578.95
+PlanCost = 578.863 MatCost = 9.6264
+COST 588.489
+USRT 1400
+SYST 20
+PHYOPNODES 1567
+PHYEQNODES 1980
+LOGOPNODES 2261
+EQUIVNODES 636
+END
+
+PROC stagr-14
+NumBuffers = 1500
+ALGO Volcano-RU
+LDAGUSR 250
+LDAGSYS 0
+fwd cost = 603.774
+PlanCost = 603.796 MatCost = 9.6264
+COST 613.423
+USRT 1320
+SYST 0
+PHYOPNODES 1592
+PHYEQNODES 1980
+LOGOPNODES 2261
+EQUIVNODES 636
+END
+
+PROC stag-18
+NumBuffers = 1500
+ALGO Volcano-RU
+LDAGUSR 320
+LDAGSYS 0
+fwd cost = 742.412
+PlanCost = 742.343 MatCost = 12.6756
+COST 755.019
+USRT 1650
+SYST 30
+PHYOPNODES 2013
+PHYEQNODES 2538
+LOGOPNODES 2905
+EQUIVNODES 816
+END
+
+PROC stagr-18
+NumBuffers = 1500
+ALGO Volcano-RU
+LDAGUSR 300
+LDAGSYS 0
+fwd cost = 776.712
+PlanCost = 776.699 MatCost = 12.6756
+COST 789.374
+USRT 1720
+SYST 10
+PHYOPNODES 2055
+PHYEQNODES 2538
+LOGOPNODES 2905
+EQUIVNODES 816
+END
+
+
+PROC stag-2
+NumBuffers = 1500
+ALGO Greedy
+RelThreshold = 0
+AbsThreshold = 0.005
+LDAGUSR 40
+LDAGSYS 0
+PDAGUSR 180
+PDAGSYS 10
+INITCOST 93.8473
+VOLCANOCOST 93.8473
+Sharable Nodes computed using separate algo
+SHARCOUNT 161
+Sharing [39:295] Benefit = 38.6483
+Sharing [52:201] Benefit = 2.957
+Sharing [34:40] Benefit = 1.951
+Sharing [59:294] Benefit = 1.68226
+BESTCOST 48.6088
+NUMPROPS 195
+PROPCOUNT 8598
+RECOMP 196
+NUMMAT 4
+COST 48.6088
+USRT 1400
+SYST 20
+PHYOPNODES 2190
+PHYEQNODES 478
+LOGOPNODES 329
+EQUIVNODES 96
+END
+
+PROC stagr-2
+NumBuffers = 1500
+ALGO Greedy
+RelThreshold = 0
+AbsThreshold = 0.005
+LDAGUSR 40
+LDAGSYS 0
+PDAGUSR 210
+PDAGSYS 0
+INITCOST 93.8473
+VOLCANOCOST 93.8473
+Sharable Nodes computed using separate algo
+SHARCOUNT 161
+Sharing [36:94] Benefit = 37.992
+Sharing [34:41] Benefit = 2.38532
+Sharing [42:158] Benefit = 1.97486
+Sharing [52:203] Benefit = 1.951
+Sharing [59:294] Benefit = 0.509262
+BESTCOST 49.0349
+NUMPROPS 198
+PROPCOUNT 8849
+RECOMP 199
+NUMMAT 5
+COST 49.0349
+USRT 1470
+SYST 10
+PHYOPNODES 2190
+PHYEQNODES 478
+LOGOPNODES 329
+EQUIVNODES 96
+END
+
+PROC stag-6
+NumBuffers = 1500
+ALGO Greedy
+RelThreshold = 0
+AbsThreshold = 0.005
+LDAGUSR 90
+LDAGSYS 0
+PDAGUSR 560
+PDAGSYS 10
+INITCOST 288.582
+VOLCANOCOST 288.582
+Sharable Nodes computed using separate algo
+SHARCOUNT 421
+Sharing [125:715] Benefit = 42.4364
+Sharing [71:289] Benefit = 42.4364
+Sharing [151:871] Benefit = 14.2969
+Sharing [100:445] Benefit = 14.2969
+Sharing [134:729] Benefit = 4.8707
+Sharing [83:303] Benefit = 4.87071
+Sharing [113:351] Benefit = 3.944
+Sharing [164:777] Benefit = 3.944
+Sharing [147:635] Benefit = 2.957
+Sharing [96:209] Benefit = 2.95699
+Sharing [130:493] Benefit = 1.951
+Sharing [78:48] Benefit = 1.951
+Sharing [154:728] Benefit = 1.68227
+Sharing [103:302] Benefit = 1.68225
+Sharing [7:27] Benefit = 1.12328
+Sharing [5:109] Benefit = 0.336197
+BESTCOST 142.846
+NUMPROPS 604
+PROPCOUNT 43451
+RECOMP 605
+NUMMAT 16
+COST 142.846
+USRT 6950
+SYST 20
+PHYOPNODES 6442
+PHYEQNODES 1374
+LOGOPNODES 973
+EQUIVNODES 276
+END
+
+PROC stagr-6
+NumBuffers = 1500
+ALGO Greedy
+RelThreshold = 0
+AbsThreshold = 0.005
+LDAGUSR 100
+LDAGSYS 0
+PDAGUSR 540
+PDAGSYS 10
+INITCOST 288.582
+VOLCANOCOST 288.582
+Sharable Nodes computed using separate algo
+SHARCOUNT 421
+Sharing [77:99] Benefit = 41.8556
+Sharing [129:538] Benefit = 41.8556
+Sharing [80:102] Benefit = 14.2507
+Sharing [132:541] Benefit = 14.2507
+Sharing [120:444] Benefit = 4.77936
+Sharing [171:870] Benefit = 4.77936
+Sharing [96:211] Benefit = 2.957
+Sharing [147:637] Benefit = 2.957
+Sharing [78:49] Benefit = 2.74753
+Sharing [130:496] Benefit = 2.74751
+Sharing [1:46] Benefit = 2.40021
+Sharing [7:27] Benefit = 2.40021
+Sharing [164:779] Benefit = 1.951
+Sharing [113:353] Benefit = 1.95099
+Sharing [154:728] Benefit = 1.68227
+Sharing [103:302] Benefit = 1.68225
+Sharing [19:349] Benefit = 0.336197
+BESTCOST 142.998
+NUMPROPS 612
+PROPCOUNT 41743
+RECOMP 613
+NUMMAT 17
+COST 142.998
+USRT 6920
+SYST 20
+PHYOPNODES 6442
+PHYEQNODES 1374
+LOGOPNODES 973
+EQUIVNODES 276
+END
+
+PROC stag-10
+NumBuffers = 1500
+ALGO Greedy
+RelThreshold = 0
+AbsThreshold = 0.005
+LDAGUSR 150
+LDAGSYS 10
+PDAGUSR 860
+PDAGSYS 50
+INITCOST 475.811
+VOLCANOCOST 475.811
+Sharable Nodes computed using separate algo
+SHARCOUNT 681
+Sharing [220:1149] Benefit = 42.4364
+Sharing [169:723] Benefit = 42.4364
+Sharing [115:297] Benefit = 42.4364
+Sharing [254:1273] Benefit = 14.3029
+Sharing [144:453] Benefit = 14.2969
+Sharing [195:879] Benefit = 14.2969
+Sharing [229:1163] Benefit = 12.9326
+Sharing [178:737] Benefit = 4.8707
+Sharing [127:311] Benefit = 4.8707
+Sharing [157:359] Benefit = 3.944
+Sharing [208:785] Benefit = 3.944
+Sharing [259:1211] Benefit = 3.33194
+Sharing [191:643] Benefit = 2.957
+Sharing [242:1069] Benefit = 2.957
+Sharing [140:217] Benefit = 2.957
+Sharing [283:1446] Benefit = 2.67764
+Sharing [276:1353] Benefit = 1.95099
+Sharing [225:927] Benefit = 1.95102
+Sharing [122:56] Benefit = 1.951
+Sharing [174:501] Benefit = 1.951
+Sharing [249:1162] Benefit = 1.68225
+Sharing [147:310] Benefit = 1.68227
+Sharing [198:736] Benefit = 1.68227
+Sharing [30:488] Benefit = 1.12326
+Sharing [7:35] Benefit = 1.12329
+Sharing [220:989] Benefit = 0.792206
+Sharing [22:543] Benefit = 0.336212
+Sharing [5:117] Benefit = 0.336182
+Sharing [46:969] Benefit = 0.336212
+BESTCOST 243.264
+NUMPROPS 1010
+PROPCOUNT 84890
+RECOMP 1011
+NUMMAT 29
+COST 243.264
+USRT 13940
+SYST 110
+PHYOPNODES 10694
+PHYEQNODES 2270
+LOGOPNODES 1617
+EQUIVNODES 456
+END
+
+PROC stagr-10
+NumBuffers = 1500
+ALGO Greedy
+RelThreshold = 0
+AbsThreshold = 0.005
+LDAGUSR 190
+LDAGSYS 0
+PDAGUSR 920
+PDAGSYS 50
+INITCOST 475.811
+VOLCANOCOST 475.811
+Sharable Nodes computed using separate algo
+SHARCOUNT 681
+Sharing [139:262] Benefit = 41.8556
+Sharing [190:688] Benefit = 41.8556
+Sharing [241:1114] Benefit = 41.8556
+Sharing [118:97] Benefit = 14.8837
+Sharing [193:691] Benefit = 14.2507
+Sharing [244:1117] Benefit = 14.2507
+Sharing [159:407] Benefit = 12.2763
+Sharing [232:1020] Benefit = 4.77936
+Sharing [283:1446] Benefit = 4.77939
+Sharing [140:219] Benefit = 3.33194
+Sharing [208:787] Benefit = 2.957
+Sharing [259:1213] Benefit = 2.957
+Sharing [242:1072] Benefit = 2.7475
+Sharing [191:646] Benefit = 2.74753
+Sharing [130:168] Benefit = 2.67761
+Sharing [0:217] Benefit = 2.40021
+Sharing [27:643] Benefit = 2.40018
+Sharing [157:362] Benefit = 2.38531
+Sharing [164:458] Benefit = 1.97488
+Sharing [174:503] Benefit = 1.95099
+Sharing [122:56] Benefit = 1.951
+Sharing [225:929] Benefit = 1.951
+Sharing [276:1355] Benefit = 1.951
+Sharing [215:878] Benefit = 1.68227
+Sharing [266:1304] Benefit = 1.68225
+Sharing [19:501] Benefit = 1.12326
+Sharing [139:233] Benefit = 0.792206
+Sharing [0:52] Benefit = 0.336212
+Sharing [27:499] Benefit = 0.336212
+Sharing [51:925] Benefit = 0.336182
+Sharing [181:600] Benefit = 0.0608368
+BESTCOST 244.291
+NUMPROPS 1026
+PROPCOUNT 87784
+RECOMP 1027
+NUMMAT 31
+COST 244.291
+USRT 14180
+SYST 90
+PHYOPNODES 10694
+PHYEQNODES 2270
+LOGOPNODES 1617
+EQUIVNODES 456
+END
+
+PROC stag-14
+NumBuffers = 1500
+ALGO Greedy
+RelThreshold = 0
+AbsThreshold = 0.005
+LDAGUSR 230
+LDAGSYS 20
+PDAGUSR 1290
+PDAGSYS 70
+INITCOST 671.011
+VOLCANOCOST 671.011
+Sharable Nodes computed using separate algo
+SHARCOUNT 941
+Sharing [213:731] Benefit = 42.4365
+Sharing [159:305] Benefit = 42.4364
+Sharing [315:1583] Benefit = 42.4364
+Sharing [264:1157] Benefit = 42.4363
+Sharing [375:2023] Benefit = 38.6483
+Sharing [290:1313] Benefit = 14.2969
+Sharing [341:1739] Benefit = 14.2969
+Sharing [239:887] Benefit = 14.2969
+Sharing [188:461] Benefit = 14.2969
+Sharing [171:319] Benefit = 4.87073
+Sharing [324:1597] Benefit = 4.8707
+Sharing [273:1171] Benefit = 4.87067
+Sharing [222:745] Benefit = 4.8707
+Sharing [252:793] Benefit = 3.944
+Sharing [303:1219] Benefit = 3.944
+Sharing [354:1645] Benefit = 3.944
+Sharing [201:367] Benefit = 3.944
+Sharing [184:225] Benefit = 2.957
+Sharing [286:1077] Benefit = 2.957
+Sharing [235:651] Benefit = 2.957
+Sharing [337:1503] Benefit = 2.957
+Sharing [388:1929] Benefit = 2.957
+Sharing [166:64] Benefit = 1.95099
+Sharing [320:1361] Benefit = 1.95099
+Sharing [269:935] Benefit = 1.95099
+Sharing [218:509] Benefit = 1.95099
+Sharing [371:1787] Benefit = 1.95099
+Sharing [395:2022] Benefit = 1.68225
+Sharing [344:1596] Benefit = 1.68228
+Sharing [293:1170] Benefit = 1.68225
+Sharing [242:744] Benefit = 1.68225
+Sharing [191:318] Benefit = 1.68228
+Sharing [78:1348] Benefit = 1.12329
+Sharing [30:496] Benefit = 1.12329
+Sharing [54:922] Benefit = 1.12329
+Sharing [7:43] Benefit = 1.12332
+Sharing [70:1403] Benefit = 0.336212
+Sharing [22:551] Benefit = 0.336182
+Sharing [5:125] Benefit = 0.336212
+Sharing [46:977] Benefit = 0.336182
+BESTCOST 331.381
+NUMPROPS 1381
+PROPCOUNT 125167
+RECOMP 1382
+NUMMAT 40
+COST 331.381
+USRT 20840
+SYST 160
+PHYOPNODES 14946
+PHYEQNODES 3166
+LOGOPNODES 2261
+EQUIVNODES 636
+END
+
+PROC stagr-14
+NumBuffers = 1500
+ALGO Greedy
+RelThreshold = 0
+AbsThreshold = 0.005
+LDAGUSR 200
+LDAGSYS 20
+PDAGUSR 1180
+PDAGSYS 80
+INITCOST 671.011
+VOLCANOCOST 671.011
+Sharable Nodes computed using separate algo
+SHARCOUNT 941
+Sharing [353:1690] Benefit = 41.8557
+Sharing [200:412] Benefit = 41.8556
+Sharing [251:838] Benefit = 41.8556
+Sharing [302:1264] Benefit = 41.8556
+Sharing [168:118] Benefit = 37.992
+Sharing [305:1267] Benefit = 14.2507
+Sharing [203:415] Benefit = 14.2507
+Sharing [254:841] Benefit = 14.2507
+Sharing [356:1693] Benefit = 14.2507
+Sharing [242:744] Benefit = 4.77936
+Sharing [293:1170] Benefit = 4.77939
+Sharing [344:1596] Benefit = 4.77936
+Sharing [395:2022] Benefit = 4.77936
+Sharing [371:1789] Benefit = 2.957
+Sharing [218:511] Benefit = 2.957
+Sharing [269:937] Benefit = 2.957
+Sharing [320:1363] Benefit = 2.957
+Sharing [252:796] Benefit = 2.74753
+Sharing [303:1222] Benefit = 2.74753
+Sharing [354:1648] Benefit = 2.74753
+Sharing [201:370] Benefit = 2.7475
+Sharing [3:55] Benefit = 2.40021
+Sharing [11:367] Benefit = 2.40021
+Sharing [35:793] Benefit = 2.40021
+Sharing [59:1219] Benefit = 2.40018
+Sharing [166:65] Benefit = 2.38531
+Sharing [174:182] Benefit = 1.97485
+Sharing [235:653] Benefit = 1.95099
+Sharing [184:227] Benefit = 1.95099
+Sharing [286:1079] Benefit = 1.95099
+Sharing [388:1931] Benefit = 1.95099
+Sharing [337:1505] Benefit = 1.95099
+Sharing [276:1028] Benefit = 1.68228
+Sharing [378:1880] Benefit = 1.68225
+Sharing [327:1454] Benefit = 1.68225
+Sharing [225:602] Benefit = 1.68228
+Sharing [0:225] Benefit = 1.12329
+Sharing [59:1075] Benefit = 0.336212
+Sharing [83:1501] Benefit = 0.336212
+Sharing [11:223] Benefit = 0.336212
+Sharing [35:649] Benefit = 0.336182
+Sharing [191:324] Benefit = 0.0608215
+BESTCOST 333.684
+NUMPROPS 1399
+PROPCOUNT 127074
+RECOMP 1400
+NUMMAT 42
+COST 333.684
+USRT 21170
+SYST 140
+PHYOPNODES 14946
+PHYEQNODES 3166
+LOGOPNODES 2261
+EQUIVNODES 636
+END
+
+PROC stag-18
+NumBuffers = 1500
+ALGO Greedy
+RelThreshold = 0
+AbsThreshold = 0.005
+LDAGUSR 300
+LDAGSYS 0
+PDAGUSR 1620
+PDAGSYS 80
+INITCOST 865.745
+VOLCANOCOST 865.745
+Sharable Nodes computed using separate algo
+SHARCOUNT 1201
+Sharing [308:1165] Benefit = 42.4364
+Sharing [359:1591] Benefit = 42.4364
+Sharing [257:739] Benefit = 42.4364
+Sharing [203:313] Benefit = 42.4364
+Sharing [461:2443] Benefit = 42.4364
+Sharing [410:2017] Benefit = 42.4364
+Sharing [436:2173] Benefit = 14.2969
+Sharing [232:469] Benefit = 14.2969
+Sharing [487:2599] Benefit = 14.2969
+Sharing [385:1747] Benefit = 14.2969
+Sharing [334:1321] Benefit = 14.2969
+Sharing [283:895] Benefit = 14.2969
+Sharing [419:2031] Benefit = 4.87067
+Sharing [215:327] Benefit = 4.87073
+Sharing [470:2457] Benefit = 4.87067
+Sharing [368:1605] Benefit = 4.8707
+Sharing [266:753] Benefit = 4.87064
+Sharing [317:1179] Benefit = 4.8707
+Sharing [500:2505] Benefit = 3.944
+Sharing [449:2079] Benefit = 3.944
+Sharing [245:375] Benefit = 3.944
+Sharing [347:1227] Benefit = 3.944
+Sharing [398:1653] Benefit = 3.944
+Sharing [296:801] Benefit = 3.944
+Sharing [228:233] Benefit = 2.957
+Sharing [279:659] Benefit = 2.957
+Sharing [381:1511] Benefit = 2.957
+Sharing [330:1085] Benefit = 2.957
+Sharing [483:2363] Benefit = 2.957
+Sharing [432:1937] Benefit = 2.957
+Sharing [262:517] Benefit = 1.95099
+Sharing [210:72] Benefit = 1.95099
+Sharing [313:943] Benefit = 1.95099
+Sharing [466:2221] Benefit = 1.95099
+Sharing [364:1369] Benefit = 1.95099
+Sharing [415:1795] Benefit = 1.95099
+Sharing [286:752] Benefit = 1.68225
+Sharing [235:326] Benefit = 1.68228
+Sharing [439:2030] Benefit = 1.68225
+Sharing [388:1604] Benefit = 1.68225
+Sharing [490:2456] Benefit = 1.68228
+Sharing [337:1178] Benefit = 1.68225
+Sharing [102:1782] Benefit = 1.12335
+Sharing [54:930] Benefit = 1.12329
+Sharing [7:51] Benefit = 1.12329
+Sharing [30:504] Benefit = 1.12329
+Sharing [78:1356] Benefit = 1.12332
+Sharing [70:1411] Benefit = 0.336212
+Sharing [5:133] Benefit = 0.336182
+Sharing [46:985] Benefit = 0.336212
+Sharing [22:559] Benefit = 0.336182
+Sharing [94:1837] Benefit = 0.336212
+BESTCOST 425.618
+NUMPROPS 1784
+PROPCOUNT 174069
+RECOMP 1785
+NUMMAT 52
+COST 425.618
+USRT 29580
+SYST 100
+PHYOPNODES 19198
+PHYEQNODES 4062
+LOGOPNODES 2905
+EQUIVNODES 816
+END
+
+PROC stagr-18
+NumBuffers = 1500
+ALGO Greedy
+RelThreshold = 0
+AbsThreshold = 0.005
+LDAGUSR 320
+LDAGSYS 0
+PDAGUSR 1710
+PDAGSYS 30
+INITCOST 865.745
+VOLCANOCOST 865.745
+Sharable Nodes computed using separate algo
+SHARCOUNT 1201
+Sharing [363:1414] Benefit = 41.8557
+Sharing [465:2266] Benefit = 41.8556
+Sharing [261:562] Benefit = 41.8557
+Sharing [209:123] Benefit = 41.8556
+Sharing [414:1840] Benefit = 41.8556
+Sharing [312:988] Benefit = 41.8556
+Sharing [315:991] Benefit = 14.2507
+Sharing [264:565] Benefit = 14.2507
+Sharing [468:2269] Benefit = 14.2507
+Sharing [212:126] Benefit = 14.2507
+Sharing [417:1843] Benefit = 14.2507
+Sharing [366:1417] Benefit = 14.2507
+Sharing [405:1746] Benefit = 4.77942
+Sharing [303:894] Benefit = 4.7793
+Sharing [507:2598] Benefit = 4.77936
+Sharing [252:468] Benefit = 4.77939
+Sharing [354:1320] Benefit = 4.77939
+Sharing [456:2172] Benefit = 4.7793
+Sharing [483:2365] Benefit = 2.957
+Sharing [381:1513] Benefit = 2.957
+Sharing [330:1087] Benefit = 2.957
+Sharing [432:1939] Benefit = 2.957
+Sharing [279:661] Benefit = 2.957
+Sharing [228:235] Benefit = 2.957
+Sharing [364:1372] Benefit = 2.74753
+Sharing [415:1798] Benefit = 2.7475
+Sharing [466:2224] Benefit = 2.74753
+Sharing [210:73] Benefit = 2.74756
+Sharing [313:946] Benefit = 2.74747
+Sharing [262:520] Benefit = 2.74756
+Sharing [19:517] Benefit = 2.40021
+Sharing [7:51] Benefit = 2.40021
+Sharing [1:70] Benefit = 2.40021
+Sharing [91:1795] Benefit = 2.40021
+Sharing [67:1369] Benefit = 2.40021
+Sharing [43:943] Benefit = 2.40021
+Sharing [500:2507] Benefit = 1.95099
+Sharing [296:803] Benefit = 1.95099
+Sharing [347:1229] Benefit = 1.95099
+Sharing [398:1655] Benefit = 1.95099
+Sharing [449:2081] Benefit = 1.95099
+Sharing [245:377] Benefit = 1.95099
+Sharing [235:326] Benefit = 1.68225
+Sharing [388:1604] Benefit = 1.68225
+Sharing [490:2456] Benefit = 1.68228
+Sharing [286:752] Benefit = 1.68225
+Sharing [439:2030] Benefit = 1.68225
+Sharing [337:1178] Benefit = 1.68228
+Sharing [43:799] Benefit = 0.336182
+Sharing [91:1651] Benefit = 0.336182
+Sharing [67:1225] Benefit = 0.336243
+Sharing [115:2077] Benefit = 0.336182
+Sharing [19:373] Benefit = 0.336182
+BESTCOST 428.322
+NUMPROPS 1823
+PROPCOUNT 173845
+RECOMP 1824
+NUMMAT 53
+COST 428.322
+USRT 29710
+SYST 100
+PHYOPNODES 19198
+PHYEQNODES 4062
+LOGOPNODES 2905
+EQUIVNODES 816
+END
+
+

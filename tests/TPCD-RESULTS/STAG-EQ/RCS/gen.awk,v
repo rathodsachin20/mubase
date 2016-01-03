@@ -1,0 +1,60 @@
+head	1.1;
+access;
+symbols;
+locks
+	sigdb:1.1; strict;
+comment	@# @;
+
+
+1.1
+date	99.02.15.10.45.11;	author sigdb;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@BEGIN {
+    for( j = 1 ; j <= 10 ; j++ ) {
+	k = 2*j;
+	for( i = 1 ; i <= k ; i++ ) {
+	    printf "SELECT PSP%d_SELKEY\n", i > "stag-"k;
+	    printf "FROM PARTSUBPART%d, PARTSUBPART%d, PARTSUBPART%d, PARTSUBPART%d, PARTSUBPART%d\n", i, i+1, i+2, i+3, i+4 > "stag-"k;
+	    printf "WHERE PSP%d_SELKEY < %d\n", i, 150+i+4 > "stag-"k; 
+	    printf "AND PSP%d_SUBPARTKEY = PSP%d_PARTKEY\n", i, i+1 > "stag-"k;
+	    printf "AND PSP%d_SELKEY < %d\n", i+1, 150+i+1 > "stag-"k;
+	    printf "AND PSP%d_SUBPARTKEY = PSP%d_PARTKEY\n", i+1, i+2 > "stag-"k;
+	    printf "AND PSP%d_SELKEY < %d\n", i+2, 150+i+5 > "stag-"k; 
+	    printf "AND PSP%d_SUBPARTKEY = PSP%d_PARTKEY\n", i+2, i+3 > "stag-"k;
+	    printf "AND PSP%d_SELKEY < %d\n", i+3, 150+i+2 > "stag-"k; 
+	    printf "AND PSP%d_SUBPARTKEY = PSP%d_PARTKEY\n", i+3, i+4 > "stag-"k;
+	    printf "AND PSP%d_SELKEY < %d;\n", i+4, 150+i+3 > "stag-"k; 
+	    print > "stag-"k;
+	}
+    }
+    for( j = 1 ; j <= 10 ; j++ ) {
+	k = 2*j;
+	for( i = k ; i >= 1 ; i-- ) {
+	    printf "SELECT PSP%d_SELKEY\n", i > "stagr-"k;
+	    printf "FROM PARTSUBPART%d, PARTSUBPART%d, PARTSUBPART%d, PARTSUBPART%d, PARTSUBPART%d\n", i, i+1, i+2, i+3, i+4 > "stagr-"k;
+	    printf "WHERE PSP%d_SELKEY < %d\n", i, 150+i+1 > "stagr-"k; 
+	    printf "AND PSP%d_SUBPARTKEY = PSP%d_PARTKEY\n", i, i+1 > "stagr-"k;
+	    printf "AND PSP%d_SELKEY < %d\n", i+1, 150+i+3 > "stagr-"k;
+	    printf "AND PSP%d_SUBPARTKEY = PSP%d_PARTKEY\n", i+1, i+2 > "stagr-"k;
+	    printf "AND PSP%d_SELKEY < %d\n", i+2, 150+i+5 > "stagr-"k; 
+	    printf "AND PSP%d_SUBPARTKEY = PSP%d_PARTKEY\n", i+2, i+3 > "stagr-"k;
+	    printf "AND PSP%d_SELKEY < %d\n", i+3, 150+i+4 > "stagr-"k; 
+	    printf "AND PSP%d_SUBPARTKEY = PSP%d_PARTKEY\n", i+3, i+4 > "stagr-"k;
+	    printf "AND PSP%d_SELKEY < %d;\n", i+4, 150+i+2 > "stagr-"k; 
+	    print > "stagr-"k;
+	}
+    }
+}
+@

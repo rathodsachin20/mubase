@@ -1,0 +1,20 @@
+#!/bin/gawk -f
+
+BEGIN {
+    for( j = 1 ; j <= 10 ; j++ ) {
+	k = 2*j;
+	printf "SELECT PSP1_SELKEY\n" > "jpq-"k;
+	printf "FROM PARTSUBPART1" > "jpq-"k;
+	for( i = 2 ; i <= k ; i++ ) {
+	    printf ", PARTSUBPART%d", i > "jpq-"k;
+	}
+	print "\n" > "jpq-"k;
+	printf "WHERE PSP1_SELKEY >= 5" > "jpq-"k; 
+	for( i = 1 ; i < k ; i++ ) {
+	    print "\n" > "jpq-"k;
+	    printf "AND PSP%d_SUBPARTKEY = PSP%d_PARTKEY", i, i+1 > "jpq-"k;
+	}
+	print ";" > "jpq-"k;
+	print > "jpq-"k;
+    }
+}

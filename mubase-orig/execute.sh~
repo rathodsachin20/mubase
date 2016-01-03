@@ -1,0 +1,17 @@
+#! /bin/sh
+
+rm ./bin/mydb.txt
+
+make clean
+make
+rm y.tab.h
+rm y.tab.c
+rm lex.yy.c
+rm a.out
+yacc -d a.y
+flex a.l
+mv y.tab.c y.tab.cpp
+mv lex.yy.c lex.yy.cpp
+
+sh run.sh
+

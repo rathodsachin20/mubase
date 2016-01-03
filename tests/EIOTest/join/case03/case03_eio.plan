@@ -1,0 +1,21 @@
+Optimization Successful: Plan Cost = 1550.67 Cost Limit = 1550.67
+
+[EQCLASS6][PLANGRP0][CC=1][PSO=NULL] UseCost = 411.697 Plan Cost = 1550.67 #Tuples = 6.4e+07 #Blocks = 187135
+| [ALG18][CC=-1]AGGREGATESCAN< MIN(:r1c1) | :r2c1 :r3c1 > Cost = 37.427
+| | [EQCLASS5][PLANGRP16][CC=1][PSO=NULL] UseCost = 2707.69 Plan Cost = 1513.24 #Tuples = 6.4e+07 #Blocks = 1.23077e+06
+| | | [ALG17][CC=-1]MERGEJOIN< :r2c1 == :r3c1 > Cost = 492.308
+| | | | [EQCLASS7][PLANGRP19][CC=1][PSO=NULL] UseCost = 5.1018 Plan Cost = 716.645 #Tuples = 160001 #Blocks = 2319
+| | | | | [ALG15][CC=-1]MERGEJOIN< AND[ :r1c1 == :r2c1 :r1c2 == :r2c2 ] > Cost = 0.9276
+| | | | | | [EQCLASS0][PLANGRP20][CC=1] UseCost = 471.429 Plan Cost = 600.001 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | | | | | [ENF12][CC=1]PARTIAL SORT( < r1:r1c1 >--> < r1:r1c1 r1:r1c1 r1:r1c2 >)  Cost = 128.572
+| | | | | | | | [EQCLASS0][PLANGRP6][CC=1] UseCost = 471.429 Plan Cost = 471.429 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | | | | | | | [ALG11][CC=1]RELSCAN< r1 > Cost = 471.429
+| | | | | | [EQCLASS1][PLANGRP21][CC=1] UseCost = 47.1438 Plan Cost = 115.717 #Tuples = 600000 #Blocks = 21429 BUILTIN
+| | | | | | | [ENF14][CC=1]PARTIAL SORT( < r2:r2c1 >--> < r2:r2c1 r2:r2c1 r2:r2c2 >)  Cost = 68.5728
+| | | | | | | | [EQCLASS1][PLANGRP9][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429 BUILTIN
+| | | | | | | | | [ALG13][CC=1]RELSCAN< r2 > Cost = 47.1438
+| | | | [EQCLASS3][PLANGRP22][CC=1] UseCost = 47.1438 Plan Cost = 304.292 #Tuples = 600000 #Blocks = 21429
+| | | | | [ENF16][CC=1]SORT< r3:r3c1 r3:r3c1 > Cost = 257.148
+| | | | | | [EQCLASS3][PLANGRP10][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | | | [ALG5][CC=1]RELSCAN< r3 > Cost = 47.1438
+

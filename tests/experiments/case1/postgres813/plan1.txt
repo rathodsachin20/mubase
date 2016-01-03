@@ -1,0 +1,13 @@
+# explain select * from bidstab1 b1, bidstab2 b2 where b1.make=b2.make and b1.year=b2.year and b1.city=b2.city and b1.color=b2.color;
+
+                                                 QUERY PLAN
+-------------------------------------------------------------------------------------------------------------------------
+ Merge Join  (cost=107790.28..112790.53 rows=25 width=220)
+   Merge Cond: (("outer".color = "inner".color) AND ("outer".city = "inner".city) AND ("outer"."year" = "inner"."year") AND ("outer".make = "inner".make))
+   ->  Sort  (cost=56596.64..57096.64 rows=200000 width=120)
+         Sort Key: b1.color, b1.city, b1."year", b1.make
+         ->  Seq Scan on bidstab1 b1  (cost=0.00..5847.00 rows=200000 width=120)
+   ->  Sort  (cost=51193.64..51693.64 rows=200000 width=100)
+         Sort Key: b2.color, b2.city, b2."year", b2.make
+         ->  Seq Scan on bidstab2 b2  (cost=0.00..5334.00 rows=200000 width=100)
+

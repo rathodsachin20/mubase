@@ -1,0 +1,16 @@
+Procedure:
+- Get join attrset S' from pred
+- Get the canonical form S of S'
+- For each o in input fav ords
+    - Translate o to outSchema (get ot)
+    - Get canonical form of ot (oc)
+    - Add oc to set F
+- Get canonical form of reqOutOrd (reqOrdCanonical) and add to set F
+- Deduce IntOrds from F and S
+- For each iOrd in IntOrds
+    - needPartialSort = iOrds >= reqOrdCanonical? false : true;
+    - leftReqOrd = TranslateFromCanonical(leftSchema)
+    - rightReqOrd = TranslateFromCanonical(rightSchema)
+    - Optimize inputs
+    - If (needPartial)
+        new PartialSort(reqOrdCanonical, iOrds);

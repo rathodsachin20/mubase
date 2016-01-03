@@ -1,0 +1,290 @@
+<EQCLASS id="5" isCorrelated="false">
+  <LOGEXP id="0" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg=":empid"/>
+<RelArgRef relarg=":ename"/>
+<RelArgRef relarg=":sal"/>
+</PROJ_EXPRS>
+    <EQCLASS id="4" isCorrelated="false">
+      <LOGEXP id="4" op="SELECT">
+<AND>
+<LHS>
+<LT>
+<LHS>
+<RelArgRef relarg=":sal"/>
+</LHS>
+<RHS>
+<INT value="10000"/>
+</RHS>
+</LT>
+</LHS>
+<RHS>
+<INEXPR>
+<LHS>
+:ename</LHS>
+<RHS>
+                    <EQCLASS id="2" isCorrelated="true">
+<CorrelatedAttributes>
+<Attr relname="emp" attrname="empid"/>
+</CorrelatedAttributes>
+                      <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg=":head"/>
+</PROJ_EXPRS>
+                        <EQCLASS id="1" isCorrelated="true">
+<CorrelatedAttributes>
+<Attr relname="emp" attrname="empid"/>
+</CorrelatedAttributes>
+                          <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="dep:depid"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="emp:empid"/>
+</RHS>
+</EQEQ>
+                            <EQCLASS id="0" isCorrelated="false">
+               <LOGEXP id="3" op="dep">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</RHS>
+</INEXPR>
+</RHS>
+</AND>
+        <EQCLASS id="3" isCorrelated="false">
+     <LOGEXP id="5" op="emp">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="7" op="SELECT">
+<INEXPR>
+<LHS>
+:ename</LHS>
+<RHS>
+                    <EQCLASS id="2" isCorrelated="true">
+<CorrelatedAttributes>
+<Attr relname="emp" attrname="empid"/>
+</CorrelatedAttributes>
+                      <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg=":head"/>
+</PROJ_EXPRS>
+                        <EQCLASS id="1" isCorrelated="true">
+<CorrelatedAttributes>
+<Attr relname="emp" attrname="empid"/>
+</CorrelatedAttributes>
+                          <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="dep:depid"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="emp:empid"/>
+</RHS>
+</EQEQ>
+                            <EQCLASS id="0" isCorrelated="false">
+               <LOGEXP id="3" op="dep">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</RHS>
+</INEXPR>
+        <EQCLASS id="6" isCorrelated="false">
+          <LOGEXP id="6" op="SELECT">
+<LT>
+<LHS>
+<RelArgRef relarg=":sal"/>
+</LHS>
+<RHS>
+<INT value="10000"/>
+</RHS>
+</LT>
+            <EQCLASS id="3" isCorrelated="false">
+       <LOGEXP id="5" op="emp">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="9" op="APPLY"> 
+<INEXPR>
+<LHS>
+:ename</LHS>
+<RHS>
+                    <EQCLASS id="2" isCorrelated="true">
+<CorrelatedAttributes>
+<Attr relname="emp" attrname="empid"/>
+</CorrelatedAttributes>
+                      <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg=":head"/>
+</PROJ_EXPRS>
+                        <EQCLASS id="1" isCorrelated="true">
+<CorrelatedAttributes>
+<Attr relname="emp" attrname="empid"/>
+</CorrelatedAttributes>
+                          <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="dep:depid"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="emp:empid"/>
+</RHS>
+</EQEQ>
+                            <EQCLASS id="0" isCorrelated="false">
+               <LOGEXP id="3" op="dep">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</RHS>
+</INEXPR>
+        <EQCLASS id="7" isCorrelated="false">
+          <LOGEXP id="8" op="SELECT">
+<AND>
+<LHS>
+<LT>
+<LHS>
+<RelArgRef relarg=":sal"/>
+</LHS>
+<RHS>
+<INT value="10000"/>
+</RHS>
+</LT>
+</LHS>
+<RHS>
+<TRUE/>
+</RHS>
+</AND>
+            <EQCLASS id="3" isCorrelated="false">
+       <LOGEXP id="5" op="emp">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="2" isCorrelated="true">
+<CorrelatedAttributes>
+<Attr relname="emp" attrname="empid"/>
+</CorrelatedAttributes>
+          <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg=":head"/>
+</PROJ_EXPRS>
+            <EQCLASS id="1" isCorrelated="true">
+<CorrelatedAttributes>
+<Attr relname="emp" attrname="empid"/>
+</CorrelatedAttributes>
+              <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="dep:depid"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="emp:empid"/>
+</RHS>
+</EQEQ>
+                <EQCLASS id="0" isCorrelated="false">
+         <LOGEXP id="3" op="dep">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="11" op="APPLY"> 
+<INEXPR>
+<LHS>
+:ename</LHS>
+<RHS>
+                    <EQCLASS id="2" isCorrelated="true">
+<CorrelatedAttributes>
+<Attr relname="emp" attrname="empid"/>
+</CorrelatedAttributes>
+                      <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg=":head"/>
+</PROJ_EXPRS>
+                        <EQCLASS id="1" isCorrelated="true">
+<CorrelatedAttributes>
+<Attr relname="emp" attrname="empid"/>
+</CorrelatedAttributes>
+                          <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="dep:depid"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="emp:empid"/>
+</RHS>
+</EQEQ>
+                            <EQCLASS id="0" isCorrelated="false">
+               <LOGEXP id="3" op="dep">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</RHS>
+</INEXPR>
+        <EQCLASS id="6" isCorrelated="false">
+          <LOGEXP id="6" op="SELECT">
+<LT>
+<LHS>
+<RelArgRef relarg=":sal"/>
+</LHS>
+<RHS>
+<INT value="10000"/>
+</RHS>
+</LT>
+            <EQCLASS id="3" isCorrelated="false">
+       <LOGEXP id="5" op="emp">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="2" isCorrelated="true">
+<CorrelatedAttributes>
+<Attr relname="emp" attrname="empid"/>
+</CorrelatedAttributes>
+          <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg=":head"/>
+</PROJ_EXPRS>
+            <EQCLASS id="1" isCorrelated="true">
+<CorrelatedAttributes>
+<Attr relname="emp" attrname="empid"/>
+</CorrelatedAttributes>
+              <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="dep:depid"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="emp:empid"/>
+</RHS>
+</EQEQ>
+                <EQCLASS id="0" isCorrelated="false">
+         <LOGEXP id="3" op="dep">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>

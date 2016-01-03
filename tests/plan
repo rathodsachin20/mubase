@@ -1,0 +1,102 @@
+ALGO Greedy
+Cost Limit = 1e+06
+LDAGUSR 100
+LDAGSYS 0
+PDAGUSR 600
+PDAGSYS 20
+INITCOST 24678.4
+SHARCOUNT 233
+Sharing 467 Benefit = 11672.8
+BESTCOST 13005.6
+NUMPROPS 225
+PROPCOUNT 100569
+RECOMP 226
+NUMMAT 1
+Optimization Successful: Plan Cost = 358.313 Cost Limit = 13005.6
+
+[EQCLASS15][PLANGRP0] UseCost = 2.81832 Plan Cost = 358.313
+
+  [ALG3309] UNION Cost = 0
+    [EQCLASS10][PLANGRP2] UseCost = 2.8166 Plan Cost = 177.136
+
+      [ALG953] AGGREGATE< MIN(:ps_supplycost) | :p_partkey > Cost = 0.256055
+        [EQCLASS103][PLANGRP467] UseCost = 0 Plan Cost = 12824.2
+
+          [ENF2909] INDEXSORT< part:p_partkey > Cost = 490.863
+            [EQCLASS103][PLANGRP3] UseCost = 176.88 Plan Cost = 12333.4
+
+              [ALG826] NLJOIN< :s_suppkey == :ps_suppkey > Cost = 376.443
+                [EQCLASS107][PLANGRP144] UseCost = 28.4625 Plan Cost = 65.3694
+
+                  [ALG509] NLJOIN< :s_nationkey == :n_nationkey > Cost = 5.41806
+                    [EQCLASS19][PLANGRP126] UseCost = 1.46667 Plan Cost = 3.90629
+
+                      [ALG437] NLJOIN< AND[ :n_regionkey == :r_regionkey :r_name == 1 ] > Cost = 0.239626
+                        [EQCLASS7][PLANGRP5] UseCost = 1.30952 Plan Cost = 1.30952
+
+                          [ALG0] RELSCAN< region > Cost = 1.30952
+                        [EQCLASS5][PLANGRP10] UseCost = 2.35714 Plan Cost = 2.35714
+
+                          [ALG4] RELSCAN< nation > Cost = 2.35714
+                    [EQCLASS1][PLANGRP18] UseCost = 56.045 Plan Cost = 56.045
+
+                      [ALG9] RELSCAN< supplier > Cost = 56.045
+                [EQCLASS24][PLANGRP31] UseCost = 367.675 Plan Cost = 11891.5
+
+                  [ALG50] NLJOIN< :p_partkey == :ps_partkey > Cost = 6605.5
+                    [EQCLASS3][PLANGRP19] UseCost = 4401.04 Plan Cost = 4401.04
+
+                      [ALG12] RELSCAN< partsupp > Cost = 4401.04
+                    [EQCLASS26][PLANGRP28] UseCost = 43.3654 Plan Cost = 884.998
+
+                      [ALG29] SELECT< :p_size == 10 > Cost = 3.94231
+                        [EQCLASS0][PLANGRP17] UseCost = 881.056 Plan Cost = 881.056
+
+                          [ALG8] RELSCAN< part > Cost = 881.056
+    [EQCLASS14][PLANGRP203] UseCost = 1.1 Plan Cost = 181.177
+
+      [ALG3308] PROJECT< :p_partkey :ps_supplycost > Cost = 0
+        [EQCLASS13][PLANGRP470] UseCost = 1.1 Plan Cost = 181.177
+
+          [ALG3062] MERGEJOIN< AND[ :p_partkey == :d_partkey :ps_supplycost == :d_mincost ] > Cost = 0.1
+            [EQCLASS103][PLANGRP467] UseCost = 0 Plan Cost = 12824.2
+
+              [ENF2909] INDEXSORT< part:p_partkey > Cost = 490.863
+                [EQCLASS103][PLANGRP3] UseCost = 176.88 Plan Cost = 12333.4
+
+                  [ALG826] NLJOIN< :s_suppkey == :ps_suppkey > Cost = 376.443
+                    [EQCLASS107][PLANGRP144] UseCost = 28.4625 Plan Cost = 65.3694
+
+                      [ALG509] NLJOIN< :s_nationkey == :n_nationkey > Cost = 5.41806
+                        [EQCLASS19][PLANGRP126] UseCost = 1.46667 Plan Cost = 3.90629
+
+                          [ALG437] NLJOIN< AND[ :n_regionkey == :r_regionkey :r_name == 1 ] > Cost = 0.239626
+                            [EQCLASS7][PLANGRP5] UseCost = 1.30952 Plan Cost = 1.30952
+
+                              [ALG0] RELSCAN< region > Cost = 1.30952
+                            [EQCLASS5][PLANGRP10] UseCost = 2.35714 Plan Cost = 2.35714
+
+                              [ALG4] RELSCAN< nation > Cost = 2.35714
+                        [EQCLASS1][PLANGRP18] UseCost = 56.045 Plan Cost = 56.045
+
+                          [ALG9] RELSCAN< supplier > Cost = 56.045
+                    [EQCLASS24][PLANGRP31] UseCost = 367.675 Plan Cost = 11891.5
+
+                      [ALG50] NLJOIN< :p_partkey == :ps_partkey > Cost = 6605.5
+                        [EQCLASS3][PLANGRP19] UseCost = 4401.04 Plan Cost = 4401.04
+
+                          [ALG12] RELSCAN< partsupp > Cost = 4401.04
+                        [EQCLASS26][PLANGRP28] UseCost = 43.3654 Plan Cost = 884.998
+
+                          [ALG29] SELECT< :p_size == 10 > Cost = 3.94231
+                            [EQCLASS0][PLANGRP17] UseCost = 881.056 Plan Cost = 881.056
+
+                              [ALG8] RELSCAN< part > Cost = 881.056
+            [EQCLASS11][PLANGRP211] UseCost = 3.84725 Plan Cost = 4.197
+
+              [ENF963] SORT< decorr:d_partkey > Cost = 0.34975
+                [EQCLASS11][PLANGRP206] UseCost = 3.84725 Plan Cost = 3.84725
+
+                  [ALG955] RELSCAN< decorr > Cost = 3.84725
+
+

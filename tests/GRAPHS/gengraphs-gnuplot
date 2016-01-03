@@ -1,0 +1,23 @@
+#!/bin/sh -x
+
+GENDATA-SCRIPTS/gendata < OUT/out-tpcd
+gnuplot < PLOT-SCRIPTS/tpcd.gnu 
+gnuplot < PLOT-SCRIPTS/tpcd-fig.gnu 
+mv -f DATA/*.dat DATA/TPCD/
+
+GENDATA-SCRIPTS/gendata-rev < OUT/out-tpcd-comp
+gnuplot < PLOT-SCRIPTS/tpcd-comp.gnu 
+gnuplot < PLOT-SCRIPTS/tpcd-comp-fig.gnu 
+mv -f DATA/*.dat DATA/TPCD-COMP/
+
+GENDATA-SCRIPTS/gendata-rev < OUT/out-stag
+gnuplot < PLOT-SCRIPTS/stag.gnu 
+gnuplot < PLOT-SCRIPTS/stag-fig.gnu 
+mv -f DATA/*.dat DATA/STAG/
+
+cd PS
+for i in *.fig
+do 
+  fig2dev -L ps -m 2 $i $i.ps
+done
+

@@ -1,0 +1,13 @@
+[EQCLASS4][PLANGRP0][CC=1][PSO=NULL] UseCost = 0.0176 Plan Cost = 1468.02 #Tuples = 2400 #Blocks = 8
+| [ALG5][CC=1]PROJECT< :l_suppkey :l_partkey :ps_supplycost > Cost = 0
+| | [EQCLASS3][PLANGRP1][CC=1][PSO=NULL] UseCost = 0.0858 Plan Cost = 1468.02 #Tuples = 2400 #Blocks = 39
+| | | [ALG4][CC=-1]MERGEJOIN< AND[ :l_partkey == :ps_partkey :l_suppkey == :ps_suppkey ] > Cost = 0.0156
+| | | | [EQCLASS0][PLANGRP5][CC=1] UseCost = 471.429 Plan Cost = 900.001 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | | | [ENF1][CC=1]PARTIAL SORT( < lineitem:l_suppkey >--> < lineitem:l_suppkey lineitem:l_partkey >)  Cost = 428.572
+| | | | | | [EQCLASS0][PLANGRP6][CC=1] UseCost = 471.429 Plan Cost = 471.429 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | | | | | [ALG0][CC=1]RELSCAN< lineitem > Cost = 471.429
+| | | | [EQCLASS1][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 568 #Tuples = 800000 #Blocks = 40000
+| | | | | [ENF3][CC=1]SORT< partsupp:ps_suppkey partsupp:ps_partkey > Cost = 480
+| | | | | | [EQCLASS1][PLANGRP7][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 800000 #Blocks = 40000
+| | | | | | | [ALG2][CC=1]RELSCAN< partsupp > Cost = 88
+

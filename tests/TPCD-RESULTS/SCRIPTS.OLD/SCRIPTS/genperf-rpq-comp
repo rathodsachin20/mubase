@@ -1,0 +1,12 @@
+#!/bin/bash 
+for algo in volcano volcano-sh volcano-ru greedy
+do
+   for inp in rpq-comp-1 rpq-comp-2 rpq-comp-3 rpq-comp-4 rpq-comp-5 rpq-comp-6 rpq-comp-7 rpq-comp-8 #rpq-9
+   do	    
+	echo PROC $inp
+	../perfeval-pruning-subs-index "$algo" < RPQ-COMP/$inp
+	echo END
+        echo
+   done
+   echo
+done

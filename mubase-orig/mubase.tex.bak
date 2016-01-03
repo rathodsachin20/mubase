@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{a4wide}
+\usepackage{latexsym}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+{\large Database Systems Lab} \\
+{\bf Assignment 6: Relation Manager for MuBase} \\
+\end{center}
+
+\noindent
+Marks: 100 \\
+
+As part of this course, students of your senior batch developed the
+foundation layers of {\em MuBase}, a small database management system
+modeled after University of Wisconsin's MiniBase.  They implemented
+storage manager to keep track of free/allocated disk blocks, 
+buffer manager and a B+ tree indexing layer. In this assignment you
+will be extending the functionality of {\em MuBase} to provide 
+support for relations. At the end of this assignment, {\em MuBase} 
+should be able to support the following operations:
+
+\begin{enumerate}
+\item Creation of a relation with specified schema
+\item Adding/deleting records from a relation
+\item Full scan of a relation
+\item Predicated scan (search) over a relation (should make
+      use of index when available)
+\item Sorting of a relation on a specified attribute
+\end{enumerate}
+
+The attached tar.gz has 3 sub-directories. The subdir {\em interface}
+contains the interfaces of the various layers (already present in 
+MuBase, as well as the ones you will be implementing). You will be 
+providing the implementation for the classes in {\tt rm.h} and {
+\tt sort.h}. The subdir {\em slotted$\_$page} contains interfaces
+for the slotted page classes. The subdir {\em mubase} contains
+the implementation of storage manager, buffer manager and B+ tree
+indexing layer. There may be some minor variations between this
+implementation (done by Varun and his team) and the inerfaces 
+provided in the {\em interface} subdir. 
+
+Go through the README file, it contains important instructions.
+
+Records in a relation will be stored in blocks using the slotted
+page organization.  A framework for implementing the get, store 
+and delete methods for a slotted page is also provided.
+
+For sorting a relation you will be implementing the external 
+sort algorithm (to be discussed in the class).
+
+The project can be done in groups of at most 4 members. Please 
+communicate your team composition by sending a mail to the TAs,
+with the subject line ``Team for MuBase''. Although this assignment 
+can be done in groups, evaluation will be done based on the 
+contribution of individuals. So split up the work equally and 
+work independently on your chosen module. 
+\end{document}
+

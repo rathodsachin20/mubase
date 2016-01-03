@@ -1,0 +1,62 @@
+                              Volcano         Volcano-SH      Volcano-RU      Greedy          
+
+COST:q2                       125.52          125.52          125.52          78.80           
+USRT:q2                       680             700             690             1220            
+SYST:q2                       10              0               0               20              
+PHYDAGUSR:q2                  0               -1              -1              250             
+PHYDAGSYS:q2                  0               -1              -1              20              
+LOGDAGUSR:q2                  30              40              40              30              
+LOGDAGSYS:q2                  0               0               0               0               
+PHYOPNODECOUNT:q2             176             176             176             2402            
+PHYEQNODECOUNT:q2             225             225             225             321             
+LOGOPNODECOUNT:q2             321             321             321             322             
+EQUIVNODECOUNT:q2             51              51              51              51              
+NUMPROPS:q2                   0               0               0               131             
+PROPCOUNT:q2                  0               -1              -1              4116            
+SHARCOUNT:q2                  0               -1              -1              0               
+
+COST:q2-decor                 91.05           46.50           46.29           46.29           
+USRT:q2-decor                 460             460             390             2430            
+SYST:q2-decor                 0               0               0               10              
+PHYDAGUSR:q2-decor            -1              -1              -1              310             
+PHYDAGSYS:q2-decor            -1              -1              -1              10              
+LOGDAGUSR:q2-decor            70              70              70              70              
+LOGDAGSYS:q2-decor            0               0               0               0               
+PHYOPNODECOUNT:q2-decor       273             273             159             3494            
+PHYEQNODECOUNT:q2-decor       409             409             326             500             
+LOGOPNODECOUNT:q2-decor       414             414             414             414             
+EQUIVNODECOUNT:q2-decor       74              74              74              74              
+NUMPROPS:q2-decor             0               0               0               267             
+PROPCOUNT:q2-decor            -1              -1              -1              15398           
+SHARCOUNT:q2-decor            -1              -1              -1              254             
+
+COST:q11                      194.74          193.51          193.51          101.73          
+USRT:q11                      10              10              10              30              
+SYST:q11                      0               0               0               0               
+PHYDAGUSR:q11                 -1              -1              -1              10              
+PHYDAGSYS:q11                 -1              -1              -1              0               
+LOGDAGUSR:q11                 0               0               0               0               
+LOGDAGSYS:q11                 0               0               0               0               
+PHYOPNODECOUNT:q11            38              38              65              135             
+PHYEQNODECOUNT:q11            40              40              40              46              
+LOGOPNODECOUNT:q11            22              22              22              22              
+EQUIVNODECOUNT:q11            13              13              13              13              
+NUMPROPS:q11                  0               0               0               26              
+PROPCOUNT:q11                 -1              -1              -1              215             
+SHARCOUNT:q11                 -1              -1              -1              30              
+
+COST:q15                      63.66           63.66           63.66           32.43           
+USRT:q15                      0               10              0               0               
+SYST:q15                      0               0               0               0               
+PHYDAGUSR:q15                 -1              -1              -1              0               
+PHYDAGSYS:q15                 -1              -1              -1              0               
+LOGDAGUSR:q15                 0               0               0               0               
+LOGDAGSYS:q15                 0               0               0               0               
+PHYOPNODECOUNT:q15            5               5               5               9               
+PHYEQNODECOUNT:q15            5               5               5               5               
+LOGOPNODECOUNT:q15            5               5               5               5               
+EQUIVNODECOUNT:q15            4               4               4               4               
+NUMPROPS:q15                  0               0               0               3               
+PROPCOUNT:q15                 -1              -1              -1              12              
+SHARCOUNT:q15                 -1              -1              -1              3               
+

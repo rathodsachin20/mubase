@@ -1,0 +1,24 @@
+# explain select * from R1, R2, R3, R4 where R1.c1=R2.c1 and R1.c2=R2.c2 and R1.c3=R2.c3 and R1.c4=R2.c4 and R3.c3=R1.c3 and R3.c1=R1.c1 and R3.c2=R1.c2 and R3.c5=R4.c5 and R3.c6=R4.c6;
+                                                 QUERY PLAN
+-------------------------------------------------------------------------------------------------------------
+ Merge Join  (cost=461.08..494.28 rows=1 width=72)
+   Merge Cond: (("outer".c2 = "inner".c2) AND ("outer".c1 = "inner".c1) AND ("outer".c3 = "inner".c3))
+   Join Filter: ("outer".c4 = "inner".c4)
+   ->  Merge Join  (cost=347.81..364.69 rows=1 width=56)
+         Merge Cond: (("outer".c2 = "inner".c2) AND ("outer".c1 = "inner".c1) AND ("outer".c3 = "inner".c3))
+         ->  Sort  (cost=234.54..234.69 rows=57 width=40)
+               Sort Key: r3.c2, r3.c1, r3.c3
+               ->  Merge Join  (cost=209.66..232.88 rows=57 width=40)
+                     Merge Cond: (("outer".c6 = "inner".c6) AND ("outer".c5 = "inner".c5))
+                     ->  Sort  (cost=104.83..108.61 rows=1510 width=20)
+                           Sort Key: r3.c6, r3.c5
+                           ->  Seq Scan on r3  (cost=0.00..25.10 rows=1510 width=20)
+                     ->  Sort  (cost=104.83..108.61 rows=1510 width=20)
+                           Sort Key: r4.c6, r4.c5
+                           ->  Seq Scan on r4  (cost=0.00..25.10 rows=1510 width=20)
+         ->  Sort  (cost=113.27..117.34 rows=1630 width=16)
+               Sort Key: r1.c2, r1.c1, r1.c3
+               ->  Seq Scan on r1  (cost=0.00..26.30 rows=1630 width=16)
+   ->  Sort  (cost=113.27..117.34 rows=1630 width=16)
+         Sort Key: r2.c2, r2.c1, r2.c3
+         ->  Seq Scan on r2  (cost=0.00..26.30 rows=1630 width=16)

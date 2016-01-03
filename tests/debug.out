@@ -1,0 +1,235 @@
+ALGO Volcano
+Created eq 0
+Adding child logExpr 1 to 0
+Adding parent logExpr 0 to 0
+Created eq 1
+Adding child logExpr 0 to 1
+Order Requirement on the Root EqNode:
+< r1:r1c1 r1:r1c2 >Initial Query Graph
+[EQCLASS1]
+| [LOGEXP0]AGGREGATE MIN(:r1c2) | :r1c1 
+| | [EQCLASS0]
+| | | [LOGEXP1]r1
+Cost Limit = 10000
+
+Expanding SubDAG for eq 1
+
+Expanding SubDAG for eq 0
+
+Expanding logexpr 1 eqclass = 0
+
+
+[EQCLASS0]
+| [LOGEXP1]r1
+Finished Expanding logexpr 1 eqclass = 0
+
+Finished Expanding SubDAG for eq 0
+
+
+Expanding logexpr 0 eqclass = 1
+
+
+[EQCLASS1]
+| [LOGEXP0]AGGREGATE MIN(:r1c2) | :r1c1 
+| | [EQCLASS0]
+| | | [LOGEXP1]r1
+Finished Expanding logexpr 0 eqclass = 1
+
+Finished Expanding SubDAG for eq 1
+
+Setting parameter logical props for Eq = 1
+Setting outerVarLogProp for Op = 0
+Setting parameter logical props for Eq = 0
+Setting outerVarLogProp for Op = 1
+Setting outerVarLogProp for Op = 1 Done
+Setting paramLogProp for Eq = 0 Done
+Setting outerVarLogProp for Op = 0 Done
+Setting paramLogProp for Eq = 1 Done
+Expanded LQDAG
+<EQCLASS id="1" isCorrelated="false">
+  <LOGEXP id="0" op="AGGREGATE"> 
+<AGG_EXPRS>
+<MIN>
+<RelArgRef relarg=":r1c2"/>
+</MIN>
+</AGG_EXPRS>
+<GROUPBY_ATTRS>
+<RelArgRef relarg=":r1c1"/>
+</GROUPBY_ATTRS>
+    <EQCLASS id="0" isCorrelated="false">
+   <LOGEXP id="1" op="r1">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+End of Expanded LQDAG
+Getting interesting props for Eq = 1
+Getting interesting props for Op = 0
+Getting interesting props for Eq = 0
+Calling GetFavorableOrders
+Computed the favorable orders for Eq 0
+< r1:r1c1 >Computed the favorable orders for Eq 1
+< r1:r1c1 >Obtained Favorable Orders:
+< r1:r1c1 >LDAGUSR 0
+LDAGSYS 0
+Applying logical subsumption at SubDAG for eq 1
+Applying logical subsumption at SubDAG for eq 0
+Applying logical subsumption at SubDAG for eq 0
+Finished Applying logical subsumption at SubDAG for eq 0
+Finished Applying logical subsumption at SubDAG for eq 0
+
+Applying logical subsumption at SubDAG for eq 1
+Finished Applying logical subsumption at SubDAG for eq 1
+Finished Applying logical subsumption at SubDAG for eq 1
+
+Optimizing Eq: 1
+Added new plan group id = 1 for eq id = 1
+Number of properties = 1
+< 0 1 >
+
+FindBestPlan Eq: 1
+Volcano_t::FindBestAlgPlan Iterating over 1 for PlanGroup = 1
+Eq = 1 PlanGroup = 1 LogExpr = 0
+Added new plan group id = 3 for eq id = 0
+Number of properties = 1
+< 4 >
+
+FindBestPlan Eq: 0
+Volcano_t::FindBestAlgPlan Iterating over 0 for PlanGroup = 3
+Eq = 0 PlanGroup = 3 LogExpr = 1
+PlanGroup 3 BuiltIn Sort< r1:r1c1 >
+ on r1 cost = 439.286
+ rel op = 0
+[EQCLASS0][PLANGRP3][CC=1] UseCost = 439.286 Plan Cost = 439.286 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| [ALG0][CC=1]RELSCAN< r1 > Cost = 439.286
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 0 for PlanGroup = 3
+Segment Sort Cost=1960.72Distincts = 1FindBestAlgPlan Eq: 0
+Volcano_t::FindBestAlgPlan Iterating over 0 for PlanGroup = 2
+Eq = 0 PlanGroup = 2 LogExpr = 1
+[EQCLASS0][PLANGRP2][CC=1] UseCost = 439.286 Plan Cost = 439.286 #Tuples = 6e+06 #Blocks = 214286
+| [ALG1][CC=1]RELSCAN< r1 > Cost = 439.286
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 0 for PlanGroup = 2
+Finished FindBestAlgPlan Eq: 0
+[EQCLASS0][PLANGRP3][CC=1] UseCost = 439.286 Plan Cost = 2400 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| [ENF2][CC=1]SORT< r1:r1c1 > Cost = 1960.72
+| | [EQCLASS0][PLANGRP2][CC=1] UseCost = 439.286 Plan Cost = 439.286 #Tuples = 6e+06 #Blocks = 214286
+| | | [ALG1][CC=1]RELSCAN< r1 > Cost = 439.286
+
+
+Finished FindBestPlan Eq: 0
+Added new plan group id = 4 for eq id = 1
+Number of properties = 1
+< 0 >
+
+[EQCLASS1][PLANGRP4][CC=1][PSO=NULL] UseCost = 0.60065 Plan Cost = 2400.02 #Tuples = 150000 #Blocks = 293
+| [ALG3][CC=-1]AGGREGATESCAN< MIN(:r1c2) | :r1c1 > Cost = 0.01465
+| | [EQCLASS0][PLANGRP3][CC=1] UseCost = 439.286 Plan Cost = 2400 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | [ENF2][CC=1]SORT< r1:r1c1 > Cost = 1960.72
+| | | | [EQCLASS0][PLANGRP2][CC=1] UseCost = 439.286 Plan Cost = 439.286 #Tuples = 6e+06 #Blocks = 214286
+| | | | | [ALG1][CC=1]RELSCAN< r1 > Cost = 439.286
+
+
+[EQCLASS1][PLANGRP1][CC=1][PSO=NULL] UseCost = 0.60065 Plan Cost = 2400.02 #Tuples = 150000 #Blocks = 293
+| [ENF4][CC=1]PARTIAL SORT( < r1:r1c1 >--> < r1:r1c1 r1:r1c2 >)  Cost = 0
+| | [EQCLASS1][PLANGRP4][CC=1][PSO=NULL] UseCost = 0.60065 Plan Cost = 2400.02 #Tuples = 150000 #Blocks = 293
+| | | [ALG3][CC=-1]AGGREGATESCAN< MIN(:r1c2) | :r1c1 > Cost = 0.01465
+| | | | [EQCLASS0][PLANGRP3][CC=1] UseCost = 439.286 Plan Cost = 2400 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | | | [ENF2][CC=1]SORT< r1:r1c1 > Cost = 1960.72
+| | | | | | [EQCLASS0][PLANGRP2][CC=1] UseCost = 439.286 Plan Cost = 439.286 #Tuples = 6e+06 #Blocks = 214286
+| | | | | | | [ALG1][CC=1]RELSCAN< r1 > Cost = 439.286
+
+
+FindBestPlan Eq: 0
+Finished FindBestPlan Eq: 0
+[EQCLASS1][PLANGRP4][CC=1][PSO=NULL] UseCost = 0.60065 Plan Cost = 2400.02 #Tuples = 150000 #Blocks = 293
+| [ALG5][CC=-1]AGGREGATESCAN< MIN(:r1c2) | :r1c1 > Cost = 0.01465
+| | [EQCLASS0][PLANGRP3][CC=1] UseCost = 439.286 Plan Cost = 2400 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | [ENF2][CC=1]SORT< r1:r1c1 > Cost = 1960.72
+| | | | [EQCLASS0][PLANGRP2][CC=1] UseCost = 439.286 Plan Cost = 439.286 #Tuples = 6e+06 #Blocks = 214286
+| | | | | [ALG1][CC=1]RELSCAN< r1 > Cost = 439.286
+
+
+[EQCLASS1][PLANGRP1][CC=1][PSO=NULL] UseCost = 0.60065 Plan Cost = 2400.02 #Tuples = 150000 #Blocks = 293
+| [ENF6][CC=1]PARTIAL SORT( < r1:r1c1 >--> < r1:r1c1 r1:r1c2 >)  Cost = 0
+| | [EQCLASS1][PLANGRP4][CC=1][PSO=NULL] UseCost = 0.60065 Plan Cost = 2400.02 #Tuples = 150000 #Blocks = 293
+| | | [ALG5][CC=-1]AGGREGATESCAN< MIN(:r1c2) | :r1c1 > Cost = 0.01465
+| | | | [EQCLASS0][PLANGRP3][CC=1] UseCost = 439.286 Plan Cost = 2400 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | | | [ENF2][CC=1]SORT< r1:r1c1 > Cost = 1960.72
+| | | | | | [EQCLASS0][PLANGRP2][CC=1] UseCost = 439.286 Plan Cost = 439.286 #Tuples = 6e+06 #Blocks = 214286
+| | | | | | | [ALG1][CC=1]RELSCAN< r1 > Cost = 439.286
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 1 for PlanGroup = 1
+Segment Sort Cost=0.26375Distincts = 1FindBestAlgPlan Eq: 1
+Volcano_t::FindBestAlgPlan Iterating over 1 for PlanGroup = 0
+Eq = 1 PlanGroup = 0 LogExpr = 0
+aggregate hash feasible, cost limit is 2396.74
+                         total cost is 0
+FindBestPlan Eq: 0
+Finished FindBestPlan Eq: 0
+aggregate hash plan found 
+aggregate hash found a new best plan
+[EQCLASS1][PLANGRP0][CC=1][PSO=NULL] UseCost = 0.60065 Plan Cost = 442.301 #Tuples = 150000 #Blocks = 293
+| [ALG7][CC=-1]AGGREGATEHASH< MIN(:r1c2) | :r1c1 > Cost = 3.01465
+| | [EQCLASS0][PLANGRP2][CC=1] UseCost = 439.286 Plan Cost = 439.286 #Tuples = 6e+06 #Blocks = 214286
+| | | [ALG1][CC=1]RELSCAN< r1 > Cost = 439.286
+
+
+Added new plan group id = 5 for eq id = 0
+Number of properties = 1
+< 4 >
+
+FindBestPlan Eq: 0
+Volcano_t::FindBestAlgPlan Iterating over 0 for PlanGroup = 5
+Eq = 0 PlanGroup = 5 LogExpr = 1
+PlanGroup 5 BuiltIn Sort< r1:r1c1 >
+ on r1 cost = 439.286
+ rel op = 8
+[EQCLASS0][PLANGRP5][CC=1] UseCost = 439.286 Plan Cost = 439.286 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| [ALG8][CC=1]RELSCAN< r1 > Cost = 439.286
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 0 for PlanGroup = 5
+Segment Sort Cost=1960.72Distincts = 1Finished FindBestPlan Eq: 0
+[EQCLASS1][PLANGRP0][CC=1][PSO=NULL] UseCost = 0.60065 Plan Cost = 439.301 #Tuples = 150000 #Blocks = 293
+| [ALG9][CC=-1]AGGREGATESCAN< MIN(:r1c2) | :r1c1 > Cost = 0.01465
+| | [EQCLASS0][PLANGRP5][CC=1] UseCost = 439.286 Plan Cost = 439.286 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | [ALG8][CC=1]RELSCAN< r1 > Cost = 439.286
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 1 for PlanGroup = 0
+Finished FindBestAlgPlan Eq: 1
+[EQCLASS1][PLANGRP1][CC=1][PSO=NULL] UseCost = 0.60065 Plan Cost = 439.565 #Tuples = 150000 #Blocks = 293
+| [ENF10][CC=1]SORT< r1:r1c1 r1:r1c2 > Cost = 0.26375
+| | [EQCLASS1][PLANGRP0][CC=1][PSO=NULL] UseCost = 0.60065 Plan Cost = 439.301 #Tuples = 150000 #Blocks = 293
+| | | [ALG9][CC=-1]AGGREGATESCAN< MIN(:r1c2) | :r1c1 > Cost = 0.01465
+| | | | [EQCLASS0][PLANGRP5][CC=1] UseCost = 439.286 Plan Cost = 439.286 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | | | [ALG8][CC=1]RELSCAN< r1 > Cost = 439.286
+
+
+Finished FindBestPlan Eq: 1
+Done Optimizing Eq: 1
+
+Optimization Successful: Plan Cost = 439.565 Cost Limit = 439.565
+
+[EQCLASS1][PLANGRP1][CC=1][PSO=NULL] UseCost = 0.60065 Plan Cost = 439.565 #Tuples = 150000 #Blocks = 293
+| [ENF10][CC=1]SORT< r1:r1c1 r1:r1c2 > Cost = 0.26375
+| | [EQCLASS1][PLANGRP0][CC=1][PSO=NULL] UseCost = 0.60065 Plan Cost = 439.301 #Tuples = 150000 #Blocks = 293
+| | | [ALG9][CC=-1]AGGREGATESCAN< MIN(:r1c2) | :r1c1 > Cost = 0.01465
+| | | | [EQCLASS0][PLANGRP5][CC=1] UseCost = 439.286 Plan Cost = 439.286 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | | | [ALG8][CC=1]RELSCAN< r1 > Cost = 439.286
+
+
+Expression DAG:
+[EQCLASS1]
+| [LOGEXP0]AGGREGATE MIN(:r1c2) | :r1c1 
+| | [EQCLASS0]
+| | | [LOGEXP1]r1
+
+Deleted eq 1
+Deleting parent logExpr 0 from 0
+Deleted eq 0

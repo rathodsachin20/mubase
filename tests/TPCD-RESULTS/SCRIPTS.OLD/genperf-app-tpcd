@@ -1,0 +1,13 @@
+#!/bin/bash 
+for algo in volcano-app volcano-app-sh
+do
+   for inp in q2 q3 q5 q7 q8-mod q9 q10 q11 q14
+   do	    
+	echo PROC $inp
+	../perfeval "$algo" < TPCD/$inp
+	echo END
+        echo
+   done
+   echo
+done
+

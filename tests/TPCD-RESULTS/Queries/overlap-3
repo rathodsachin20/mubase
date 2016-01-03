@@ -1,0 +1,19 @@
+select sp.sp_sno, sp.sp_pno
+from pp, s, sp, p
+where sp.sp_sno = s.s_no and sp.sp_pno = p.p_no and sp.sp_pno = pp.pp_no and
+s.s_city = p.p_city and pp.pp_no = p.p_no;
+
+select sp.sp_sno, sp.sp_pno
+from s, sp, p, ss
+where sp.sp_sno = s.s_no and sp.sp_pno = p.p_no and sp.sp_sno = ss.ss_no and
+s.s_city = p.p_city and ss.ss_no = s.s_no;
+
+select sp.sp_sno,sp.sp_pno
+from s, sp, ss, pp
+where sp.sp_sno = s.s_no and sp.sp_sno = ss.ss_no and sp.sp_pno = pp.pp_no
+and ss.ss_no = s.s_no;
+
+select sp.sp_sno,sp.sp_pno
+from ss, sp, p, pp
+where sp.sp_sno = ss.ss_no and sp.sp_pno = p.p_no and sp.sp_pno = pp.pp_no and
+pp.pp_no = p.p_no;

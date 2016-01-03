@@ -1,0 +1,119 @@
+ALGO Greedy
+RelThreshold = 0
+AbsThreshold = 0.01
+Cost Limit = 1e+07
+LDAGUSR 150
+LDAGSYS 10
+LDAGUSR 60
+LDAGSYS 10
+PDAGUSR 630
+PDAGSYS 20
+INITCOST 1958.65
+VOLCANOCOST 1958.65
+Initial Plan
+[EQCLASS15][PLANGRP0] UseCost = 0.0022 Plan Cost = 1958.65 #Tuples = 1 #Blocks = 1
+| [ALG2518] PROJECT< :p_partkey > Cost = 0
+| | [EQCLASS14][PLANGRP1] UseCost = 0.0022 Plan Cost = 1958.65 #Tuples = 1 #Blocks = 1
+| | | [ALG2441] MERGEJOIN< AND[ <:ps_supplycost IN
+| | | | | | | | | | [EQCLASS8][PLANGRP2] UseCost = 0.0022 Plan Cost = 0.097385 #Tuples = 1 #Blocks = 1
+| | | | | | | | | | | [ALG1087] AGGREGATE< MIN(:ps_supplycost) | :ps_const > Cost = 0.0002
+| | | | | | | | | | | | [EQCLASS7][PLANGRP4] UseCost = 0.0022 Plan Cost = 0.097185 #Tuples = 1 #Blocks = 1
+| | | | | | | | | | | | | [ALG718] INDEXEDNLJOIN< AND[ :n_regionkey == :r_regionkey :r_name == 1 ] > Cost = 0.000817
+| | | | | | | | | | | | | | [EQCLASS5][PLANGRP35] UseCost = 0.0022 Plan Cost = 0.0022 #Tuples = 5 #Blocks = 1 BUILTIN
+| | | | | | | | | | | | | | | [ALG48] RELSCAN< region > Cost = 0.0022
+| | | | | | | | | | | | | | [EQCLASS109][PLANGRP152] UseCost = 0.0022 Plan Cost = 0.096368 #Tuples = 5 #Blocks = 1
+| | | | | | | | | | | | | | | [ALG625] INDEXEDNLJOIN< :s_nationkey == :n_nationkey > Cost = 0.000868
+| | | | | | | | | | | | | | | | [EQCLASS3][PLANGRP58] UseCost = 0.0044 Plan Cost = 0.0044 #Tuples = 25 #Blocks = 2 BUILTIN
+| | | | | | | | | | | | | | | | | [ALG109] RELSCAN< nation > Cost = 0.0044
+| | | | | | | | | | | | | | | | [EQCLASS110][PLANGRP138] UseCost = 0.0022 Plan Cost = 0.0955 #Tuples = 5 #Blocks = 1
+| | | | | | | | | | | | | | | | | [ALG523] INDEXEDNLJOIN< :s_suppkey == :ps_suppkey > Cost = 0.0431
+| | | | | | | | | | | | | | | | | | [EQCLASS1][PLANGRP24] UseCost = 0.11 Plan Cost = 0.11 #Tuples = 1000 #Blocks = 50 BUILTIN
+| | | | | | | | | | | | | | | | | | | [ALG23] RELSCAN< supplier > Cost = 0.11
+| | | | | | | | | | | | | | | | | | [EQCLASS100][PLANGRP125] UseCost = 0.0022 Plan Cost = 0.0524 #Tuples = 4 #Blocks = 1
+| | | | | | | | | | | | | | | | | | | [ENF439] SORT< partsupp:ps_const > Cost = 0
+| | | | | | | | | | | | | | | | | | | | [EQCLASS100][PLANGRP118] UseCost = 0.0022 Plan Cost = 0.0516 #Tuples = 4 #Blocks = 1
+| | | | | | | | | | | | | | | | | | | | | [ALG423] INDEXEDSELECT< :p_partkey == :ps_partkey > Cost = 0.0516
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS0][PLANGRP119] UseCost = 8.8 Plan Cost = 8.8 #Tuples = 80000 #Blocks = 4000 BUILTIN
+| | | | | | | | | | | | | | | | | | | | | | | [ALG418] RELSCAN< partsupp > Cost = 8.8
+> :s_suppkey == :ps_suppkey ] > Cost = 1931.7
+| | | | [EQCLASS43][PLANGRP93] UseCost = 0.0088 Plan Cost = 0.222245 #Tuples = 201 #Blocks = 4
+| | | | | [ALG271] INDEXEDNLJOIN< :s_nationkey == :n_nationkey > Cost = 0.100817
+| | | | | | [EQCLASS20][PLANGRP61] UseCost = 0.0022 Plan Cost = 0.0114275 #Tuples = 6 #Blocks = 1
+| | | | | | | [ENF135] INDEX< nation:n_nationkey > Cost = 0.00421053
+| | | | | | | | [EQCLASS20][PLANGRP62] UseCost = 0.0022 Plan Cost = 0.007217 #Tuples = 6 #Blocks = 1
+| | | | | | | | | [ALG132] INDEXEDNLJOIN< AND[ :n_regionkey == :r_regionkey :r_name == 1 ] > Cost = 0.002817
+| | | | | | | | | | [EQCLASS5][PLANGRP35] UseCost = 0.0022 Plan Cost = 0.0022 #Tuples = 5 #Blocks = 1 BUILTIN
+| | | | | | | | | | | [ALG48] RELSCAN< region > Cost = 0.0022
+| | | | | | | | | | [EQCLASS3][PLANGRP59] UseCost = 0.0044 Plan Cost = 0.0044 #Tuples = 25 #Blocks = 2 BUILTIN
+| | | | | | | | | | | [ALG110] RELSCAN< nation > Cost = 0.0044
+| | | | | | [EQCLASS1][PLANGRP25] UseCost = 0.11 Plan Cost = 0.11 #Tuples = 1000 #Blocks = 50 BUILTIN
+| | | | | | | [ALG24] RELSCAN< supplier > Cost = 0.11
+| | | | [EQCLASS25][PLANGRP234] UseCost = 0.132 Plan Cost = 10.7282 #Tuples = 4000 #Blocks = 60
+| | | | | [ENF1166] SORT< partsupp:ps_suppkey > Cost = 0.1442
+| | | | | | [EQCLASS25][PLANGRP227] UseCost = 0.132 Plan Cost = 10.584 #Tuples = 4000 #Blocks = 60
+| | | | | | | [ALG1159] MERGEJOIN< AND[ :p_partkey == :ps_partkey :p_size == 10 ] > Cost = 0.024
+| | | | | | | | [EQCLASS0][PLANGRP120] UseCost = 8.8 Plan Cost = 8.8 #Tuples = 80000 #Blocks = 4000 BUILTIN
+| | | | | | | | | [ALG419] RELSCAN< partsupp > Cost = 8.8
+| | | | | | | | [EQCLASS9][PLANGRP229] UseCost = 1.76 Plan Cost = 1.76 #Tuples = 20000 #Blocks = 800 BUILTIN
+| | | | | | | | | [ALG1147] RELSCAN< part > Cost = 1.76
+
+SHARCOUNT 0
+Sharing 167 Benefit = 1459.3
+BESTCOST 499.354
+NUMPROPS 166
+PROPCOUNT 155105
+RECOMP 167
+NUMMAT 1
+Optimization Successful: Plan Cost = 488.781 Cost Limit = 516.107
+
+[EQCLASS15][PLANGRP0] UseCost = 0.0022 Plan Cost = 488.781 #Tuples = 1 #Blocks = 1 CORRELATED
+| [ALG2518] PROJECT< :p_partkey > Cost = 0
+| | [EQCLASS14][PLANGRP337] UseCost = 0.0022 Plan Cost = 488.781 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | [ALG2347] MERGEJOIN< AND[ <:ps_supplycost IN
+| | | | | | | | | | [EQCLASS8][PLANGRP2] UseCost = 0.0022 Plan Cost = 0.0229371 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | | | | | | | | | [ALG1087] AGGREGATE< MIN(:ps_supplycost) | :ps_const > Cost = 0.0002
+| | | | | | | | | | | | [EQCLASS7][PLANGRP4] UseCost = 0.0022 Plan Cost = 0.0227371 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | | | | | | | | | | | [ENF1086] SORT< partsupp:ps_const > Cost = 0
+| | | | | | | | | | | | | | [EQCLASS7][PLANGRP3] UseCost = 0.0022 Plan Cost = 0.0223371 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | | | | | | | | | | | | | [ALG743] INDEXEDSELECT< :p_partkey == :ps_partkey > Cost = 0.0223371
+| | | | | | | | | | | | | | | | [EQCLASS45][PLANGRP167] UseCost = 0.9526 Plan Cost = 27.3257 #Tuples = 16001 #Blocks = 433 MARKED SHARED
+| | | | | | | | | | | | | | | | | [ENF741] INDEX< partsupp:ps_partkey > Cost = 1.82316
+| | | | | | | | | | | | | | | | | | [EQCLASS45][PLANGRP168] UseCost = 0.9526 Plan Cost = 25.5026 #Tuples = 16001 #Blocks = 433
+| | | | | | | | | | | | | | | | | | | [ALG735] INDEXEDNLJOIN< AND[ :n_regionkey == :r_regionkey :r_name == 1 ] > Cost = 8.08682
+| | | | | | | | | | | | | | | | | | | | [EQCLASS5][PLANGRP35] UseCost = 0.0022 Plan Cost = 0.0022 #Tuples = 5 #Blocks = 1 MARKED BUILTIN
+| | | | | | | | | | | | | | | | | | | | | [ALG48] RELSCAN< region > Cost = 0.0022
+| | | | | | | | | | | | | | | | | | | | [EQCLASS77][PLANGRP157] UseCost = 3.7466 Plan Cost = 17.4157 #Tuples = 80001 #Blocks = 1703
+| | | | | | | | | | | | | | | | | | | | | [ALG641] INDEXEDNLJOIN< :s_suppkey == :ps_suppkey > Cost = 8.34393
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS31][PLANGRP78] UseCost = 0.0308 Plan Cost = 0.271815 #Tuples = 1000 #Blocks = 14
+| | | | | | | | | | | | | | | | | | | | | | | [ENF196] INDEX< supplier:s_suppkey > Cost = 0.0589474
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS31][PLANGRP79] UseCost = 0.0308 Plan Cost = 0.212868 #Tuples = 1000 #Blocks = 14
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG194] INDEXEDNLJOIN< :s_nationkey == :n_nationkey > Cost = 0.102868
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS3][PLANGRP58] UseCost = 0.0044 Plan Cost = 0.0044 #Tuples = 25 #Blocks = 2 MARKED BUILTIN
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG109] RELSCAN< nation > Cost = 0.0044
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1][PLANGRP24] UseCost = 0.11 Plan Cost = 0.11 #Tuples = 1000 #Blocks = 50 MARKED BUILTIN
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG23] RELSCAN< supplier > Cost = 0.11
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS0][PLANGRP119] UseCost = 8.8 Plan Cost = 8.8 #Tuples = 80000 #Blocks = 4000 MARKED BUILTIN
+| | | | | | | | | | | | | | | | | | | | | | | [ALG418] RELSCAN< partsupp > Cost = 8.8
+> AND[ :p_partkey == :ps_partkey :p_size == 10 ] ] > Cost = 450.743
+| | | | [EQCLASS45][PLANGRP167] UseCost = 0.9526 Plan Cost = 27.3257 #Tuples = 16001 #Blocks = 433 MARKED SHARED
+| | | | | [ENF741] INDEX< partsupp:ps_partkey > Cost = 1.82316
+| | | | | | [EQCLASS45][PLANGRP168] UseCost = 0.9526 Plan Cost = 25.5026 #Tuples = 16001 #Blocks = 433
+| | | | | | | [ALG735] INDEXEDNLJOIN< AND[ :n_regionkey == :r_regionkey :r_name == 1 ] > Cost = 8.08682
+| | | | | | | | [EQCLASS5][PLANGRP35] UseCost = 0.0022 Plan Cost = 0.0022 #Tuples = 5 #Blocks = 1 MARKED BUILTIN
+| | | | | | | | | [ALG48] RELSCAN< region > Cost = 0.0022
+| | | | | | | | [EQCLASS77][PLANGRP157] UseCost = 3.7466 Plan Cost = 17.4157 #Tuples = 80001 #Blocks = 1703
+| | | | | | | | | [ALG641] INDEXEDNLJOIN< :s_suppkey == :ps_suppkey > Cost = 8.34393
+| | | | | | | | | | [EQCLASS31][PLANGRP78] UseCost = 0.0308 Plan Cost = 0.271815 #Tuples = 1000 #Blocks = 14
+| | | | | | | | | | | [ENF196] INDEX< supplier:s_suppkey > Cost = 0.0589474
+| | | | | | | | | | | | [EQCLASS31][PLANGRP79] UseCost = 0.0308 Plan Cost = 0.212868 #Tuples = 1000 #Blocks = 14
+| | | | | | | | | | | | | [ALG194] INDEXEDNLJOIN< :s_nationkey == :n_nationkey > Cost = 0.102868
+| | | | | | | | | | | | | | [EQCLASS3][PLANGRP58] UseCost = 0.0044 Plan Cost = 0.0044 #Tuples = 25 #Blocks = 2 MARKED BUILTIN
+| | | | | | | | | | | | | | | [ALG109] RELSCAN< nation > Cost = 0.0044
+| | | | | | | | | | | | | | [EQCLASS1][PLANGRP24] UseCost = 0.11 Plan Cost = 0.11 #Tuples = 1000 #Blocks = 50 MARKED BUILTIN
+| | | | | | | | | | | | | | | [ALG23] RELSCAN< supplier > Cost = 0.11
+| | | | | | | | | | [EQCLASS0][PLANGRP119] UseCost = 8.8 Plan Cost = 8.8 #Tuples = 80000 #Blocks = 4000 MARKED BUILTIN
+| | | | | | | | | | | [ALG418] RELSCAN< partsupp > Cost = 8.8
+| | | | [EQCLASS9][PLANGRP228] UseCost = 1.76 Plan Cost = 1.76 #Tuples = 20000 #Blocks = 800 BUILTIN
+| | | | | [ALG1146] RELSCAN< part > Cost = 1.76
+
+

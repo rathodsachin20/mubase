@@ -1,0 +1,26 @@
+
+eiotest=# explain select * from bidstab1 bt1, bidstab1 bt2 where bt1.year=bt2.year and bt1.make=bt2.make order by bt1.make;
+                                     QUERY PLAN
+-------------------------------------------------------------------------------------
+ Merge Join  (cost=113193.28..700114693.28 rows=40000000000 width=240)
+   Merge Cond: (("outer".make = "inner".make) AND ("outer"."year" = "inner"."year"))
+   ->  Sort  (cost=56596.64..57096.64 rows=200000 width=120)
+         Sort Key: bt1.make, bt1."year"
+         ->  Seq Scan on bidstab1 bt1  (cost=0.00..5847.00 rows=200000 width=120)
+   ->  Sort  (cost=56596.64..57096.64 rows=200000 width=120)
+         Sort Key: bt2.make, bt2."year"
+         ->  Seq Scan on bidstab1 bt2  (cost=0.00..5847.00 rows=200000 width=120)
+(8 rows)
+ 
+eiotest=# explain select * from bidstab1 bt1, bidstab1 bt2 where bt1.year=bt2.year and bt1.make=bt2.make order by bt1.year;
+                                           QUERY PLAN
+-------------------------------------------------------------------------------------------------
+ Merge Join  (cost=56596.64..700063584.64 rows=40000000000 width=240)
+   Merge Cond: ("outer"."year" = "inner"."year")
+   Join Filter: ("outer".make = "inner".make)
+   ->  Index Scan using idx_bt1_year on bidstab1 bt1  (cost=0.00..6488.00 rows=200000 width=120)
+   ->  Sort  (cost=56596.64..57096.64 rows=200000 width=120)
+         Sort Key: bt2."year"
+         ->  Seq Scan on bidstab1 bt2  (cost=0.00..5847.00 rows=200000 width=120)
+(7 rows)
+

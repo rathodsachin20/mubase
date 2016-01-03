@@ -1,0 +1,13 @@
+#!/bin/bash 
+for algo in greedy-noprune
+do
+   for inp in compq-1 compq-2 compq-3 compq-4 compq-5 compq-6
+   do	    
+	echo PROC $inp
+	../perfeval  "$algo" < TPCD/$inp
+	echo END
+        echo
+   done
+   echo
+done
+

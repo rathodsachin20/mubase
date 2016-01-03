@@ -1,0 +1,82 @@
+#!/bin/gawk -f
+
+BEGIN {
+    for( k = 1 ; k <= 10 ; k++ ) {
+	for( l = 1 ; l <= k ; l++ ) {
+	    for( x = 0 ; x < 2 ; x++ ) {
+		for( y = 0 ; y < 2 ; y++ ) {
+		    for( z = 0 ; z < 2 ; z++ ) {
+			printf "SELECT MIN(CUSTOMER.C_SELKEY)\n FROM CUSTOMER, ORDERS, LINEITEM, NATION\n WHERE CUSTOMER.C_CUSTKEY = ORDERS.O_CUSTKEY\n AND LINEITEM.L_ORDERKEY = ORDERS.O_ORDERKEY\n AND ORDERS.O_SELKEY = %d \n AND LINEITEM.L_SELKEY = 7\n AND CUSTOMER.C_NATIONKEY = NATION.N_NATIONKEY\n GROUP BY ", k+l > "hier-"k;
+			if( x == 1 ) {
+			    if( y == 1 ) {
+				if( z == 1 ) {
+				    printf "N_CONSTKEY" > "hier-"k;
+				} else {
+				    printf "N_NATIONKEY" > "hier-"k;
+				}
+			    } else {
+				printf "C_CUSTKEY" > "hier-"k;
+				if( z == 1 ) {
+				    printf ", N_NATIONKEY" > "hier-"k;
+				}
+			    } 
+			} else {
+			    printf "O_ORDERKEY" > "hier-"k;
+			    if( y == 1 ) {
+				if( z == 0 ) {
+				    printf ", N_NATIONKEY" > "hier-"k;
+				}
+			    } else {
+				printf ", C_CUSTKEY" > "hier-"k;
+				if( z == 0 ) {
+				    printf ", N_NATIONKEY" > "hier-"k;
+				}
+			    }
+			}
+			printf ";\n\n" > "hier-"k;
+		    }
+		}
+	    }
+	}
+    }
+
+    for( k = 1 ; k <= 10 ; k++ ) {
+	for( l = k ; l >= 1 ; l-- ) {
+	    for( x = 1 ; x >= 0 ; x-- ) {
+		for( y = 1 ; y >= 0 ; y-- ) {
+		    for( z = 1 ; z >= 0  ; z-- ) {
+			printf "SELECT MIN(CUSTOMER.C_SELKEY)\n FROM CUSTOMER, ORDERS, LINEITEM, NATION\n WHERE CUSTOMER.C_CUSTKEY = ORDERS.O_CUSTKEY\n AND LINEITEM.L_ORDERKEY = ORDERS.O_ORDERKEY\n AND ORDERS.O_SELKEY = %d \n AND LINEITEM.L_SELKEY = 7\n AND CUSTOMER.C_NATIONKEY = NATION.N_NATIONKEY\n GROUP BY ", k+l > "rhier-"k;
+			if( x == 1 ) {
+			    if( y == 1 ) {
+				if( z == 1 ) {
+				    printf "N_CONSTKEY" > "rhier-"k;
+				} else {
+				    printf "N_NATIONKEY" > "rhier-"k;
+				}
+			    } else {
+				printf "C_CUSTKEY" > "rhier-"k;
+				if( z == 1 ) {
+				    printf ", N_NATIONKEY" > "rhier-"k;
+				}
+			    } 
+			} else {
+			    printf "O_ORDERKEY" > "rhier-"k;
+			    if( y == 1 ) {
+				if( z == 0 ) {
+				    printf ", N_NATIONKEY" > "rhier-"k;
+				}
+			    } else {
+				printf ", C_CUSTKEY" > "rhier-"k;
+				if( z == 0 ) {
+				    printf ", N_NATIONKEY" > "rhier-"k;
+				}
+			    }
+			}
+			printf ";\n\n" > "rhier-"k;
+		    }
+		}
+	    }
+	}
+    }
+}
+

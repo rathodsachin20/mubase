@@ -1,0 +1,40 @@
+Desperate dirty fix in unification --- do not delete the redundant node
+
+Bug on q15 flipped
+
+GetRelLogProp
+IndexAttrProp : to be corrected; did quick fix for equality predicates
+CostVal_t Join_t::CostLB(void) const
+
+if the plangroup requires a indexorder physical prop, then no algorithms
+need be applied -- taken care of in a ugly way ... need to think of a
+better solution.
+
+schemas not maintained properly
+
+DIRTY FIX: we keep the name of the aggregate attribute as the name
+of the aggregated attribute --- simplifies matters for cascaded
+attributes. We assume only max/min type of aggregations so that the
+maxval/minval/numDistinct properties of the attribute remain the same
+after aggregation.
+
+Best plan for an eq-class, phy-prop is the best among the plans for
+strictly this phy-prop and for any further phy-props. One needs to check
+plans for stronger physical properties unless it is guaranteed that the
+plans for the stronger physical properties are guaranteed to be more
+expensive.
+
+MUST apply algorithm before enforcer for completeness. This is because
+of the comebacks at a node. It is necessary that all the
+algorithm-rooted plans be generated before the comeback which can occur
+only during enforcer-rooted plan generation.
+
+When checking if a physical property is present, check attribute representatives
+
+Selectivities need to be improved --- e.g. for equating two attributes
+
+How to take care of already existing physical properties while computing
+cost of the enforcer
+
+Tidy up the expression hierarchy --- separate boolean expressions from
+arithmetic expressions

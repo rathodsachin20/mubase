@@ -1,0 +1,12 @@
+select pp.pp_no, s.s_status
+from s, sp, pp
+where sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno;
+
+select pp.pp_no, s.s_status
+from s, sp, pp, ss
+where sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and pp.pp_no = ss.ss_no;
+
+select pp.pp_no, s.s_status
+from s, sp, pp, ss, spsp
+where sp.sp_pno = pp.pp_no and s.s_no = sp.sp_sno and pp.pp_no = ss.ss_no
+and ss.ss_no = spsp.spsp_no; 

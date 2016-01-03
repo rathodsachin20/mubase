@@ -1,0 +1,17 @@
+BEGIN {
+    for( j = 1 ; j <= 10 ; j++ ) {
+	k = 2*j;
+	for( i = 0 ; i < k ; i++ ) {
+	    printf "SELECT PSP%d_SELKEY\n", (i)%30 > "stag-"k;
+	    printf "FROM PARTSUBPART%d, PARTSUBPART%d, PARTSUBPART%d, PARTSUBPART%d, PARTSUBPART%d, PARTSUBPART%d, PARTSUBPART%d, PARTSUBPART%d\n", (i)%30, (i+1)%30, (i+2)%30, (i+3)%30, (i+4)%30, (i+5)%30, (i+6)%30, (i+7)%30 > "stag-"k;
+	    printf "WHERE PSP%d_SELKEY < %d", (i)%30, (i+5)*10 > "stag-"k; 
+
+	    for( n = 0 ; n <= 6 ; n++ ) {
+		printf "\n" > "stag-"k;
+		printf "AND PSP%d_SUBPARTKEY = PSP%d_PARTKEY\n", (i+n)%30, (i+n+1)%30 > "stag-"k;
+		printf "AND PSP%d_SELKEY < %d", (i+n+1)%30, (i+5)*10 > "stag-"k;
+	    }
+	    printf ";\n\n" > "stag-"k;
+	}
+    }
+}

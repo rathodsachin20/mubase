@@ -1,0 +1,23 @@
+Optimization Successful: Plan Cost = 1728 Cost Limit = 1728
+
+[EQCLASS6][PLANGRP0][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1728 #Tuples = 1 #Blocks = 1
+| [ALG17][CC=1]PROJECT< :r1c1 :r2c1 :r3c1 > Cost = 0
+| | [EQCLASS5][PLANGRP1][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1728 #Tuples = 1 #Blocks = 1
+| | | [ALG16][CC=-1]MERGEJOIN< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] > Cost = 0.0004
+| | | | [EQCLASS8][PLANGRP16][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | | | [ENF13][CC=1]SORT< r1:r1c3 r3:r3c4 r3:r3c5 > Cost = 0
+| | | | | | [EQCLASS8][PLANGRP15][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | | | | | [ALG12][CC=-1]MERGEJOIN< AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] > Cost = 0.0004
+| | | | | | | | [EQCLASS3][PLANGRP14][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ENF8][CC=1]SORT< r3:r3c1 r3:r3c4 r3:r3c5 > Cost = 488
+| | | | | | | | | | [EQCLASS3][PLANGRP13][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | | | [ALG7][CC=1]RELSCAN< r3 > Cost = 88
+| | | | | | | | [EQCLASS0][PLANGRP17][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ENF10][CC=1]SORT< r1:r1c1 r1:r1c4 r1:r1c5 > Cost = 488
+| | | | | | | | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+| | | | [EQCLASS1][PLANGRP11][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ENF3][CC=1]SORT< r2:r2c3 r2:r2c4 r2:r2c5 > Cost = 488
+| | | | | | [EQCLASS1][PLANGRP10][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 88
+

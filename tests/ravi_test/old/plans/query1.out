@@ -1,0 +1,589 @@
+ALGO Volcano
+Created eq 0
+Adding child logExpr 3 to 0
+Adding parent logExpr 2 to 0
+--- ZERO SELECTIVITY ---
+orderitem:oi_orderid == purchaseorder:o_orderidCreated eq 1
+Adding child logExpr 2 to 1
+Adding parent logExpr 1 to 1
+Created eq 2
+Adding child logExpr 1 to 2
+
+
+------------------
+Added the following Index Order as a built-in index
+Relation Name:purchaseorder
+Attribute Name:o_orderid
+
+
+------------------
+Created eq 3
+Adding child logExpr 5 to 3
+Adding parent logExpr 4 to 3
+Created eq 4
+Adding child logExpr 4 to 4
+Adding parent logExpr 0 to 4
+Created eq 5
+Adding child logExpr 0 to 5
+Initial Query Graph
+[EQCLASS5]
+| [LOGEXP0]PROJECT purchaseorder:o_orderid purchaseorder:o_defaultshipaddr 
+| | [EQCLASS4]
+| | | [LOGEXP4]SELECT< <purchaseorder:o_defaultshipaddr IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT orderitem:oi_shipto 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< orderitem:oi_orderid == purchaseorder:o_orderid >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]orderitem
+> >
+| | | | [EQCLASS3]
+| | | | | [LOGEXP5]purchaseorder
+Cost Limit = 1000
+=========== Calling ExpandDAG =============
+
+Expanding SubDAG for eq 5
+
+Expanding SubDAG for eq 4
+
+Expanding SubDAG for eq 3
+
+Expanding logexpr 5 eqclass = 3
+
+
+[EQCLASS3]
+| [LOGEXP5]purchaseorder
+Finished Expanding logexpr 5 eqclass = 3
+
+Finished Expanding SubDAG for eq 3
+
+
+Expanding logexpr 4 eqclass = 4
+
+SelectPushPred_t::Apply Iterating over 3
+SelectPushPred_t::Apply Finished Iterating over 3
+
+Applying Transformation: NestedPredToApplyOp.
+On Select_t node: 4
+
+Nested predicate present in logexpr: 4
+Original Predicate (Before removing nested pred):
+<purchaseorder:o_defaultshipaddr IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT orderitem:oi_shipto 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< orderitem:oi_orderid == purchaseorder:o_orderid >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]orderitem
+>
+Inside method NestedPredToApplyOp_t::removeInExpr()
+
+Modified Predicate (After removing nested pred):
+TRUE
+Exracted Nested Predicate: 
+<purchaseorder:o_defaultshipaddr IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT orderitem:oi_shipto 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< orderitem:oi_orderid == purchaseorder:o_orderid >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]orderitem
+>Adding parent logExpr 6 to 3
+Adding parent logExpr 6 to 2
+Adding child logExpr 6 to 4
+
+ID of the new Apply_t: 6
+
+EQ node for the new Apply_t : 4
+
+NestedPredToApplyOp_t::Apply Finished
+
+[EQCLASS4]
+| [LOGEXP4]SELECT< <purchaseorder:o_defaultshipaddr IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT orderitem:oi_shipto 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< orderitem:oi_orderid == purchaseorder:o_orderid >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]orderitem
+> >
+| | [EQCLASS3]
+| | | [LOGEXP5]purchaseorder
+| [LOGEXP6]APPLY< <purchaseorder:o_defaultshipaddr IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT orderitem:oi_shipto 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< orderitem:oi_orderid == purchaseorder:o_orderid >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]orderitem
+> >
+| | [EQCLASS3]
+| | | [LOGEXP5]purchaseorder
+| | [EQCLASS2]
+| | | [LOGEXP1]PROJECT orderitem:oi_shipto 
+| | | | [EQCLASS1]
+| | | | | [LOGEXP2]SELECT< orderitem:oi_orderid == purchaseorder:o_orderid >
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP3]orderitem
+Finished Expanding logexpr 4 eqclass = 4
+
+
+Expanding SubDAG for eq 2
+
+Expanding SubDAG for eq 1
+
+Expanding SubDAG for eq 0
+
+Expanding logexpr 3 eqclass = 0
+
+
+[EQCLASS0]
+| [LOGEXP3]orderitem
+Finished Expanding logexpr 3 eqclass = 0
+
+Finished Expanding SubDAG for eq 0
+
+
+Expanding logexpr 2 eqclass = 1
+
+SelectPushPred_t::Apply Iterating over 0
+SelectPushPred_t::Apply Finished Iterating over 0
+
+Applying Transformation: NestedPredToApplyOp.
+On Select_t node: 2
+
+No nested predicate in logexpr: 2
+
+[EQCLASS1]
+| [LOGEXP2]SELECT< orderitem:oi_orderid == purchaseorder:o_orderid >
+| | [EQCLASS0]
+| | | [LOGEXP3]orderitem
+Finished Expanding logexpr 2 eqclass = 1
+
+Finished Expanding SubDAG for eq 1
+
+
+Expanding logexpr 1 eqclass = 2
+
+
+[EQCLASS2]
+| [LOGEXP1]PROJECT orderitem:oi_shipto 
+| | [EQCLASS1]
+| | | [LOGEXP2]SELECT< orderitem:oi_orderid == purchaseorder:o_orderid >
+| | | | [EQCLASS0]
+| | | | | [LOGEXP3]orderitem
+Finished Expanding logexpr 1 eqclass = 2
+
+Finished Expanding SubDAG for eq 2
+
+
+Expanding logexpr 6 eqclass = 4
+
+
+[EQCLASS4]
+| [LOGEXP4]SELECT< <purchaseorder:o_defaultshipaddr IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT orderitem:oi_shipto 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< orderitem:oi_orderid == purchaseorder:o_orderid >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]orderitem
+> >
+| | [EQCLASS3]
+| | | [LOGEXP5]purchaseorder
+| [LOGEXP6]APPLY< <purchaseorder:o_defaultshipaddr IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT orderitem:oi_shipto 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< orderitem:oi_orderid == purchaseorder:o_orderid >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]orderitem
+> >
+| | [EQCLASS3]
+| | | [LOGEXP5]purchaseorder
+| | [EQCLASS2]
+| | | [LOGEXP1]PROJECT orderitem:oi_shipto 
+| | | | [EQCLASS1]
+| | | | | [LOGEXP2]SELECT< orderitem:oi_orderid == purchaseorder:o_orderid >
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP3]orderitem
+Finished Expanding logexpr 6 eqclass = 4
+
+Finished Expanding SubDAG for eq 4
+
+
+Expanding logexpr 0 eqclass = 5
+
+
+[EQCLASS5]
+| [LOGEXP0]PROJECT purchaseorder:o_orderid purchaseorder:o_defaultshipaddr 
+| | [EQCLASS4]
+| | | [LOGEXP4]SELECT< <purchaseorder:o_defaultshipaddr IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT orderitem:oi_shipto 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< orderitem:oi_orderid == purchaseorder:o_orderid >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]orderitem
+> >
+| | | | [EQCLASS3]
+| | | | | [LOGEXP5]purchaseorder
+| | | [LOGEXP6]APPLY< <purchaseorder:o_defaultshipaddr IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT orderitem:oi_shipto 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< orderitem:oi_orderid == purchaseorder:o_orderid >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]orderitem
+> >
+| | | | [EQCLASS3]
+| | | | | [LOGEXP5]purchaseorder
+| | | | [EQCLASS2]
+| | | | | [LOGEXP1]PROJECT orderitem:oi_shipto 
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP2]SELECT< orderitem:oi_orderid == purchaseorder:o_orderid >
+| | | | | | | | [EQCLASS0]
+| | | | | | | | | [LOGEXP3]orderitem
+Finished Expanding logexpr 0 eqclass = 5
+
+Finished Expanding SubDAG for eq 5
+
+=========== Done ExpandDAG =============
+=========== Aliase Table =============
+Alias Table
+======== End of Aliase Table =========
+=========== Calling SetOuterVarLogProp =============
+Setting parameter logical props for Eq = 5
+Setting outerVarLogProp for Op = 0
+Setting parameter logical props for Eq = 4
+Setting outerVarLogProp for Op = 4
+Setting parameter logical props for Eq = 3
+Setting outerVarLogProp for Op = 5
+Setting outerVarLogProp for Op = 5 Done
+Setting paramLogProp for Eq = 3 Done
+Setting outerVarLogProp for Op = 4 Done
+Setting parameter logical props for Eq = 2
+Setting outerVarLogProp for Op = 1
+Setting parameter logical props for Eq = 1
+Setting outerVarLogProp for Op = 2
+Setting parameter logical props for Eq = 0
+Setting outerVarLogProp for Op = 3
+Setting outerVarLogProp for Op = 3 Done
+Setting paramLogProp for Eq = 0 Done
+Setting outerVarLogProp for Op = 2 Done
+Setting paramLogProp for Eq = 1 Done
+Setting outerVarLogProp for Op = 1 Done
+Setting paramLogProp for Eq = 2 Done
+Setting outerVarLogProp for Op = 6
+Setting outerVarLogProp for Op = 6 Done
+Setting paramLogProp for Eq = 4 Done
+Setting outerVarLogProp for Op = 0 Done
+Setting paramLogProp for Eq = 5 Done
+=========== Done SetOuterVarLogProp =============
+Expanded LQDAG -- Debug Print
+<EQCLASS id="5" isCorrelated="false">
+  <LOGEXP id="0" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg="purchaseorder:o_orderid"/>
+<RelArgRef relarg="purchaseorder:o_defaultshipaddr"/>
+</PROJ_EXPRS>
+    <EQCLASS id="4" isCorrelated="false">
+      <LOGEXP id="4" op="SELECT">
+<INEXPR>
+<LHS>
+purchaseorder:o_defaultshipaddr</LHS>
+<RHS>
+                    <EQCLASS id="2" isCorrelated="true">
+<OuterVariables>
+<Attr relname="purchaseorder" attrname="o_orderid"/>
+</OuterVariables>
+                      <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg="orderitem:oi_shipto"/>
+</PROJ_EXPRS>
+                        <EQCLASS id="1" isCorrelated="true">
+<OuterVariables>
+<Attr relname="purchaseorder" attrname="o_orderid"/>
+</OuterVariables>
+                          <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="orderitem:oi_orderid"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="purchaseorder:o_orderid"/>
+</RHS>
+</EQEQ>
+                            <EQCLASS id="0" isCorrelated="false">
+               <LOGEXP id="3" op="orderitem">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</RHS>
+</INEXPR>
+        <EQCLASS id="3" isCorrelated="false">
+     <LOGEXP id="5" op="purchaseorder">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="6" op="APPLY"> 
+<INEXPR>
+<LHS>
+purchaseorder:o_defaultshipaddr</LHS>
+<RHS>
+                    <EQCLASS id="2" isCorrelated="true">
+<OuterVariables>
+<Attr relname="purchaseorder" attrname="o_orderid"/>
+</OuterVariables>
+                      <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg="orderitem:oi_shipto"/>
+</PROJ_EXPRS>
+                        <EQCLASS id="1" isCorrelated="true">
+<OuterVariables>
+<Attr relname="purchaseorder" attrname="o_orderid"/>
+</OuterVariables>
+                          <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="orderitem:oi_orderid"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="purchaseorder:o_orderid"/>
+</RHS>
+</EQEQ>
+                            <EQCLASS id="0" isCorrelated="false">
+               <LOGEXP id="3" op="orderitem">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</RHS>
+</INEXPR>
+        <EQCLASS id="3" isCorrelated="false">
+     <LOGEXP id="5" op="purchaseorder">
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="2" isCorrelated="true">
+<OuterVariables>
+<Attr relname="purchaseorder" attrname="o_orderid"/>
+</OuterVariables>
+          <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg="orderitem:oi_shipto"/>
+</PROJ_EXPRS>
+            <EQCLASS id="1" isCorrelated="true">
+<OuterVariables>
+<Attr relname="purchaseorder" attrname="o_orderid"/>
+</OuterVariables>
+              <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="orderitem:oi_orderid"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="purchaseorder:o_orderid"/>
+</RHS>
+</EQEQ>
+                <EQCLASS id="0" isCorrelated="false">
+         <LOGEXP id="3" op="orderitem">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+End of Expanded LQDAG -- Debug Print
+Calling GetInteresting Order -- Debug Print
+Getting interesting props for Eq = 5
+Getting interesting props for Op = 0
+Getting interesting props for Eq = 4
+Getting interesting props for Op = 4
+Getting interesting props for Eq = 3
+Returning empty interesting orders for Eq 3
+DEBUG: In Expr->GetInterestingOrders()
+DEBUG: Number of outervars = 0
+Constructed interesting orders for Eq:4< >DEBUG: Returning from Expre->GetInterestingOrders()
+Getting interesting props for Apply Op = 6
+Getting interesting props for Eq = 3
+Returning empty interesting orders for Eq 3
+Getting interesting props for Eq = 2
+Getting interesting props for Op = 1
+Getting interesting props for Eq = 1
+Getting interesting props for Op = 2
+Getting interesting props for Eq = 0
+Returning empty interesting orders for Eq 0
+DEBUG: In Expr->GetInterestingOrders()
+DEBUG: Number of outervars = 1
+Constructed interesting orders for Eq:1< purchaseorder:o_orderid >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 1:
+< purchaseorder:o_orderid >Returning: Interesting orders for Eq 2:
+< purchaseorder:o_orderid >Returning: Interesting orders for Eq 4:
+< >Returning: Interesting orders for Eq 5:
+< >GetInterestingOrders... Success!
+< >LDAGUSR 10
+LDAGSYS 0
+Applying logical subsumption at SubDAG for eq 5
+Applying logical subsumption at SubDAG for eq 4
+Applying logical subsumption at SubDAG for eq 3
+Applying logical subsumption at SubDAG for eq 3
+Finished Applying logical subsumption at SubDAG for eq 3
+Finished Applying logical subsumption at SubDAG for eq 3
+
+Applying logical subsumption at SubDAG for eq 2
+Applying logical subsumption at SubDAG for eq 1
+Applying logical subsumption at SubDAG for eq 0
+Applying logical subsumption at SubDAG for eq 0
+Finished Applying logical subsumption at SubDAG for eq 0
+Finished Applying logical subsumption at SubDAG for eq 0
+
+Applying logical subsumption at SubDAG for eq 1
+Finished Applying logical subsumption at SubDAG for eq 1
+Finished Applying logical subsumption at SubDAG for eq 1
+
+Applying logical subsumption at SubDAG for eq 2
+Finished Applying logical subsumption at SubDAG for eq 2
+Finished Applying logical subsumption at SubDAG for eq 2
+
+Applying logical subsumption at SubDAG for eq 4
+Finished Applying logical subsumption at SubDAG for eq 4
+Finished Applying logical subsumption at SubDAG for eq 4
+
+Applying logical subsumption at SubDAG for eq 5
+Finished Applying logical subsumption at SubDAG for eq 5
+Finished Applying logical subsumption at SubDAG for eq 5
+
+Optimizing Eq: 5
+FindBestPlan Eq: 5
+Volcano_t::FindBestAlgPlan Iterating over 5 for PlanGroup = 0
+Eq = 5 PlanGroup = 0 LogExpr = 0
+FindBestPlan Eq: 4
+Volcano_t::FindBestAlgPlan Iterating over 4 for PlanGroup = 1
+Eq = 4 PlanGroup = 1 LogExpr = 4
+NumDistinct = 150000
+=========== Calling ExpandDAG =============
+=========== Done ExpandDAG =============
+=========== Aliase Table =============
+Alias Table
+======== End of Aliase Table =========
+=========== Calling SetOuterVarLogProp =============
+=========== Done SetOuterVarLogProp =============
+Expanded LQDAG -- Debug Print
+<EQCLASS id="2" isCorrelated="true">
+<OuterVariables>
+<Attr relname="purchaseorder" attrname="o_orderid"/>
+</OuterVariables>
+  <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg="orderitem:oi_shipto"/>
+</PROJ_EXPRS>
+    <EQCLASS id="1" isCorrelated="true">
+<OuterVariables>
+<Attr relname="purchaseorder" attrname="o_orderid"/>
+</OuterVariables>
+      <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="orderitem:oi_orderid"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="purchaseorder:o_orderid"/>
+</RHS>
+</EQEQ>
+        <EQCLASS id="0" isCorrelated="false">
+     <LOGEXP id="3" op="orderitem">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+End of Expanded LQDAG -- Debug Print
+Calling GetInteresting Order -- Debug Print
+Getting interesting props for Eq = 2
+Getting interesting props for Op = 1
+Getting interesting props for Eq = 1
+Getting interesting props for Op = 2
+Getting interesting props for Eq = 0
+Returning empty interesting orders for Eq 0
+DEBUG: In Expr->GetInterestingOrders()
+DEBUG: Number of outervars = 1
+Constructed interesting orders for Eq:1< purchaseorder:o_orderid >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 1:
+< purchaseorder:o_orderid >Returning: Interesting orders for Eq 2:
+< purchaseorder:o_orderid >GetInterestingOrders... Success!
+< purchaseorder:o_orderid >LDAGUSR 0
+LDAGSYS 0
+Optimizing Eq: 2
+FindBestPlan Eq: 2
+Volcano_t::FindBestAlgPlan Iterating over 2 for PlanGroup = 2
+Eq = 2 PlanGroup = 2 LogExpr = 1
+FindBestPlan Eq: 1
+Volcano_t::FindBestAlgPlan Iterating over 1 for PlanGroup = 3
+Eq = 1 PlanGroup = 3 LogExpr = 2
+Volcano_t::FindBestAlgPlan Finished Iterating over 1 for PlanGroup = 3
+Finished FindBestPlan Eq: 1
+Volcano_t::FindBestAlgPlan Finished Iterating over 2 for PlanGroup = 2
+Finished FindBestPlan Eq: 2
+Done Optimizing Eq: 2
+Nested Query: Eq = 2 CostLimit = 0.00665452 Best Plan Cost = 0.00665452
+Eq = 4 PlanGroup = 1 LogExpr = 6
+Volcano_t::FindBestAlgPlan Finished Iterating over 4 for PlanGroup = 1
+Finished FindBestPlan Eq: 4
+Volcano_t::FindBestAlgPlan Finished Iterating over 5 for PlanGroup = 0
+Finished FindBestPlan Eq: 5
+Done Optimizing Eq: 5
+Optimization Failed for Limit 1000
+
+Expression DAG:
+[EQCLASS5]
+| [LOGEXP0]PROJECT purchaseorder:o_orderid purchaseorder:o_defaultshipaddr 
+| | [EQCLASS4]
+| | | [LOGEXP4]SELECT< <purchaseorder:o_defaultshipaddr IN
+| | | | | | | | | | [EQCLASS2] CORRELATED
+| | | | | | | | | | | [LOGEXP1]PROJECT orderitem:oi_shipto 
+| | | | | | | | | | | | [EQCLASS1] CORRELATED
+| | | | | | | | | | | | | [LOGEXP2]SELECT< orderitem:oi_orderid == purchaseorder:o_orderid >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]orderitem
+> >
+| | | | [EQCLASS3]
+| | | | | [LOGEXP5]purchaseorder
+| | | [LOGEXP6]APPLY< <purchaseorder:o_defaultshipaddr IN
+| | | | | | | | | | [EQCLASS2] CORRELATED
+| | | | | | | | | | | [LOGEXP1]PROJECT orderitem:oi_shipto 
+| | | | | | | | | | | | [EQCLASS1] CORRELATED
+| | | | | | | | | | | | | [LOGEXP2]SELECT< orderitem:oi_orderid == purchaseorder:o_orderid >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]orderitem
+> >
+| | | | [EQCLASS3]
+| | | | | [LOGEXP5]purchaseorder
+| | | | [EQCLASS2] CORRELATED
+| | | | | [LOGEXP1]PROJECT orderitem:oi_shipto 
+| | | | | | [EQCLASS1] CORRELATED
+| | | | | | | [LOGEXP2]SELECT< orderitem:oi_orderid == purchaseorder:o_orderid >
+| | | | | | | | [EQCLASS0]
+| | | | | | | | | [LOGEXP3]orderitem
+
+Deleted eq 5
+Deleting parent logExpr 0 from 4
+Deleted eq 4
+Deleting parent logExpr 4 from 3
+Deleting parent logExpr 6 from 3
+Deleted eq 3
+Deleting parent logExpr 6 from 2
+Deleted eq 2
+Deleting parent logExpr 1 from 1
+Deleted eq 1
+Deleting parent logExpr 2 from 0
+Deleted eq 0

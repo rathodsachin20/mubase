@@ -1,0 +1,39 @@
+ALGO Greedy
+Threshold = 0.03
+LDAGUSR 400
+LDAGSYS 20
+PDAGUSR 2150
+PDAGSYS 100
+INITCOST 166446
+SHARCOUNT 667
+Sharing 3112 Benefit = 7155.19
+Sharing 2440 Benefit = 7146.12
+Sharing 1768 Benefit = 7133.06
+Sharing 1096 Benefit = 7125.67
+Sharing 424 Benefit = 7109.89
+Sharing 4330 Benefit = 5611.36
+Sharing 2888 Benefit = 5322.73
+Sharing 3560 Benefit = 5315.41
+Sharing 2216 Benefit = 5299.87
+Sharing 200 Benefit = 5279.49
+Sharing 1544 Benefit = 5277.82
+Sharing 872 Benefit = 5256.62
+Sharing 4119 Benefit = 3511.59
+Sharing 861 Benefit = 3420.66
+Sharing 1533 Benefit = 3418.75
+Sharing 2205 Benefit = 3416.84
+Sharing 2877 Benefit = 3414.92
+Sharing 548 Benefit = 3362.48
+Sharing 772 Benefit = 2486.39
+BESTCOST 70380.8
+NUMPROPS 850
+PROPCOUNT 3009848
+RECOMP 851
+NUMMAT 19
+COST 70380.8
+USRT 64960
+SYST 180
+PHYOPNODES 26769
+PHYEQNODES 4514
+LOGOPNODES 4043
+EQUIVNODES 763

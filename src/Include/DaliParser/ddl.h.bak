@@ -1,0 +1,401 @@
+#ifndef DDL_H
+#define DDL_H
+
+#include <assert.h>
+
+class Memo_t;
+
+class InsertTable : public NonRelExpr 
+{
+	char relName[DALIMAXRELNAME];
+	Tuple *argList;
+	// $argList$ could be NULL
+	RelExpr *tableExpr;
+	
+	void  Constructor(const char *relName, Tuple *argList,
+			       RelExpr *tableExpr);
+  public:
+	static InsertTable *create(const char *relName, Tuple *argList,
+			       RelExpr *tableExpr);
+	bool print(FILE *file)
+	{
+		fprintf(file, " INSERT INTO %s ", relName); 
+		tableExpr->print(file);
+		fprintf(file, "\n");
+		return true;
+	}
+//	bool typeCheck(TransID &);
+	bool rewrite();
+/*	bool optimize(TransID &tid_a)
+	{
+		return tableExpr->optimize(tid_a);
+	}
+	bool evaluate(TransID &);
+*/
+};
+
+class DeleteTable : public NonRelExpr 
+	/* FIX: It might be cleaner to derive $DeleteTable$ both from
+	   $NonRelExpr$ and $RelScanExpr$. That way most of the member 
+	   can be inherited from $RelScanExpr$. */
+{
+	RelScanExpr *relScan;
+
+	void Constructor(const char *relName, Expr *wherecond);
+  public:
+	static DeleteTable *create(const char *relName, Expr *wherecond = NULL);
+	bool print(FILE *out);
+/*	bool typeCheck(TransID &tid_a) 
+	{
+		if(((RelExpr *)relScan)->typeCheck(0, tid_a) < 0) 
+			return false;
+		resultInfo = ((RelExpr *)relScan)->resultInfo;
+		return true;
+	}
+*/
+	bool rewrite()
+	{
+		return ((RelExpr *)relScan)->rewrite(); 
+	}
+/*	bool optimize(TransID &tid_a)
+	{
+		return ((RelExpr *)relScan)->optimize(tid_a); 
+	}
+	bool evaluate(TransID &);
+*/
+};
+
+class UpdateExpr
+/* This class is not a sub-class of $Expr$ because it really should not be */
+{
+	bool typeCheck(TupleDef &resultInfo);
+		/* $typeCheck$ assumes that $rhs$ does not have any $LocalArgRef$s
+		   and $attribute$ is a $RelArgRef$. $typeCheck$ dis-ambiguates
+		   $attribute$ and $rhs$ if necessary. */
+	bool rewrite(TupleDef &resultInfo, ArgSource source_a);
+		// $rewrite$ assumes that $typeCheck$ has been performed.
+	friend class UpdateTable;
+  public:
+	Expr *attribute;
+	Expr *rhs;
+	void print(FILE *out_a);
+};
+typedef List<UpdateExpr> UpdateExprList;
+
+class UpdateTable : public NonRelExpr 
+{
+	RelScanExpr *relScan;
+	struct
+	{
+		int numUpdateExprs;
+		UpdateExpr *updateExprs;
+	} attrValList;
+
+	void Constructor(const char *relName, UpdateExprList *avl,
+			       Expr *wherecond);
+  public:
+	static UpdateTable *create(const char *relName, UpdateExprList *avl,
+			       Expr *wherecond);
+	bool print(FILE *out);
+//	bool typeCheck(TransID &);
+	bool rewrite();
+/*	bool optimize(TransID &tid_a)
+	{
+		return ((RelExpr *)relScan)->optimize(tid_a); 
+	}
+	bool evaluate(TransID &);
+*/
+};
+
+class CreateDataBase : public NonRelExpr
+{
+  	void Constructor()	{ NonRelExpr::Constructor(D_CREATE_DB);}
+  public:
+	static CreateDataBase *create()
+	{
+		CreateDataBase *retVal = (CreateDataBase *)
+		  new char[sizeof(CreateDataBase)];
+		retVal->Constructor();
+		return retVal;
+	}
+	bool print(FILE *out)	{ fprintf(out, "CREATE DATABASE\n"); return true;}
+//	bool typeCheck(TransID &)	{return true;}
+	bool rewrite()	{return true;}
+//	bool optimize(TransID &)	{return true;}
+/*	bool evaluate(TransID &)
+	{
+		DALI_R_ASSERT(DaliRelMgr::init() >= 0);
+		fprintf(stdout, "Created Data Base in statement no:%d\n", stmtCount);
+		return true;
+	}
+*/
+};
+
+class CreateTableSpace : public NonRelExpr
+{
+	char *name;
+	int size;
+
+  	void Constructor(char *name_a, int size_a)
+	{
+		NonRelExpr::Constructor(D_CREATE_TS);
+		name = name_a;
+		size = size_a;
+	}
+  public:
+	static CreateTableSpace *create(char *name_a, int size_a)
+	{
+		CreateTableSpace *retVal = (CreateTableSpace *)
+		  new char[sizeof(CreateTableSpace)];
+		retVal->Constructor(name_a, size_a);
+		return retVal;
+	}
+	bool print(FILE *out)
+	{ fprintf(out, "CREATE TABLE_SPACE name\n"); return true;}
+//	bool typeCheck(TransID &)	{return true;}
+	bool rewrite()	{return true;}
+//	bool optimize(TransID &)	{return true;}
+//	bool evaluate(TransID &);
+};
+
+class DropDataBase : public NonRelExpr
+{
+  	void Constructor()	{ NonRelExpr::Constructor(D_DROP_DB);}
+  public:
+	static DropDataBase *create()
+	{
+		DropDataBase *retVal = (DropDataBase *)
+		  new char[sizeof(DropDataBase)];
+		retVal->Constructor();
+		return retVal;
+	}
+	bool print(FILE *out)
+	{ fprintf(out, "DROP DATABASE\n"); return true;}
+//	bool typeCheck(TransID &)	{return true;}
+	bool rewrite()	{return true;}
+//	bool optimize(TransID &)	{return true;}
+//	bool evaluate(TransID &);
+};
+
+class DropTableSpace : public NonRelExpr
+{
+	char *name;
+
+  	void Constructor(char *name_a)
+	{
+		NonRelExpr::Constructor(D_DROP_TS);
+		name = name_a;
+	}
+  public:
+	static DropTableSpace *create(char *name_a)
+	{
+		DropTableSpace *retVal = (DropTableSpace *)
+		  new char[sizeof(DropTableSpace)];
+		retVal->Constructor(name_a);
+		return retVal;
+	}
+	bool print(FILE *out)
+	{ fprintf(out, "DROP TABLE-SPACE:%s\n", name); return true;}
+//	bool typeCheck(TransID &)	{return true;}
+	bool rewrite()	{return true;}
+//	bool optimize(TransID &)	{return true;}
+//	bool evaluate(TransID &);
+};
+
+class DropTable : public NonRelExpr
+{
+	char *name;
+
+  	void Constructor(char *name_a)
+	{
+		NonRelExpr::Constructor(D_DROP_TABLE);
+		name = name_a;
+	}
+  public:
+	static DropTable *create(char *name_a)
+	{
+		DropTable *retVal = (DropTable *)
+		  new char[sizeof(DropTable)];
+		retVal->Constructor(name_a);
+		return retVal;
+	}
+	bool print(FILE *out)
+	{ fprintf(out, "DROP TABLE:%s\n", name); return true;}
+//	bool typeCheck(TransID &)	{return true;}
+	bool rewrite()	{return true;}
+//	bool optimize(TransID &)	{return true;}
+/*	bool evaluate(TransID &tid_a)
+	{
+		DALI_R_ASSERT(DaliRelMgr::deleteTable(tid_a, name) >= 0);
+		fprintf(stdout, "Dropped table:%s in statement no:%d\n", 
+		  name, stmtCount);
+		return true;
+	}
+*/
+};
+
+class DropIndex : public NonRelExpr
+{
+	char *tableName, *indexName;
+
+  	void Constructor(char *indexName_a, char *tableName_a)
+	{
+		NonRelExpr::Constructor(D_DROP_INDEX);
+		indexName = indexName_a;
+		tableName = tableName_a;
+	}
+  public:
+	static DropIndex *create(char *indexName_a, char *tableName_a)
+	{
+		DropIndex *retVal = (DropIndex *)
+		  new char[sizeof(DropIndex)];
+		retVal->Constructor(indexName_a, tableName_a);
+		return retVal;
+	}
+	bool print(FILE *out)
+	{
+		fprintf(out, "DROP INDEX:%s on TABLE:%s\n",
+		  indexName, tableName);
+		return true;
+	}
+//	bool typeCheck(TransID &)	{return true;}
+	bool rewrite()	{return true;}
+/*
+	bool optimize(TransID &)	{return true;}
+	bool evaluate(TransID &tid_a)
+	{
+		DALI_R_ASSERT(DaliRelMgr::deleteIndex(tid_a, indexName, tableName) 
+		  >= 0);
+		fprintf(stdout, "Dropped index:%s on table:%s in statement no:%d\n", 
+		  indexName, tableName, stmtCount);
+		return true;
+	}
+*/
+};
+
+struct Table_descriptor {
+    char *name;
+//    DaliTableSchema schema;
+    char *dbfile_name; // tablespace
+
+    Table_descriptor(char *name_a) : name(name_a), dbfile_name(0) {}
+    ~Table_descriptor();
+};
+
+struct View_descriptor {
+    char *name;
+    char *sourceName;
+//  DaliTableSchema schema;
+
+    View_descriptor() : name(NULL), sourceName(NULL) {}
+    ~View_descriptor();
+};
+
+
+struct MTM_descriptor {
+    char *name;
+    char *fromTableName;
+//  DaliAttrList fromAttrList;
+    char *toTableName;
+//  DaliAttrList toAttrList;
+    int addPointers;
+    int oneToManyFlag;
+
+    MTM_descriptor();
+    ~MTM_descriptor();
+};
+
+struct RI_descriptor {
+    char *name;
+    char *fromTableName; 
+//    DaliAttrList fromTableList;
+    char *toTableName; 
+//    DaliAttrList toTableList;
+    int cascade_deletes;
+
+    RI_descriptor();
+    ~RI_descriptor();
+};
+
+struct Index_descriptor {
+    char *name;
+    char *tableName;
+//    DaliAttrList attrList;
+//    DaliIndexType type;
+
+    Index_descriptor();
+    ~Index_descriptor();
+};
+
+class MultiTableSchema : public NonRelExpr
+{
+  public:
+    MultiTableSchema()
+		: tableCount(0), tableMax(0), tableList(0), viewCount(0),
+		  viewMax(0), viewList(0), mtmCount(0), mtmMax(0), mtmList(0),
+		  riCount(0), riMax(0), riList(0), indexCount(0), indexMax(0),
+		  indexList(0) { Constructor(D_CREATE_SCHEMA); }
+    ~MultiTableSchema();
+
+    int addTable(Table_descriptor *ntable);
+    int addView(View_descriptor *nview);
+    int addMTM(MTM_descriptor *nmtm);
+    int addRI(RI_descriptor *nri);
+    int addIndex(Index_descriptor *nidx);
+    Equivalence_t* PostOrder(Memo_t& memo)
+    { return NULL; }
+
+	bool print(FILE *file) 
+	{
+		fprintf(file, "BEGIN MULTIPLE SCHEMA\n");
+		for(int i = 0;  i < tableCount; i++) 
+		{
+			Table_descriptor *td = tableList[i];
+			fprintf(file, "TABLE td->name\n");
+//			td->schema.print(file);
+		}
+		for(i = 0;  i < indexCount; i++) 
+		{
+			Index_descriptor *id = indexList[i];
+			fprintf(file, "INDEX id->name on TABLE id->tableName\n");
+		}
+		return true;
+	}
+/*	bool typeCheck(TransID &)
+	{
+		return true;
+		// FIX: Maybe add something to this later
+	}
+	bool optimize(TransID &)
+	{
+		return true;
+	}
+*/
+	bool rewrite()
+	{
+		return true;
+	}
+//	bool evaluate(TransID &tid_a);
+protected:
+    Table_descriptor **tableList;
+    int tableCount;
+    int tableMax;
+
+    View_descriptor **viewList;
+    int viewCount;
+    int viewMax;
+
+    MTM_descriptor **mtmList;
+    int mtmCount;
+    int mtmMax;
+
+    RI_descriptor **riList;
+    int riCount;
+    int riMax;
+
+    Index_descriptor **indexList;
+    int indexCount;
+    int indexMax;
+
+};
+#endif

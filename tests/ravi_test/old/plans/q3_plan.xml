@@ -1,0 +1,695 @@
+ALGO Volcano
+
+
+------------------
+Added the following Index Order as a built-in index
+Relation Name:emp
+Attribute Name:empid
+
+
+------------------
+Created eq 0
+Adding child logExpr 3 to 0
+Adding parent logExpr 2 to 0
+Created eq 1
+Adding child logExpr 2 to 1
+Adding parent logExpr 1 to 1
+Created eq 2
+Adding child logExpr 1 to 2
+Adding parent logExpr 5 to 0
+Deleting parent logExpr 5 from 0
+Adding parent logExpr 4 to 1
+Deleting parent logExpr 4 from 1
+Adding parent logExpr 7 to 0
+Created eq 3
+Adding child logExpr 7 to 3
+Adding parent logExpr 0 to 3
+Created eq 4
+Adding child logExpr 0 to 4
+Initial Query Graph
+[EQCLASS4]
+| [LOGEXP0]PROJECT :empid :ename :sal 
+| | [EQCLASS3]
+| | | [LOGEXP7]SELECT< AND[ <:sal IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT :sal 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]emp
+> <:sal IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT :sal 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]emp
+> ] >
+| | | | [EQCLASS0]
+| | | | | [LOGEXP3]emp
+Cost Limit = 1000
+=========== Calling ExpandDAG =============
+
+Expanding SubDAG for eq 4
+
+Expanding SubDAG for eq 3
+
+Expanding SubDAG for eq 0
+
+Expanding logexpr 3 eqclass = 0
+
+
+[EQCLASS0]
+| [LOGEXP3]emp
+Finished Expanding logexpr 3 eqclass = 0
+
+Finished Expanding SubDAG for eq 0
+
+
+Expanding logexpr 7 eqclass = 3
+
+SelectPushPred_t::Apply Iterating over 0
+SelectPushPred_t::Apply Finished Iterating over 0
+
+Applying Transformation: NestedPredToApplyOp.
+On Select_t node: 7
+
+Nested predicate present in logexpr: 7
+Original Predicate (Before removing nested pred):
+AND[ <:sal IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT :sal 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]emp
+> <:sal IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT :sal 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]emp
+> ]
+Inside method NestedPredToApplyOp_t::removeInExpr()
+
+Inside method NestedPredToApplyOp_t::removeInExpr()
+
+Inside method NestedPredToApplyOp_t::removeInExpr()
+
+Modified Predicate (After removing nested pred):
+AND[ TRUE TRUE ]
+Exracted Nested Predicate: 
+<:sal IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT :sal 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]emp
+>Adding parent logExpr 9 to 0
+Created eq 5
+Adding child logExpr 9 to 5
+
+ID of the new Select_t: 9
+
+EQ node for the new Select_t: 5
+Adding parent logExpr 10 to 5
+Adding parent logExpr 10 to 2
+Adding child logExpr 10 to 3
+
+ID of the new Apply_t: 10
+
+EQ node for the new Apply_t : 3
+
+NestedPredToApplyOp_t::Apply Finished
+
+[EQCLASS3]
+| [LOGEXP7]SELECT< AND[ <:sal IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT :sal 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]emp
+> <:sal IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT :sal 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]emp
+> ] >
+| | [EQCLASS0]
+| | | [LOGEXP3]emp
+| [LOGEXP10]APPLY< <:sal IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT :sal 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]emp
+> >
+| | [EQCLASS5]
+| | | [LOGEXP9]SELECT< AND[ TRUE TRUE ] >
+| | | | [EQCLASS0]
+| | | | | [LOGEXP3]emp
+| | [EQCLASS2]
+| | | [LOGEXP1]PROJECT :sal 
+| | | | [EQCLASS1]
+| | | | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP3]emp
+Finished Expanding logexpr 7 eqclass = 3
+
+
+Expanding SubDAG for eq 5
+
+Expanding logexpr 9 eqclass = 5
+
+SelectPushPred_t::Apply Iterating over 0
+SelectPushPred_t::Apply Finished Iterating over 0
+
+Applying Transformation: NestedPredToApplyOp.
+On Select_t node: 9
+
+No nested predicate in logexpr: 9
+
+[EQCLASS5]
+| [LOGEXP9]SELECT< AND[ TRUE TRUE ] >
+| | [EQCLASS0]
+| | | [LOGEXP3]emp
+Finished Expanding logexpr 9 eqclass = 5
+
+Finished Expanding SubDAG for eq 5
+
+
+Expanding SubDAG for eq 2
+
+Expanding SubDAG for eq 1
+
+Expanding logexpr 2 eqclass = 1
+
+SelectPushPred_t::Apply Iterating over 0
+SelectPushPred_t::Apply Finished Iterating over 0
+
+Applying Transformation: NestedPredToApplyOp.
+On Select_t node: 2
+
+No nested predicate in logexpr: 2
+
+[EQCLASS1]
+| [LOGEXP2]SELECT< :manager == :manager >
+| | [EQCLASS0]
+| | | [LOGEXP3]emp
+Finished Expanding logexpr 2 eqclass = 1
+
+Finished Expanding SubDAG for eq 1
+
+
+Expanding logexpr 1 eqclass = 2
+
+
+[EQCLASS2]
+| [LOGEXP1]PROJECT :sal 
+| | [EQCLASS1]
+| | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | [EQCLASS0]
+| | | | | [LOGEXP3]emp
+Finished Expanding logexpr 1 eqclass = 2
+
+Finished Expanding SubDAG for eq 2
+
+
+Expanding logexpr 10 eqclass = 3
+
+
+[EQCLASS3]
+| [LOGEXP7]SELECT< AND[ <:sal IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT :sal 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]emp
+> <:sal IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT :sal 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]emp
+> ] >
+| | [EQCLASS0]
+| | | [LOGEXP3]emp
+| [LOGEXP10]APPLY< <:sal IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT :sal 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]emp
+> >
+| | [EQCLASS5]
+| | | [LOGEXP9]SELECT< AND[ TRUE TRUE ] >
+| | | | [EQCLASS0]
+| | | | | [LOGEXP3]emp
+| | [EQCLASS2]
+| | | [LOGEXP1]PROJECT :sal 
+| | | | [EQCLASS1]
+| | | | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP3]emp
+Finished Expanding logexpr 10 eqclass = 3
+
+Finished Expanding SubDAG for eq 3
+
+
+Expanding logexpr 0 eqclass = 4
+
+
+[EQCLASS4]
+| [LOGEXP0]PROJECT :empid :ename :sal 
+| | [EQCLASS3]
+| | | [LOGEXP7]SELECT< AND[ <:sal IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT :sal 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]emp
+> <:sal IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT :sal 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]emp
+> ] >
+| | | | [EQCLASS0]
+| | | | | [LOGEXP3]emp
+| | | [LOGEXP10]APPLY< <:sal IN
+| | | | | | | | | | [EQCLASS2]
+| | | | | | | | | | | [LOGEXP1]PROJECT :sal 
+| | | | | | | | | | | | [EQCLASS1]
+| | | | | | | | | | | | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | | | | | | | | | | | [EQCLASS0]
+| | | | | | | | | | | | | | | [LOGEXP3]emp
+> >
+| | | | [EQCLASS5]
+| | | | | [LOGEXP9]SELECT< AND[ TRUE TRUE ] >
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP3]emp
+| | | | [EQCLASS2]
+| | | | | [LOGEXP1]PROJECT :sal 
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP2]SELECT< :manager == :manager >
+| | | | | | | | [EQCLASS0]
+| | | | | | | | | [LOGEXP3]emp
+Finished Expanding logexpr 0 eqclass = 4
+
+Finished Expanding SubDAG for eq 4
+
+=========== Done ExpandDAG =============
+=========== Aliase Table =============
+Alias Table
+======== End of Aliase Table =========
+=========== Calling SetCorrelatedVarsG =============
+Setting correlated attributes for Eq = 4
+Setting correlated attributes for Op = 0
+Setting correlated attributes for Eq = 3
+Setting correlated attributes for Op = 7
+Setting correlated attributes for Eq = 0
+Setting correlated attributes for Op = 3
+Setting correlated attributes for Op = 3 Done
+Setting correlated attributes for Eq = 0 Done
+Setting correlated attributes for Op = 7 Done
+Setting correlated attributes for Eq = 2
+Setting correlated attributes for Op = 1
+Setting correlated attributes for Eq = 1
+Setting correlated attributes for Op = 2
+Setting correlated attributes for Op = 2 Done
+Setting correlated attributes for Eq = 1 Done
+Setting correlated attributes for Op = 1 Done
+Setting correlated attributes for Eq = 2 Done
+Setting correlated attributes for Op = 10
+Setting correlated attributes for Eq = 5
+Setting correlated attributes for Op = 9
+Setting correlated attributes for Op = 9 Done
+Setting correlated attributes for Eq = 5 Done
+Setting correlated attributes for Op = 10 Done
+Setting correlated attributes for Eq = 3 Done
+Setting correlated attributes for Op = 0 Done
+Setting correlated attributes for Eq = 4 Done
+=========== Done SetCorrelatedVars =============
+Expanded LQDAG -- Debug Print
+<EQCLASS id="4" isCorrelated="false">
+  <LOGEXP id="0" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg=":empid"/>
+<RelArgRef relarg=":ename"/>
+<RelArgRef relarg=":sal"/>
+</PROJ_EXPRS>
+    <EQCLASS id="3" isCorrelated="false">
+      <LOGEXP id="7" op="SELECT">
+<AND>
+<LHS>
+<INEXPR>
+<LHS>
+:sal</LHS>
+<RHS>
+                    <EQCLASS id="2" isCorrelated="false">
+                      <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg=":sal"/>
+</PROJ_EXPRS>
+                        <EQCLASS id="1" isCorrelated="false">
+                          <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":manager"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":manager"/>
+</RHS>
+</EQEQ>
+                            <EQCLASS id="0" isCorrelated="false">
+               <LOGEXP id="3" op="emp">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</RHS>
+</INEXPR>
+</LHS>
+<RHS>
+<INEXPR>
+<LHS>
+:sal</LHS>
+<RHS>
+                    <EQCLASS id="2" isCorrelated="false">
+                      <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg=":sal"/>
+</PROJ_EXPRS>
+                        <EQCLASS id="1" isCorrelated="false">
+                          <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":manager"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":manager"/>
+</RHS>
+</EQEQ>
+                            <EQCLASS id="0" isCorrelated="false">
+               <LOGEXP id="3" op="emp">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</RHS>
+</INEXPR>
+</RHS>
+</AND>
+        <EQCLASS id="0" isCorrelated="false">
+     <LOGEXP id="3" op="emp">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="10" op="APPLY"> 
+<INEXPR>
+<LHS>
+:sal</LHS>
+<RHS>
+                    <EQCLASS id="2" isCorrelated="false">
+                      <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg=":sal"/>
+</PROJ_EXPRS>
+                        <EQCLASS id="1" isCorrelated="false">
+                          <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":manager"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":manager"/>
+</RHS>
+</EQEQ>
+                            <EQCLASS id="0" isCorrelated="false">
+               <LOGEXP id="3" op="emp">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</RHS>
+</INEXPR>
+        <EQCLASS id="5" isCorrelated="false">
+          <LOGEXP id="9" op="SELECT">
+<AND>
+<LHS>
+<TRUE/>
+</LHS>
+<RHS>
+<TRUE/>
+</RHS>
+</AND>
+            <EQCLASS id="0" isCorrelated="false">
+       <LOGEXP id="3" op="emp">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="2" isCorrelated="false">
+          <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg=":sal"/>
+</PROJ_EXPRS>
+            <EQCLASS id="1" isCorrelated="false">
+              <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":manager"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":manager"/>
+</RHS>
+</EQEQ>
+                <EQCLASS id="0" isCorrelated="false">
+         <LOGEXP id="3" op="emp">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+End of Expanded LQDAG -- Debug Print
+LDAGUSR 0
+LDAGSYS 0
+Applying logical subsumption at SubDAG for eq 4
+Applying logical subsumption at SubDAG for eq 3
+Applying logical subsumption at SubDAG for eq 0
+Applying logical subsumption at SubDAG for eq 0
+Adding parent logExpr 11 to 0
+Created eq 6
+Created subsuming eq 6
+Adding child logExpr 11 to 6
+Adding parent logExpr 12 to 6
+Adding child logExpr 12 to 5
+Adding parent logExpr 13 to 6
+Adding child logExpr 13 to 1
+Finished Applying logical subsumption at SubDAG for eq 0
+Finished Applying logical subsumption at SubDAG for eq 0
+
+Applying logical subsumption at SubDAG for eq 5
+Applying logical subsumption at SubDAG for eq 5
+Finished Applying logical subsumption at SubDAG for eq 5
+Finished Applying logical subsumption at SubDAG for eq 5
+
+Applying logical subsumption at SubDAG for eq 2
+Applying logical subsumption at SubDAG for eq 1
+Applying logical subsumption at SubDAG for eq 1
+Finished Applying logical subsumption at SubDAG for eq 1
+Finished Applying logical subsumption at SubDAG for eq 1
+
+Applying logical subsumption at SubDAG for eq 2
+Finished Applying logical subsumption at SubDAG for eq 2
+Finished Applying logical subsumption at SubDAG for eq 2
+
+Applying logical subsumption at SubDAG for eq 3
+Finished Applying logical subsumption at SubDAG for eq 3
+Finished Applying logical subsumption at SubDAG for eq 3
+
+Applying logical subsumption at SubDAG for eq 4
+Finished Applying logical subsumption at SubDAG for eq 4
+Finished Applying logical subsumption at SubDAG for eq 4
+
+Optimizing Eq: 4
+FindBestPlan Eq: 4
+Volcano_t::FindBestAlgPlan Iterating over 4 for PlanGroup = 0
+Eq = 4 PlanGroup = 0 LogExpr = 0
+FindBestPlan Eq: 3
+Volcano_t::FindBestAlgPlan Iterating over 3 for PlanGroup = 1
+Eq = 3 PlanGroup = 1 LogExpr = 7
+NumDistinct = 100
+=========== Calling ExpandDAG =============
+=========== Done ExpandDAG =============
+=========== Aliase Table =============
+Alias Table
+======== End of Aliase Table =========
+=========== Calling SetCorrelatedVarsG =============
+=========== Done SetCorrelatedVars =============
+Expanded LQDAG -- Debug Print
+<EQCLASS id="2" isCorrelated="false">
+  <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg=":sal"/>
+</PROJ_EXPRS>
+    <EQCLASS id="1" isCorrelated="false">
+      <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":manager"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":manager"/>
+</RHS>
+</EQEQ>
+        <EQCLASS id="0" isCorrelated="false">
+     <LOGEXP id="3" op="emp">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="13" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":manager"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":manager"/>
+</RHS>
+</EQEQ>
+        <EQCLASS id="6" isCorrelated="false">
+          <LOGEXP id="11" op="SELECT">
+<OR>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":manager"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":manager"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<AND>
+<LHS>
+<TRUE/>
+</LHS>
+<RHS>
+<TRUE/>
+</RHS>
+</AND>
+</RHS>
+</OR>
+            <EQCLASS id="0" isCorrelated="false">
+       <LOGEXP id="3" op="emp">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+End of Expanded LQDAG -- Debug Print
+LDAGUSR 0
+LDAGSYS 0
+Optimizing Eq: 2
+FindBestPlan Eq: 2
+Volcano_t::FindBestAlgPlan Iterating over 2 for PlanGroup = 2
+Eq = 2 PlanGroup = 2 LogExpr = 1
+FindBestPlan Eq: 1
+Volcano_t::FindBestAlgPlan Iterating over 1 for PlanGroup = 3
+Eq = 1 PlanGroup = 3 LogExpr = 2
+FindBestPlan Eq: 0
+Volcano_t::FindBestAlgPlan Iterating over 0 for PlanGroup = 4
+Eq = 0 PlanGroup = 4 LogExpr = 3
+[EQCLASS0][PLANGRP4] UseCost = 0.88 Plan Cost = 0.88 #Tuples = 20000 #Blocks = 400
+| [ALG0] RELSCAN< emp > Cost = 0.88
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 0 for PlanGroup = 4
+Finished FindBestPlan Eq: 0
+Found best plan for select ...
+[EQCLASS1][PLANGRP3] UseCost = 0.5368 Plan Cost = 1.0088 #Tuples = 20000 #Blocks = 244
+| [ALG1] SELECT< :manager == :manager > Cost = 0.1288
+| | [EQCLASS0][PLANGRP4] UseCost = 0.88 Plan Cost = 0.88 #Tuples = 20000 #Blocks = 400
+| | | [ALG0] RELSCAN< emp > Cost = 0.88
+
+
+Added new plan group id = 5 for eq id = 0
+Number of properties = 1
+< 0 >
+
+FindBestPlan Eq: 0
+Volcano_t::FindBestAlgPlan Iterating over 0 for PlanGroup = 5
+Eq = 0 PlanGroup = 5 LogExpr = 3
+Volcano_t::FindBestAlgPlan Finished Iterating over 0 for PlanGroup = 5
+Finished FindBestPlan Eq: 0
+Eq = 1 PlanGroup = 3 LogExpr = 13
+FindBestPlan Eq: 6
+Volcano_t::FindBestAlgPlan Iterating over 6 for PlanGroup = 6
+Eq = 6 PlanGroup = 6 LogExpr = 11
+FindBestPlan Eq: 0
+Finished FindBestPlan Eq: 0
+Volcano_t::FindBestAlgPlan Finished Iterating over 6 for PlanGroup = 6
+Finished FindBestPlan Eq: 6
+Added new plan group id = 7 for eq id = 6
+Number of properties = 1
+< 0 >
+
+FindBestPlan Eq: 6
+Volcano_t::FindBestAlgPlan Iterating over 6 for PlanGroup = 7
+Eq = 6 PlanGroup = 7 LogExpr = 11
+Volcano_t::FindBestAlgPlan Finished Iterating over 6 for PlanGroup = 7
+Finished FindBestPlan Eq: 6
+Volcano_t::FindBestAlgPlan Finished Iterating over 1 for PlanGroup = 3
+Finished FindBestPlan Eq: 1
+[EQCLASS2][PLANGRP2] UseCost = 0.088 Plan Cost = 1.0088 #Tuples = 20000 #Blocks = 40
+| [ALG2] PROJECT< :sal > Cost = 0
+| | [EQCLASS1][PLANGRP3] UseCost = 0.5368 Plan Cost = 1.0088 #Tuples = 20000 #Blocks = 244
+| | | [ALG1] SELECT< :manager == :manager > Cost = 0.1288
+| | | | [EQCLASS0][PLANGRP4] UseCost = 0.88 Plan Cost = 0.88 #Tuples = 20000 #Blocks = 400
+| | | | | [ALG0] RELSCAN< emp > Cost = 0.88
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 2 for PlanGroup = 2
+Finished FindBestPlan Eq: 2
+Done Optimizing Eq: 2
+Nested Query: Eq = 2 CostLimit = 9.99871 Best Plan Cost = 1.0088
+Nested Query Optimization Successful
+dist = 100 subQueryCost = 1.0088
+FindBestPlan Eq: 0
+Finished FindBestPlan Eq: 0
+Found best plan for select ...
+[EQCLASS3][PLANGRP1] UseCost = 0.5368 Plan Cost = 101.889 #Tuples = 20000 #Blocks = 244
+| [ALG3] SELECT< AND[ <:sal IN
+| | | | | | | | | | [EQCLASS2][PLANGRP2] UseCost = 0.088 Plan Cost = 1.0088 #Tuples = 20000 #Blocks = 40
+| | | | | | | | | | | [ALG2] PROJECT< :sal > Cost = 0
+| | | | | | | | | | | | [EQCLASS1][PLANGRP3] UseCost = 0.5368 Plan Cost = 1.0088 #Tuples = 20000 #Blocks = 244
+| | | | | | | | | | | | | [ALG1] SELECT< :manager == :manager > Cost = 0.1288
+| | | | | | | | | | | | | | [EQCLASS0][PLANGRP4] UseCost = 0.88 Plan Cost = 0.88 #Tuples = 20000 #Blocks = 400
+| | | | | | | | | | | | | | | [ALG0] RELSCAN< emp > Cost = 0.88

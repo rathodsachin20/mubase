@@ -1,0 +1,22 @@
+[EQCLASS5][PLANGRP0] UseCost = 0.0022 Plan Cost = 102.866 #Tuples = 4 #Blocks = 1
+| [ALG18] PROJECT< r1:r1c1 > Cost = 0
+| | [EQCLASS4][PLANGRP1] UseCost = 0.0022 Plan Cost = 102.866 #Tuples = 4 #Blocks = 1
+| | | [ALG17] BASICAPPLY< LeftSemiJoin > Cost = 0.0004
+| | | | [EQCLASS7][PLANGRP11] UseCost = 0.0022 Plan Cost = 51.4306 #Tuples = 4 #Blocks = 1
+| | | | | [ENF9] SORT< r1:r1c4 > Cost = 0.0008
+| | | | | | [EQCLASS7][PLANGRP10] UseCost = 0.0022 Plan Cost = 51.4298 #Tuples = 4 #Blocks = 1
+| | | | | | | [ALG8] SELECT (state_retain=0)< AND[ r1:r1c2 == 100 TRUE ] > Cost = 4.286
+| | | | | | | | [EQCLASS3][PLANGRP7] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | | | | | [ALG3] RELSCAN< r1 > Cost = 47.1438
+| | | | [EQCLASS2][PLANGRP17] UseCost = 0.0022 Plan Cost = 51.4352 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | | | [ALG16] PROJECT< r2:r2c1 > Cost = 0
+| | | | | | [EQCLASS1][PLANGRP18] UseCost = 0.0022 Plan Cost = 51.4352 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | | | | | [ALG15] SELECT (state_retain=1)< r2:r2c3 == r1:r1c4 > Cost = 0.0004
+| | | | | | | | [EQCLASS8][PLANGRP26] UseCost = 0.0022 Plan Cost = 51.4348 #Tuples = 4 #Blocks = 1
+| | | | | | | | | [ENF14] INDEXSORT< r2:r2c3 > Cost = 0.00501053
+| | | | | | | | | | [EQCLASS8][PLANGRP25] UseCost = 0.0022 Plan Cost = 51.4298 #Tuples = 4 #Blocks = 1
+| | | | | | | | | | | [ALG11] SELECT (state_retain=0)< r2:r2c2 == 200 > Cost = 4.286
+| | | | | | | | | | | | [EQCLASS0][PLANGRP22] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | | | | | | | | | [ALG10] RELSCAN< r2 > Cost = 47.1438
+ 
+

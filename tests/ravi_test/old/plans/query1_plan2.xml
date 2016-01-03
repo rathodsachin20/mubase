@@ -1,0 +1,122 @@
+<EQCLASS id="5" isCorrelated="false">
+  <LOGEXP id="0" op="PROJECT">
+<PROJ_EXPRS>
+<RelArgRef relarg="purchaseorder:o_orderid"/>
+<RelArgRef relarg="purchaseorder:o_defaultshipaddr"/>
+</PROJ_EXPRS>
+    <EQCLASS id="4" isCorrelated="false">
+      <LOGEXP id="4" op="SELECT">
+<INEXPR>
+<LHS>
+purchaseorder:o_defaultshipaddr</LHS>
+<RHS>
+                    <EQCLASS id="2" isCorrelated="true">
+<OuterVariables>
+<Attr relname="purchaseorder" attrname="o_orderid"/>
+</OuterVariables>
+                      <LOGEXP id="1" op="PROJECT">
+<PROJ_EXPRS>
+<RelArgRef relarg="orderitem:oi_shipto"/>
+</PROJ_EXPRS>
+                        <EQCLASS id="1" isCorrelated="true">
+<OuterVariables>
+<Attr relname="purchaseorder" attrname="o_orderid"/>
+</OuterVariables>
+                          <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="orderitem:oi_orderid"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="purchaseorder:o_orderid"/>
+</RHS>
+</EQEQ>
+                            <EQCLASS id="0" isCorrelated="false">
+               <LOGEXP id="3" op="orderitem">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</RHS>
+</INEXPR>
+        <EQCLASS id="3" isCorrelated="false">
+     <LOGEXP id="5" op="purchaseorder">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="6" op="APPLY">
+<INEXPR>
+<LHS>
+purchaseorder:o_defaultshipaddr</LHS>
+<RHS>
+                    <EQCLASS id="2" isCorrelated="true">
+<OuterVariables>
+<Attr relname="purchaseorder" attrname="o_orderid"/>
+</OuterVariables>
+                      <LOGEXP id="1" op="PROJECT">
+<PROJ_EXPRS>
+<RelArgRef relarg="orderitem:oi_shipto"/>
+</PROJ_EXPRS>
+                        <EQCLASS id="1" isCorrelated="true">
+<OuterVariables>
+<Attr relname="purchaseorder" attrname="o_orderid"/>
+</OuterVariables>
+                          <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="orderitem:oi_orderid"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="purchaseorder:o_orderid"/>
+</RHS>
+</EQEQ>
+                            <EQCLASS id="0" isCorrelated="false">
+               <LOGEXP id="3" op="orderitem">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</RHS>
+</INEXPR>
+        <EQCLASS id="3" isCorrelated="false">
+     <LOGEXP id="5" op="purchaseorder">
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="2" isCorrelated="true">
+<OuterVariables>
+<Attr relname="purchaseorder" attrname="o_orderid"/>
+</OuterVariables>
+          <LOGEXP id="1" op="PROJECT">
+<PROJ_EXPRS>
+<RelArgRef relarg="orderitem:oi_shipto"/>
+</PROJ_EXPRS>
+            <EQCLASS id="1" isCorrelated="true">
+<OuterVariables>
+<Attr relname="purchaseorder" attrname="o_orderid"/>
+</OuterVariables>
+              <LOGEXP id="2" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="orderitem:oi_orderid"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="purchaseorder:o_orderid"/>
+</RHS>
+</EQEQ>
+                <EQCLASS id="0" isCorrelated="false">
+         <LOGEXP id="3" op="orderitem">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+

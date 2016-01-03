@@ -1,0 +1,39 @@
+EIO TODO:
+=========
+
+1. ford(R) is dependent on what attributes are needed above (due to 
+covering indexes). Since the same relation can be used in different
+sub-expressions, we need to pass the attributes needed along a
+specific path while computing the ford(R). If we alias each 
+usage of R differently (say as R1 and R2), this won't be needed.
+
+2. Changed the correlatedVars in class Equivalence to LogProp_t * Just
+as we model the logical properties of the result of the expression with
+LogProp_t, we should model the logical props of the input parameters
+also with LogProp_t. This allows us to store other properties of the
+parameters as well (such as expected distinct values, sizes etc.)
+Use the MergeSchema method to combine schemas!!
+
+
+3. Inside the Equivalence class instead of just the planGroupBase,
+maintain a lookup table paramSortOrder -> planGroupBase. Given a pso
+lookup this table to get the PO base and then traverse as usual.
+
+4. Modeling the parameter sort orders: Use PhyProp_t - specifically
+SortOrder_t In fact there exist all the needed methods like Translate!!
+to translate the order relative to one schema to another.
+But to use this we must make the correlatedVars as LogProp_t
+
+5. Modify the PlanGroup_t FindBestPlan (...) and FindBestAlgPlan ...
+in Volcano.h as follows:
+
+   PlanGroup_t *FindBestPlan(Equivalence_t *eq,
+                             PhyPropGroup_t *reqProp, 
+                             Cost_t *totalCost,
+                             CostVal_t *costLimit, 
+                             int isInputIndexed = 0,
+                             PhyProp_t *pso = NULL,
+                             // parameter index to level map
+                             Lookup<int, int> *plevelMap = NULL,
+                             int level = -1);
+

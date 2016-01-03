@@ -1,0 +1,62 @@
+PG infers o/p orders from merge-joins i/p orders BUT does not expliot the
+orders that are partially satisfied.  
+In the example, the outer-most merge-join produces (c3,c2,c1) and the order by 
+askes for (c3, c1, c2). A full enforcer is placed. To make sure that the cost
+calculation does not account for the partially satisfied order a second query
+with order by (c2, c1, c3) is given and the cost of the sort enforcer remains
+the same.
+
+
+eiotest=#  explain select * from R1, R2, R3, R4 where R1.c1=R2.c1 and R1.c2=R2.c2 and R1.c3=R2.c3 and R1.c4=R2.c4 and R3.c3=R1.c3 and R3.c1=R1.c1 and R3.c2=R1.c2 and R3.c5=R4.c5 and R3.c6=R4.c6 order by R1.c3, R1.c1, R1.c2;
+                                                       QUERY PLAN
+-------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=274.84..274.85 rows=1 width=72)
+   Sort Key: r1.c3, r1.c1, r1.c2
+   ->  Merge Join  (cost=215.31..274.83 rows=1 width=72)
+         Merge Cond: (("outer".c3 = "inner".c3) AND ("outer".c2 = "inner".c2) AND ("outer".c1 = "inner".c1))
+         Join Filter: ("inner".c4 = "outer".c4)
+         ->  Index Scan using idx_r2_321 on r2  (cost=0.00..52.00 rows=1000 width=16)
+         ->  Sort  (cost=215.31..215.31 rows=1 width=56)
+               Sort Key: r3.c3, r3.c2, r3.c1
+               ->  Merge Join  (cost=155.53..215.30 rows=1 width=56)
+                     Merge Cond: (("outer".c1 = "inner".c1) AND ("outer".c2 = "inner".c2) AND ("outer".c3 = "inner".c3))
+                     ->  Index Scan using idx_r1_123 on r1  (cost=0.00..52.00 rows=1000 width=16)
+                     ->  Sort  (cost=155.53..155.59 rows=26 width=40)
+                           Sort Key: r3.c1, r3.c2, r3.c3
+                           ->  Merge Join  (cost=139.66..154.92 rows=26 width=40)
+                                 Merge Cond: (("outer".c6 = "inner".c6) AND ("outer".c5 = "inner".c5))
+                                 ->  Sort  (cost=69.83..72.33 rows=1000 width=20)
+                                       Sort Key: r3.c6, r3.c5
+                                       ->  Seq Scan on r3  (cost=0.00..20.00 rows=1000 width=20)
+                                 ->  Sort  (cost=69.83..72.33 rows=1000 width=20)
+                                       Sort Key: r4.c6, r4.c5
+                                       ->  Seq Scan on r4  (cost=0.00..20.00 rows=1000 width=20)
+(21 rows)
+ 
+eiotest=#  explain select * from R1, R2, R3, R4 where R1.c1=R2.c1 and R1.c2=R2.c2 and R1.c3=R2.c3 and R1.c4=R2.c4 and R3.c3=R1.c3 and R3.c1=R1.c1 and R3.c2=R1.c2 and R3.c5=R4.c5 and R3.c6=R4.c6 order by R1.c2, R1.c1, R1.c3;
+                                                       QUERY PLAN
+-------------------------------------------------------------------------------------------------------------------------
+ Sort  (cost=274.84..274.85 rows=1 width=72)
+   Sort Key: r1.c2, r1.c1, r1.c3
+   ->  Merge Join  (cost=215.31..274.83 rows=1 width=72)
+         Merge Cond: (("outer".c3 = "inner".c3) AND ("outer".c2 = "inner".c2) AND ("outer".c1 = "inner".c1))
+         Join Filter: ("inner".c4 = "outer".c4)
+         ->  Index Scan using idx_r2_321 on r2  (cost=0.00..52.00 rows=1000 width=16)
+         ->  Sort  (cost=215.31..215.31 rows=1 width=56)
+               Sort Key: r3.c3, r3.c2, r3.c1
+               ->  Merge Join  (cost=155.53..215.30 rows=1 width=56)
+                     Merge Cond: (("outer".c1 = "inner".c1) AND ("outer".c2 = "inner".c2) AND ("outer".c3 = "inner".c3))
+                     ->  Index Scan using idx_r1_123 on r1  (cost=0.00..52.00 rows=1000 width=16)
+                     ->  Sort  (cost=155.53..155.59 rows=26 width=40)
+                           Sort Key: r3.c1, r3.c2, r3.c3
+                           ->  Merge Join  (cost=139.66..154.92 rows=26 width=40)
+                                 Merge Cond: (("outer".c6 = "inner".c6) AND ("outer".c5 = "inner".c5))
+                                 ->  Sort  (cost=69.83..72.33 rows=1000 width=20)
+                                       Sort Key: r3.c6, r3.c5
+                                       ->  Seq Scan on r3  (cost=0.00..20.00 rows=1000 width=20)
+                                 ->  Sort  (cost=69.83..72.33 rows=1000 width=20)
+                                       Sort Key: r4.c6, r4.c5
+                                       ->  Seq Scan on r4  (cost=0.00..20.00 rows=1000 width=20)
+(21 rows)
+ 
+

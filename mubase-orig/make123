@@ -1,0 +1,14 @@
+#! /bin/sh
+rm ./src/y.tab.h
+rm ./src/y.tab.cpp
+rm ./src/lex.yy.cpp
+rm a.out
+yacc -d a.y
+flex a.l
+mv y.tab.c y.tab.cpp
+mv lex.yy.c lex.yy.cpp
+
+mv y.tab.cpp ./src/y.tab.cpp
+mv lex.yy.cpp ./src/lex.yy.cpp
+mv y.tab.h ./include/y.tab.h
+

@@ -1,0 +1,9 @@
+Optimization Successful: Plan Cost = 481.956 Cost Limit = 481.956
+
+[EQCLASS1][PLANGRP0][CC=1][PSO=NULL] UseCost = 115.79 Plan Cost = 481.956 #Tuples = 6e+06 #Blocks = 52632
+| [ALG4][CC=-1]AGGREGATESCAN< MIN(:r1c2) | :r1c1 :r1c3 :r1c4 :r1c5 :r1c6 :r1c7 :r1c8 :r1c9 > Cost = 10.5264
+| | [EQCLASS0][PLANGRP2][CC=1] UseCost = 471.429 Plan Cost = 471.429 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | [ENF3][CC=1]PARTIAL SORT( < r1:r1c1 >--> < r1:r1c1 r1:r1c3 r1:r1c4 r1:r1c5 r1:r1c6 r1:r1c7 r1:r1c8 r1:r1c9 >)  Cost = 1e-04
+| | | | [EQCLASS0][PLANGRP3][CC=1] UseCost = 471.429 Plan Cost = 471.429 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | | | [ALG2][CC=1]RELSCAN< r1 > Cost = 471.429
+

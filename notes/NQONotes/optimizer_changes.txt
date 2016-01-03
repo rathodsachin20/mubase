@@ -1,0 +1,158 @@
+Changes Required in the Optimizer Code for NQO
+----------------------------------------------
+
+1. A new logical operator ApplyOp_t that extends LogicalOp_t
+   To start with this can be a binary operator.
+
+   ApplyOp_t
+
+        // Members of the LogicalOp_t
+        - LogicalOpType_t type;         // APPLY_T
+        - char isOrdered;               // 1 => true
+        - Equivalence_t *eqClass;       // associated eq class (parent)
+        - int numInputs;                // 2
+        - Equivalence_t **inputs        // inputs[0] -> bind (left) subexpr
+                                        // inputs[1] -> use (right) subexpr
+        // New members
+        - Predicate_t nestedPredicate;  // Predicate that connects the outer and inner
+                                        // Can be IN, NOT IN, EXISTS and NOT EXISTS
+       -- project list ??? 
+
+        // Implementations of methods defined in LogicalOp_t
+        - virtual LogicalOp_t *PushInPred(Predicate_t *inPred, Memo_t& memo) = 0;
+                o Push the predicate into the left input.
+                o ?? Need not implement for now.
+
+        - virtual LogicalOp_t *PushInProj(Project_t *inProj, Memo_t& memo) = 0;
+                o Push the project into the left input but retain all the 
+                  columns that are used in the right input.
+                o ?? Need not implement for now.
+
+        - virtual void ApplyAlgorithms(PlanGroup_t *planGroup, Volcano_t *opt,
+                                       Cost_t *totalCost, Plan_t *bestPlan, 
+                                       CostVal_t *costLimit) = 0;
+                o Question: Does this method club both the physical plan generation 
+                  and the choosing of the best plan?
+                o TODO 
+
+
+        - virtual void ApplyTransformations(Memo_t& memo) = 0;
+               o No logical transformations need to be applied for the
+                 Apply operator. However we need to apply a new transformation
+                 for the SelectOp. See #2 below.
+
+2. Wite a new Transformation Rule class NestedPredToApplyOp_t
+   - static void Apply(Select_t *op, Memo_t& memo)
+        o Check if the predicate of op contains an InPredicate. 
+        o If yes, decompose the predicate and separate the InPredicate.
+        o Let's say the decomposed parts are p1 (everything except the InPrd)
+          and p2 (the InPred).
+        o Construct a new ApplyOp_t with p1 as input[0] and p2 as its input[1]
+        o Add the new ApplyOp_t instance to op's equivalence class (parent).
+    -- Set the project list ???
+
+
+------------ Physical Plan Space and the Search ------------------------
+
+
+3. PlanGroupt_t *Optimizer_t::FindBestPlan(Equivalence_t *eq, 
+                                           CostVal_t *costLimit) = 0;
+   Change it to:
+   a. Return an array of pointers to plan groups.
+   b. Take the initial required physical properties (order by clause) [Future]
+
+   Changes:
+   1. Include/Optimizer.h
+   2. Include/Volcano.h --> class Volcano.h
+   3. Volcano/Volcano.c 
+      A. Volcano_t::FindBestPlan(Equivalence_t rootEq, CostVal_t *costLimit)
+        - Should return PlanGroup_t **
+        - Use the physical properties required by the user (order by clause)
+          instead of using an empty phy prop group (line 152) [Future]
+        - Line 161: Call to the overloaded FindBestPlan(...). Assign the 
+          return value to PlanGroup_t **.
+      B. Volcano_t::FindBestPlan(Equivalence_t *eq, PhyPropGroup_t *reqProp, 
+                                 Cost_t *totalCost, CostVal_t *costLimit, 
+                                 int isInpIndexed)
+         - Should return PlanGrou_t **
+         - Line 183: Call to eq->PlanGroup(reqProp). Assign the return
+           to Plangroup_t **.
+         - Line 189: Call the FindBestPlan(planGroup, totalCost, costLimit,
+                                           isInpIndexed) should be called
+           in a loop for all the plan groups in the above list.
+
+
+   4. Equivalence.c:
+      PlanGroup_t *Equivalence_t::PlanGroup(PhyPropGroup_t) should be 
+      changed to return an array of PlanGroups.
+
+      
+*4. Each logical eq node (Equivalence_t) should have a list (schema)
+   containing the outer variables in its scope. The required physical
+   properties of a plan group contain indexes of this list. At the 
+   Apply operator the required call orders of the rhs will be translated into
+   the required pp for the lhs as follows:
+   From the index of the required call order deduct (minus) the length of the 
+   scope list associated with the parent eq node of the apply op.
+
+
+5. Change the PlanGroup_t to include the required parameter sort order.
+   1. PhyPropGroup_t *paramProp; // Required physical props for the params
+
+
+* 6. Equivalence_t maintains a reference to the base (least element) of 
+   the partial order of plan groups.  Has a method to return the plan group
+   for corresponding to a given phy prop. 
+
+   Why is it important to maintain a reference from logical eq nodes
+   to the set of plan groups for that equivalence node but with diff
+   phy props? Why maintain it as a special PO structure rather than 
+   simply a list?
+
+   With required call orders we will have a set of PlanGroups for each
+   equivalence node AND each physical property group combination. So
+   we will have a PO in which each element is organized as another partial
+   order.
+
+                             pg9
+                              \/
+                   g5------- pg8
+                   |
+              g3  g4          pg4
+               \ /             |
+                g2  g3    pg2 pg3 
+                 \ /        \/
+    EqNode -----> g1--------pg1
+
+    Each of g1, g2, ... is a group of plan groups that satisfy a set of
+    physical properties. The plan groups pg1, pg2... within a single group
+    satisfy the same set of physical properties but require different call
+    orders on the input arguments.
+
+
+
+4. A new algorithm OrderedScan (extends FilterAlgo_t). Will inherit the predicate
+   from the FilterAlgo. This operator depends on the physical sort order of the
+   relation in order to give its cost and the required parameter sort order.
+
+   Question 1: 
+   The physical sort order of the relation is currently not 
+   captured in the catalog??
+  -- has to be added ...
+  -- need to return the physical position on no more matching tuples,
+  -- and pass it as a parameter to specify where to start scan.
+
+5. The LogicalOp_t::ApplyAlgorithms method currently takes a PlanGroup_t *.
+   This should take an array of  PlanGroup_t *.
+
+
+
+Changes for integrating the Postgres Catalog with our optimizer
+---------------------------------------------------------------
+
+Notes:
+1. Old Catalog class has static members and static methods for keeping the
+   Catalog info.
+2. 
+
+

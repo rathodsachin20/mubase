@@ -1,0 +1,19 @@
+Mubase Assignment
+Done by
+1.VARUN SIMHADRI,CS08B034
+2.ARUN CHAITANYA M,CS08B024
+3.KARTHIK BADAM,CS08B007
+4.JSN HARSHA,CS08B019
+5.SURESH BABU T,CS08B037
+
+To generate the input file and to use it:
+Input_file_generator.cpp can be used to generate the input text file, which we can use to replace the old input file named test.txt in " input " folder. Then remove test.txt from bin.
+
+To run the program:
+First "make clean"
+Then "make"
+Then "./run.sh"
+
+Note:
+Block size, ptr size, key size,etc.. will be present in global.h which can be modified.
+

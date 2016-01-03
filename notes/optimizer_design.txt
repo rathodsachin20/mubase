@@ -1,0 +1,566 @@
+
+Class Hierarchies
+*****************
+
+Optimizers
+==================
++ Optimizer_t
+    + Volcano_t
+        + VolcanoOrd_t
+            + VolcanoShar_t
+                + VolcanoRU_t
+                + VolcanoRevRU_t
+    + DAGOpt_t
+        + Greedy_t
+        + ExhSearch_t
+            + CachedExhSearch_t
+
+
+Logical Operations 
+==================
+
++ LogicalOp_t
+
+    + Union_t 
+    + Aggregate_t
+    + Project_t
+    + Filter_t 
+        + Select_t
+        + Join_t
+    + Rel_t
+
+
+Physical Operations 
+====================
++ PhysicalOp_t
+    + Enforcer_t
+        + Sort_t
+        + Index_t
+        + IndexSort_t
+
+
+    + Algorithm_t
+        + RelScan_t
+        + ProjectScan_t
+        + AggregateHash_t
+        + AggregateScan_t
+        + FilterAlgo_t
+            + SelectScan_t
+            + IndexedSelect_t
+            + MergeJoin_t
+            + NestedLoopsJoin_t
+            + IndexedNestedLoopsJoin_t
+        + Merge_t (for union)
+ 
+
+Logical and Physical Properties
+===============================
+
++ LogProp_t 
+    + BaseRelLogProp_t
+    + IntRelLogProp_t
+
+
++ PhyProp_t
+    + Order_t
+        + SortOrder_t
+        + IndexOrder_t
+
+
++ PhyPropGroup_t
+    - PrependList_t<PhyProp_t *> propList;
+
+Expressions
+===========
+
++ Expr_t
+    + Value_t
+        + Null_t
+        + Star_t
+        + String_t
+        + Int_t
+        + Float_t
+        + Double_t
+    + AggExpr_t
+        + Max_t
+        + Min_t
+        + Sum_t
+        + Avg_t
+        + Count_t
+        + CountDistinct_t
+        + CountStar_t
+    + RelArgRef_t
+    + Predicate_t
+        + ConstPredicate_t
+            + True_t
+            + False_t
+        + UnaryPredicate_t
+            + Not_t
+        + BinaryPredicate_t
+            + BinarySymmetricPredicate_t
+                + Eq_t // equality predicate
+                + NEq_t // non-equality predicate
+                + And_t 
+                + Or_t 
+            + BinaryAssymmetricPredicate_t
+                + Less_t
+                + LessEq_t
+        + InExpr_t
+
+    + ArithExpr_t
+        + CommutativeArithExpr_t
+            + Plus_t
+            + Mult_t
+        + NonCommutativeArithExpr_t
+            + Minus_t
+            + Div_t
+
+Cost
+====
+
++ Cost_t
+    + CostOrd_t
+        - CostVal_t value
+    + CostSet_t
+        - CostList_t list
+
+
+
+
+
+Important Methods and Members
+*****************************
+
+Optimizers
+==================
+
+Optimizer_t
+
+    - virtual Memo_t& Memo(void) = 0;
+    - virtual PlanGroup_t *FindBestPlan(Equivalence_t *eq, 
+                                        CostVal_t *costLimit) = 0;
+    - CostVal_t BestPlanCost(Equivalence_t *eq)
+
+
+Logical Operations 
+==================
+
++ LogicalOp_t
+    - int id
+    - LogicalOpType_t type;
+    - char isExpanded
+    - Equivalence_t *eqClass
+    - int numInputs
+    - Equivalence_t **inputs
+
+
+    - void Expand(Memo_t& memo)
+    - virtual LogicalOp_t *PushInPred (Predicate_t *pred, Memo_t& memo) = 0;
+    - virtual LogicalOp_t *PushInProj (Project_t *inProj, Memo_t& memo) = 0;
+    - virtual void ApplyAlgorithms(PlanGroup_t *planGroup, Volcano_t *opt,
+                                   Cost_t *totalCost, Plan_t *bestPlan, 
+                                   CostVal_t *costLimit) = 0;
+
+    - virtual void ApplyTransformations(Memo_t& memo) = 0;
+    - virtual void PrintExpressionDAG(int indentLevel) const;
+
+
++ Filter_t
+    - Predicate_t *pred
+
++ Rel_t
+    - char *name
+
+
+
+Physical Operations 
+===================
++ PhysicalOp_t
+    - int id
+    - int numInputs
+    - PlanGroup_t **inputs;       // input plan groups
+    - PlanGroup_t **actualInputs; // actual input plan groups --- can be a
+                                  // plangroup covering the corresponding
+                                  // plangroup in input
+    - CostVal_t costVal;          // cost of the operator
+    - Plan_t *plan;               // plan with this operator as root
+
+
+    - virtual void SetInput (int i, PlanGroup *pg);
+    - PlanGroup_t *Input (int i)
+    - virtual void SetActualInput (int i, PlanGroup *pg);
+    - PlanGroup_t *ActualInput (int i)
+    - CostVal_t CostVal()   // Operator cost
+    - virtual CostVal_t NQCostVal()
+    - virtual CostVal_t LocalCostVal() = 0;
+    - virtual void PrintPlan(int indentLevel) = 0;
+    - void PrintSQL()
+    - virtual void PrintSQLStmt()
+
++ Enforcer_t
+    - virtual EnforceType_t EnforceType() = 0;
+    
+        + Sort_t
+            - SortOrder_t *sortOrderProp;
+
+        + Index_t
+            - IndexOrder_t *indexOrderProp;
+
+        + IndexSort_t
+            - IndexOrder_t *indexOrderProp;
+
++ Algorithm_t
+    - virtual AlgoType_t AlgoType() = 0;
+
+        + RelScan_t
+            - char *relName
+
+        + ProjectScan_t
+            - AttrMap_t *projMap;
+
+        + AggregateHash_t
+            - AttrMap_t *groupByAttrMap;
+            - AttrMap_t *aggAttrMap;
+
+        + AggregateScan_t
+            - AttrMap_t *groupByAttrMap;
+            - AttrMap_t *aggAttrMap;
+
+        + FilterAlgo_t
+            - Predicate_t *pred;
+
+                + SelectScan_t
+                    - char isInProgress;
+                + IndexedSelect_t
+                + MergeJoin_t
+                + NestedLoopsJoin_t
+                + IndexedNestedLoopsJoin_t
+        + Merge_t
+
+Plans
+=====
+
++ Plan_t
+    - Plangroup_t *planGroup;
+    - PhysicalOp_t *root; // root = NULL implies a failed plan
+    - Cost_t *cost;
+
+
++ PlanGroup_t
+    - Equivalence_t *eqClass;
+    - PropertyGroup_t *prop; // Group of physical properties
+    - PrependList<Plan_t *> algPlans;
+    - PrependList<Plan_t *> enfPlans;
+    - Plan_t *bestPlan;
+    - Plan_t *bestAlgPlan;
+    - Plan_t *bestEnfPlan;
+    - PrependList<PhysicalOp_t *> algParents;
+    - PrependList<PhysicalOp_t *> enfParents;
+
+
+
+Transformation Rules
+====================
+// (AB)*(CD) <--> (AC)(BD) and variations due to commutativity.
+
+JoinExchange_t
+
+    static void BuildJoinTree(Equivalence_t *eqABCD, 
+                              Equivalence_t *inpA, Equivalence_t *inpB,
+                              Equivalence_t *inpC, Equivalence_t *inpD,
+                              Predicate_t *pred, Memo_t &memo)
+    static void Apply(Join_t *op, Memo_t& memo)
+
+JoinAssoc_t
+    static void Apply(Join_t *op, Memo_t& memo)
+JoinPushPred_t
+    static void Apply(Join_t *op, Memo_t& memo)
+SelectPushPred_t
+    static void Apply(Select_t *op, Memo_t& memo)
+PushProj_t
+    static void Apply(Project_t *op, Memo_t& memo)
+
+
+
+Other Classes
+==============
+
+Interface_t
+        static Equivalence_t *ExpressionDAG(Optimizer_t& opt)
+
+Memo_t  // A lookup table with key being the LogicalOp
+    - Lookup_t<MEMOSIZE, MemoKey_t> table; 
+
+Lookup_t // Template class for generic Hashtable
+
+
+
+Catalog Information
+===================
+
+Attr_t
+    - char *relName     // Name of the base relation
+    - char *name        // Attribute name
+    - DataSize_t size_Bytes;
+
+AttrProp_t
+    - AttrType_t type       // Data type of the attribute
+    - Card_t numDistinct    // Number of distinct values
+
+    + IntegerProp_t
+        - int maxval;
+        - int minval;
+Schema_t
+    - int numAttr       // Number of attributes
+    - Attr_t **attr;    // Attribute array
+    - DataSize_t tupleSize_Bytes; // Tuple size in bytes
+
+SchemaProp_t
+    int numAttr;        // number of attributes
+    AttrProp_t **prop;  // property list
+    int *rep;           // table for union-find
+
+// Logical properties of a relation to be stored in the catalog.
+LogProp_t 
+    - char *name;                 // name of the relation
+    - Schema_t *schema;           // schema of the relation
+    - SchemaProp_t *schemaProp;   // properties of the attributes in the schema
+    - Card_t relSize_Tuples;      // size in number of tuples
+
+    + BaseRelLogProp_t      // Base relation logical property. 
+                            // Extension to be considered: How the blocks 
+                            // are packed is not considered.
+        - Card_t tuplesPerBlock
+        - PrependList_t<IndexOrder_t *> builtInIndexList;
+
+    + IntRelLogProp_t       // Intermediate relation logical property
+
+
+Catalog_t
+    - PrependList_t<BaseRelLogProp_t *> relLogPropList;
+
+Size_t
+    - int numTuples
+    - int tupleSize
+    - int noOfBlocks
+    - int tuplesPerBlock
+
+CatalogInfoForRel
+    - char *RelName
+    - Size_t RelSize
+    - CatalogInfoForRel *Next
+
+CatalogInfoForAttr
+
+Global utility functions:
+------------------------
+Schema_t *MergeSchema (Schema_t *left, Schema_t *right)
+SchemaProp_t *MergeSchemaProp (SchemaProp_t *left, SchemaProp_t *right)
+
+
+
+Control Flow
+*****************
+
+1. Optimizer_t *opt = instantiate the required optimizer impl.
+
+/*
+ * Static method to convert the Dali Parse tree to LQDAG. 
+ * This is not yet expanded.
+ */
+2. Equivalence_t *rootEq = Interface_t::ExpressionDAG(*opt);
+
+/*
+ * Does the following 3 operations.
+ *  a. Expands the rootEq node (ExpandDAG).
+ *  b. Generates the physical DAG from the expanded LQDAG.
+ *  c. Traverses the physical DAG and sets the best plan and cost.
+ */
+3. PlanGroup_t *pg = opt->FindBestPlan(rootEq, costLimit);
+   
+    // Inside opt->FindBestPlan() 
+    3.1 opt->ExpandDAG(rootEq);
+        - Straight forward as in the thesis. See Volcano_t::ExpandDAG
+        - In turn calls LogicalOp_t::Expand(memo);
+
+    3.2 If logical subsumption to be applied, apply it. 
+        opt->ExpandSubsumption()
+
+    3.3 pg = opt->FindBestPlan(rootEq, emptyReqProp, initTotalCost, 
+                               costLimit);
+    Note that the initial req prop list is empty. So order-by clause is not
+    taken care of.
+    initialTotalCost is 0 to start with.
+
+    3.4 return pg;
+
+/*
+ * This method assumes that the rootEq node is already expanded.
+ */
+4. PlanGroup_t *pg = opt->FindBestPlan(rootEq, reqProp, totalCost, 
+                                       costLimit, isInpIndexed);
+
+    /**
+     * This method traverses the partial order of plan groups associated with
+     * the eq node and returns the plan group for the required physical
+     * property group. It creates a new (empty) plan group if one does not
+     * already exist. Note that the eq node points to the base (least) of 
+     * the partial order of plan groups. 
+     */
+    4.1 PlanGroup_t pg = rootEq->PlanGroup(reqProp);
+
+    4.2 Plan_t *bestPlan = FindBestPlan(planGroup, totalCost, costLimit, 
+                                        isInpIndexed)
+
+    4.3 If the optimization failed (bestPlan==NULL) return NULL
+        Else retuen the plan group (Expanded and best plan set)
+
+
+/**
+ * Physical DAG generation, cost estimation and setting the best plan 
+ * are all clubbed in this method.
+ *
+ * pg : An empty (newly created) plan group if the expression was not already
+ *      optimized. If the expression was already optimized with exactly the
+ *      same set of required phy props then the old plan group is passed (in
+ *      which the best plan is already set).
+ * totalCost: 0 to start with. The total cost expended so far.
+ * costLimit: User specified cost limit or the cost of the best plan found so
+ *            far.
+ * isInpIndex: ??
+ */
+5. Plan_t *Volcano_t::FindBestPlan(PlanGroup_t *planGroup,
+		    Cost_t *totalCost, CostVal_t *costLimit, int isInpIndex)
+
+        5.1 Check if the best plan is already set (pg -> BestPlan() != NULL)
+            If BestPlan exists and it satisfies the costLimit return it.
+            If it does not satisfy the costLimit return null. 
+            If the plan is optimized for some other query (MQO) consider two
+            alternatives:
+                a. Materialization and Reuse 
+                b. Re-evaluation
+
+            If BestPlan does not exist. Start the optimization (5.2)
+
+        5.2 Start the optimization
+
+            Plan_t *bestAlgPlan = FindBestAlgPlan(pg, totalCost,
+                                                  costLimit, isInpIndex);
+            Plan_t *bestEnfPlan = FindBestEnfPlan(pg, totalCost,
+                                                  costLimit, isInpIndex);
+
+            bestPlan = cheaper of the bestAlgPlan and bestEnfPlab;
+                
+            pg->setBestPlan(bestPlan);
+            return bestPlan;
+
+
+6. FindBestAlgPlan(PlanGroup_t *pg, Cost_t *totalCost, Cost_t* costLimit, 
+                                                       int isInpIndex)
+
+    6.1  As in 5.1 check if the BestAlgPlan already exists and whether
+         it is for the same query or a previous query (MQO). If the 
+         BestAlgPlan does not exist start the optimization as given in 6.2
+
+    6.2 Get the Equivalence Class associated with the plan group
+        Equivalence_t *eq = pg->EqClass();
+    
+    6.3 For each child logExpr (instance of LogicalOp_t) of eq do
+        logExpr->ApplyAlgorithms(pg, this (Optimizer_t), totalCost,
+                                 bestAlgplan, costLimit);
+
+    6.4 Go over all the covering plan groups. // Need to understand this.
+
+
+
+7. FindBestEnfPlan(PlanGroup_t *pg, Cost_t *totalCost, Cost_t* costLimit, 
+                                                       int isInpIndex)
+
+    7.1  As in 6.1 check if the BestEnfPlan already exists and whether
+         it is for the same query or a previous query (MQO). If the BestEnfPlan
+         does not exist start the optimization as given in 7.2
+
+    7.2 Apply the enforcers to relax the reqProp and recursively optimize
+        Updates bestEnfPlan, costLimit
+        ApplyEnforcers(planGroup, totalCost, bestEnfPlan, costLimit);
+
+    7.3 pg->setBestEnfPlan(bestEnfPlan)
+   
+    7.4 If bestEnfPlan->isFailed() return NULL else return bestEnfPlan
+
+
+8. ApplyEnforcers (PlanGroup_t *pg, Cost_t *totalCost, Plan_t *bestPlan, 
+                   Costval_t *costLimit) {
+
+   PropertyGroup_t *reqProp = pg->PropGroup();
+   reqPropList = reqProp->PropList();
+
+   For each PhyProp_t prop in reqPropList {
+        prop->Enforce(pg, this (Optimizer_t), totalCost, 
+                      bestEnfPlan, costLimit);
+   }
+}
+
+9. LogicalOp_t::ApplyAlgorithms(PlanGroup_t *pg, Optimizer_t *opt, 
+                                Cost_t *totalCost, Plant_t *bestAlgplan, 
+                                Cost_t *costLimit)
+
+
+
+
+
+Pushing Predicates Down
+-----------------------
+
+TransRule.c:
+
+JoinPushPred_t::Apply(Join_t *op, Memo_t &memo)
+	--> pred->Decompose(schema, inpSchema, &parPred, &childPred);
+        schema is the schema associated with the eq node to which the
+        join op belongs to. inpSchema is the schema of a child of
+        the join op. 
+
+        The decomposed preds are returned in the out params. If
+        the complete pred is pushed or not pushed then the parPred
+        or childPred will be ConstPreds.True.
+
+    Eq_t::Decompose(...)
+        // Here IsValidSchema is assumed to return true only if
+        // both lhs and rhs of the predicate have proper bindings
+        // in the childSchema. As such passing of the parent schema
+        // is not required here!
+        if (IsValidSchame(parSchema, childSchema))
+            push into child; parent = True();
+        else
+            parent = this; child = True();
+
+
+    Eq_t::IsValidSchame(parSchema, childSchema)
+        
+        return IsValidExpr(parSchema, childSchema, left) &&
+			   IsValidExpr(parSchema, childSchema, right);
+
+        Therefore IsValidExpr is assumed to return true only if the expr 
+        (only VALUE_T and RelArgRef are considered by the InValidExpr())
+        has proper bindings in the childSchema. Once again parSchema is
+        not required.
+
+    IsValidExpr(parSchema, childSchema, expr)
+    
+        Returns true if expr has valid bindings in childSchema OR
+        expr has no bindings in childSchema as well as parSchema (presumed
+        to be correlated). Returns false if no bindings in the childExpr
+        bindings in the parentSchema. If parSchema is NULL decision is
+        only based on the childSchema - if binding found in childSchema
+        return true else return false.
+
+
+
+==================================
+
+Other Questions
+---------------
+1. The catalog does not capture the foreign key constraint. Isn't this 
+   important in the cost estimation? e.g., to estimate how many tuples
+   qualify a join predicate.
+

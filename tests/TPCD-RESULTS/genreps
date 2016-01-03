@@ -1,0 +1,8 @@
+#!/bin/bash
+
+gawk -f SCRIPTS/tabulate.awk OUT/out-tpcd >| REPORTS/rep-tpcd
+# gawk -f SCRIPTS/tabulaterev.awk OUT/out-tpcd-comp >| REPORTS/rep-tpcd-comp
+# gawk -f SCRIPTS/tabulaterev.awk OUT/out-stag >| REPORTS/rep-stag
+gawk -f SCRIPTS/tabulatemin.awk OUT/out-tpcd-comp >| REPORTS/rep-tpcd-comp
+gawk -f SCRIPTS/tabulatemin.awk OUT/out-stag >| REPORTS/rep-stag
+gawk -f SCRIPTS/tabulate.awk OUT/out-nomqo >| REPORTS/rep-nomqo

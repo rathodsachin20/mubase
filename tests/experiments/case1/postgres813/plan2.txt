@@ -1,0 +1,21 @@
+# set enable_hashjoin=false;
+
+# explain select * from bidstab1 b1, bidstab2 b2, rating r where b1.make=b2.make and b1.year=b2.year and b1.city=b2.city and b1.color=b2.color and b1.year=r.year and b1.make=r.make;
+
+                                        QUERY PLAN
+-------------------------------------------------------------------------------------------
+ Merge Join  (cost=107796.60..110842.35 rows=1 width=272)
+   Merge Cond: (("outer".make = "inner".make) AND ("outer"."year" = "inner"."year"))
+   Join Filter: (("outer".city = "inner".city) AND ("outer".color = "inner".color))
+   ->  Merge Join  (cost=56602.96..58108.71 rows=500 width=172)
+         Merge Cond: (("outer".make = "inner".make) AND ("outer"."year" = "inner"."year"))
+         ->  Sort  (cost=6.32..6.57 rows=100 width=52)
+               Sort Key: r.make, r."year"
+               ->  Seq Scan on rating r  (cost=0.00..3.00 rows=100 width=52)
+         ->  Sort  (cost=56596.64..57096.64 rows=200000 width=120)
+               Sort Key: b1.make, b1."year"
+               ->  Seq Scan on bidstab1 b1  (cost=0.00..5847.00 rows=200000 width=120)
+   ->  Sort  (cost=51193.64..51693.64 rows=200000 width=100)
+         Sort Key: b2.make, b2."year"
+         ->  Seq Scan on bidstab2 b2  (cost=0.00..5334.00 rows=200000 width=100)
+

@@ -1,0 +1,3234 @@
+ALGO Volcano
+Created eq 0
+Schema: r1c10 NUMBER ClassHead : r1c10, r1c9 NUMBER ClassHead : r1c9, r1c8 NUMBER ClassHead : r1c8, r1c7 NUMBER ClassHead : r1c7, r1c6 NUMBER ClassHead : r1c6, r1c5 NUMBER ClassHead : r1c5, r1c4 NUMBER ClassHead : r1c4, r1c3 NUMBER ClassHead : r1c3, r1c2 NUMBER ClassHead : r1c2, r1c1 NUMBER ClassHead : r1c1Adding child logExpr 4 to 0
+Created eq 1
+Schema: r2c5 NUMBER ClassHead : r2c5, r2c4 NUMBER ClassHead : r2c4, r2c3 NUMBER ClassHead : r2c3, r2c2 NUMBER ClassHead : r2c2, r2c1 NUMBER ClassHead : r2c1Adding child logExpr 5 to 1
+Adding parent logExpr 3 to 0
+Adding parent logExpr 3 to 1
+Created eq 2
+Schema: r1c10 NUMBER ClassHead : r1c10, r1c9 NUMBER ClassHead : r1c9, r1c8 NUMBER ClassHead : r1c8, r1c7 NUMBER ClassHead : r1c7, r1c6 NUMBER ClassHead : r1c6, r1c5 NUMBER ClassHead : r1c5, r1c4 NUMBER ClassHead : r1c4, r1c3 NUMBER ClassHead : r1c3, r1c2 NUMBER ClassHead : r1c2, r1c1 NUMBER ClassHead : r1c1, r2c5 NUMBER ClassHead : r2c5, r2c4 NUMBER ClassHead : r2c4, r2c3 NUMBER ClassHead : r2c3, r2c2 NUMBER ClassHead : r2c2, r2c1 NUMBER ClassHead : r2c1Adding child logExpr 3 to 2
+Created eq 3
+Schema: r3c5 NUMBER ClassHead : r3c5, r3c4 NUMBER ClassHead : r3c4, r3c3 NUMBER ClassHead : r3c3, r3c2 NUMBER ClassHead : r3c2, r3c1 NUMBER ClassHead : r3c1Adding child logExpr 6 to 3
+Adding parent logExpr 2 to 2
+Adding parent logExpr 2 to 3
+Created eq 4
+Schema: r1c10 NUMBER ClassHead : r1c10, r1c9 NUMBER ClassHead : r1c9, r1c8 NUMBER ClassHead : r1c8, r1c7 NUMBER ClassHead : r1c7, r1c6 NUMBER ClassHead : r1c6, r1c5 NUMBER ClassHead : r1c5, r1c4 NUMBER ClassHead : r1c4, r1c3 NUMBER ClassHead : r1c3, r1c2 NUMBER ClassHead : r1c2, r1c1 NUMBER ClassHead : r1c1, r2c5 NUMBER ClassHead : r2c5, r2c4 NUMBER ClassHead : r2c4, r2c3 NUMBER ClassHead : r2c3, r2c2 NUMBER ClassHead : r2c2, r2c1 NUMBER ClassHead : r2c1, r3c5 NUMBER ClassHead : r3c5, r3c4 NUMBER ClassHead : r3c4, r3c3 NUMBER ClassHead : r3c3, r3c2 NUMBER ClassHead : r3c2, r3c1 NUMBER ClassHead : r3c1Adding child logExpr 2 to 4
+Adding parent logExpr 1 to 4
+--- ZERO SELECTIVITY ---
+AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]Created eq 5
+Schema: r1c10 NUMBER ClassHead : r1c10, r1c9 NUMBER ClassHead : r1c9, r1c8 NUMBER ClassHead : r1c8, r1c7 NUMBER ClassHead : r1c7, r1c6 NUMBER ClassHead : r1c6, r1c5 NUMBER ClassHead : r1c5, r1c4 NUMBER ClassHead : r1c4, r1c3 NUMBER ClassHead : r1c3, r1c2 NUMBER ClassHead : r1c2, r1c1 NUMBER ClassHead : r1c1, r2c5 NUMBER ClassHead : r2c5, r2c4 NUMBER ClassHead : r2c4, r2c3 NUMBER ClassHead : r2c3, r2c2 NUMBER ClassHead : r2c2, r2c1 NUMBER ClassHead : r2c1, r3c5 NUMBER ClassHead : r3c5, r3c4 NUMBER ClassHead : r3c4, r3c3 NUMBER ClassHead : r3c3, r3c2 NUMBER ClassHead : r3c2, r3c1 NUMBER ClassHead : r3c1Adding child logExpr 1 to 5
+Adding parent logExpr 0 to 5
+Created eq 6
+Schema: r1c1 NUMBER ClassHead : r1c1, r2c1 NUMBER ClassHead : r2c1, r3c1 NUMBER ClassHead : r3c1Adding child logExpr 0 to 6
+Initial Query Graph
+[EQCLASS6]
+| [LOGEXP0]PROJECT :r1c1 :r2c1 :r3c1 
+| | [EQCLASS5]
+| | | [LOGEXP1]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS4]
+| | | | | [LOGEXP2]JOIN TRUE
+| | | | | | [EQCLASS2]
+| | | | | | | [LOGEXP3]JOIN TRUE
+| | | | | | | | [EQCLASS0]
+| | | | | | | | | [LOGEXP4]r1
+| | | | | | | | [EQCLASS1]
+| | | | | | | | | [LOGEXP5]r2
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+Cost Limit = 10000
+
+Expanding SubDAG for eq 6
+
+Expanding SubDAG for eq 5
+
+Expanding SubDAG for eq 4
+
+Expanding SubDAG for eq 2
+
+Expanding SubDAG for eq 0
+
+Expanding logexpr 4 eqclass = 0
+
+
+[EQCLASS0]
+| [LOGEXP4]r1
+Finished Expanding logexpr 4 eqclass = 0
+
+Finished Expanding SubDAG for eq 0
+
+
+Expanding SubDAG for eq 1
+
+Expanding logexpr 5 eqclass = 1
+
+
+[EQCLASS1]
+| [LOGEXP5]r2
+Finished Expanding logexpr 5 eqclass = 1
+
+Finished Expanding SubDAG for eq 1
+
+
+Expanding logexpr 3 eqclass = 2
+
+
+[EQCLASS2]
+| [LOGEXP3]JOIN TRUE
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+Finished Expanding logexpr 3 eqclass = 2
+
+Finished Expanding SubDAG for eq 2
+
+
+Expanding SubDAG for eq 3
+
+Expanding logexpr 6 eqclass = 3
+
+
+[EQCLASS3]
+| [LOGEXP6]r3
+Finished Expanding logexpr 6 eqclass = 3
+
+Finished Expanding SubDAG for eq 3
+
+
+Expanding logexpr 2 eqclass = 4
+
+
+[EQCLASS4]
+| [LOGEXP2]JOIN TRUE
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+Finished Expanding logexpr 2 eqclass = 4
+
+Finished Expanding SubDAG for eq 4
+
+
+Expanding logexpr 1 eqclass = 5
+
+SelectPushPred_t::Apply Iterating over 4
+Adding parent logExpr 7 to 2
+Adding parent logExpr 7 to 3
+Adding child logExpr 7 to 5
+SelectPushPred_t::Apply Finished Iterating over 4
+
+Applying Transformation: NestedPredToApplyOp.
+On Select_t node: 1
+
+No nested predicate in logexpr: 1
+
+[EQCLASS5]
+| [LOGEXP1]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | [EQCLASS4]
+| | | [LOGEXP2]JOIN TRUE
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| [LOGEXP7]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+Finished Expanding logexpr 1 eqclass = 5
+
+
+Expanding logexpr 7 eqclass = 5
+
+Adding parent logExpr 8 to 2
+--- ZERO SELECTIVITY ---
+AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]Created eq 7
+Schema: r1c10 NUMBER ClassHead : r1c10, r1c9 NUMBER ClassHead : r1c9, r1c8 NUMBER ClassHead : r1c8, r1c7 NUMBER ClassHead : r1c7, r1c6 NUMBER ClassHead : r1c6, r1c5 NUMBER ClassHead : r1c5, r1c4 NUMBER ClassHead : r1c4, r1c3 NUMBER ClassHead : r1c3, r1c2 NUMBER ClassHead : r1c2, r1c1 NUMBER ClassHead : r1c1, r2c5 NUMBER ClassHead : r2c5, r2c4 NUMBER ClassHead : r2c4, r2c3 NUMBER ClassHead : r2c3, r2c2 NUMBER ClassHead : r2c2, r2c1 NUMBER ClassHead : r2c1Adding child logExpr 8 to 7
+Adding parent logExpr 9 to 7
+Adding parent logExpr 9 to 3
+Adding child logExpr 9 to 5
+Adding parent logExpr 10 to 3
+--- ZERO SELECTIVITY ---
+AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]Created eq 8
+Schema: r3c5 NUMBER ClassHead : r3c5, r3c4 NUMBER ClassHead : r3c4, r3c3 NUMBER ClassHead : r3c3, r3c2 NUMBER ClassHead : r3c2, r3c1 NUMBER ClassHead : r3c1Adding child logExpr 10 to 8
+Adding parent logExpr 11 to 8
+Adding parent logExpr 11 to 2
+Adding child logExpr 11 to 5
+Adding parent logExpr 12 to 2
+Deleting parent logExpr 12 from 2
+Adding parent logExpr 13 to 7
+Adding parent logExpr 13 to 3
+Deleting parent logExpr 13 from 7
+Deleting parent logExpr 13 from 3
+JoinAssoc_t::Apply Iterating over 3
+JoinAssoc_t::Apply Finished Iterating over 3
+JoinAssoc_t::Apply Iterating over 2
+Adding parent logExpr 14 to 3
+Adding parent logExpr 14 to 0
+--- ZERO SELECTIVITY ---
+AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]Created eq 9
+Schema: r3c5 NUMBER ClassHead : r3c5, r3c4 NUMBER ClassHead : r3c4, r3c3 NUMBER ClassHead : r3c3, r3c2 NUMBER ClassHead : r3c2, r3c1 NUMBER ClassHead : r3c1, r1c10 NUMBER ClassHead : r1c10, r1c9 NUMBER ClassHead : r1c9, r1c8 NUMBER ClassHead : r1c8, r1c7 NUMBER ClassHead : r1c7, r1c6 NUMBER ClassHead : r1c6, r1c5 NUMBER ClassHead : r1c5, r1c4 NUMBER ClassHead : r1c4, r1c3 NUMBER ClassHead : r1c3, r1c2 NUMBER ClassHead : r1c2, r1c1 NUMBER ClassHead : r1c1Adding child logExpr 14 to 9
+Adding parent logExpr 15 to 9
+Adding parent logExpr 15 to 1
+Adding child logExpr 15 to 5
+Adding parent logExpr 16 to 3
+Adding parent logExpr 16 to 1
+--- ZERO SELECTIVITY ---
+AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]Created eq 10
+Schema: r3c5 NUMBER ClassHead : r3c5, r3c4 NUMBER ClassHead : r3c4, r3c3 NUMBER ClassHead : r3c3, r3c2 NUMBER ClassHead : r3c2, r3c1 NUMBER ClassHead : r3c1, r2c5 NUMBER ClassHead : r2c5, r2c4 NUMBER ClassHead : r2c4, r2c3 NUMBER ClassHead : r2c3, r2c2 NUMBER ClassHead : r2c2, r2c1 NUMBER ClassHead : r2c1Adding child logExpr 16 to 10
+Adding parent logExpr 17 to 10
+Adding parent logExpr 17 to 0
+Adding child logExpr 17 to 5
+JoinAssoc_t::Apply Finished Iterating over 2
+JoinExchange_t::Apply Iterating over 2
+JoinExchange_t::Apply Finished Iterating over 2
+
+[EQCLASS5]
+| [LOGEXP1]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | [EQCLASS4]
+| | | [LOGEXP2]JOIN TRUE
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| [LOGEXP7]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| [LOGEXP9]JOIN TRUE
+| | [EQCLASS7]
+| | | [LOGEXP8]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| [LOGEXP11]JOIN TRUE
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS8]
+| | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| [LOGEXP15]JOIN TRUE
+| | [EQCLASS9]
+| | | [LOGEXP14]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+| [LOGEXP17]JOIN TRUE
+| | [EQCLASS10]
+| | | [LOGEXP16]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+Finished Expanding logexpr 7 eqclass = 5
+
+
+Expanding SubDAG for eq 7
+
+Expanding logexpr 8 eqclass = 7
+
+SelectPushPred_t::Apply Iterating over 2
+Adding parent logExpr 18 to 0
+Adding parent logExpr 18 to 1
+Adding child logExpr 18 to 7
+SelectPushPred_t::Apply Finished Iterating over 2
+
+Applying Transformation: NestedPredToApplyOp.
+On Select_t node: 8
+
+No nested predicate in logexpr: 8
+
+[EQCLASS7]
+| [LOGEXP8]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| [LOGEXP18]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+Finished Expanding logexpr 8 eqclass = 7
+
+
+Expanding logexpr 18 eqclass = 7
+
+Adding parent logExpr 19 to 0
+--- ZERO SELECTIVITY ---
+AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]Created eq 11
+Schema: r1c10 NUMBER ClassHead : r1c10, r1c9 NUMBER ClassHead : r1c9, r1c8 NUMBER ClassHead : r1c8, r1c7 NUMBER ClassHead : r1c7, r1c6 NUMBER ClassHead : r1c6, r1c5 NUMBER ClassHead : r1c5, r1c4 NUMBER ClassHead : r1c4, r1c3 NUMBER ClassHead : r1c3, r1c2 NUMBER ClassHead : r1c2, r1c1 NUMBER ClassHead : r1c1Adding child logExpr 19 to 11
+Adding parent logExpr 20 to 11
+Adding parent logExpr 20 to 1
+Adding child logExpr 20 to 7
+Adding parent logExpr 21 to 1
+--- ZERO SELECTIVITY ---
+AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]Created eq 12
+Schema: r2c5 NUMBER ClassHead : r2c5, r2c4 NUMBER ClassHead : r2c4, r2c3 NUMBER ClassHead : r2c3, r2c2 NUMBER ClassHead : r2c2, r2c1 NUMBER ClassHead : r2c1Adding child logExpr 21 to 12
+Adding parent logExpr 22 to 12
+Adding parent logExpr 22 to 0
+Adding child logExpr 22 to 7
+Adding parent logExpr 23 to 0
+Deleting parent logExpr 23 from 0
+Adding parent logExpr 24 to 11
+Adding parent logExpr 24 to 1
+Deleting parent logExpr 24 from 11
+Deleting parent logExpr 24 from 1
+JoinAssoc_t::Apply Iterating over 1
+JoinAssoc_t::Apply Finished Iterating over 1
+JoinAssoc_t::Apply Iterating over 0
+JoinAssoc_t::Apply Finished Iterating over 0
+JoinExchange_t::Apply Iterating over 0
+JoinExchange_t::Apply Finished Iterating over 0
+
+[EQCLASS7]
+| [LOGEXP8]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| [LOGEXP18]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+| [LOGEXP20]JOIN TRUE
+| | [EQCLASS11]
+| | | [LOGEXP19]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+| [LOGEXP22]JOIN TRUE
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+| | [EQCLASS12]
+| | | [LOGEXP21]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+Finished Expanding logexpr 18 eqclass = 7
+
+
+Expanding SubDAG for eq 11
+
+Expanding logexpr 19 eqclass = 11
+
+SelectPushPred_t::Apply Iterating over 0
+SelectPushPred_t::Apply Finished Iterating over 0
+
+Applying Transformation: NestedPredToApplyOp.
+On Select_t node: 19
+
+No nested predicate in logexpr: 19
+
+[EQCLASS11]
+| [LOGEXP19]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+Finished Expanding logexpr 19 eqclass = 11
+
+Finished Expanding SubDAG for eq 11
+
+
+Expanding logexpr 20 eqclass = 7
+
+
+[EQCLASS7]
+| [LOGEXP8]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| [LOGEXP18]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+| [LOGEXP20]JOIN TRUE
+| | [EQCLASS11]
+| | | [LOGEXP19]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+| [LOGEXP22]JOIN TRUE
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+| | [EQCLASS12]
+| | | [LOGEXP21]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+Finished Expanding logexpr 20 eqclass = 7
+
+
+Expanding SubDAG for eq 12
+
+Expanding logexpr 21 eqclass = 12
+
+SelectPushPred_t::Apply Iterating over 1
+SelectPushPred_t::Apply Finished Iterating over 1
+
+Applying Transformation: NestedPredToApplyOp.
+On Select_t node: 21
+
+No nested predicate in logexpr: 21
+
+[EQCLASS12]
+| [LOGEXP21]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+Finished Expanding logexpr 21 eqclass = 12
+
+Finished Expanding SubDAG for eq 12
+
+
+Expanding logexpr 22 eqclass = 7
+
+
+[EQCLASS7]
+| [LOGEXP8]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| [LOGEXP18]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+| [LOGEXP20]JOIN TRUE
+| | [EQCLASS11]
+| | | [LOGEXP19]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+| [LOGEXP22]JOIN TRUE
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+| | [EQCLASS12]
+| | | [LOGEXP21]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+Finished Expanding logexpr 22 eqclass = 7
+
+Finished Expanding SubDAG for eq 7
+
+
+Expanding logexpr 9 eqclass = 5
+
+
+[EQCLASS5]
+| [LOGEXP1]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | [EQCLASS4]
+| | | [LOGEXP2]JOIN TRUE
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| [LOGEXP7]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| [LOGEXP9]JOIN TRUE
+| | [EQCLASS7]
+| | | [LOGEXP8]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | [LOGEXP18]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | | [LOGEXP20]JOIN TRUE
+| | | | [EQCLASS11]
+| | | | | [LOGEXP19]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | | [LOGEXP22]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS12]
+| | | | | [LOGEXP21]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| [LOGEXP11]JOIN TRUE
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS8]
+| | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| [LOGEXP15]JOIN TRUE
+| | [EQCLASS9]
+| | | [LOGEXP14]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+| [LOGEXP17]JOIN TRUE
+| | [EQCLASS10]
+| | | [LOGEXP16]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+Finished Expanding logexpr 9 eqclass = 5
+
+
+Expanding SubDAG for eq 8
+
+Expanding logexpr 10 eqclass = 8
+
+SelectPushPred_t::Apply Iterating over 3
+SelectPushPred_t::Apply Finished Iterating over 3
+
+Applying Transformation: NestedPredToApplyOp.
+On Select_t node: 10
+
+No nested predicate in logexpr: 10
+
+[EQCLASS8]
+| [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+Finished Expanding logexpr 10 eqclass = 8
+
+Finished Expanding SubDAG for eq 8
+
+
+Expanding logexpr 11 eqclass = 5
+
+
+[EQCLASS5]
+| [LOGEXP1]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | [EQCLASS4]
+| | | [LOGEXP2]JOIN TRUE
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| [LOGEXP7]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| [LOGEXP9]JOIN TRUE
+| | [EQCLASS7]
+| | | [LOGEXP8]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | [LOGEXP18]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | | [LOGEXP20]JOIN TRUE
+| | | | [EQCLASS11]
+| | | | | [LOGEXP19]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | | [LOGEXP22]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS12]
+| | | | | [LOGEXP21]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| [LOGEXP11]JOIN TRUE
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS8]
+| | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| [LOGEXP15]JOIN TRUE
+| | [EQCLASS9]
+| | | [LOGEXP14]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+| [LOGEXP17]JOIN TRUE
+| | [EQCLASS10]
+| | | [LOGEXP16]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+Finished Expanding logexpr 11 eqclass = 5
+
+
+Expanding SubDAG for eq 9
+
+Expanding logexpr 14 eqclass = 9
+
+Adding parent logExpr 25 to 3
+Deleting parent logExpr 25 from 3
+Adding parent logExpr 26 to 8
+Adding parent logExpr 26 to 0
+Adding child logExpr 26 to 9
+Adding parent logExpr 27 to 0
+Deleting parent logExpr 27 from 0
+Adding parent logExpr 28 to 11
+Adding parent logExpr 28 to 3
+Adding child logExpr 28 to 9
+Adding parent logExpr 29 to 3
+Deleting parent logExpr 29 from 3
+Adding parent logExpr 30 to 8
+Adding parent logExpr 30 to 0
+Deleting parent logExpr 30 from 8
+Deleting parent logExpr 30 from 0
+JoinAssoc_t::Apply Iterating over 0
+JoinAssoc_t::Apply Finished Iterating over 0
+JoinAssoc_t::Apply Iterating over 3
+JoinAssoc_t::Apply Finished Iterating over 3
+JoinExchange_t::Apply Iterating over 3
+JoinExchange_t::Apply Finished Iterating over 3
+
+[EQCLASS9]
+| [LOGEXP14]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+| [LOGEXP26]JOIN TRUE
+| | [EQCLASS8]
+| | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+| [LOGEXP28]JOIN TRUE
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| | [EQCLASS11]
+| | | [LOGEXP19]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+Finished Expanding logexpr 14 eqclass = 9
+
+
+Expanding logexpr 26 eqclass = 9
+
+
+[EQCLASS9]
+| [LOGEXP14]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+| [LOGEXP26]JOIN TRUE
+| | [EQCLASS8]
+| | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+| [LOGEXP28]JOIN TRUE
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| | [EQCLASS11]
+| | | [LOGEXP19]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+Finished Expanding logexpr 26 eqclass = 9
+
+
+Expanding logexpr 28 eqclass = 9
+
+
+[EQCLASS9]
+| [LOGEXP14]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+| [LOGEXP26]JOIN TRUE
+| | [EQCLASS8]
+| | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+| [LOGEXP28]JOIN TRUE
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| | [EQCLASS11]
+| | | [LOGEXP19]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+Finished Expanding logexpr 28 eqclass = 9
+
+Finished Expanding SubDAG for eq 9
+
+
+Expanding logexpr 15 eqclass = 5
+
+
+[EQCLASS5]
+| [LOGEXP1]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | [EQCLASS4]
+| | | [LOGEXP2]JOIN TRUE
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| [LOGEXP7]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| [LOGEXP9]JOIN TRUE
+| | [EQCLASS7]
+| | | [LOGEXP8]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | [LOGEXP18]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | | [LOGEXP20]JOIN TRUE
+| | | | [EQCLASS11]
+| | | | | [LOGEXP19]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | | [LOGEXP22]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS12]
+| | | | | [LOGEXP21]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| [LOGEXP11]JOIN TRUE
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS8]
+| | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| [LOGEXP15]JOIN TRUE
+| | [EQCLASS9]
+| | | [LOGEXP14]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | [LOGEXP26]JOIN TRUE
+| | | | [EQCLASS8]
+| | | | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | [LOGEXP28]JOIN TRUE
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | | [EQCLASS11]
+| | | | | [LOGEXP19]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+| [LOGEXP17]JOIN TRUE
+| | [EQCLASS10]
+| | | [LOGEXP16]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+Finished Expanding logexpr 15 eqclass = 5
+
+
+Expanding SubDAG for eq 10
+
+Expanding logexpr 16 eqclass = 10
+
+Adding parent logExpr 31 to 3
+Deleting parent logExpr 31 from 3
+Adding parent logExpr 32 to 8
+Adding parent logExpr 32 to 1
+Adding child logExpr 32 to 10
+Adding parent logExpr 33 to 1
+Deleting parent logExpr 33 from 1
+Adding parent logExpr 34 to 12
+Adding parent logExpr 34 to 3
+Adding child logExpr 34 to 10
+Adding parent logExpr 35 to 3
+Deleting parent logExpr 35 from 3
+Adding parent logExpr 36 to 8
+Adding parent logExpr 36 to 1
+Deleting parent logExpr 36 from 8
+Deleting parent logExpr 36 from 1
+JoinAssoc_t::Apply Iterating over 1
+JoinAssoc_t::Apply Finished Iterating over 1
+JoinAssoc_t::Apply Iterating over 3
+JoinAssoc_t::Apply Finished Iterating over 3
+JoinExchange_t::Apply Iterating over 3
+JoinExchange_t::Apply Finished Iterating over 3
+
+[EQCLASS10]
+| [LOGEXP16]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+| [LOGEXP32]JOIN TRUE
+| | [EQCLASS8]
+| | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+| [LOGEXP34]JOIN TRUE
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| | [EQCLASS12]
+| | | [LOGEXP21]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+Finished Expanding logexpr 16 eqclass = 10
+
+
+Expanding logexpr 32 eqclass = 10
+
+
+[EQCLASS10]
+| [LOGEXP16]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+| [LOGEXP32]JOIN TRUE
+| | [EQCLASS8]
+| | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+| [LOGEXP34]JOIN TRUE
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| | [EQCLASS12]
+| | | [LOGEXP21]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+Finished Expanding logexpr 32 eqclass = 10
+
+
+Expanding logexpr 34 eqclass = 10
+
+
+[EQCLASS10]
+| [LOGEXP16]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+| [LOGEXP32]JOIN TRUE
+| | [EQCLASS8]
+| | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+| [LOGEXP34]JOIN TRUE
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| | [EQCLASS12]
+| | | [LOGEXP21]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+Finished Expanding logexpr 34 eqclass = 10
+
+Finished Expanding SubDAG for eq 10
+
+
+Expanding logexpr 17 eqclass = 5
+
+
+[EQCLASS5]
+| [LOGEXP1]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | [EQCLASS4]
+| | | [LOGEXP2]JOIN TRUE
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| [LOGEXP7]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| [LOGEXP9]JOIN TRUE
+| | [EQCLASS7]
+| | | [LOGEXP8]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | [LOGEXP18]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | | [LOGEXP20]JOIN TRUE
+| | | | [EQCLASS11]
+| | | | | [LOGEXP19]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | | [LOGEXP22]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS12]
+| | | | | [LOGEXP21]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| [LOGEXP11]JOIN TRUE
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS8]
+| | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| [LOGEXP15]JOIN TRUE
+| | [EQCLASS9]
+| | | [LOGEXP14]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | [LOGEXP26]JOIN TRUE
+| | | | [EQCLASS8]
+| | | | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | [LOGEXP28]JOIN TRUE
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | | [EQCLASS11]
+| | | | | [LOGEXP19]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+| [LOGEXP17]JOIN TRUE
+| | [EQCLASS10]
+| | | [LOGEXP16]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | | [LOGEXP32]JOIN TRUE
+| | | | [EQCLASS8]
+| | | | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | | [LOGEXP34]JOIN TRUE
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | | [EQCLASS12]
+| | | | | [LOGEXP21]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+Finished Expanding logexpr 17 eqclass = 5
+
+Finished Expanding SubDAG for eq 5
+
+
+Expanding logexpr 0 eqclass = 6
+
+
+[EQCLASS6]
+| [LOGEXP0]PROJECT :r1c1 :r2c1 :r3c1 
+| | [EQCLASS5]
+| | | [LOGEXP1]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS4]
+| | | | | [LOGEXP2]JOIN TRUE
+| | | | | | [EQCLASS2]
+| | | | | | | [LOGEXP3]JOIN TRUE
+| | | | | | | | [EQCLASS0]
+| | | | | | | | | [LOGEXP4]r1
+| | | | | | | | [EQCLASS1]
+| | | | | | | | | [LOGEXP5]r2
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | [LOGEXP7]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | [LOGEXP9]JOIN TRUE
+| | | | [EQCLASS7]
+| | | | | [LOGEXP8]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | [EQCLASS2]
+| | | | | | | [LOGEXP3]JOIN TRUE
+| | | | | | | | [EQCLASS0]
+| | | | | | | | | [LOGEXP4]r1
+| | | | | | | | [EQCLASS1]
+| | | | | | | | | [LOGEXP5]r2
+| | | | | [LOGEXP18]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | | [LOGEXP20]JOIN TRUE
+| | | | | | [EQCLASS11]
+| | | | | | | [LOGEXP19]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | | | [EQCLASS0]
+| | | | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | | [LOGEXP22]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS12]
+| | | | | | | [LOGEXP21]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | | | [EQCLASS1]
+| | | | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | [LOGEXP11]JOIN TRUE
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS8]
+| | | | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | [LOGEXP15]JOIN TRUE
+| | | | [EQCLASS9]
+| | | | | [LOGEXP14]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | [LOGEXP26]JOIN TRUE
+| | | | | | [EQCLASS8]
+| | | | | | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | | | [EQCLASS3]
+| | | | | | | | | [LOGEXP6]r3
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | [LOGEXP28]JOIN TRUE
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | | | | [EQCLASS11]
+| | | | | | | [LOGEXP19]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | | | [EQCLASS0]
+| | | | | | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | | [LOGEXP17]JOIN TRUE
+| | | | [EQCLASS10]
+| | | | | [LOGEXP16]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | | [LOGEXP32]JOIN TRUE
+| | | | | | [EQCLASS8]
+| | | | | | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | | | [EQCLASS3]
+| | | | | | | | | [LOGEXP6]r3
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | | [LOGEXP34]JOIN TRUE
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | | | | [EQCLASS12]
+| | | | | | | [LOGEXP21]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | | | [EQCLASS1]
+| | | | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+Finished Expanding logexpr 0 eqclass = 6
+
+Finished Expanding SubDAG for eq 6
+
+Setting parameter logical props for Eq = 6
+Setting outerVarLogProp for Op = 0
+Setting parameter logical props for Eq = 5
+Setting outerVarLogProp for Op = 1
+Setting parameter logical props for Eq = 4
+Setting outerVarLogProp for Op = 2
+Setting parameter logical props for Eq = 2
+Setting outerVarLogProp for Op = 3
+Setting parameter logical props for Eq = 0
+Setting outerVarLogProp for Op = 4
+Setting outerVarLogProp for Op = 4 Done
+Setting paramLogProp for Eq = 0 Done
+Setting parameter logical props for Eq = 1
+Setting outerVarLogProp for Op = 5
+Setting outerVarLogProp for Op = 5 Done
+Setting paramLogProp for Eq = 1 Done
+Setting outerVarLogProp for Op = 3 Done
+Setting paramLogProp for Eq = 2 Done
+Setting parameter logical props for Eq = 3
+Setting outerVarLogProp for Op = 6
+Setting outerVarLogProp for Op = 6 Done
+Setting paramLogProp for Eq = 3 Done
+Setting outerVarLogProp for Op = 2 Done
+Setting paramLogProp for Eq = 4 Done
+Setting outerVarLogProp for Op = 1 Done
+Setting outerVarLogProp for Op = 7
+Setting outerVarLogProp for Op = 7 Done
+Setting outerVarLogProp for Op = 9
+Setting parameter logical props for Eq = 7
+Setting outerVarLogProp for Op = 8
+Setting outerVarLogProp for Op = 8 Done
+Setting outerVarLogProp for Op = 18
+Setting outerVarLogProp for Op = 18 Done
+Setting outerVarLogProp for Op = 20
+Setting parameter logical props for Eq = 11
+Setting outerVarLogProp for Op = 19
+Setting outerVarLogProp for Op = 19 Done
+Setting paramLogProp for Eq = 11 Done
+Setting outerVarLogProp for Op = 20 Done
+Setting outerVarLogProp for Op = 22
+Setting parameter logical props for Eq = 12
+Setting outerVarLogProp for Op = 21
+Setting outerVarLogProp for Op = 21 Done
+Setting paramLogProp for Eq = 12 Done
+Setting outerVarLogProp for Op = 22 Done
+Setting paramLogProp for Eq = 7 Done
+Setting outerVarLogProp for Op = 9 Done
+Setting outerVarLogProp for Op = 11
+Setting parameter logical props for Eq = 8
+Setting outerVarLogProp for Op = 10
+Setting outerVarLogProp for Op = 10 Done
+Setting paramLogProp for Eq = 8 Done
+Setting outerVarLogProp for Op = 11 Done
+Setting outerVarLogProp for Op = 15
+Setting parameter logical props for Eq = 9
+Setting outerVarLogProp for Op = 14
+Setting outerVarLogProp for Op = 14 Done
+Setting outerVarLogProp for Op = 26
+Setting outerVarLogProp for Op = 26 Done
+Setting outerVarLogProp for Op = 28
+Setting outerVarLogProp for Op = 28 Done
+Setting paramLogProp for Eq = 9 Done
+Setting outerVarLogProp for Op = 15 Done
+Setting outerVarLogProp for Op = 17
+Setting parameter logical props for Eq = 10
+Setting outerVarLogProp for Op = 16
+Setting outerVarLogProp for Op = 16 Done
+Setting outerVarLogProp for Op = 32
+Setting outerVarLogProp for Op = 32 Done
+Setting outerVarLogProp for Op = 34
+Setting outerVarLogProp for Op = 34 Done
+Setting paramLogProp for Eq = 10 Done
+Setting outerVarLogProp for Op = 17 Done
+Setting paramLogProp for Eq = 5 Done
+Setting outerVarLogProp for Op = 0 Done
+Setting paramLogProp for Eq = 6 Done
+Expanded LQDAG
+<EQCLASS id="6" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r2" attrname="c1"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r2" attrname="c2"/>
+<Attr relname="r1" attrname="c3"/>
+<Attr relname="r2" attrname="c3"/>
+<Attr relname="r3" attrname="c1"/>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r3" attrname="c2"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r3" attrname="c3"/>
+<Attr relname="r1" attrname="c3"/>
+</OuterVariables>
+  <LOGEXP id="0" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg=":r1c1"/>
+<RelArgRef relarg=":r2c1"/>
+<RelArgRef relarg=":r3c1"/>
+</PROJ_EXPRS>
+    <EQCLASS id="5" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r2" attrname="c1"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r2" attrname="c2"/>
+<Attr relname="r1" attrname="c3"/>
+<Attr relname="r2" attrname="c3"/>
+<Attr relname="r3" attrname="c1"/>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r3" attrname="c2"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r3" attrname="c3"/>
+<Attr relname="r1" attrname="c3"/>
+</OuterVariables>
+      <LOGEXP id="1" op="SELECT">
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c1"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c1"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+        <EQCLASS id="4" isCorrelated="false">
+          <LOGEXP id="2" op="JOIN"> 
+<TRUE/>
+            <EQCLASS id="2" isCorrelated="false">
+              <LOGEXP id="3" op="JOIN"> 
+<TRUE/>
+                <EQCLASS id="0" isCorrelated="false">
+         <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+                <EQCLASS id="1" isCorrelated="false">
+         <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="3" isCorrelated="false">
+       <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="7" op="JOIN"> 
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c1"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c1"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+        <EQCLASS id="2" isCorrelated="false">
+          <LOGEXP id="3" op="JOIN"> 
+<TRUE/>
+            <EQCLASS id="0" isCorrelated="false">
+       <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="1" isCorrelated="false">
+       <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="3" isCorrelated="false">
+     <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="9" op="JOIN"> 
+<TRUE/>
+        <EQCLASS id="7" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r2" attrname="c1"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r2" attrname="c2"/>
+<Attr relname="r1" attrname="c3"/>
+<Attr relname="r2" attrname="c3"/>
+<Attr relname="r3" attrname="c1"/>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r3" attrname="c2"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r3" attrname="c3"/>
+<Attr relname="r1" attrname="c3"/>
+</OuterVariables>
+          <LOGEXP id="8" op="SELECT">
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c1"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c1"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+            <EQCLASS id="2" isCorrelated="false">
+              <LOGEXP id="3" op="JOIN"> 
+<TRUE/>
+                <EQCLASS id="0" isCorrelated="false">
+         <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+                <EQCLASS id="1" isCorrelated="false">
+         <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+          <LOGEXP id="18" op="JOIN"> 
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c1"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c1"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+            <EQCLASS id="0" isCorrelated="false">
+       <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="1" isCorrelated="false">
+       <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+          <LOGEXP id="20" op="JOIN"> 
+<TRUE/>
+            <EQCLASS id="11" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r2" attrname="c1"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r2" attrname="c2"/>
+<Attr relname="r1" attrname="c3"/>
+<Attr relname="r2" attrname="c3"/>
+<Attr relname="r3" attrname="c1"/>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r3" attrname="c2"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r3" attrname="c3"/>
+<Attr relname="r1" attrname="c3"/>
+</OuterVariables>
+              <LOGEXP id="19" op="SELECT">
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c1"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c1"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+                <EQCLASS id="0" isCorrelated="false">
+         <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="1" isCorrelated="false">
+       <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+          <LOGEXP id="22" op="JOIN"> 
+<TRUE/>
+            <EQCLASS id="0" isCorrelated="false">
+       <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="12" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r2" attrname="c1"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r2" attrname="c2"/>
+<Attr relname="r1" attrname="c3"/>
+<Attr relname="r2" attrname="c3"/>
+<Attr relname="r3" attrname="c1"/>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r3" attrname="c2"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r3" attrname="c3"/>
+<Attr relname="r1" attrname="c3"/>
+</OuterVariables>
+              <LOGEXP id="21" op="SELECT">
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c1"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c1"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+                <EQCLASS id="1" isCorrelated="false">
+         <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="3" isCorrelated="false">
+     <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="11" op="JOIN"> 
+<TRUE/>
+        <EQCLASS id="2" isCorrelated="false">
+          <LOGEXP id="3" op="JOIN"> 
+<TRUE/>
+            <EQCLASS id="0" isCorrelated="false">
+       <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="1" isCorrelated="false">
+       <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="8" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r2" attrname="c1"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r2" attrname="c2"/>
+<Attr relname="r1" attrname="c3"/>
+<Attr relname="r2" attrname="c3"/>
+<Attr relname="r3" attrname="c1"/>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r3" attrname="c2"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r3" attrname="c3"/>
+<Attr relname="r1" attrname="c3"/>
+</OuterVariables>
+          <LOGEXP id="10" op="SELECT">
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c1"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c1"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+            <EQCLASS id="3" isCorrelated="false">
+       <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="15" op="JOIN"> 
+<TRUE/>
+        <EQCLASS id="9" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r2" attrname="c1"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r2" attrname="c2"/>
+<Attr relname="r1" attrname="c3"/>
+<Attr relname="r2" attrname="c3"/>
+<Attr relname="r3" attrname="c1"/>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r3" attrname="c2"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r3" attrname="c3"/>
+<Attr relname="r1" attrname="c3"/>
+</OuterVariables>
+          <LOGEXP id="14" op="JOIN"> 
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c1"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c1"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+            <EQCLASS id="3" isCorrelated="false">
+       <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="0" isCorrelated="false">
+       <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+          <LOGEXP id="26" op="JOIN"> 
+<TRUE/>
+            <EQCLASS id="8" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r2" attrname="c1"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r2" attrname="c2"/>
+<Attr relname="r1" attrname="c3"/>
+<Attr relname="r2" attrname="c3"/>
+<Attr relname="r3" attrname="c1"/>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r3" attrname="c2"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r3" attrname="c3"/>
+<Attr relname="r1" attrname="c3"/>
+</OuterVariables>
+              <LOGEXP id="10" op="SELECT">
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c1"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c1"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+                <EQCLASS id="3" isCorrelated="false">
+         <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="0" isCorrelated="false">
+       <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+          <LOGEXP id="28" op="JOIN"> 
+<TRUE/>
+            <EQCLASS id="3" isCorrelated="false">
+       <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="11" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r2" attrname="c1"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r2" attrname="c2"/>
+<Attr relname="r1" attrname="c3"/>
+<Attr relname="r2" attrname="c3"/>
+<Attr relname="r3" attrname="c1"/>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r3" attrname="c2"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r3" attrname="c3"/>
+<Attr relname="r1" attrname="c3"/>
+</OuterVariables>
+              <LOGEXP id="19" op="SELECT">
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c1"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c1"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+                <EQCLASS id="0" isCorrelated="false">
+         <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="1" isCorrelated="false">
+     <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="17" op="JOIN"> 
+<TRUE/>
+        <EQCLASS id="10" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r2" attrname="c1"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r2" attrname="c2"/>
+<Attr relname="r1" attrname="c3"/>
+<Attr relname="r2" attrname="c3"/>
+<Attr relname="r3" attrname="c1"/>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r3" attrname="c2"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r3" attrname="c3"/>
+<Attr relname="r1" attrname="c3"/>
+</OuterVariables>
+          <LOGEXP id="16" op="JOIN"> 
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c1"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c1"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+            <EQCLASS id="3" isCorrelated="false">
+       <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="1" isCorrelated="false">
+       <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+          <LOGEXP id="32" op="JOIN"> 
+<TRUE/>
+            <EQCLASS id="8" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r2" attrname="c1"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r2" attrname="c2"/>
+<Attr relname="r1" attrname="c3"/>
+<Attr relname="r2" attrname="c3"/>
+<Attr relname="r3" attrname="c1"/>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r3" attrname="c2"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r3" attrname="c3"/>
+<Attr relname="r1" attrname="c3"/>
+</OuterVariables>
+              <LOGEXP id="10" op="SELECT">
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c1"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c1"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+                <EQCLASS id="3" isCorrelated="false">
+         <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="1" isCorrelated="false">
+       <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+          <LOGEXP id="34" op="JOIN"> 
+<TRUE/>
+            <EQCLASS id="3" isCorrelated="false">
+       <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="12" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r2" attrname="c1"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r2" attrname="c2"/>
+<Attr relname="r1" attrname="c3"/>
+<Attr relname="r2" attrname="c3"/>
+<Attr relname="r3" attrname="c1"/>
+<Attr relname="r1" attrname="c1"/>
+<Attr relname="r3" attrname="c2"/>
+<Attr relname="r1" attrname="c2"/>
+<Attr relname="r3" attrname="c3"/>
+<Attr relname="r1" attrname="c3"/>
+</OuterVariables>
+              <LOGEXP id="21" op="SELECT">
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c1"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r2:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c1"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c2"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c2"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r3:c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:c3"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+                <EQCLASS id="1" isCorrelated="false">
+         <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="0" isCorrelated="false">
+     <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+End of Expanded LQDAG
+Getting interesting props for Eq = 6
+Getting interesting props for Op = 0
+Getting interesting props for Eq = 5
+Getting interesting props for Op = 1
+Getting interesting props for Eq = 4
+Getting interesting props for Op = 2
+Getting interesting props for Eq = 2
+Getting interesting props for Op = 3
+Getting interesting props for Eq = 0
+Getting interesting props for Eq = 1
+Getting interesting props for Eq = 3
+Getting interesting props for Op = 7
+Getting interesting props for Eq = 2
+Getting interesting props for Op = 3
+Getting interesting props for Eq = 0
+Getting interesting props for Eq = 1
+Getting interesting props for Eq = 3
+Getting interesting props for Op = 9
+Getting interesting props for Eq = 7
+Getting interesting props for Op = 8
+Getting interesting props for Eq = 2
+Getting interesting props for Op = 3
+Getting interesting props for Eq = 0
+Getting interesting props for Eq = 1
+Getting interesting props for Op = 18
+Getting interesting props for Eq = 0
+Getting interesting props for Eq = 1
+Getting interesting props for Op = 20
+Getting interesting props for Eq = 11
+Getting interesting props for Op = 19
+Getting interesting props for Eq = 0
+< r1:c1 r2:c1 r1:c2 r2:c2 r1:c3 r2:c3 r3:c1 r1:c1 r3:c2 r1:c2 r3:c3 r1:c3 >Getting interesting props for Eq = 1
+Getting interesting props for Op = 22
+Getting interesting props for Eq = 0
+Getting interesting props for Eq = 12
+Getting interesting props for Op = 21
+Getting interesting props for Eq = 1
+< r1:c1 r2:c1 r1:c2 r2:c2 r1:c3 r2:c3 r3:c1 r1:c1 r3:c2 r1:c2 r3:c3 r1:c3 >< r1:c1 r2:c1 r1:c2 r2:c2 r1:c3 r2:c3 r3:c1 r1:c1 r3:c2 r1:c2 r3:c3 r1:c3 >Getting interesting props for Eq = 3
+Getting interesting props for Op = 11
+Getting interesting props for Eq = 2
+Getting interesting props for Op = 3
+Getting interesting props for Eq = 0
+Getting interesting props for Eq = 1
+Getting interesting props for Eq = 8
+Getting interesting props for Op = 10
+Getting interesting props for Eq = 3
+< r1:c1 r2:c1 r1:c2 r2:c2 r1:c3 r2:c3 r3:c1 r1:c1 r3:c2 r1:c2 r3:c3 r1:c3 >Getting interesting props for Op = 15
+Getting interesting props for Eq = 9
+Getting interesting props for Op = 14
+Getting interesting props for Eq = 3
+Getting interesting props for Eq = 0
+Getting interesting props for Op = 26
+Getting interesting props for Eq = 8
+Getting interesting props for Op = 10
+Getting interesting props for Eq = 3
+< r1:c1 r2:c1 r1:c2 r2:c2 r1:c3 r2:c3 r3:c1 r1:c1 r3:c2 r1:c2 r3:c3 r1:c3 >Getting interesting props for Eq = 0
+Getting interesting props for Op = 28
+Getting interesting props for Eq = 3
+Getting interesting props for Eq = 11
+Getting interesting props for Op = 19
+Getting interesting props for Eq = 0
+< r1:c1 r2:c1 r1:c2 r2:c2 r1:c3 r2:c3 r3:c1 r1:c1 r3:c2 r1:c2 r3:c3 r1:c3 >< r1:c1 r2:c1 r1:c2 r2:c2 r1:c3 r2:c3 r3:c1 r1:c1 r3:c2 r1:c2 r3:c3 r1:c3 >Getting interesting props for Eq = 1
+Getting interesting props for Op = 17
+Getting interesting props for Eq = 10
+Getting interesting props for Op = 16
+Getting interesting props for Eq = 3
+Getting interesting props for Eq = 1
+Getting interesting props for Op = 32
+Getting interesting props for Eq = 8
+Getting interesting props for Op = 10
+Getting interesting props for Eq = 3
+< r1:c1 r2:c1 r1:c2 r2:c2 r1:c3 r2:c3 r3:c1 r1:c1 r3:c2 r1:c2 r3:c3 r1:c3 >Getting interesting props for Eq = 1
+Getting interesting props for Op = 34
+Getting interesting props for Eq = 3
+Getting interesting props for Eq = 12
+Getting interesting props for Op = 21
+Getting interesting props for Eq = 1
+< r1:c1 r2:c1 r1:c2 r2:c2 r1:c3 r2:c3 r3:c1 r1:c1 r3:c2 r1:c2 r3:c3 r1:c3 >< r1:c1 r2:c1 r1:c2 r2:c2 r1:c3 r2:c3 r3:c1 r1:c1 r3:c2 r1:c2 r3:c3 r1:c3 >Getting interesting props for Eq = 0
+< r1:c1 r2:c1 r1:c2 r2:c2 r1:c3 r2:c3 r3:c1 r1:c1 r3:c2 r1:c2 r3:c3 r1:c3 >< r1:c1 r2:c1 r1:c2 r2:c2 r1:c3 r2:c3 r3:c1 r1:c1 r3:c2 r1:c2 r3:c3 r1:c3 >Calling GetFavorableOrders
+Computed the favorable orders for Eq 0
+Computed the favorable orders for Eq 1
+Computed the favorable orders for Eq 2
+Computed the favorable orders for Eq 3
+Computed the favorable orders for Eq 4
+Computed the favorable orders for Eq 11
+Computed the favorable orders for Eq 12
+Computed the favorable orders for Eq 7
+Computed the favorable orders for Eq 8
+Computed the favorable orders for Eq 9
+Computed the favorable orders for Eq 10
+Computed the favorable orders for Eq 5
+Computed the favorable orders for Eq 6
+Obtained Favorable Orders:
+LDAGUSR 4
+LDAGSYS 8
+Deleting logexpr 8
+Deleting child logExpr 8 from 7
+Before Deletion
+[8][18][20][22]
+After Deletion
+[18][20][22]
+Deleting parent logExpr 8 from 2
+Applying logical subsumption at SubDAG for eq 6
+Applying logical subsumption at SubDAG for eq 5
+Applying logical subsumption at SubDAG for eq 4
+Applying logical subsumption at SubDAG for eq 2
+Applying logical subsumption at SubDAG for eq 0
+Applying logical subsumption at SubDAG for eq 0
+Finished Applying logical subsumption at SubDAG for eq 0
+Finished Applying logical subsumption at SubDAG for eq 0
+
+Applying logical subsumption at SubDAG for eq 1
+Applying logical subsumption at SubDAG for eq 1
+Finished Applying logical subsumption at SubDAG for eq 1
+Finished Applying logical subsumption at SubDAG for eq 1
+
+Applying logical subsumption at SubDAG for eq 2
+Finished Applying logical subsumption at SubDAG for eq 2
+Finished Applying logical subsumption at SubDAG for eq 2
+
+Applying logical subsumption at SubDAG for eq 3
+Applying logical subsumption at SubDAG for eq 3
+Finished Applying logical subsumption at SubDAG for eq 3
+Finished Applying logical subsumption at SubDAG for eq 3
+
+Applying logical subsumption at SubDAG for eq 4
+Finished Applying logical subsumption at SubDAG for eq 4
+Finished Applying logical subsumption at SubDAG for eq 4
+
+Applying logical subsumption at SubDAG for eq 7
+Applying logical subsumption at SubDAG for eq 11
+Applying logical subsumption at SubDAG for eq 11
+Finished Applying logical subsumption at SubDAG for eq 11
+Finished Applying logical subsumption at SubDAG for eq 11
+
+Applying logical subsumption at SubDAG for eq 12
+Applying logical subsumption at SubDAG for eq 12
+Finished Applying logical subsumption at SubDAG for eq 12
+Finished Applying logical subsumption at SubDAG for eq 12
+
+Applying logical subsumption at SubDAG for eq 7
+Finished Applying logical subsumption at SubDAG for eq 7
+Finished Applying logical subsumption at SubDAG for eq 7
+
+Applying logical subsumption at SubDAG for eq 8
+Applying logical subsumption at SubDAG for eq 8
+Finished Applying logical subsumption at SubDAG for eq 8
+Finished Applying logical subsumption at SubDAG for eq 8
+
+Applying logical subsumption at SubDAG for eq 9
+Applying logical subsumption at SubDAG for eq 9
+Finished Applying logical subsumption at SubDAG for eq 9
+Finished Applying logical subsumption at SubDAG for eq 9
+
+Applying logical subsumption at SubDAG for eq 10
+Applying logical subsumption at SubDAG for eq 10
+Finished Applying logical subsumption at SubDAG for eq 10
+Finished Applying logical subsumption at SubDAG for eq 10
+
+Applying logical subsumption at SubDAG for eq 5
+Finished Applying logical subsumption at SubDAG for eq 5
+Finished Applying logical subsumption at SubDAG for eq 5
+
+Applying logical subsumption at SubDAG for eq 6
+Finished Applying logical subsumption at SubDAG for eq 6
+Finished Applying logical subsumption at SubDAG for eq 6
+
+Optimizing Eq: 6
+FindBestPlan Eq: 6
+Volcano_t::FindBestAlgPlan Iterating over 6 for PlanGroup = 0
+Eq = 6 PlanGroup = 0 LogExpr = 0
+FindBestPlan Eq: 5
+Volcano_t::FindBestAlgPlan Iterating over 5 for PlanGroup = 1
+Eq = 5 PlanGroup = 1 LogExpr = 1
+Eq = 5 PlanGroup = 1 LogExpr = 7
+Eq = 5 PlanGroup = 1 LogExpr = 9
+FindBestPlan Eq: 7
+Volcano_t::FindBestAlgPlan Iterating over 7 for PlanGroup = 2
+Eq = 7 PlanGroup = 2 LogExpr = 18
+Eq = 7 PlanGroup = 2 LogExpr = 20
+FindBestPlan Eq: 11
+Volcano_t::FindBestAlgPlan Iterating over 11 for PlanGroup = 3
+Eq = 11 PlanGroup = 3 LogExpr = 19
+FindBestPlan Eq: 0
+Volcano_t::FindBestAlgPlan Iterating over 0 for PlanGroup = 4
+Eq = 0 PlanGroup = 4 LogExpr = 4
+[EQCLASS0][PLANGRP4][CC=1] UseCost = 471.429 Plan Cost = 471.429 #Tuples = 6e+06 #Blocks = 214286
+| [ALG0][CC=1]RELSCAN< r1 > Cost = 471.429
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 0 for PlanGroup = 4
+Finished FindBestPlan Eq: 0
+Found best plan for select ...
+[EQCLASS11][PLANGRP3][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 514.287 #Tuples = 1 #Blocks = 1 CORRELATED
+| [ALG1][CC=1]SELECT (state_retain=0)< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] > Cost = 42.8574
+| | [EQCLASS0][PLANGRP4][CC=1] UseCost = 471.429 Plan Cost = 471.429 #Tuples = 6e+06 #Blocks = 214286
+| | | [ALG0][CC=1]RELSCAN< r1 > Cost = 471.429
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 11 for PlanGroup = 3
+Finished FindBestPlan Eq: 11
+FindBestPlan Eq: 1
+Volcano_t::FindBestAlgPlan Iterating over 1 for PlanGroup = 5
+Eq = 1 PlanGroup = 5 LogExpr = 5
+[EQCLASS1][PLANGRP5][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| [ALG2][CC=1]RELSCAN< r2 > Cost = 47.1438
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 1 for PlanGroup = 5
+Finished FindBestPlan Eq: 1
+[EQCLASS7][PLANGRP2][CC=1][PSO=NULL] UseCost = 0.0286 Plan Cost = 681.433 #Tuples = 839 #Blocks = 13 CORRELATED
+| [ALG3][CC=1]NLJOIN< TRUE > Cost = 120.003
+| | [EQCLASS11][PLANGRP3][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 514.287 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | [ALG1][CC=1]SELECT (state_retain=0)< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] > Cost = 42.8574
+| | | | [EQCLASS0][PLANGRP4][CC=1] UseCost = 471.429 Plan Cost = 471.429 #Tuples = 6e+06 #Blocks = 214286
+| | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 471.429
+| | [EQCLASS1][PLANGRP5][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | [ALG2][CC=1]RELSCAN< r2 > Cost = 47.1438
+
+
+Eq = 7 PlanGroup = 2 LogExpr = 22
+Volcano_t::FindBestAlgPlan Finished Iterating over 7 for PlanGroup = 2
+Finished FindBestPlan Eq: 7
+FindBestPlan Eq: 3
+Volcano_t::FindBestAlgPlan Iterating over 3 for PlanGroup = 6
+Eq = 3 PlanGroup = 6 LogExpr = 6
+[EQCLASS3][PLANGRP6][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| [ALG4][CC=1]RELSCAN< r3 > Cost = 47.1438
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 3 for PlanGroup = 6
+Finished FindBestPlan Eq: 3
+[EQCLASS5][PLANGRP1][CC=1][PSO=NULL] UseCost = 21277.1 Plan Cost = 4222.86 #Tuples = 5.02914e+08 #Blocks = 9.67143e+06 CORRELATED
+| [ALG5][CC=1]NLJOIN< TRUE > Cost = 3494.29
+| | [EQCLASS7][PLANGRP2][CC=1][PSO=NULL] UseCost = 0.0286 Plan Cost = 681.433 #Tuples = 839 #Blocks = 13 CORRELATED
+| | | [ALG3][CC=1]NLJOIN< TRUE > Cost = 120.003
+| | | | [EQCLASS11][PLANGRP3][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 514.287 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | | | [ALG1][CC=1]SELECT (state_retain=0)< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] > Cost = 42.8574
+| | | | | | [EQCLASS0][PLANGRP4][CC=1] UseCost = 471.429 Plan Cost = 471.429 #Tuples = 6e+06 #Blocks = 214286
+| | | | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 471.429
+| | | | [EQCLASS1][PLANGRP5][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 47.1438
+| | [EQCLASS3][PLANGRP6][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | [ALG4][CC=1]RELSCAN< r3 > Cost = 47.1438
+
+
+Eq = 5 PlanGroup = 1 LogExpr = 11
+Eq = 5 PlanGroup = 1 LogExpr = 15
+FindBestPlan Eq: 9
+Volcano_t::FindBestAlgPlan Iterating over 9 for PlanGroup = 7
+Eq = 9 PlanGroup = 7 LogExpr = 14
+Eq = 9 PlanGroup = 7 LogExpr = 26
+Eq = 9 PlanGroup = 7 LogExpr = 28
+FindBestPlan Eq: 3
+Finished FindBestPlan Eq: 3
+FindBestPlan Eq: 11
+Finished FindBestPlan Eq: 11
+[EQCLASS9][PLANGRP7][CC=1][PSO=NULL] UseCost = 0.0286 Plan Cost = 681.433 #Tuples = 839 #Blocks = 13 CORRELATED
+| [ALG6][CC=1]NLJOIN< TRUE > Cost = 120.003
+| | [EQCLASS3][PLANGRP6][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | [ALG4][CC=1]RELSCAN< r3 > Cost = 47.1438
+| | [EQCLASS11][PLANGRP3][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 514.287 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | [ALG1][CC=1]SELECT (state_retain=0)< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] > Cost = 42.8574
+| | | | [EQCLASS0][PLANGRP4][CC=1] UseCost = 471.429 Plan Cost = 471.429 #Tuples = 6e+06 #Blocks = 214286
+| | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 471.429
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 9 for PlanGroup = 7
+Finished FindBestPlan Eq: 9
+FindBestPlan Eq: 1
+Finished FindBestPlan Eq: 1
+[EQCLASS5][PLANGRP1][CC=1][PSO=NULL] UseCost = 21277.1 Plan Cost = 4222.86 #Tuples = 5.02914e+08 #Blocks = 9.67143e+06 CORRELATED
+| [ALG7][CC=1]NLJOIN< TRUE > Cost = 3494.29
+| | [EQCLASS9][PLANGRP7][CC=1][PSO=NULL] UseCost = 0.0286 Plan Cost = 681.433 #Tuples = 839 #Blocks = 13 CORRELATED
+| | | [ALG6][CC=1]NLJOIN< TRUE > Cost = 120.003
+| | | | [EQCLASS3][PLANGRP6][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | [ALG4][CC=1]RELSCAN< r3 > Cost = 47.1438
+| | | | [EQCLASS11][PLANGRP3][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 514.287 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | | | [ALG1][CC=1]SELECT (state_retain=0)< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] > Cost = 42.8574
+| | | | | | [EQCLASS0][PLANGRP4][CC=1] UseCost = 471.429 Plan Cost = 471.429 #Tuples = 6e+06 #Blocks = 214286
+| | | | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 471.429
+| | [EQCLASS1][PLANGRP5][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | [ALG2][CC=1]RELSCAN< r2 > Cost = 47.1438
+
+
+Eq = 5 PlanGroup = 1 LogExpr = 17
+FindBestPlan Eq: 10
+Volcano_t::FindBestAlgPlan Iterating over 10 for PlanGroup = 8
+Eq = 10 PlanGroup = 8 LogExpr = 16
+Eq = 10 PlanGroup = 8 LogExpr = 32
+FindBestPlan Eq: 8
+Volcano_t::FindBestAlgPlan Iterating over 8 for PlanGroup = 9
+Eq = 8 PlanGroup = 9 LogExpr = 10
+FindBestPlan Eq: 3
+Finished FindBestPlan Eq: 3
+Found best plan for select ...
+[EQCLASS8][PLANGRP9][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 51.4298 #Tuples = 1 #Blocks = 1 CORRELATED
+| [ALG8][CC=1]SELECT (state_retain=0)< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] > Cost = 4.286
+| | [EQCLASS3][PLANGRP6][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | [ALG4][CC=1]RELSCAN< r3 > Cost = 47.1438
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 8 for PlanGroup = 9
+Finished FindBestPlan Eq: 8
+FindBestPlan Eq: 1
+Finished FindBestPlan Eq: 1
+[EQCLASS10][PLANGRP8][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 218.574 #Tuples = 84 #Blocks = 1 CORRELATED
+| [ALG9][CC=1]NLJOIN< TRUE > Cost = 120
+| | [EQCLASS8][PLANGRP9][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 51.4298 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | [ALG8][CC=1]SELECT (state_retain=0)< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] > Cost = 4.286
+| | | | [EQCLASS3][PLANGRP6][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | [ALG4][CC=1]RELSCAN< r3 > Cost = 47.1438
+| | [EQCLASS1][PLANGRP5][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | [ALG2][CC=1]RELSCAN< r2 > Cost = 47.1438
+
+
+Eq = 10 PlanGroup = 8 LogExpr = 34
+FindBestPlan Eq: 3
+Finished FindBestPlan Eq: 3
+FindBestPlan Eq: 12
+Volcano_t::FindBestAlgPlan Iterating over 12 for PlanGroup = 10
+Eq = 12 PlanGroup = 10 LogExpr = 21
+FindBestPlan Eq: 1
+Finished FindBestPlan Eq: 1
+Volcano_t::FindBestAlgPlan Finished Iterating over 12 for PlanGroup = 10
+Finished FindBestPlan Eq: 12
+Volcano_t::FindBestAlgPlan Finished Iterating over 10 for PlanGroup = 8
+Finished FindBestPlan Eq: 10
+FindBestPlan Eq: 0
+Finished FindBestPlan Eq: 0
+[EQCLASS5][PLANGRP1][CC=1][PSO=NULL] UseCost = 21277.1 Plan Cost = 3824.29 #Tuples = 5.02914e+08 #Blocks = 9.67143e+06 CORRELATED
+| [ALG10][CC=1]NLJOIN< TRUE > Cost = 3134.29
+| | [EQCLASS10][PLANGRP8][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 218.574 #Tuples = 84 #Blocks = 1 CORRELATED
+| | | [ALG9][CC=1]NLJOIN< TRUE > Cost = 120
+| | | | [EQCLASS8][PLANGRP9][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 51.4298 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | | | [ALG8][CC=1]SELECT (state_retain=0)< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] > Cost = 4.286
+| | | | | | [EQCLASS3][PLANGRP6][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | | | [ALG4][CC=1]RELSCAN< r3 > Cost = 47.1438
+| | | | [EQCLASS1][PLANGRP5][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 47.1438
+| | [EQCLASS0][PLANGRP4][CC=1] UseCost = 471.429 Plan Cost = 471.429 #Tuples = 6e+06 #Blocks = 214286
+| | | [ALG0][CC=1]RELSCAN< r1 > Cost = 471.429
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 5 for PlanGroup = 1
+Finished FindBestPlan Eq: 5
+[EQCLASS6][PLANGRP0][CC=1][PSO=NULL] UseCost = 3235.12 Plan Cost = 3824.29 #Tuples = 5.02914e+08 #Blocks = 1.47051e+06 CORRELATED
+| [ALG11][CC=1]PROJECT< :r1c1 :r2c1 :r3c1 > Cost = 0
+| | [EQCLASS5][PLANGRP1][CC=1][PSO=NULL] UseCost = 21277.1 Plan Cost = 3824.29 #Tuples = 5.02914e+08 #Blocks = 9.67143e+06 CORRELATED
+| | | [ALG10][CC=1]NLJOIN< TRUE > Cost = 3134.29
+| | | | [EQCLASS10][PLANGRP8][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 218.574 #Tuples = 84 #Blocks = 1 CORRELATED
+| | | | | [ALG9][CC=1]NLJOIN< TRUE > Cost = 120
+| | | | | | [EQCLASS8][PLANGRP9][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 51.4298 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | | | | | [ALG8][CC=1]SELECT (state_retain=0)< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] > Cost = 4.286
+| | | | | | | | [EQCLASS3][PLANGRP6][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | | | | | [ALG4][CC=1]RELSCAN< r3 > Cost = 47.1438
+| | | | | | [EQCLASS1][PLANGRP5][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 47.1438
+| | | | [EQCLASS0][PLANGRP4][CC=1] UseCost = 471.429 Plan Cost = 471.429 #Tuples = 6e+06 #Blocks = 214286
+| | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 471.429
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 6 for PlanGroup = 0
+Finished FindBestPlan Eq: 6
+Done Optimizing Eq: 6
+
+Optimization Successful: Plan Cost = 3824.29 Cost Limit = 3824.29
+
+[EQCLASS6][PLANGRP0][CC=1][PSO=NULL] UseCost = 3235.12 Plan Cost = 3824.29 #Tuples = 5.02914e+08 #Blocks = 1.47051e+06 CORRELATED
+| [ALG11][CC=1]PROJECT< :r1c1 :r2c1 :r3c1 > Cost = 0
+| | [EQCLASS5][PLANGRP1][CC=1][PSO=NULL] UseCost = 21277.1 Plan Cost = 3824.29 #Tuples = 5.02914e+08 #Blocks = 9.67143e+06 CORRELATED
+| | | [ALG10][CC=1]NLJOIN< TRUE > Cost = 3134.29
+| | | | [EQCLASS10][PLANGRP8][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 218.574 #Tuples = 84 #Blocks = 1 CORRELATED
+| | | | | [ALG9][CC=1]NLJOIN< TRUE > Cost = 120
+| | | | | | [EQCLASS8][PLANGRP9][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 51.4298 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | | | | | [ALG8][CC=1]SELECT (state_retain=0)< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] > Cost = 4.286
+| | | | | | | | [EQCLASS3][PLANGRP6][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | | | | | [ALG4][CC=1]RELSCAN< r3 > Cost = 47.1438
+| | | | | | [EQCLASS1][PLANGRP5][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 47.1438
+| | | | [EQCLASS0][PLANGRP4][CC=1] UseCost = 471.429 Plan Cost = 471.429 #Tuples = 6e+06 #Blocks = 214286
+| | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 471.429
+
+
+Expression DAG:
+[EQCLASS6] CORRELATED
+| [LOGEXP0]PROJECT :r1c1 :r2c1 :r3c1 
+| | [EQCLASS5] CORRELATED
+| | | [LOGEXP1]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | [EQCLASS4]
+| | | | | [LOGEXP2]JOIN TRUE
+| | | | | | [EQCLASS2]
+| | | | | | | [LOGEXP3]JOIN TRUE
+| | | | | | | | [EQCLASS0]
+| | | | | | | | | [LOGEXP4]r1
+| | | | | | | | [EQCLASS1]
+| | | | | | | | | [LOGEXP5]r2
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | [LOGEXP7]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | [LOGEXP9]JOIN TRUE
+| | | | [EQCLASS7] CORRELATED
+| | | | | [LOGEXP18]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | | [LOGEXP20]JOIN TRUE
+| | | | | | [EQCLASS11] CORRELATED
+| | | | | | | [LOGEXP19]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | | | [EQCLASS0]
+| | | | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | | [LOGEXP22]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS12] CORRELATED
+| | | | | | | [LOGEXP21]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | | | [EQCLASS1]
+| | | | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | [LOGEXP11]JOIN TRUE
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS8] CORRELATED
+| | | | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | [LOGEXP15]JOIN TRUE
+| | | | [EQCLASS9] CORRELATED
+| | | | | [LOGEXP14]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | [LOGEXP26]JOIN TRUE
+| | | | | | [EQCLASS8] CORRELATED
+| | | | | | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | | | [EQCLASS3]
+| | | | | | | | | [LOGEXP6]r3
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | [LOGEXP28]JOIN TRUE
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | | | | [EQCLASS11] CORRELATED
+| | | | | | | [LOGEXP19]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | | | [EQCLASS0]
+| | | | | | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | | [LOGEXP17]JOIN TRUE
+| | | | [EQCLASS10] CORRELATED
+| | | | | [LOGEXP16]JOIN AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ]
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | | [LOGEXP32]JOIN TRUE
+| | | | | | [EQCLASS8] CORRELATED
+| | | | | | | [LOGEXP10]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | | | [EQCLASS3]
+| | | | | | | | | [LOGEXP6]r3
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | | [LOGEXP34]JOIN TRUE
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | | | | [EQCLASS12] CORRELATED
+| | | | | | | [LOGEXP21]SELECT< AND[ AND[ AND[ AND[ AND[ r1:c1 == r2:c1 r1:c2 == r2:c2 ] r1:c3 == r2:c3 ] r3:c1 == r1:c1 ] r3:c2 == r1:c2 ] r3:c3 == r1:c3 ] >
+| | | | | | | | [EQCLASS1]
+| | | | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+
+Deleted eq 6
+Deleting parent logExpr 0 from 5
+Deleted eq 5
+Deleting parent logExpr 1 from 4
+Deleted eq 4
+Deleting parent logExpr 2 from 2
+Deleting parent logExpr 2 from 3
+Deleting parent logExpr 7 from 2
+Deleting parent logExpr 7 from 3
+Deleting parent logExpr 9 from 7
+Deleted eq 7
+Deleting parent logExpr 18 from 0
+Deleting parent logExpr 18 from 1
+Deleting parent logExpr 20 from 11
+Deleting parent logExpr 20 from 1
+Deleting parent logExpr 22 from 0
+Deleting parent logExpr 22 from 12
+Deleting parent logExpr 9 from 3
+Deleting parent logExpr 11 from 2
+Deleted eq 2
+Deleting parent logExpr 3 from 0
+Deleting parent logExpr 3 from 1
+Deleting parent logExpr 11 from 8
+Deleting parent logExpr 15 from 9
+Deleted eq 9
+Deleting parent logExpr 14 from 3
+Deleting parent logExpr 14 from 0
+Deleting parent logExpr 26 from 8
+Deleting parent logExpr 26 from 0
+Deleting parent logExpr 28 from 3
+Deleting parent logExpr 28 from 11
+Deleted eq 11
+Deleting parent logExpr 19 from 0
+Deleting parent logExpr 15 from 1
+Deleting parent logExpr 17 from 10
+Deleted eq 10
+Deleting parent logExpr 16 from 3
+Deleting parent logExpr 16 from 1
+Deleting parent logExpr 32 from 8
+Deleted eq 8
+Deleting parent logExpr 10 from 3
+Deleting parent logExpr 32 from 1
+Deleting parent logExpr 34 from 3
+Deleted eq 3
+Deleting parent logExpr 34 from 12
+Deleted eq 12
+Deleting parent logExpr 21 from 1
+Deleted eq 1
+Deleting parent logExpr 17 from 0
+Deleted eq 0

@@ -1,0 +1,20 @@
+                    Vol-EXP         Vol-EXP-SH      Vol-APP         Vol-APP-SH      Vol-EXP-MQ      Vol-APP-MQ      Greedy          
+
+COST:q8-mod         55207.60        55207.60        55207.60        55207.60        -1.00           -1.00           55207.60        
+USRT:q8-mod         4670            4640            6190            6170            -1              -1              5570            
+SYST:q8-mod         30              50              80              100             -1              -1              50              
+DUSR:q8-mod         0               -1              -1              -1              -1              -1              5400            
+DSYS:q8-mod         0               -1              -1              -1              -1              -1              50              
+
+SELECT P_PARTKEY
+FROM PART, SUPPLIER, LINEITEM, ORDERS, CUSTOMER, NATION, REGION
+WHERE  P_PARTKEY   =     L_PARTKEY
+    AND  S_SUPPKEY   =     L_SUPPKEY
+    AND  L_ORDERKEY  =     O_ORDERKEY
+    AND  O_CUSTKEY   =     C_CUSTKEY
+    AND  C_NATIONKEY    =  NATION.N_NATIONKEY
+    AND  NATION.N_NATIONKEY =  R_REGIONKEY
+    AND  R_REGIONKEY     = 2
+    AND  O_SELKEY > 16
+    AND  P_SELKEY  < 3;
+

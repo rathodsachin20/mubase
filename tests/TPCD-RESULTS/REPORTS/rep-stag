@@ -1,0 +1,77 @@
+                              Volcano         Volcano-SH      Volcano-RU      Greedy          
+
+COST:stagr-2                  93.84           90.90           90.12           48.61           
+USRT:stagr-2                  140             130             180             1400            
+SYST:stagr-2                  0               0               0               10              
+PHYDAGUSR:stagr-2             0               -1              -1              180             
+PHYDAGSYS:stagr-2             0               -1              -1              0               
+LOGDAGUSR:stagr-2             30              30              30              40              
+LOGDAGSYS:stagr-2             0               0               0               0               
+PHYOPNODECOUNT:stagr-2        177             177             230             2190            
+PHYEQNODECOUNT:stagr-2        304             304             304             478             
+LOGOPNODECOUNT:stagr-2        329             329             329             329             
+EQUIVNODECOUNT:stagr-2        96              96              96              96              
+NUMPROPS:stagr-2              0               0               0               195             
+PROPCOUNT:stagr-2             0               -1              -1              8598            
+SHARCOUNT:stagr-2             0               -1              -1              161             
+
+COST:stagr-6                  288.56          273.14          258.59          142.85          
+USRT:stagr-6                  430             380             560             6920            
+SYST:stagr-6                  0               0               0               20              
+PHYDAGUSR:stagr-6             -1              -1              -1              540             
+PHYDAGSYS:stagr-6             -1              -1              -1              10              
+LOGDAGUSR:stagr-6             80              90              90              90              
+LOGDAGSYS:stagr-6             0               0               0               0               
+PHYOPNODECOUNT:stagr-6        514             514             675             6442            
+PHYEQNODECOUNT:stagr-6        862             862             862             1374            
+LOGOPNODECOUNT:stagr-6        973             973             973             973             
+EQUIVNODECOUNT:stagr-6        276             276             276             276             
+NUMPROPS:stagr-6              0               0               0               604             
+PROPCOUNT:stagr-6             -1              -1              -1              41743           
+SHARCOUNT:stagr-6             -1              -1              -1              421             
+
+COST:stagr-10                 475.78          451.47          419.53          243.26          
+USRT:stagr-10                 690             690             930             13940           
+SYST:stagr-10                 20              10              10              90              
+PHYDAGUSR:stagr-10            -1              -1              -1              860             
+PHYDAGSYS:stagr-10            -1              -1              -1              50              
+LOGDAGUSR:stagr-10            140             160             170             150             
+LOGDAGSYS:stagr-10            0               0               0               0               
+PHYOPNODECOUNT:stagr-10       843             843             1109            10694           
+PHYEQNODECOUNT:stagr-10       1421            1421            1421            2270            
+LOGOPNODECOUNT:stagr-10       1617            1617            1617            1617            
+EQUIVNODECOUNT:stagr-10       456             456             456             456             
+NUMPROPS:stagr-10             0               0               0               1010            
+PROPCOUNT:stagr-10            -1              -1              -1              84890           
+SHARCOUNT:stagr-10            -1              -1              -1              681             
+
+COST:stagr-14                 670.97          637.18          588.49          331.38          
+USRT:stagr-14                 980             930             1320            20840           
+SYST:stagr-14                 0               10              0               140             
+PHYDAGUSR:stagr-14            -1              -1              -1              1180            
+PHYDAGSYS:stagr-14            -1              -1              -1              70              
+LOGDAGUSR:stagr-14            220             220             230             200             
+LOGDAGSYS:stagr-14            0               0               0               20              
+PHYOPNODECOUNT:stagr-14       1183            1183            1567            14946           
+PHYEQNODECOUNT:stagr-14       1980            1980            1980            3166            
+LOGOPNODECOUNT:stagr-14       2261            2261            2261            2261            
+EQUIVNODECOUNT:stagr-14       636             636             636             636             
+NUMPROPS:stagr-14             0               0               0               1381            
+PROPCOUNT:stagr-14            -1              -1              -1              125167          
+SHARCOUNT:stagr-14            -1              -1              -1              941             
+
+COST:stagr-18                 865.69          819.42          755.02          425.62          
+USRT:stagr-18                 1160            1280            1650            29580           
+SYST:stagr-18                 30              30              10              100             
+PHYDAGUSR:stagr-18            -1              -1              -1              1620            
+PHYDAGSYS:stagr-18            -1              -1              -1              30              
+LOGDAGUSR:stagr-18            280             310             300             300             
+LOGDAGSYS:stagr-18            10              0               0               0               
+PHYOPNODECOUNT:stagr-18       1523            1523            2013            19198           
+PHYEQNODECOUNT:stagr-18       2538            2538            2538            4062            
+LOGOPNODECOUNT:stagr-18       2905            2905            2905            2905            
+EQUIVNODECOUNT:stagr-18       816             816             816             816             
+NUMPROPS:stagr-18             0               0               0               1784            
+PROPCOUNT:stagr-18            -1              -1              -1              173845          
+SHARCOUNT:stagr-18            -1              -1              -1              1201            
+

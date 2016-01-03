@@ -1,0 +1,62 @@
+                              Greedy          Greedy-UnifShar 
+
+COST:q2                       78.80           78.80           
+USRT:q2                       1270            1780            
+SYST:q2                       0               0               
+PHYDAGUSR:q2                  270             280             
+PHYDAGSYS:q2                  0               0               
+LOGDAGUSR:q2                  30              30              
+LOGDAGSYS:q2                  0               0               
+PHYOPNODECOUNT:q2             2402            2402            
+PHYEQNODECOUNT:q2             321             321             
+LOGOPNODECOUNT:q2             322             322             
+EQUIVNODECOUNT:q2             51              51              
+NUMPROPS:q2                   131             241             
+PROPCOUNT:q2                  4116            6716            
+SHARCOUNT:q2                  141             264             
+
+COST:q2-decor                 46.29           46.39           
+USRT:q2-decor                 2490            3350            
+SYST:q2-decor                 10              10              
+PHYDAGUSR:q2-decor            320             300             
+PHYDAGSYS:q2-decor            0               10              
+LOGDAGUSR:q2-decor            70              70              
+LOGDAGSYS:q2-decor            0               0               
+PHYOPNODECOUNT:q2-decor       3494            3494            
+PHYEQNODECOUNT:q2-decor       500             500             
+LOGOPNODECOUNT:q2-decor       414             414             
+EQUIVNODECOUNT:q2-decor       74              74              
+NUMPROPS:q2-decor             267             418             
+PROPCOUNT:q2-decor            15398           24460           
+SHARCOUNT:q2-decor            244             410             
+
+COST:q11                      98.05           98.05           
+USRT:q11                      30              40              
+SYST:q11                      0               0               
+PHYDAGUSR:q11                 10              10              
+PHYDAGSYS:q11                 0               0               
+LOGDAGUSR:q11                 10              0               
+LOGDAGSYS:q11                 0               0               
+PHYOPNODECOUNT:q11            137             137             
+PHYEQNODECOUNT:q11            46              46              
+LOGOPNODECOUNT:q11            23              23              
+EQUIVNODECOUNT:q11            13              13              
+NUMPROPS:q11                  26              47              
+PROPCOUNT:q11                 307             449             
+SHARCOUNT:q11                 27              44              
+
+COST:q15                      32.43           32.43           
+USRT:q15                      0               10              
+SYST:q15                      0               0               
+PHYDAGUSR:q15                 0               0               
+PHYDAGSYS:q15                 0               0               
+LOGDAGUSR:q15                 0               0               
+LOGDAGSYS:q15                 0               0               
+PHYOPNODECOUNT:q15            9               9               
+PHYEQNODECOUNT:q15            5               5               
+LOGOPNODECOUNT:q15            5               5               
+EQUIVNODECOUNT:q15            4               4               
+NUMPROPS:q15                  3               3               
+PROPCOUNT:q15                 12              18              
+SHARCOUNT:q15                 3               3               
+

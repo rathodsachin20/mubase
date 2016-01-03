@@ -1,0 +1,1048 @@
+#
+#driver.o: /usr/include/stdlib.h /usr/include/features.h
+#driver.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+#driver.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#driver.o: /usr/include/sys/types.h /usr/include/gnu/types.h
+#driver.o: /usr/include/time.h /usr/include/endian.h /usr/include/bytesex.h
+#driver.o: /usr/include/sys/select.h /usr/include/selectbits.h
+#driver.o: /usr/include/alloca.h /usr/include/g++/iostream.h
+#driver.o: /usr/include/g++/streambuf.h /usr/include/libio.h
+#driver.o: /usr/include/_G_config.h
+#driver.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#driver.o: /users/sigdb/Optimizer/src/Include/Catalog.h
+#driver.o: /users/sigdb/Optimizer/src/Include/List.h /usr/include/assert.h
+#driver.o: /users/sigdb/Optimizer/src/Include/Config.h
+#driver.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#driver.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#driver.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#driver.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#driver.o: /users/sigdb/Optimizer/src/Include/LogProp.h /usr/include/stdio.h
+#driver.o: /usr/include/stdio_lim.h /usr/include/string.h /usr/include/math.h
+#driver.o: /usr/include/huge_val.h /usr/include/mathcalls.h
+#driver.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#driver.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#driver.o: /users/sigdb/Optimizer/src/Include/Equivalence.h
+#driver.o: /users/sigdb/Optimizer/src/Include/Node.h
+#driver.o: /users/sigdb/Optimizer/src/Include/PhysicalOp.h
+#driver.o: /users/sigdb/Optimizer/src/Include/Plan.h
+#driver.o: /users/sigdb/Optimizer/src/Include/Lookup.h
+#driver.o: /users/sigdb/Optimizer/src/Include/PhyProp.h
+#driver.o: /users/sigdb/Optimizer/src/Include/PhyPropGroup.h
+#driver.o: /users/sigdb/Optimizer/src/Include/LogicalOp.h
+#driver.o: /users/sigdb/Optimizer/src/Include/Interface.h
+#driver.o: /users/sigdb/Optimizer/src/Include/Volcano.h
+#driver.o: /users/sigdb/Optimizer/src/Include/Memo.h
+#driver.o: /users/sigdb/Optimizer/src/Include/Optimizer.h
+#
+#driver.o: /users/sigdb/Optimizer/src/Include/ExhSearch.h
+#driver.o: /users/sigdb/Optimizer/src/Include/DAGOpt.h
+#driver.o: /users/sigdb/Optimizer/src/Include/Greedy.h
+#driver.o: /users/sigdb/Optimizer/src/Include/Heap.h
+#driver.o: /users/sigdb/Optimizer/src/Include/HeapKey.h
+#Config.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#Config.o: /users/sigdb/Optimizer/src/Include/Config.h
+#Config.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#Config.o: /usr/include/assert.h
+#Config.o: /usr/include/features.h
+#Config.o: /usr/include/sys/cdefs.h
+#Config.o: /usr/include/gnu/stubs.h
+#Config.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#Config.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#Config.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#Catalog.o: /usr/include/stdio.h
+#Catalog.o: /usr/include/libio.h
+#Catalog.o: /usr/include/features.h
+#Catalog.o: /usr/include/sys/cdefs.h
+#Catalog.o: /usr/include/gnu/stubs.h
+#Catalog.o: /usr/include/_G_config.h
+#Catalog.o: /usr/include/gnu/types.h
+#Catalog.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#Catalog.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#Catalog.o: /usr/include/stdio_lim.h
+#Catalog.o: /usr/include/string.h
+#Catalog.o: /usr/include/stdlib.h
+#Catalog.o: /usr/include/sys/types.h
+#Catalog.o: /usr/include/time.h
+#Catalog.o: /usr/include/endian.h
+#Catalog.o: /usr/include/bytesex.h
+#Catalog.o: /usr/include/sys/select.h
+#Catalog.o: /usr/include/selectbits.h
+#Catalog.o: /usr/include/alloca.h
+#Catalog.o: /usr/include/g++/iostream.h
+#Catalog.o: /usr/include/g++/streambuf.h
+#Catalog.o: /users/sigdb/Optimizer/src/Include/List.h
+#Catalog.o: /usr/include/assert.h
+#Catalog.o: /users/sigdb/Optimizer/src/Include/Config.h
+#Catalog.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#Catalog.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#Catalog.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#Catalog.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#Catalog.o: /users/sigdb/Optimizer/src/Include/LogProp.h
+#Catalog.o: /usr/include/math.h
+#Catalog.o: /usr/include/huge_val.h
+#Catalog.o: /usr/include/mathcalls.h
+#Catalog.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#Catalog.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#Catalog.o: /users/sigdb/Optimizer/src/Include/Catalog.h
+#Cost.o: /users/sigdb/Optimizer/src/Include/PhysicalOp.h
+#Cost.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#Cost.o: /users/sigdb/Optimizer/src/Include/Config.h
+#Cost.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#Cost.o: /usr/include/assert.h
+#Cost.o: /usr/include/features.h
+#Cost.o: /usr/include/sys/cdefs.h
+#Cost.o: /usr/include/gnu/stubs.h
+#Cost.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#Cost.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#Cost.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#Cost.o: /users/sigdb/Optimizer/src/Include/Node.h
+#Cost.o: /users/sigdb/Optimizer/src/Include/List.h
+#Cost.o: /usr/include/g++/iostream.h
+#Cost.o: /usr/include/g++/streambuf.h
+#Cost.o: /usr/include/libio.h
+#Cost.o: /usr/include/_G_config.h
+#Cost.o: /usr/include/gnu/types.h
+#Cost.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#Cost.o: /usr/include/stdlib.h
+#Cost.o: /usr/include/sys/types.h
+#Cost.o: /usr/include/time.h
+#Cost.o: /usr/include/endian.h
+#Cost.o: /usr/include/bytesex.h
+#Cost.o: /usr/include/sys/select.h
+#Cost.o: /usr/include/selectbits.h
+#Cost.o: /usr/include/alloca.h
+#Cost.o: /users/sigdb/Optimizer/src/Include/Plan.h
+#Cost.o: /users/sigdb/Optimizer/src/Include/Lookup.h
+#Cost.o: /users/sigdb/Optimizer/src/Include/PhyProp.h
+#Cost.o: /users/sigdb/Optimizer/src/Include/LogProp.h
+#Cost.o: /usr/include/stdio.h
+#Cost.o: /usr/include/stdio_lim.h
+#Cost.o: /usr/include/string.h
+#Cost.o: /usr/include/math.h
+#Cost.o: /usr/include/huge_val.h
+#Cost.o: /usr/include/mathcalls.h
+#Cost.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#Cost.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#Cost.o: /users/sigdb/Optimizer/src/Include/PhyPropGroup.h
+#Cost.o: /users/sigdb/Optimizer/src/Include/Equivalence.h
+#Cost.o: /users/sigdb/Optimizer/src/Include/LogicalOp.h
+#CostList.o: /usr/include/assert.h
+#CostList.o: /usr/include/features.h
+#CostList.o: /usr/include/sys/cdefs.h
+#CostList.o: /usr/include/gnu/stubs.h
+#CostList.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#CostList.o: /users/sigdb/Optimizer/src/Include/PhysicalOp.h
+#CostList.o: /users/sigdb/Optimizer/src/Include/Config.h
+#CostList.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#CostList.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#CostList.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#CostList.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#CostList.o: /users/sigdb/Optimizer/src/Include/Node.h
+#CostList.o: /users/sigdb/Optimizer/src/Include/List.h
+#CostList.o: /usr/include/g++/iostream.h
+#CostList.o: /usr/include/g++/streambuf.h
+#CostList.o: /usr/include/libio.h
+#CostList.o: /usr/include/_G_config.h
+#CostList.o: /usr/include/gnu/types.h
+#CostList.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#CostList.o: /usr/include/stdlib.h
+#CostList.o: /usr/include/sys/types.h
+#CostList.o: /usr/include/time.h
+#CostList.o: /usr/include/endian.h
+#CostList.o: /usr/include/bytesex.h
+#CostList.o: /usr/include/sys/select.h
+#CostList.o: /usr/include/selectbits.h
+#CostList.o: /usr/include/alloca.h
+#CostList.o: /users/sigdb/Optimizer/src/Include/Plan.h
+#CostList.o: /users/sigdb/Optimizer/src/Include/Lookup.h
+#CostList.o: /users/sigdb/Optimizer/src/Include/PhyProp.h
+#CostList.o: /users/sigdb/Optimizer/src/Include/LogProp.h
+#CostList.o: /usr/include/stdio.h
+#CostList.o: /usr/include/stdio_lim.h
+#CostList.o: /usr/include/string.h
+#CostList.o: /usr/include/math.h
+#CostList.o: /usr/include/huge_val.h
+#CostList.o: /usr/include/mathcalls.h
+#CostList.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#CostList.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#CostList.o: /users/sigdb/Optimizer/src/Include/PhyPropGroup.h
+#CostList.o: /users/sigdb/Optimizer/src/Include/Equivalence.h
+#CostList.o: /users/sigdb/Optimizer/src/Include/LogicalOp.h
+#Equivalence.o: /users/sigdb/Optimizer/src/Include/Config.h
+#Equivalence.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#Equivalence.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#Equivalence.o: /usr/include/assert.h
+#Equivalence.o: /usr/include/features.h
+#Equivalence.o: /usr/include/sys/cdefs.h
+#Equivalence.o: /usr/include/gnu/stubs.h
+#Equivalence.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#Equivalence.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#Equivalence.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#Equivalence.o: /users/sigdb/Optimizer/src/Include/Node.h
+#Equivalence.o: /users/sigdb/Optimizer/src/Include/List.h
+#Equivalence.o: /usr/include/g++/iostream.h
+#Equivalence.o: /usr/include/g++/streambuf.h
+#Equivalence.o: /usr/include/libio.h
+#Equivalence.o: /usr/include/_G_config.h
+#Equivalence.o: /usr/include/gnu/types.h
+#Equivalence.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#Equivalence.o: /usr/include/stdlib.h
+#Equivalence.o: /usr/include/sys/types.h
+#Equivalence.o: /usr/include/time.h
+#Equivalence.o: /usr/include/endian.h
+#Equivalence.o: /usr/include/bytesex.h
+#Equivalence.o: /usr/include/sys/select.h
+#Equivalence.o: /usr/include/selectbits.h
+#Equivalence.o: /usr/include/alloca.h
+#Equivalence.o: /users/sigdb/Optimizer/src/Include/Lookup.h
+#Equivalence.o: /users/sigdb/Optimizer/src/Include/PhysicalOp.h
+#Equivalence.o: /users/sigdb/Optimizer/src/Include/Plan.h
+#Equivalence.o: /users/sigdb/Optimizer/src/Include/PhyProp.h
+#Equivalence.o: /users/sigdb/Optimizer/src/Include/LogProp.h
+#Equivalence.o: /usr/include/stdio.h
+#Equivalence.o: /usr/include/stdio_lim.h
+#Equivalence.o: /usr/include/string.h
+#Equivalence.o: /usr/include/math.h
+#Equivalence.o: /usr/include/huge_val.h
+#Equivalence.o: /usr/include/mathcalls.h
+#Equivalence.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#Equivalence.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#Equivalence.o: /users/sigdb/Optimizer/src/Include/PhyPropGroup.h
+#Equivalence.o: /users/sigdb/Optimizer/src/Include/Equivalence.h
+#Equivalence.o: /users/sigdb/Optimizer/src/Include/LogicalOp.h
+#
+#Equivalence.o: /users/sigdb/Optimizer/src/Include/Memo.h
+#Expr.o: /usr/include/g++/iostream.h
+#Expr.o: /usr/include/g++/streambuf.h
+#Expr.o: /usr/include/libio.h
+#Expr.o: /usr/include/features.h
+#Expr.o: /usr/include/sys/cdefs.h
+#Expr.o: /usr/include/gnu/stubs.h
+#Expr.o: /usr/include/_G_config.h
+#Expr.o: /usr/include/gnu/types.h
+#Expr.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#Expr.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#Expr.o: /usr/include/assert.h
+#Expr.o: /usr/include/stdlib.h
+#Expr.o: /usr/include/sys/types.h
+#Expr.o: /usr/include/time.h
+#Expr.o: /usr/include/endian.h
+#Expr.o: /usr/include/bytesex.h
+#Expr.o: /usr/include/sys/select.h
+#Expr.o: /usr/include/selectbits.h
+#Expr.o: /usr/include/alloca.h
+#Expr.o: /usr/include/string.h
+#Expr.o: /users/sigdb/Optimizer/src/Include/LogProp.h
+#Expr.o: /usr/include/stdio.h
+#Expr.o: /usr/include/stdio_lim.h
+#Expr.o: /usr/include/math.h
+#Expr.o: /usr/include/huge_val.h
+#Expr.o: /usr/include/mathcalls.h
+#Expr.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#Expr.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#Expr.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#Expr.o: /users/sigdb/Optimizer/src/Include/Config.h
+#Expr.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#Expr.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#Expr.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#ExprInterface.o: /users/sigdb/Optimizer/src/Include/DaliParser/sql_parse.h
+#ExprInterface.o: /users/sigdb/Optimizer/src/Include/DaliParser/ucbproto.h
+#ExprInterface.o: /users/sigdb/Optimizer/src/Include/DaliParser/sql_defs.h
+#ExprInterface.o: /usr/include/alloca.h
+#ExprInterface.o: /usr/include/features.h
+#ExprInterface.o: /usr/include/sys/cdefs.h
+#ExprInterface.o: /usr/include/gnu/stubs.h
+#ExprInterface.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#ExprInterface.o: /usr/include/stdlib.h
+#ExprInterface.o: /usr/include/sys/types.h
+#ExprInterface.o: /usr/include/gnu/types.h
+#ExprInterface.o: /usr/include/time.h
+#ExprInterface.o: /usr/include/endian.h
+#ExprInterface.o: /usr/include/bytesex.h
+#ExprInterface.o: /usr/include/sys/select.h
+#ExprInterface.o: /usr/include/selectbits.h
+#ExprInterface.o: /usr/include/stdio.h
+#ExprInterface.o: /usr/include/libio.h
+#ExprInterface.o: /usr/include/_G_config.h
+#ExprInterface.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#ExprInterface.o: /usr/include/stdio_lim.h
+#ExprInterface.o: /usr/include/string.h
+#ExprInterface.o: /users/sigdb/Optimizer/src/Include/DaliParser/sql_error.h
+#ExprInterface.o: /users/sigdb/Optimizer/src/Include/DaliParser/error.h
+#ExprInterface.o: /users/sigdb/Optimizer/src/Include/DaliParser/prim_types.h
+#ExprInterface.o: /users/sigdb/Optimizer/src/Include/DaliParser/config.h
+#ExprInterface.o: /users/sigdb/Optimizer/src/Include/DaliParser/expr.h
+#ExprInterface.o: /users/sigdb/Optimizer/src/Include/DaliParser/rel_alg.h
+#ExprInterface.o: /users/sigdb/Optimizer/src/Include/DaliParser/list.h
+#ExprInterface.o: /usr/include/g++/stream.h
+#ExprInterface.o: /usr/include/g++/iostream.h
+#ExprInterface.o: /usr/include/g++/streambuf.h
+#ExprInterface.o: /users/sigdb/Optimizer/src/Include/DaliParser/exprinterface.h
+#ExprInterface.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#ExprInterface.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#ExprInterface.o: /usr/include/assert.h
+#ExhSearch.o: /usr/include/assert.h
+#ExhSearch.o: /usr/include/features.h
+#ExhSearch.o: /usr/include/sys/cdefs.h
+#ExhSearch.o: /usr/include/gnu/stubs.h
+#ExhSearch.o: /usr/include/stdlib.h
+#ExhSearch.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#ExhSearch.o: /usr/include/sys/types.h
+#ExhSearch.o: /usr/include/gnu/types.h
+#ExhSearch.o: /usr/include/time.h
+#ExhSearch.o: /usr/include/endian.h
+#ExhSearch.o: /usr/include/bytesex.h
+#ExhSearch.o: /usr/include/sys/select.h
+#ExhSearch.o: /usr/include/selectbits.h
+#ExhSearch.o: /usr/include/alloca.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/Config.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/PhysicalOp.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/Node.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/List.h
+#ExhSearch.o: /usr/include/g++/iostream.h
+#ExhSearch.o: /usr/include/g++/streambuf.h
+#ExhSearch.o: /usr/include/libio.h
+#ExhSearch.o: /usr/include/_G_config.h
+#ExhSearch.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/Plan.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/Lookup.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/PhyProp.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/LogProp.h
+#ExhSearch.o: /usr/include/stdio.h
+#ExhSearch.o: /usr/include/stdio_lim.h
+#ExhSearch.o: /usr/include/string.h
+#ExhSearch.o: /usr/include/math.h
+#ExhSearch.o: /usr/include/huge_val.h
+#ExhSearch.o: /usr/include/mathcalls.h
+#ExhSearch.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/PhyPropGroup.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/Equivalence.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/LogicalOp.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/DAGOpt.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/Volcano.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/Memo.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/Optimizer.h
+#ExhSearch.o: /users/sigdb/Optimizer/src/Include/ExhSearch.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#Greedy.o: /usr/include/assert.h
+#Greedy.o: /usr/include/features.h
+#Greedy.o: /usr/include/sys/cdefs.h
+#Greedy.o: /usr/include/gnu/stubs.h
+#Greedy.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/List.h
+#Greedy.o: /usr/include/g++/iostream.h
+#Greedy.o: /usr/include/g++/streambuf.h
+#Greedy.o: /usr/include/libio.h
+#Greedy.o: /usr/include/_G_config.h
+#Greedy.o: /usr/include/gnu/types.h
+#Greedy.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#Greedy.o: /usr/include/stdlib.h
+#Greedy.o: /usr/include/sys/types.h
+#Greedy.o: /usr/include/time.h
+#Greedy.o: /usr/include/endian.h
+#Greedy.o: /usr/include/bytesex.h
+#Greedy.o: /usr/include/sys/select.h
+#Greedy.o: /usr/include/selectbits.h
+#Greedy.o: /usr/include/alloca.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/Config.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/Heap.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/PhysicalOp.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/Node.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/Plan.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/Lookup.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/PhyProp.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/LogProp.h
+#Greedy.o: /usr/include/stdio.h
+#Greedy.o: /usr/include/stdio_lim.h
+#Greedy.o: /usr/include/string.h
+#Greedy.o: /usr/include/math.h
+#Greedy.o: /usr/include/huge_val.h
+#Greedy.o: /usr/include/mathcalls.h
+#Greedy.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/PhyPropGroup.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/Equivalence.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/LogicalOp.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/Volcano.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/Memo.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/Optimizer.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/DAGOpt.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/HeapKey.h
+#Greedy.o: /users/sigdb/Optimizer/src/Include/Greedy.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/DaliParser/sql_parse.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/DaliParser/ucbproto.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/DaliParser/sql_defs.h
+#Interface.o: /usr/include/alloca.h
+#Interface.o: /usr/include/features.h
+#Interface.o: /usr/include/sys/cdefs.h
+#Interface.o: /usr/include/gnu/stubs.h
+#Interface.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#Interface.o: /usr/include/stdlib.h
+#Interface.o: /usr/include/sys/types.h
+#Interface.o: /usr/include/gnu/types.h
+#Interface.o: /usr/include/time.h
+#Interface.o: /usr/include/endian.h
+#Interface.o: /usr/include/bytesex.h
+#Interface.o: /usr/include/sys/select.h
+#Interface.o: /usr/include/selectbits.h
+#Interface.o: /usr/include/stdio.h
+#Interface.o: /usr/include/libio.h
+#Interface.o: /usr/include/_G_config.h
+#Interface.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#Interface.o: /usr/include/stdio_lim.h
+#Interface.o: /usr/include/string.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/DaliParser/sql_error.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/DaliParser/error.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/DaliParser/prim_types.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/DaliParser/config.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/DaliParser/expr.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/DaliParser/rel_alg.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/DaliParser/list.h
+#Interface.o: /usr/include/g++/stream.h
+#Interface.o: /usr/include/g++/iostream.h
+#Interface.o: /usr/include/g++/streambuf.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/DaliParser/exprinterface.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#Interface.o: /usr/include/assert.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/List.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/Config.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/Memo.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/Lookup.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/LogicalOp.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/PhyPropGroup.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/PhyProp.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/LogProp.h
+#Interface.o: /usr/include/math.h
+#Interface.o: /usr/include/huge_val.h
+#Interface.o: /usr/include/mathcalls.h
+#Interface.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/Node.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/Equivalence.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/Volcano.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/Optimizer.h
+#Interface.o: /users/sigdb/Optimizer/src/Include/Interface.h
+#LogProp.o: /usr/include/assert.h
+#LogProp.o: /usr/include/features.h
+#LogProp.o: /usr/include/sys/cdefs.h
+#LogProp.o: /usr/include/gnu/stubs.h
+#LogProp.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#LogProp.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#LogProp.o: /usr/include/stdlib.h
+#LogProp.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#LogProp.o: /usr/include/sys/types.h
+#LogProp.o: /usr/include/gnu/types.h
+#LogProp.o: /usr/include/time.h
+#LogProp.o: /usr/include/endian.h
+#LogProp.o: /usr/include/bytesex.h
+#LogProp.o: /usr/include/sys/select.h
+#LogProp.o: /usr/include/selectbits.h
+#LogProp.o: /usr/include/alloca.h
+#LogProp.o: /usr/include/string.h
+#LogProp.o: /usr/include/g++/iostream.h
+#LogProp.o: /usr/include/g++/streambuf.h
+#LogProp.o: /usr/include/libio.h
+#LogProp.o: /usr/include/_G_config.h
+#LogProp.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#LogProp.o: /users/sigdb/Optimizer/src/Include/LogProp.h
+#LogProp.o: /usr/include/stdio.h
+#LogProp.o: /usr/include/stdio_lim.h
+#LogProp.o: /usr/include/math.h
+#LogProp.o: /usr/include/huge_val.h
+#LogProp.o: /usr/include/mathcalls.h
+#LogProp.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#LogProp.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#LogProp.o: /users/sigdb/Optimizer/src/Include/Config.h
+#LogProp.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#LogProp.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#LogicalOp.o: /usr/include/string.h
+#LogicalOp.o: /usr/include/features.h
+#LogicalOp.o: /usr/include/sys/cdefs.h
+#LogicalOp.o: /usr/include/gnu/stubs.h
+#LogicalOp.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/Memo.h
+#LogicalOp.o: /usr/include/assert.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/Lookup.h
+#LogicalOp.o: /usr/include/stdlib.h
+#LogicalOp.o: /usr/include/sys/types.h
+#LogicalOp.o: /usr/include/gnu/types.h
+#LogicalOp.o: /usr/include/time.h
+#LogicalOp.o: /usr/include/endian.h
+#LogicalOp.o: /usr/include/bytesex.h
+#LogicalOp.o: /usr/include/sys/select.h
+#LogicalOp.o: /usr/include/selectbits.h
+#LogicalOp.o: /usr/include/alloca.h
+#LogicalOp.o: /usr/include/g++/iostream.h
+#LogicalOp.o: /usr/include/g++/streambuf.h
+#LogicalOp.o: /usr/include/libio.h
+#LogicalOp.o: /usr/include/_G_config.h
+#LogicalOp.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/LogicalOp.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/List.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/Config.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/PhyPropGroup.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/PhyProp.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/LogProp.h
+#LogicalOp.o: /usr/include/stdio.h
+#LogicalOp.o: /usr/include/stdio_lim.h
+#LogicalOp.o: /usr/include/math.h
+#LogicalOp.o: /usr/include/huge_val.h
+#LogicalOp.o: /usr/include/mathcalls.h
+#LogicalOp.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/Node.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/Equivalence.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/Catalog.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/TransRule.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/PhysicalOp.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/Plan.h
+#
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/Volcano.h
+#LogicalOp.o: /users/sigdb/Optimizer/src/Include/Optimizer.h
+#
+#Memo.o: /users/sigdb/Optimizer/src/Include/LogicalOp.h
+#Memo.o: /usr/include/string.h
+#Memo.o: /usr/include/features.h
+#Memo.o: /usr/include/sys/cdefs.h
+#Memo.o: /usr/include/gnu/stubs.h
+#Memo.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#Memo.o: /users/sigdb/Optimizer/src/Include/List.h
+#Memo.o: /usr/include/assert.h
+#Memo.o: /usr/include/g++/iostream.h
+#Memo.o: /usr/include/g++/streambuf.h
+#Memo.o: /usr/include/libio.h
+#Memo.o: /usr/include/_G_config.h
+#Memo.o: /usr/include/gnu/types.h
+#Memo.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#Memo.o: /usr/include/stdlib.h
+#Memo.o: /usr/include/sys/types.h
+#Memo.o: /usr/include/time.h
+#Memo.o: /usr/include/endian.h
+#Memo.o: /usr/include/bytesex.h
+#Memo.o: /usr/include/sys/select.h
+#Memo.o: /usr/include/selectbits.h
+#Memo.o: /usr/include/alloca.h
+#Memo.o: /users/sigdb/Optimizer/src/Include/Config.h
+#Memo.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#Memo.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#Memo.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#Memo.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#Memo.o: /users/sigdb/Optimizer/src/Include/PhyPropGroup.h
+#Memo.o: /users/sigdb/Optimizer/src/Include/PhyProp.h
+#Memo.o: /users/sigdb/Optimizer/src/Include/LogProp.h
+#Memo.o: /usr/include/stdio.h
+#Memo.o: /usr/include/stdio_lim.h
+#Memo.o: /usr/include/math.h
+#Memo.o: /usr/include/huge_val.h
+#Memo.o: /usr/include/mathcalls.h
+#Memo.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#Memo.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#Memo.o: /users/sigdb/Optimizer/src/Include/Node.h
+#Memo.o: /users/sigdb/Optimizer/src/Include/Equivalence.h
+#Memo.o: /users/sigdb/Optimizer/src/Include/Memo.h
+#Memo.o: /users/sigdb/Optimizer/src/Include/Lookup.h
+#Node.o: /usr/include/assert.h
+#Node.o: /usr/include/features.h
+#Node.o: /usr/include/sys/cdefs.h
+#Node.o: /usr/include/gnu/stubs.h
+#Node.o: /users/sigdb/Optimizer/src/Include/List.h
+#Node.o: /usr/include/g++/iostream.h
+#Node.o: /usr/include/g++/streambuf.h
+#Node.o: /usr/include/libio.h
+#Node.o: /usr/include/_G_config.h
+#Node.o: /usr/include/gnu/types.h
+#Node.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#Node.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#Node.o: /usr/include/stdlib.h
+#Node.o: /usr/include/sys/types.h
+#Node.o: /usr/include/time.h
+#Node.o: /usr/include/endian.h
+#Node.o: /usr/include/bytesex.h
+#Node.o: /usr/include/sys/select.h
+#Node.o: /usr/include/selectbits.h
+#Node.o: /usr/include/alloca.h
+#Node.o: /users/sigdb/Optimizer/src/Include/Config.h
+#Node.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#Node.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#Node.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#Node.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#Node.o: /users/sigdb/Optimizer/src/Include/Node.h
+#PhyProp.o: /usr/include/assert.h
+#PhyProp.o: /usr/include/features.h
+#PhyProp.o: /usr/include/sys/cdefs.h
+#PhyProp.o: /usr/include/gnu/stubs.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/PhyPropGroup.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/List.h
+#PhyProp.o: /usr/include/g++/iostream.h
+#PhyProp.o: /usr/include/g++/streambuf.h
+#PhyProp.o: /usr/include/libio.h
+#PhyProp.o: /usr/include/_G_config.h
+#PhyProp.o: /usr/include/gnu/types.h
+#PhyProp.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#PhyProp.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#PhyProp.o: /usr/include/stdlib.h
+#PhyProp.o: /usr/include/sys/types.h
+#PhyProp.o: /usr/include/time.h
+#PhyProp.o: /usr/include/endian.h
+#PhyProp.o: /usr/include/bytesex.h
+#PhyProp.o: /usr/include/sys/select.h
+#PhyProp.o: /usr/include/selectbits.h
+#PhyProp.o: /usr/include/alloca.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/Config.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/PhyProp.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/LogProp.h
+#PhyProp.o: /usr/include/stdio.h
+#PhyProp.o: /usr/include/stdio_lim.h
+#PhyProp.o: /usr/include/string.h
+#PhyProp.o: /usr/include/math.h
+#PhyProp.o: /usr/include/huge_val.h
+#PhyProp.o: /usr/include/mathcalls.h
+#PhyProp.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/PhysicalOp.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/Node.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/Plan.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/Lookup.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/Equivalence.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/LogicalOp.h
+#
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/Memo.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/Volcano.h
+#PhyProp.o: /users/sigdb/Optimizer/src/Include/Optimizer.h
+#
+#PhyPropGroup.o: /users/sigdb/Optimizer/src/Include/List.h
+#PhyPropGroup.o: /usr/include/assert.h
+#PhyPropGroup.o: /usr/include/features.h
+#PhyPropGroup.o: /usr/include/sys/cdefs.h
+#PhyPropGroup.o: /usr/include/gnu/stubs.h
+#PhyPropGroup.o: /usr/include/g++/iostream.h
+#PhyPropGroup.o: /usr/include/g++/streambuf.h
+#PhyPropGroup.o: /usr/include/libio.h
+#PhyPropGroup.o: /usr/include/_G_config.h
+#PhyPropGroup.o: /usr/include/gnu/types.h
+#PhyPropGroup.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#PhyPropGroup.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#PhyPropGroup.o: /usr/include/stdlib.h
+#PhyPropGroup.o: /usr/include/sys/types.h
+#PhyPropGroup.o: /usr/include/time.h
+#PhyPropGroup.o: /usr/include/endian.h
+#PhyPropGroup.o: /usr/include/bytesex.h
+#PhyPropGroup.o: /usr/include/sys/select.h
+#PhyPropGroup.o: /usr/include/selectbits.h
+#PhyPropGroup.o: /usr/include/alloca.h
+#PhyPropGroup.o: /users/sigdb/Optimizer/src/Include/Config.h
+#PhyPropGroup.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#PhyPropGroup.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#PhyPropGroup.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#PhyPropGroup.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#PhyPropGroup.o: /users/sigdb/Optimizer/src/Include/PhyProp.h
+#PhyPropGroup.o: /users/sigdb/Optimizer/src/Include/LogProp.h
+#PhyPropGroup.o: /usr/include/stdio.h
+#PhyPropGroup.o: /usr/include/stdio_lim.h
+#PhyPropGroup.o: /usr/include/string.h
+#PhyPropGroup.o: /usr/include/math.h
+#PhyPropGroup.o: /usr/include/huge_val.h
+#PhyPropGroup.o: /usr/include/mathcalls.h
+#PhyPropGroup.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#PhyPropGroup.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#PhyPropGroup.o: /users/sigdb/Optimizer/src/Include/PhyPropGroup.h
+#PhysicalOp.o: /usr/include/assert.h
+#PhysicalOp.o: /usr/include/features.h
+#PhysicalOp.o: /usr/include/sys/cdefs.h
+#PhysicalOp.o: /usr/include/gnu/stubs.h
+#PhysicalOp.o: /usr/include/math.h
+#PhysicalOp.o: /usr/include/huge_val.h
+#PhysicalOp.o: /usr/include/mathcalls.h
+#PhysicalOp.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#PhysicalOp.o: /users/sigdb/Optimizer/src/Include/Config.h
+#PhysicalOp.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#PhysicalOp.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#PhysicalOp.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#PhysicalOp.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#PhysicalOp.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#PhysicalOp.o: /users/sigdb/Optimizer/src/Include/LogProp.h
+#PhysicalOp.o: /usr/include/stdio.h
+#PhysicalOp.o: /usr/include/libio.h
+#PhysicalOp.o: /usr/include/_G_config.h
+#PhysicalOp.o: /usr/include/gnu/types.h
+#PhysicalOp.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#PhysicalOp.o: /usr/include/stdio_lim.h
+#PhysicalOp.o: /usr/include/stdlib.h
+#PhysicalOp.o: /usr/include/sys/types.h
+#PhysicalOp.o: /usr/include/time.h
+#PhysicalOp.o: /usr/include/endian.h
+#PhysicalOp.o: /usr/include/bytesex.h
+#PhysicalOp.o: /usr/include/sys/select.h
+#PhysicalOp.o: /usr/include/selectbits.h
+#PhysicalOp.o: /usr/include/alloca.h
+#PhysicalOp.o: /usr/include/string.h
+#PhysicalOp.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#PhysicalOp.o: /usr/include/g++/iostream.h
+#PhysicalOp.o: /usr/include/g++/streambuf.h
+#PhysicalOp.o: /users/sigdb/Optimizer/src/Include/PhysicalOp.h
+#PhysicalOp.o: /users/sigdb/Optimizer/src/Include/Node.h
+#PhysicalOp.o: /users/sigdb/Optimizer/src/Include/List.h
+#PhysicalOp.o: /users/sigdb/Optimizer/src/Include/Plan.h
+#PhysicalOp.o: /users/sigdb/Optimizer/src/Include/Lookup.h
+#PhysicalOp.o: /users/sigdb/Optimizer/src/Include/PhyProp.h
+#PhysicalOp.o: /users/sigdb/Optimizer/src/Include/PhyPropGroup.h
+#PhysicalOp.o: /users/sigdb/Optimizer/src/Include/Equivalence.h
+#PhysicalOp.o: /users/sigdb/Optimizer/src/Include/LogicalOp.h
+#Plan.o: /usr/include/assert.h
+#Plan.o: /usr/include/features.h
+#Plan.o: /usr/include/sys/cdefs.h
+#Plan.o: /usr/include/gnu/stubs.h
+#Plan.o: /usr/include/g++/iostream.h
+#Plan.o: /usr/include/g++/streambuf.h
+#Plan.o: /usr/include/libio.h
+#Plan.o: /usr/include/_G_config.h
+#Plan.o: /usr/include/gnu/types.h
+#Plan.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#Plan.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#Plan.o: /users/sigdb/Optimizer/src/Include/Node.h
+#Plan.o: /users/sigdb/Optimizer/src/Include/List.h
+#Plan.o: /usr/include/stdlib.h
+#Plan.o: /usr/include/sys/types.h
+#Plan.o: /usr/include/time.h
+#Plan.o: /usr/include/endian.h
+#Plan.o: /usr/include/bytesex.h
+#Plan.o: /usr/include/sys/select.h
+#Plan.o: /usr/include/selectbits.h
+#Plan.o: /usr/include/alloca.h
+#Plan.o: /users/sigdb/Optimizer/src/Include/Config.h
+#Plan.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#Plan.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#Plan.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#Plan.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#Plan.o: /users/sigdb/Optimizer/src/Include/PhysicalOp.h
+#Plan.o: /users/sigdb/Optimizer/src/Include/Plan.h
+#Plan.o: /users/sigdb/Optimizer/src/Include/Lookup.h
+#Plan.o: /users/sigdb/Optimizer/src/Include/PhyProp.h
+#Plan.o: /users/sigdb/Optimizer/src/Include/LogProp.h
+#Plan.o: /usr/include/stdio.h
+#Plan.o: /usr/include/stdio_lim.h
+#Plan.o: /usr/include/string.h
+#Plan.o: /usr/include/math.h
+#Plan.o: /usr/include/huge_val.h
+#Plan.o: /usr/include/mathcalls.h
+#Plan.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#Plan.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#Plan.o: /users/sigdb/Optimizer/src/Include/PhyPropGroup.h
+#Plan.o: /users/sigdb/Optimizer/src/Include/Equivalence.h
+#Plan.o: /users/sigdb/Optimizer/src/Include/LogicalOp.h
+#
+#Plan.o: /users/sigdb/Optimizer/src/Include/Memo.h
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#TransRule.o: /usr/include/assert.h
+#TransRule.o: /usr/include/features.h
+#TransRule.o: /usr/include/sys/cdefs.h
+#TransRule.o: /usr/include/gnu/stubs.h
+#TransRule.o: /users/sigdb/Optimizer/src/Include/Config.h
+#TransRule.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#TransRule.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#TransRule.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#TransRule.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#TransRule.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#TransRule.o: /users/sigdb/Optimizer/src/Include/Memo.h
+#TransRule.o: /users/sigdb/Optimizer/src/Include/Lookup.h
+#TransRule.o: /usr/include/stdlib.h
+#TransRule.o: /usr/include/sys/types.h
+#TransRule.o: /usr/include/gnu/types.h
+#TransRule.o: /usr/include/time.h
+#TransRule.o: /usr/include/endian.h
+#TransRule.o: /usr/include/bytesex.h
+#TransRule.o: /usr/include/sys/select.h
+#TransRule.o: /usr/include/selectbits.h
+#TransRule.o: /usr/include/alloca.h
+#TransRule.o: /usr/include/g++/iostream.h
+#TransRule.o: /usr/include/g++/streambuf.h
+#TransRule.o: /usr/include/libio.h
+#TransRule.o: /usr/include/_G_config.h
+#TransRule.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#TransRule.o: /users/sigdb/Optimizer/src/Include/LogicalOp.h
+#TransRule.o: /usr/include/string.h
+#TransRule.o: /users/sigdb/Optimizer/src/Include/List.h
+#TransRule.o: /users/sigdb/Optimizer/src/Include/PhyPropGroup.h
+#TransRule.o: /users/sigdb/Optimizer/src/Include/PhyProp.h
+#TransRule.o: /users/sigdb/Optimizer/src/Include/LogProp.h
+#TransRule.o: /usr/include/stdio.h
+#TransRule.o: /usr/include/stdio_lim.h
+#TransRule.o: /usr/include/math.h
+#TransRule.o: /usr/include/huge_val.h
+#TransRule.o: /usr/include/mathcalls.h
+#TransRule.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#TransRule.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#TransRule.o: /users/sigdb/Optimizer/src/Include/Node.h
+#TransRule.o: /users/sigdb/Optimizer/src/Include/Equivalence.h
+#TransRule.o: /users/sigdb/Optimizer/src/Include/TransRule.h
+#Volcano.o: /usr/include/assert.h
+#Volcano.o: /usr/include/features.h
+#Volcano.o: /usr/include/sys/cdefs.h
+#Volcano.o: /usr/include/gnu/stubs.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/Config.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/typedefs.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/Cost.h
+#Volcano.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/RefCount.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/CostList.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/Memo.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/Lookup.h
+#Volcano.o: /usr/include/stdlib.h
+#Volcano.o: /usr/include/sys/types.h
+#Volcano.o: /usr/include/gnu/types.h
+#Volcano.o: /usr/include/time.h
+#Volcano.o: /usr/include/endian.h
+#Volcano.o: /usr/include/bytesex.h
+#Volcano.o: /usr/include/sys/select.h
+#Volcano.o: /usr/include/selectbits.h
+#Volcano.o: /usr/include/alloca.h
+#Volcano.o: /usr/include/g++/iostream.h
+#Volcano.o: /usr/include/g++/streambuf.h
+#Volcano.o: /usr/include/libio.h
+#Volcano.o: /usr/include/_G_config.h
+#Volcano.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/LogicalOp.h
+#Volcano.o: /usr/include/string.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/List.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/PhyPropGroup.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/PhyProp.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/LogProp.h
+#Volcano.o: /usr/include/stdio.h
+#Volcano.o: /usr/include/stdio_lim.h
+#Volcano.o: /usr/include/math.h
+#Volcano.o: /usr/include/huge_val.h
+#Volcano.o: /usr/include/mathcalls.h
+#Volcano.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/float.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/Expr.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/Node.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/Equivalence.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/Plan.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/PhysicalOp.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/TransRule.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/Volcano.h
+#Volcano.o: /users/sigdb/Optimizer/src/Include/Optimizer.h
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#expr.o: /users/sigdb/Optimizer/src/Include/DaliParser/ucbproto.h
+#expr.o: /users/sigdb/Optimizer/src/Include/DaliParser/sql_defs.h
+#expr.o: /usr/include/alloca.h
+#expr.o: /usr/include/features.h
+#expr.o: /usr/include/sys/cdefs.h
+#expr.o: /usr/include/gnu/stubs.h
+#expr.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#expr.o: /usr/include/stdlib.h
+#expr.o: /usr/include/sys/types.h
+#expr.o: /usr/include/gnu/types.h
+#expr.o: /usr/include/time.h
+#expr.o: /usr/include/endian.h
+#expr.o: /usr/include/bytesex.h
+#expr.o: /usr/include/sys/select.h
+#expr.o: /usr/include/selectbits.h
+#expr.o: /usr/include/stdio.h
+#expr.o: /usr/include/libio.h
+#expr.o: /usr/include/_G_config.h
+#expr.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#expr.o: /usr/include/stdio_lim.h
+#expr.o: /usr/include/string.h
+#expr.o: /users/sigdb/Optimizer/src/Include/DaliParser/sql_error.h
+#expr.o: /users/sigdb/Optimizer/src/Include/DaliParser/error.h
+#expr.o: /users/sigdb/Optimizer/src/Include/DaliParser/prim_types.h
+#expr.o: /users/sigdb/Optimizer/src/Include/DaliParser/config.h
+#expr.o: /users/sigdb/Optimizer/src/Include/DaliParser/expr.h
+#prim_types.o: /users/sigdb/Optimizer/src/Include/DaliParser/ucbproto.h
+#prim_types.o: /users/sigdb/Optimizer/src/Include/DaliParser/sql_defs.h
+#prim_types.o: /usr/include/alloca.h
+#prim_types.o: /usr/include/features.h
+#prim_types.o: /usr/include/sys/cdefs.h
+#prim_types.o: /usr/include/gnu/stubs.h
+#prim_types.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#prim_types.o: /usr/include/stdlib.h
+#prim_types.o: /usr/include/sys/types.h
+#prim_types.o: /usr/include/gnu/types.h
+#prim_types.o: /usr/include/time.h
+#prim_types.o: /usr/include/endian.h
+#prim_types.o: /usr/include/bytesex.h
+#prim_types.o: /usr/include/sys/select.h
+#prim_types.o: /usr/include/selectbits.h
+#prim_types.o: /usr/include/stdio.h
+#prim_types.o: /usr/include/libio.h
+#prim_types.o: /usr/include/_G_config.h
+#prim_types.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#prim_types.o: /usr/include/stdio_lim.h
+#prim_types.o: /usr/include/string.h
+#prim_types.o: /users/sigdb/Optimizer/src/Include/DaliParser/sql_error.h
+#prim_types.o: /users/sigdb/Optimizer/src/Include/DaliParser/error.h
+#prim_types.o: /users/sigdb/Optimizer/src/Include/DaliParser/prim_types.h
+#prim_types.o: /users/sigdb/Optimizer/src/Include/DaliParser/config.h
+#scanner.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/features.h
+#scanner.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+#scanner.o: /usr/include/_G_config.h /usr/include/gnu/types.h
+#scanner.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#scanner.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#scanner.o: /usr/include/stdio_lim.h /usr/include/ctype.h
+#scanner.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/string.h
+#scanner.o: parser.h /usr/include/stdlib.h /usr/include/sys/types.h
+#scanner.o: /usr/include/time.h /usr/include/sys/select.h
+#scanner.o: /usr/include/selectbits.h /usr/include/alloca.h
+#parser.o: /users/sigdb/Optimizer/src/Include/DaliParser/sql_parse.h
+#parser.o: /users/sigdb/Optimizer/src/Include/DaliParser/ucbproto.h
+#parser.o: /users/sigdb/Optimizer/src/Include/DaliParser/sql_defs.h
+#parser.o: /usr/include/alloca.h /usr/include/features.h
+#parser.o: /usr/include/sys/cdefs.h /usr/include/gnu/stubs.h
+#parser.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#parser.o: /usr/include/stdlib.h /usr/include/sys/types.h
+#parser.o: /usr/include/gnu/types.h /usr/include/time.h /usr/include/endian.h
+#parser.o: /usr/include/bytesex.h /usr/include/sys/select.h
+#parser.o: /usr/include/selectbits.h /usr/include/stdio.h /usr/include/libio.h
+#parser.o: /usr/include/_G_config.h
+#parser.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#parser.o: /usr/include/stdio_lim.h /usr/include/string.h
+#parser.o: /users/sigdb/Optimizer/src/Include/DaliParser/sql_error.h
+#parser.o: /users/sigdb/Optimizer/src/Include/DaliParser/error.h
+#parser.o: /users/sigdb/Optimizer/src/Include/DaliParser/prim_types.h
+#parser.o: /users/sigdb/Optimizer/src/Include/DaliParser/config.h
+#parser.o: /users/sigdb/Optimizer/src/Include/DaliParser/expr.h
+#parser.o: /users/sigdb/Optimizer/src/Include/DaliParser/rel_alg.h
+#parser.o: /users/sigdb/Optimizer/src/Include/DaliParser/list.h
+#parser.o: /usr/include/g++/stream.h /usr/include/g++/iostream.h
+#parser.o: /usr/include/g++/streambuf.h
+#rel_alg.o: /users/sigdb/Optimizer/src/Include/DaliParser/ucbproto.h
+#rel_alg.o: /users/sigdb/Optimizer/src/Include/DaliParser/sql_defs.h
+#rel_alg.o: /usr/include/alloca.h
+#rel_alg.o: /usr/include/features.h
+#rel_alg.o: /usr/include/sys/cdefs.h
+#rel_alg.o: /usr/include/gnu/stubs.h
+#rel_alg.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stddef.h
+#rel_alg.o: /usr/include/stdlib.h
+#rel_alg.o: /usr/include/sys/types.h
+#rel_alg.o: /usr/include/gnu/types.h
+#rel_alg.o: /usr/include/time.h
+#rel_alg.o: /usr/include/endian.h
+#rel_alg.o: /usr/include/bytesex.h
+#rel_alg.o: /usr/include/sys/select.h
+#rel_alg.o: /usr/include/selectbits.h
+#rel_alg.o: /usr/include/stdio.h
+#rel_alg.o: /usr/include/libio.h
+#rel_alg.o: /usr/include/_G_config.h
+#rel_alg.o: /usr/lib/gcc-lib/i386-redhat-linux/2.7.2.3/include/stdarg.h
+#rel_alg.o: /usr/include/stdio_lim.h
+#rel_alg.o: /usr/include/string.h
+#rel_alg.o: /users/sigdb/Optimizer/src/Include/DaliParser/sql_error.h
+#rel_alg.o: /users/sigdb/Optimizer/src/Include/DaliParser/error.h
+#rel_alg.o: /users/sigdb/Optimizer/src/Include/DaliParser/prim_types.h
+#rel_alg.o: /users/sigdb/Optimizer/src/Include/DaliParser/config.h
+#rel_alg.o: /users/sigdb/Optimizer/src/Include/DaliParser/expr.h
+#rel_alg.o: /users/sigdb/Optimizer/src/Include/DaliParser/rel_alg.h
+#rel_alg.o: /users/sigdb/Optimizer/src/Include/DaliParser/list.h
+#rel_alg.o: /usr/include/g++/stream.h
+#rel_alg.o: /usr/include/g++/iostream.h
+#rel_alg.o: /usr/include/g++/streambuf.h

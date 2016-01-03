@@ -1,0 +1,22 @@
+Case 1:
+-------
+TPC-H Database
+
+Added constraints as otherwise the size estimates were incorrect.
+
+NOTICE:  ALTER TABLE / ADD UNIQUE will create implicit index "s_supp_unq" for table "supplier" (applicable to all)
+
+tpch1=# alter table supplier add constraint s_supp_unq        unique(s_suppkey);
+tpch1=# alter table part     add constraint p_part_unq        unique(p_partkey);
+tpch1=# alter table partsupp add constraint ps_partsupp_unq   unique(ps_partkey, ps_suppkey);
+
+tpch1=# alter table partsupp add constraint ps_supp_fk foreign key(ps_suppkey) references supplier(s_suppkey);
+tpch1=# alter table partsupp add constraint ps_part_fk foreign key(ps_partkey) references part(p_partkey);
+
+tpch1=# alter table lineitem add constraint l_partsupp_fk foreign key(l_partkey, l_suppkey) references partsupp(ps_partkey,ps_suppkey);
+
+select L_ORDERKEY, P_NAME, S_NAME, PS_AVAILQTY 
+from   LINEITEM LI, PART P, SUPPLIER S, PARTSUPP PS
+where  LI.L_PARTKEY=P.P_PARTKEY AND LI.L_SUPPKEY=S.S_SUPPKEY AND LI.L_PARTKEY=PS.PS_PARTKEY AND LI.L_SUPPKEY=PS.PS_SUPPKEY ORDER BY L_PARTKEY, L_SUPPKEY;
+
+cluster ps_partsupp_unq on partsupp;

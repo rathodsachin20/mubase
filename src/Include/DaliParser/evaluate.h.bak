@@ -1,0 +1,350 @@
+/* 
+  NOTES:
+   - SQLIterators are per process and not stored in the database, unlike
+   queries/views 
+*/
+
+class ExprIter
+{
+  public:
+	void *value;
+	ArgType type;
+
+	ExprIter(void *value_a, ArgType &type_a) : value(value_a), type(type_a)
+	{}
+	virtual void evaluate() {}
+};
+
+class ValueIter : public ExprIter
+{
+  public:
+	ValueIter(void *value_a, ArgType &type_a) :
+	  ExprIter(new char[type_a.length()], type_a)
+	{
+		ArgType::PtrToPtr(value, type_a, value_a, type_a);
+	}
+};
+
+class LogicalIter : public ExprIter
+{
+	LogicalExpr::LogicalOp op;
+  	ArgType leftType, rightType;
+	void *leftValue, *rightValue;
+  	ExprIter *left, *right;
+  public:
+	LogicalIter(LogicalExpr::LogicalOp op_a, ArgType &type_a, 
+	  ExprIter *left_a, ExprIter *right_a) :
+	  ExprIter(new char[type_a.length()], type_a), op(op_a), left(left_a),
+	  right(right_a), leftType(left_a->type), rightType(right_a->type),
+	  leftValue(left_a->value), rightValue(right_a->value)
+	{}
+	void evaluate();
+};
+
+class ArithIter : public ExprIter
+{
+	ArithExpr::ArithOp op;
+  	ArgType leftType, rightType;
+	void *leftValue, *rightValue;
+  	ExprIter *left, *right;
+  public:
+	ArithIter(ArithExpr::ArithOp op_a, ArgType &type_a, ExprIter *left_a, 
+	  ExprIter *right_a) :
+	  ExprIter(new char[type_a.length()], type_a), op(op_a), left(left_a),
+	  right(right_a), leftType(left_a->type), rightType(right_a->type),
+	  leftValue(left_a->value), rightValue(right_a->value)
+	{}
+	void evaluate();
+};
+
+class LocalArgRefIter : public ExprIter
+{
+  public:
+	LocalArgRefIter(void *value_a, ArgType &type_a) : ExprIter(value_a, type_a)
+	{}
+};
+
+/**********************/
+
+class SQLResult
+{
+	int numFields; // Number of components in the result tuple
+	void **fields; // $fields[i]$ points to the $i$th tuple component
+	friend class RelScanIter;
+  	friend class InsertTable;
+  public:
+	SQLResult(int numFields_a = 0)
+	{
+		numFields = numFields_a;
+		fields = new void*[numFields];
+	}
+	~SQLResult() { delete[] fields; }
+	SQLResult &operator =(SQLResult &rhs_a)
+	{
+		DALI_R_ASSERT(rhs_a.numFields == numFields);
+		for(int i = 0; i < numFields; ++i)
+			fields[i] = rhs_a.fields[i];
+		return *this;
+	}
+	SQLResult &operator +(SQLResult &rhs_a);
+	void *&operator[](int nthComponent_a) const
+	{
+		return fields[nthComponent_a];
+	}
+	bool print(FILE *out_a, TupleDef &resultInfo);
+};
+
+class SQLIterator {
+  protected:
+	RelExpr  *queryPtr;	// The actual query node 
+  public:
+	SQLResult *result;	
+
+	SQLIterator(RelExpr *queryPtr_a) : 
+		queryPtr(queryPtr_a),
+		result(new SQLResult(queryPtr_a->resultInfo.numArgs)) {}
+	~SQLIterator()	 {delete result;}
+//	virtual bool open(TransID &tid_a) = 0;
+	virtual bool getNext() = 0;
+		// Returns true on success, false on EOF
+	virtual bool close() = 0;
+	virtual bool reset() = 0;
+};
+
+class RelScanIter: public SQLIterator
+{
+	ExprIter *scanCond;
+  public:
+  	/* The state for this iterator consists of space for one 
+	   $DaliTableHandle$ object and one $DaliTableIter$ object. 
+	   It also has the $tid$ of the transaction copying the query tree. */
+
+//	DaliTableHandle dTHandle;
+//	DaliTableIter   dTIter;
+//	TransID tid;
+
+	RelScanIter(RelScanExpr *queryPtr_a)
+	  : SQLIterator(queryPtr_a)
+	{
+		for(int i = 0; i < queryPtr->resultInfo.numArgs; ++i)
+			(*result)[i] = 
+			  new char[queryPtr->resultInfo.args[i].argType.length()];
+		scanCond = ((queryPtr_a->cond) ? queryPtr_a->cond->createIters
+		  (SQLResult(), SQLResult(), (*result)) : NULL);
+	}
+	~RelScanIter()
+	{
+		if(scanCond)
+			delete scanCond;
+		for(int i = 0; i < queryPtr->resultInfo.numArgs; ++i)
+			delete (*result)[i];
+	}
+	static RelScanIter *create(RelScanExpr *queryPtr_a)
+	{
+		RelScanIter *retVal = new RelScanIter(queryPtr_a);
+		return retVal;
+	}
+//	bool open(TransID &tid_a);
+	bool getNext();
+//	bool deleteTuple() { return (dTIter.deleteTuple() >= 0); }
+/*	bool updateTuple(SQLResult &updateTuple, DaliAttrList &updateAttrList)
+	{
+		return (dTIter.update((void *)(updateTuple.fields), 
+		  &updateAttrList) >= 0);
+	}
+	bool close()
+	{
+		if((dTHandle.closeScan(dTIter) <= 0) ||
+		  (DaliRelMgr::closeTable(tid, dTHandle) <= 0))
+			SQLErrAE("Unable to close table: %s", 
+			  ((RelScanExpr *)queryPtr)->name, -1)
+		return true;
+	}
+*/
+	bool reset();
+};
+
+class RenameIter: public SQLIterator
+{
+	/* The state for this iterator consists of a pointer to the
+	   child node of this iterator */
+  public:
+	SQLIterator *child;
+
+	RenameIter(RenameExpr *queryPtr_a, SQLIterator *child_a)
+	  : SQLIterator(queryPtr_a), child(child_a) 
+	{ (*result) = *(child->result);	}
+	~RenameIter() { delete child; }
+	static RenameIter *create(RenameExpr *queryPtr_a, SQLIterator *child_a)
+	{
+		RenameIter *retVal = new RenameIter(queryPtr_a, child_a);
+		return retVal;
+	}
+//	bool open(TransID &tid_a) { return child->open(tid_a); }
+	bool getNext() { return child->getNext(); }
+	bool close() { return child->close(); }
+	bool reset() { return child->reset(); }
+};
+
+class SelectIter: public SQLIterator
+{
+  	ExprIter *selectCond;
+  public:
+	/* The state for this iterator consists of a pointer to the
+	   child node of this iterator */
+	SQLIterator *child;
+
+	SelectIter(SelectExpr *queryPtr_a, SQLIterator *child_a)
+	  : SQLIterator(queryPtr_a), child(child_a)
+	{ 
+		(*result) = *(child->result);
+		selectCond = ((queryPtr_a->cond) ? queryPtr_a->cond->createIters
+		  (SQLResult(), SQLResult(), *result) : NULL);
+	}
+	~SelectIter() 
+	{ 
+		if(selectCond)
+			delete selectCond;
+		delete child; 
+	}
+	static SelectIter *create(SelectExpr *queryPtr_a, SQLIterator *child_a)
+	{
+		SelectIter *retVal = new SelectIter(queryPtr_a, child_a);
+		return retVal;
+	}
+//	bool open(TransID &tid_a) { return child->open(tid_a); }
+	bool getNext()
+	{
+		if(selectCond)
+		{
+			while(child->getNext())
+			{
+				selectCond->evaluate();
+				if(*((bool *)(selectCond->value)) == true) 
+					return true;
+			}
+			return false;
+		}
+		else
+			return child->getNext();
+	}
+	bool close() { return child->close(); }
+	bool reset() { return child->reset(); }
+};
+
+class ProjectIter: public SQLIterator
+	/* I am not having  a common super-class for Project and Group in the 
+	   iterators, as of now. */
+{
+  	ExprIter **projExprs;
+	int numProjectExprs;
+  public:
+	/* The state for this iterator consists of a pointer to the
+	   child node of this iterator */
+	SQLIterator *child;
+
+	ProjectIter(ProjectExpr *queryPtr_a, SQLIterator *child_a)
+	  : SQLIterator(queryPtr_a), child(child_a), 
+		numProjectExprs(queryPtr_a->resultInfo.numArgs)
+	{
+		projExprs = new ExprIter*[numProjectExprs];
+		for(int i = 0; i < numProjectExprs; ++i)
+			projExprs[i] = queryPtr_a->projList.projectElems[i].
+			  projectionExpr->createIters(*(child->result), SQLResult(),
+			  SQLResult());
+		for(i = 0; i < numProjectExprs; ++i)
+			(*result)[i] = projExprs[i]->value;
+	}
+	~ProjectIter()
+	{
+		for(int i = 0; i < numProjectExprs; ++i)
+			delete projExprs[i];
+		delete[] projExprs;
+	}
+	static ProjectIter *create(ProjectExpr *queryPtr_a, SQLIterator *child_a)
+	{
+		ProjectIter *retVal = new ProjectIter(queryPtr_a, child_a);
+		return retVal;
+	}
+//	bool open(TransID &tid_a) { return child->open(tid_a); }
+	bool getNext()
+	{
+		bool retVal = child->getNext();
+		if(retVal)
+			for(int i = 0; i < numProjectExprs; ++i) projExprs[i]->evaluate();
+		return retVal;
+	}
+	bool close() { return child->close(); }
+	bool reset() { return child->reset(); }
+};
+
+class JoinIter: public SQLIterator
+{
+	bool leftUnRead;
+  	ExprIter *joinCond;
+  public:
+	/* The state for this iterator consists of two pointers to the two
+	   child $SQLIterator$s and the $leftUnRead$ member. $leftUnRead$ is 
+	   true until the first time $getNext$ is called, after which it 
+	   becomes false. */
+	SQLIterator *left, *right;
+
+	JoinIter(JoinExpr *queryPtr_a, SQLIterator *left_a, SQLIterator *right_a)
+	  : SQLIterator(queryPtr_a), left(left_a),
+		right(right_a), leftUnRead(true) 
+	{
+		(*result) = (*(left->result)) + (*(right->result));
+		joinCond = ((queryPtr_a->cond) ? queryPtr_a->cond->createIters
+		  (SQLResult(), SQLResult(), *result) : NULL);
+	}
+	~JoinIter()
+	{
+		if(joinCond)
+			delete joinCond;
+		delete right;
+		delete left;
+	}
+	static JoinIter *create(JoinExpr *queryPtr_a, SQLIterator *left_a,
+	  SQLIterator *right_a)
+	{
+		JoinIter *retVal = new JoinIter(queryPtr_a, left_a, right_a);
+		return retVal;
+	}
+//	bool open(TransID &tid_a)
+	{
+		return (left->open(tid_a) && right->open(tid_a));
+	}
+	bool getNext();
+	bool close() { return (left->close() && right->close()); }
+	bool reset()
+	{
+		leftUnRead = true;
+		return (left->reset() && right->reset());
+	}
+};
+
+class RelValueIter: public SQLIterator
+{
+	bool firstCall;
+  public:
+	/* The state for this iterator consists of the flag $firstCall$.
+	   This flag is true until the first time $getNext$ is called,
+	   after which it becomes false. */
+
+	RelValueIter(RelValueExpr *queryPtr_a)
+	  : SQLIterator(queryPtr_a), firstCall(true)
+	{
+		for(int i = 0; i < queryPtr->resultInfo.numArgs; ++i)
+			(*result)[i] = 
+			  ArgType::ValueToPtr(queryPtr->resultInfo.args[i].argType,
+			  (Value *)(queryPtr_a->value->attrs[i]), 
+			  queryPtr->resultInfo.args[i].defaultValue);
+	}
+	~RelValueIter() {}
+	static RelValueIter *create(RelValueExpr *queryPtr_a)
+		{ return new RelValueIter(queryPtr_a); }
+//	bool open(TransID &tid_a) {return true; }
+	bool getNext() { return (firstCall ? (firstCall = false, true) : false); }
+	bool close() {return true; }
+	bool reset() {return true; }
+};

@@ -1,0 +1,12 @@
+class ClauseList {
+     public:
+      	Expr *clause;
+        ClauseList *next;
+
+        ClauseList() { clause = NULL; next = NULL; }
+        ClauseList(Expr *_clause) { clause = _clause; 
+                                    next = NULL; }
+        static ClauseList* Copy(ClauseList*);
+        void  append(ClauseList *clause);
+        static ClauseList *concat(ClauseList *lClause, ClauseList *rClause);
+};

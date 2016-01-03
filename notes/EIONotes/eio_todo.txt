@@ -1,0 +1,4 @@
+1. Outer variable schema gets duplicate attributes if the same outer variable is
+   used multiple times (in different nested query blocks). See query2_plan.xml
+
+2. 

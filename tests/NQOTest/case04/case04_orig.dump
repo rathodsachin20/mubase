@@ -1,0 +1,115 @@
+ALGO Volcano
+
+
+------------------
+Added the following Index Order as a built-in index
+Relation Name:r10
+Attribute Name:r10c2
+
+
+------------------
+
+
+------------------
+Added the following Index Order as a built-in index
+Relation Name:r9
+Attribute Name:r9c2
+
+
+------------------
+
+
+------------------
+Added the following Index Order as a built-in index
+Relation Name:r8
+Attribute Name:r8c2
+
+
+------------------
+
+
+------------------
+Added the following Index Order as a built-in index
+Relation Name:r7
+Attribute Name:r7c2
+
+
+------------------
+
+
+------------------
+Added the following Index Order as a built-in index
+Relation Name:r6
+Attribute Name:r6c2
+
+
+------------------
+
+
+------------------
+Added the following Index Order as a built-in index
+Relation Name:r5
+Attribute Name:r5c2
+
+
+------------------
+
+
+------------------
+Added the following Index Order as a built-in index
+Relation Name:r4
+Attribute Name:r4c2
+
+
+------------------
+
+
+------------------
+Added the following Index Order as a built-in index
+Relation Name:r3
+Attribute Name:r3c2
+
+
+------------------
+
+
+------------------
+Added the following Index Order as a built-in index
+Relation Name:r2
+Attribute Name:r2c3
+
+
+------------------
+
+
+------------------
+Added the following Index Order as a built-in index
+Relation Name:r1
+Attribute Name:r1c4
+
+
+------------------
+Cost Limit = 2.14748e+09
+LDAGUSR 0
+LDAGSYS 0
+NumDistinct = 150
+LDAGUSR 0
+LDAGSYS 0
+NumDistinct = 15
+LDAGUSR 0
+LDAGSYS 0
+NumDistinct = 400
+LDAGUSR 0
+LDAGSYS 0
+NumDistinct = 400
+LDAGUSR 0
+LDAGSYS 0
+NumDistinct = 400
+LDAGUSR 0
+LDAGSYS 0
+LDAGUSR 0
+LDAGSYS 0
+LDAGUSR 0
+LDAGSYS 0
+Optimization Failed for Limit 2.14748e+09
+

@@ -1,0 +1,528 @@
+<EQCLASS id="5" isCorrelated="false">
+  <LOGEXP id="0" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg="r1:r1c1"/>
+</PROJ_EXPRS>
+    <EQCLASS id="4" isCorrelated="false">
+      <LOGEXP id="4" op="SELECT">
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:r1c2"/>
+</LHS>
+<RHS>
+<INT value="100"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<INEXPR>
+<LHS>
+r1:r1c3</LHS>
+<RHS>
+                    <EQCLASS id="2" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="r1c4"/>
+</OuterVariables>
+                      <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg="r2:r2c1"/>
+</PROJ_EXPRS>
+                        <EQCLASS id="1" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="r1c4"/>
+</OuterVariables>
+                          <LOGEXP id="2" op="SELECT">
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c2"/>
+</LHS>
+<RHS>
+<INT value="200"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:r1c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+                            <EQCLASS id="0" isCorrelated="false">
+               <LOGEXP id="3" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+                          <LOGEXP id="13" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:r1c4"/>
+</RHS>
+</EQEQ>
+                            <EQCLASS id="8" isCorrelated="false">
+                              <LOGEXP id="12" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c2"/>
+</LHS>
+<RHS>
+<INT value="200"/>
+</RHS>
+</EQEQ>
+                                <EQCLASS id="0" isCorrelated="false">
+                 <LOGEXP id="3" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</RHS>
+</INEXPR>
+</RHS>
+</AND>
+        <EQCLASS id="3" isCorrelated="false">
+     <LOGEXP id="5" op="r1">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="7" op="SELECT">
+<INEXPR>
+<LHS>
+r1:r1c3</LHS>
+<RHS>
+                    <EQCLASS id="2" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="r1c4"/>
+</OuterVariables>
+                      <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg="r2:r2c1"/>
+</PROJ_EXPRS>
+                        <EQCLASS id="1" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="r1c4"/>
+</OuterVariables>
+                          <LOGEXP id="2" op="SELECT">
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c2"/>
+</LHS>
+<RHS>
+<INT value="200"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:r1c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+                            <EQCLASS id="0" isCorrelated="false">
+               <LOGEXP id="3" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+                          <LOGEXP id="13" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:r1c4"/>
+</RHS>
+</EQEQ>
+                            <EQCLASS id="8" isCorrelated="false">
+                              <LOGEXP id="12" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c2"/>
+</LHS>
+<RHS>
+<INT value="200"/>
+</RHS>
+</EQEQ>
+                                <EQCLASS id="0" isCorrelated="false">
+                 <LOGEXP id="3" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</RHS>
+</INEXPR>
+        <EQCLASS id="6" isCorrelated="false">
+          <LOGEXP id="6" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:r1c2"/>
+</LHS>
+<RHS>
+<INT value="100"/>
+</RHS>
+</EQEQ>
+            <EQCLASS id="3" isCorrelated="false">
+       <LOGEXP id="5" op="r1">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="9" op="APPLY"> 
+<INEXPR>
+<LHS>
+r1:r1c3</LHS>
+<RHS>
+                    <EQCLASS id="2" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="r1c4"/>
+</OuterVariables>
+                      <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg="r2:r2c1"/>
+</PROJ_EXPRS>
+                        <EQCLASS id="1" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="r1c4"/>
+</OuterVariables>
+                          <LOGEXP id="2" op="SELECT">
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c2"/>
+</LHS>
+<RHS>
+<INT value="200"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:r1c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+                            <EQCLASS id="0" isCorrelated="false">
+               <LOGEXP id="3" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+                          <LOGEXP id="13" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:r1c4"/>
+</RHS>
+</EQEQ>
+                            <EQCLASS id="8" isCorrelated="false">
+                              <LOGEXP id="12" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c2"/>
+</LHS>
+<RHS>
+<INT value="200"/>
+</RHS>
+</EQEQ>
+                                <EQCLASS id="0" isCorrelated="false">
+                 <LOGEXP id="3" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</RHS>
+</INEXPR>
+        <EQCLASS id="7" isCorrelated="false">
+          <LOGEXP id="8" op="SELECT">
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:r1c2"/>
+</LHS>
+<RHS>
+<INT value="100"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<TRUE/>
+</RHS>
+</AND>
+            <EQCLASS id="3" isCorrelated="false">
+       <LOGEXP id="5" op="r1">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="2" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="r1c4"/>
+</OuterVariables>
+          <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg="r2:r2c1"/>
+</PROJ_EXPRS>
+            <EQCLASS id="1" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="r1c4"/>
+</OuterVariables>
+              <LOGEXP id="2" op="SELECT">
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c2"/>
+</LHS>
+<RHS>
+<INT value="200"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:r1c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+                <EQCLASS id="0" isCorrelated="false">
+         <LOGEXP id="3" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+              <LOGEXP id="13" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:r1c4"/>
+</RHS>
+</EQEQ>
+                <EQCLASS id="8" isCorrelated="false">
+                  <LOGEXP id="12" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c2"/>
+</LHS>
+<RHS>
+<INT value="200"/>
+</RHS>
+</EQEQ>
+                    <EQCLASS id="0" isCorrelated="false">
+           <LOGEXP id="3" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="11" op="APPLY"> 
+<INEXPR>
+<LHS>
+r1:r1c3</LHS>
+<RHS>
+                    <EQCLASS id="2" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="r1c4"/>
+</OuterVariables>
+                      <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg="r2:r2c1"/>
+</PROJ_EXPRS>
+                        <EQCLASS id="1" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="r1c4"/>
+</OuterVariables>
+                          <LOGEXP id="2" op="SELECT">
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c2"/>
+</LHS>
+<RHS>
+<INT value="200"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:r1c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+                            <EQCLASS id="0" isCorrelated="false">
+               <LOGEXP id="3" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+                          <LOGEXP id="13" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:r1c4"/>
+</RHS>
+</EQEQ>
+                            <EQCLASS id="8" isCorrelated="false">
+                              <LOGEXP id="12" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c2"/>
+</LHS>
+<RHS>
+<INT value="200"/>
+</RHS>
+</EQEQ>
+                                <EQCLASS id="0" isCorrelated="false">
+                 <LOGEXP id="3" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</RHS>
+</INEXPR>
+        <EQCLASS id="6" isCorrelated="false">
+          <LOGEXP id="6" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r1:r1c2"/>
+</LHS>
+<RHS>
+<INT value="100"/>
+</RHS>
+</EQEQ>
+            <EQCLASS id="3" isCorrelated="false">
+       <LOGEXP id="5" op="r1">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="2" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="r1c4"/>
+</OuterVariables>
+          <LOGEXP id="1" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg="r2:r2c1"/>
+</PROJ_EXPRS>
+            <EQCLASS id="1" isCorrelated="true">
+<OuterVariables>
+<Attr relname="r1" attrname="r1c4"/>
+</OuterVariables>
+              <LOGEXP id="2" op="SELECT">
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c2"/>
+</LHS>
+<RHS>
+<INT value="200"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:r1c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+                <EQCLASS id="0" isCorrelated="false">
+         <LOGEXP id="3" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+              <LOGEXP id="13" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg="r1:r1c4"/>
+</RHS>
+</EQEQ>
+                <EQCLASS id="8" isCorrelated="false">
+                  <LOGEXP id="12" op="SELECT">
+<EQEQ>
+<LHS>
+<RelArgRef relarg="r2:r2c2"/>
+</LHS>
+<RHS>
+<INT value="200"/>
+</RHS>
+</EQEQ>
+                    <EQCLASS id="0" isCorrelated="false">
+           <LOGEXP id="3" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>

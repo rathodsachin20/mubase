@@ -1,0 +1,3 @@
+select part.p_partkey
+from part, supplier
+where part.p_selkey > 1 and supplier.s_suppkey < 1000;

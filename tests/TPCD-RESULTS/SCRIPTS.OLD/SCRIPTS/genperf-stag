@@ -1,0 +1,12 @@
+#!/bin/bash 
+for algo in volcano volcano-sh volcano-ru greedy
+do
+   for inp in stag-2 stag-4 stag-6 stag-8 stag-10 stag-12 stag-14 stag-16 stag-18 stag-20
+   do	    
+	echo PROC $inp
+	../perfeval-pruning-subs-index "$algo" < STAG/$inp
+	echo END
+        echo
+   done
+   echo
+done

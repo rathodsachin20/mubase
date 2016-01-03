@@ -1,0 +1,10 @@
+select sp.sp_sno, sp.sp_pno
+from s,ss,sp,spsp
+where sp.sp_sno = s.s_no and sp.sp_sno = ss.ss_no and s.s_no = ss.ss_no
+and spsp.spsp_no = sp.sp_sno;
+
+select sp1.sp1_sno, sp1.sp1_pno
+from p,pp,sp1,psps
+where sp1.sp1_pno = p.p_no and sp1.sp1_pno = pp.pp_no and
+p.p_no = pp.pp_no and psps.psps_no = sp1.sp1_sno;
+

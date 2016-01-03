@@ -1,0 +1,77 @@
+                              Volcano         Volcano-SH      Volcano-RU      Greedy          
+
+COST:q3                       51.89           51.89           51.89           51.89           
+USRT:q3                       10              20              20              20              
+SYST:q3                       10              0               0               0               
+PHYDAGUSR:q3                  0               -1              -1              20              
+PHYDAGSYS:q3                  0               -1              -1              0               
+LOGDAGUSR:q3                  0               0               10              10              
+LOGDAGSYS:q3                  10              0               0               0               
+PHYOPNODECOUNT:q3             20              20              20              189             
+PHYEQNODECOUNT:q3             39              39              39              55              
+LOGOPNODECOUNT:q3             33              33              33              33              
+EQUIVNODECOUNT:q3             13              13              13              13              
+NUMPROPS:q3                   0               0               0               0               
+PROPCOUNT:q3                  0               -1              -1              0               
+SHARCOUNT:q3                  0               -1              -1              0               
+
+COST:q5                       55.73           55.73           55.73           55.73           
+USRT:q5                       150             160             150             250             
+SYST:q5                       10              0               10              0               
+PHYDAGUSR:q5                  -1              -1              -1              220             
+PHYDAGSYS:q5                  -1              -1              -1              0               
+LOGDAGUSR:q5                  40              40              50              60              
+LOGDAGSYS:q5                  0               0               0               0               
+PHYOPNODECOUNT:q5             137             137             137             2268            
+PHYEQNODECOUNT:q5             206             206             206             377             
+LOGOPNODECOUNT:q5             273             273             273             273             
+EQUIVNODECOUNT:q5             57              57              57              57              
+NUMPROPS:q5                   0               0               0               0               
+PROPCOUNT:q5                  -1              -1              -1              0               
+SHARCOUNT:q5                  -1              -1              -1              0               
+
+COST:q7                       54.71           54.71           54.71           54.71           
+USRT:q7                       100             90              90              120             
+SYST:q7                       0               0               0               0               
+PHYDAGUSR:q7                  -1              -1              -1              100             
+PHYDAGSYS:q7                  -1              -1              -1              0               
+LOGDAGUSR:q7                  20              20              20              10              
+LOGDAGSYS:q7                  0               0               0               0               
+PHYOPNODECOUNT:q7             108             108             108             1180            
+PHYEQNODECOUNT:q7             183             183             183             262             
+LOGOPNODECOUNT:q7             141             141             141             141             
+EQUIVNODECOUNT:q7             43              43              43              43              
+NUMPROPS:q7                   0               0               0               0               
+PROPCOUNT:q7                  -1              -1              -1              0               
+SHARCOUNT:q7                  -1              -1              -1              0               
+
+COST:q9                       152.69          152.69          152.69          152.69          
+USRT:q9                       190             200             210             170             
+SYST:q9                       0               0               0               0               
+PHYDAGUSR:q9                  -1              -1              -1              130             
+PHYDAGSYS:q9                  -1              -1              -1              0               
+LOGDAGUSR:q9                  30              40              30              30              
+LOGDAGSYS:q9                  0               0               0               0               
+PHYOPNODECOUNT:q9             113             113             113             1500            
+PHYEQNODECOUNT:q9             213             213             213             287             
+LOGOPNODECOUNT:q9             175             175             175             175             
+EQUIVNODECOUNT:q9             46              46              46              46              
+NUMPROPS:q9                   0               0               0               0               
+PROPCOUNT:q9                  -1              -1              -1              0               
+SHARCOUNT:q9                  -1              -1              -1              0               
+
+COST:q10                      48.17           48.17           48.17           48.17           
+USRT:q10                      30              30              20              30              
+SYST:q10                      0               0               0               0               
+PHYDAGUSR:q10                 -1              -1              -1              30              
+PHYDAGSYS:q10                 -1              -1              -1              0               
+LOGDAGUSR:q10                 0               10              10              0               
+LOGDAGSYS:q10                 0               0               0               0               
+PHYOPNODECOUNT:q10            65              65              65              390             
+PHYEQNODECOUNT:q10            74              74              74              102             
+LOGOPNODECOUNT:q10            54              54              54              54              
+EQUIVNODECOUNT:q10            20              20              20              20              
+NUMPROPS:q10                  0               0               0               0               
+PROPCOUNT:q10                 -1              -1              -1              0               
+SHARCOUNT:q10                 -1              -1              -1              0               
+

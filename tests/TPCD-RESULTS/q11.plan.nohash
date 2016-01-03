@@ -1,0 +1,40 @@
+NumBuffers = 1500
+ALGO Volcano-RU
+Cost Limit = 1e+09
+LDAGUSR 0
+LDAGSYS 10
+PlanCost = 98.9377 MatCost = 2.8602
+Optimization Successful: Plan Cost = 98.9377 Cost Limit = 101.798
+
+[EQCLASS8][PLANGRP0] UseCost = 0.275 Plan Cost = 98.9377 #Tuples = 64000 #Blocks = 125 MARKED
+| [ALG34] UNION Cost = 0
+| | [EQCLASS6][PLANGRP1] UseCost = 0.1386 Plan Cost = 97.4395 #Tuples = 32000 #Blocks = 63 MARKED
+| | | [ALG32] AGGREGATEHASH< MIN(partsupp:ps_suppkey) | partsupp:ps_partkey > Cost = 0.0766
+| | | | [EQCLASS5][PLANGRP2] UseCost = 1.4982 Plan Cost = 97.3629 #Tuples = 32000 #Blocks = 681 MARKED SHARED
+| | | | | [ALG31] INDEXEDNLJOIN< partsupp:ps_suppkey == supplier:s_suppkey > Cost = 8.13644
+| | | | | | [EQCLASS12][PLANGRP26] UseCost = 0.0132 Plan Cost = 1.22649 #Tuples = 400 #Blocks = 6 MARKED
+| | | | | | | [ENF30] INDEX< supplier:s_suppkey > Cost = 0.0252632
+| | | | | | | | [EQCLASS12][PLANGRP27] UseCost = 0.0132 Plan Cost = 1.20123 #Tuples = 400 #Blocks = 6 MARKED
+| | | | | | | | | [ALG29] INDEXEDNLJOIN< AND[ supplier:s_nationkey == nation:n_nationkey nation:n_nationkey == 7 ] > Cost = 0.101227
+| | | | | | | | | | [EQCLASS3][PLANGRP11] UseCost = 0.0044 Plan Cost = 0.0044 #Tuples = 25 #Blocks = 2 MARKED BUILTIN
+| | | | | | | | | | | [ALG7] RELSCAN< nation > Cost = 0.0044
+| | | | | | | | | | [EQCLASS1][PLANGRP28] UseCost = 1.1 Plan Cost = 1.1 #Tuples = 10000 #Blocks = 500 MARKED BUILTIN
+| | | | | | | | | | | [ALG28] RELSCAN< supplier > Cost = 1.1
+| | | | | | [EQCLASS0][PLANGRP5] UseCost = 88 Plan Cost = 88 #Tuples = 800000 #Blocks = 40000 MARKED
+| | | | | | | [ALG0] RELSCAN< partsupp > Cost = 88
+| | [EQCLASS7][PLANGRP35] UseCost = 0.0704 Plan Cost = 1.4982 #Tuples = 32000 #Blocks = 32 MARKED
+| | | [ALG33] PROJECT< partsupp:ps_suppkey > Cost = 0
+| | | | [EQCLASS5][PLANGRP2] UseCost = 1.4982 Plan Cost = 97.3629 #Tuples = 32000 #Blocks = 681 MARKED SHARED
+| | | | | [ALG31] INDEXEDNLJOIN< partsupp:ps_suppkey == supplier:s_suppkey > Cost = 8.13644
+| | | | | | [EQCLASS12][PLANGRP26] UseCost = 0.0132 Plan Cost = 1.22649 #Tuples = 400 #Blocks = 6 MARKED
+| | | | | | | [ENF30] INDEX< supplier:s_suppkey > Cost = 0.0252632
+| | | | | | | | [EQCLASS12][PLANGRP27] UseCost = 0.0132 Plan Cost = 1.20123 #Tuples = 400 #Blocks = 6 MARKED
+| | | | | | | | | [ALG29] INDEXEDNLJOIN< AND[ supplier:s_nationkey == nation:n_nationkey nation:n_nationkey == 7 ] > Cost = 0.101227
+| | | | | | | | | | [EQCLASS3][PLANGRP11] UseCost = 0.0044 Plan Cost = 0.0044 #Tuples = 25 #Blocks = 2 MARKED BUILTIN
+| | | | | | | | | | | [ALG7] RELSCAN< nation > Cost = 0.0044
+| | | | | | | | | | [EQCLASS1][PLANGRP28] UseCost = 1.1 Plan Cost = 1.1 #Tuples = 10000 #Blocks = 500 MARKED BUILTIN
+| | | | | | | | | | | [ALG28] RELSCAN< supplier > Cost = 1.1
+| | | | | | [EQCLASS0][PLANGRP5] UseCost = 88 Plan Cost = 88 #Tuples = 800000 #Blocks = 40000 MARKED
+| | | | | | | [ALG0] RELSCAN< partsupp > Cost = 88
+
+

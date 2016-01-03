@@ -1,0 +1,17 @@
+#!/bin/sh -x
+
+touch DATA/TPCD DATA/TPCD-COMP DATA/STAG
+rm -rf DATA/TPCD DATA/TPCD-COMP DATA/STAG
+mkdir DATA/TPCD
+mkdir DATA/TPCD-COMP
+mkdir DATA/STAG
+
+GENDATA-SCRIPTS/gendata < OUT/out-tpcd
+mv -f DATA/*.dat DATA/TPCD/
+GENDATA-SCRIPTS/gendata-rev-min < OUT/out-tpcd-comp
+mv -f DATA/*.dat DATA/TPCD-COMP/
+GENDATA-SCRIPTS/gendata-rev-min < OUT/out-stag
+mv -f DATA/*.dat DATA/STAG/
+
+echo "Now copy directory DATA to prasan@ashwini:JGRAPH/DATA and run gengraphs there"
+

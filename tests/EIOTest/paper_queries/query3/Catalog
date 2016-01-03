@@ -1,0 +1,84 @@
+NumOfTuples(R1) = 2000000
+TuplesPerBlock(R1) = 50
+
+DistinctAttr(R1,r1c1) = 20000
+AttrMinValue(R1,r1c1) = 1
+AttrMaxValue(R1,r1c1) = 20000
+AttrSize(R1,r1c1) = 4
+
+DistinctAttr(R1,r1c2) = 20000
+AttrMinValue(R1,r1c2) = 1
+AttrMaxValue(R1,r1c2) = 20000
+AttrSize(R1,r1c2) = 4
+
+DistinctAttr(R1,r1c3) = 20000
+AttrMinValue(R1,r1c3) = 1
+AttrMaxValue(R1,r1c3) = 20000
+AttrSize(R1,r1c3) = 4
+
+DistinctAttr(R1,r1c4) = 20000
+AttrMinValue(R1,r1c4) = 1
+AttrMaxValue(R1,r1c4) = 20000
+AttrSize(R1,r1c4) = 4
+
+DistinctAttr(R1,r1c5) = 20000
+AttrMinValue(R1,r1c5) = 1
+AttrMaxValue(R1,r1c5) = 20000
+AttrSize(R1,r1c5) = 4
+
+NumOfTuples(R2) = 2000000
+TuplesPerBlock(R2) = 50
+
+DistinctAttr(R2,r2c1) = 20000
+AttrMinValue(R2,r2c1) = 1
+AttrMaxValue(R2,r2c1) = 20000
+AttrSize(R2,r2c1) = 4
+
+DistinctAttr(R2,r2c2) = 20000
+AttrMinValue(R2,r2c2) = 1
+AttrMaxValue(R2,r2c2) = 20000
+AttrSize(R2,r2c2) = 4
+
+DistinctAttr(R2,r2c3) = 20000
+AttrMinValue(R2,r2c3) = 1
+AttrMaxValue(R2,r2c3) = 20000
+AttrSize(R2,r2c3) = 4
+
+DistinctAttr(R2,r2c4) = 20000
+AttrMinValue(R2,r2c4) = 1
+AttrMaxValue(R2,r2c4) = 20000
+AttrSize(R2,r2c4) = 4
+
+DistinctAttr(R2,r2c5) = 20000
+AttrMinValue(R2,r2c5) = 1
+AttrMaxValue(R2,r2c5) = 20000
+AttrSize(R2,r2c5) = 4
+
+NumOfTuples(R3) = 2000000
+TuplesPerBlock(R3) = 50
+
+DistinctAttr(R3,r3c1) = 20000
+AttrMinValue(R3,r3c1) = 1
+AttrMaxValue(R3,r3c1) = 20000
+AttrSize(R3,r3c1) = 4
+
+DistinctAttr(R3,r3c2) = 20000
+AttrMinValue(R3,r3c2) = 1
+AttrMaxValue(R3,r3c2) = 20000
+AttrSize(R3,r3c2) = 4
+
+DistinctAttr(R3,r3c3) = 20000
+AttrMinValue(R3,r3c3) = 1
+AttrMaxValue(R3,r3c3) = 20000
+AttrSize(R3,r3c3) = 4
+
+DistinctAttr(R3,r3c4) = 20000
+AttrMinValue(R3,r3c4) = 1
+AttrMaxValue(R3,r3c4) = 20000
+AttrSize(R3,r3c4) = 4
+
+DistinctAttr(R3,r3c5) = 20000
+AttrMinValue(R3,r3c5) = 1
+AttrMaxValue(R3,r3c5) = 20000
+AttrSize(R3,r3c5) = 4
+

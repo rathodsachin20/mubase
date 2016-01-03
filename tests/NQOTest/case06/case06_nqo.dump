@@ -1,0 +1,52 @@
+ALGO Volcano
+Cost Limit = 2.14748e+09
+LDAGUSR 0
+LDAGSYS 0
+LDAGUSR 0
+LDAGSYS 0
+LDAGUSR 0
+LDAGSYS 0
+LDAGUSR 0
+LDAGSYS 0
+LDAGUSR 0
+LDAGSYS 0
+Optimization Successful: Plan Cost = 14922.7 Cost Limit = 14922.7
+
+[EQCLASS14][PLANGRP0][CC=1][PSO=NULL] UseCost = 1.2892 Plan Cost = 14922.7 #Tuples = 600000 #Blocks = 586
+| [ALG346][CC=1]PROJECT< r1:r1c1 > Cost = 0
+| | [EQCLASS13][PLANGRP1][CC=1][PSO=NULL] UseCost = 6.4394 Plan Cost = 14922.7 #Tuples = 600000 #Blocks = 2927
+| | | [ALG345][CC=1]BASICAPPLY< LeftSemiJoin > Cost = 0.5856
+| | | | [EQCLASS12][PLANGRP495][CC=1] UseCost = 26.4 Plan Cost = 26.4 #Tuples = 600000 #Blocks = 12000 BUILTIN
+| | | | | [ALG232][CC=1]RELSCAN< r1 > Cost = 26.4
+| | | | [EQCLASS11][PLANGRP496][CC=6000][PSO=< r1:r1c1 >] UseCost = 0.0022 Plan Cost = 14895.7 #Tuples = 100 #Blocks = 1 CORRELATED
+| | | | | [ALG344][CC=6000]PROJECT< r2:r2c1 > Cost = 0
+| | | | | | [EQCLASS10][PLANGRP497][CC=6000][PSO=< r1:r1c1 >] UseCost = 0.0022 Plan Cost = 14895.7 #Tuples = 100 #Blocks = 1 CORRELATED
+| | | | | | | [ALG343][CC=6000]BASICAPPLY< LeftSemiJoin > Cost = 2.4
+| | | | | | | | [EQCLASS15][PLANGRP690][CC=6000][PSO=< r1:r1c1 >] UseCost = 0.0022 Plan Cost = 14598.1 #Tuples = 100 #Blocks = 1 CORRELATED
+| | | | | | | | | [ALG339][CC=6000]SELECT (state_retain=1)< AND[ r2:r2c2 == r1:r1c1 TRUE ] > Cost = 14401.2
+| | | | | | | | | | [EQCLASS9][PLANGRP692][CC=1] UseCost = 26.4 Plan Cost = 196.927 #Tuples = 600000 #Blocks = 12000
+| | | | | | | | | | | [ENF338][CC=1]INDEXSORT< r2:r2c2 > Cost = 170.527
+| | | | | | | | | | | | [EQCLASS9][PLANGRP696][CC=1] UseCost = 26.4 Plan Cost = 26.4 #Tuples = 600000 #Blocks = 12000
+| | | | | | | | | | | | | [ALG337][CC=1]RELSCAN< r2 > Cost = 26.4
+| | | | | | | | [EQCLASS8][PLANGRP704][CC=100][PSO=< r2:r2c2 >] UseCost = 0.0022 Plan Cost = 295.22 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | | | | | | | [ALG342][CC=100]PROJECT< r3:r3c1 > Cost = 0
+| | | | | | | | | | [EQCLASS7][PLANGRP705][CC=100][PSO=< r2:r2c2 >] UseCost = 0.0022 Plan Cost = 295.22 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | | | | | | | | | [ALG341][CC=100]SELECT (state_retain=1)< AND[ AND[ r3:r3c2 == r1:r1c2 r3:r3c3 == r2:r2c1 ] <r3:r3c4 IN
+| | | | | | | | | | [EQCLASS5][PLANGRP6][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 28.8002 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | | | | | | | | | [ALG5][CC=1]PROJECT< r4:r4c1 > Cost = 0
+| | | | | | | | | | | | [EQCLASS4][PLANGRP7][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 28.8002 #Tuples = 1 #Blocks = 1 CORRELATED
+| | | | | | | | | | | | | [ALG4][CC=1]SELECT (state_retain=0)< AND[ AND[ AND[ r4:r4c2 == r1:r1c3 r4:r4c3 == r2:r2c2 ] r4:r4c4 == r3:r3c1 ] <r4:r4c5 IN
+| | | | | | | | | | [EQCLASS2][PLANGRP8][CC=1][PSO=NULL] UseCost = 0 Plan Cost = 0 #Tuples = 0 #Blocks = 0 CORRELATED
+| | | | | | | | | | | [ALG2][CC=1]PROJECT< r5:r5c1 > Cost = 0
+| | | | | | | | | | | | [EQCLASS1][PLANGRP9][CC=1][PSO=NULL] UseCost = 0 Plan Cost = 0 #Tuples = 0 #Blocks = 0 CORRELATED
+| | | | | | | | | | | | | [ALG1][CC=1]SELECT (state_retain=0)< AND[ AND[ AND[ r5:r5c2 == r1:r1c4 r5:r5c3 == r2:r2c3 ] r5:r5c4 == r3:r3c2 ] r5:r5c5 == r4:r4c1 ] > Cost = 0
+| | | | | | | | | | | | | | [EQCLASS0][PLANGRP10][CC=1] UseCost = 0 Plan Cost = 0 #Tuples = 0 #Blocks = 0
+| | | | | | | | | | | | | | | [ALG0][CC=1]RELSCAN< r5 > Cost = 0
+> ] > Cost = 2.4002
+| | | | | | | | | | | | | | [EQCLASS3][PLANGRP11][CC=1] UseCost = 26.4 Plan Cost = 26.4 #Tuples = 600000 #Blocks = 12000
+| | | | | | | | | | | | | | | [ALG3][CC=1]RELSCAN< r4 > Cost = 26.4
+> ] > Cost = 268.82
+| | | | | | | | | | | | [EQCLASS6][PLANGRP707][CC=1] UseCost = 26.4 Plan Cost = 26.4 #Tuples = 600000 #Blocks = 12000 BUILTIN
+| | | | | | | | | | | | | [ALG340][CC=1]RELSCAN< r3 > Cost = 26.4
+
+

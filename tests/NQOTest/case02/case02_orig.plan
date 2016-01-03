@@ -1,0 +1,17 @@
+Optimization Successful: Plan Cost = 7771.75 Cost Limit = 7771.75
+
+[EQCLASS5][PLANGRP0] UseCost = 0.0088 Plan Cost = 7771.75 #Tuples = 4000 #Blocks = 4
+| [ALG5] PROJECT< r1:r1c1 > Cost = 0
+| | [EQCLASS4][PLANGRP1] UseCost = 0.044 Plan Cost = 7771.75 #Tuples = 4000 #Blocks = 20
+| | | [ALG4] SELECT< AND[ r1:r1c2 == 100 <r1:r1c3 IN
+| | | | | | | | | | [EQCLASS2][PLANGRP2] UseCost = 0.088 Plan Cost = 51.4688 #Tuples = 40001 #Blocks = 40
+| | | | | | | | | | | [ALG2] PROJECT< r2:r2c1 > Cost = 0
+| | | | | | | | | | | | [EQCLASS1][PLANGRP3] UseCost = 0.4312 Plan Cost = 51.4688 #Tuples = 40001 #Blocks = 196
+| | | | | | | | | | | | | [ALG1] SELECT< r2:r2c3 == r1:r1c4 > Cost = 4.325
+| | | | | | | | | | | | | | [EQCLASS0][PLANGRP4] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | | | | | | | | | | | [ALG0] RELSCAN< r2 > Cost = 47.1438
+> ] > Cost = 7724.61
+| | | | [EQCLASS3][PLANGRP5] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | [ALG3] RELSCAN< r1 > Cost = 47.1438
+
+

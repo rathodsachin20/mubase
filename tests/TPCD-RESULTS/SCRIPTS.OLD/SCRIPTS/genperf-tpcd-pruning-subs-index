@@ -1,0 +1,12 @@
+#!/bin/bash 
+for algo in volcano volcano-sh volcano-ru greedy
+do
+   for inp in q2-mod q2 q3 q5 q7 q8-mod q9 q10 q11 q14
+   do	    
+	echo PROC $inp
+	../perfeval-pruning-subs-index  "$algo" < TPCD/$inp
+	echo END
+        echo
+   done
+   echo
+done

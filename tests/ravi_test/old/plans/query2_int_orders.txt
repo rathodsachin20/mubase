@@ -1,0 +1,110 @@
+Returning empty interesting orders for Eq 6
+Returning: Interesting orders for Eq 9:
+Returning empty interesting orders for Eq 6
+Returning: Interesting orders for Eq 10:
+Returning empty interesting orders for Eq 3
+Returning empty interesting orders for Eq 3
+Returning: Interesting orders for Eq 11:
+Returning: Interesting orders for Eq 13:
+Returning empty interesting orders for Eq 0
+Returning: Interesting orders for Eq 14:
+Returning: Interesting orders for Eq 1:
+< r1:r1c4 r1:r1c5 r2:r2c5 >< >
+
+Returning: Interesting orders for Eq 2:
+< r1:r1c4 r1:r1c5 r2:r2c5 >< >
+
+Returning: Interesting orders for Eq 4:
+< r1:r1c4 r1:r1c4 r1:r1c5 >< >< r1:r1c4 >< r1:r1c4 r1:r1c5 >
+
+Returning: Interesting orders for Eq 5:
+Returning: Interesting orders for Eq 9:
+Returning empty interesting orders for Eq 3
+Constructed interesting orders for Eq:11< >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 11:
+Returning empty interesting orders for Eq 3
+Constructed interesting orders for Eq:4< r1:r1c4 r1:r1c4 r1:r1c5 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning empty interesting orders for Eq 3
+Constructed interesting orders for Eq:11< >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 11:
+Returning empty interesting orders for Eq 3
+Constructed interesting orders for Eq:13< r1:r1c4 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning empty interesting orders for Eq 3
+Constructed interesting orders for Eq:13< r1:r1c4 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning empty interesting orders for Eq 3
+Constructed interesting orders for Eq:11< >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 11:
+Returning empty interesting orders for Eq 3
+Constructed interesting orders for Eq:13< r1:r1c4 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 13:
+Returning empty interesting orders for Eq 0
+Constructed interesting orders for Eq:1< r1:r1c4 r1:r1c5 r2:r2c5 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning empty interesting orders for Eq 0
+Constructed interesting orders for Eq:14< >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 14:
+Returning empty interesting orders for Eq 0
+Constructed interesting orders for Eq:1< r1:r1c4 r1:r1c5 r2:r2c5 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 1:
+Returning: Interesting orders for Eq 2:
+Returning: Interesting orders for Eq 4:
+Returning: Interesting orders for Eq 5:
+Returning: Interesting orders for Eq 7:
+Returning: Interesting orders for Eq 8:
+Returning empty interesting orders for Eq 3
+Constructed interesting orders for Eq:4< r1:r1c4 r1:r1c4 r1:r1c5 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning empty interesting orders for Eq 3
+Constructed interesting orders for Eq:11< >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 11:
+Returning empty interesting orders for Eq 3
+Constructed interesting orders for Eq:4< r1:r1c4 r1:r1c4 r1:r1c5 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning empty interesting orders for Eq 3
+Constructed interesting orders for Eq:11< >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 11:
+Returning empty interesting orders for Eq 3
+Constructed interesting orders for Eq:13< r1:r1c4 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning empty interesting orders for Eq 3
+Constructed interesting orders for Eq:13< r1:r1c4 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning empty interesting orders for Eq 3
+Constructed interesting orders for Eq:11< >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 11:
+Returning empty interesting orders for Eq 3
+Constructed interesting orders for Eq:13< r1:r1c4 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 13:
+Returning empty interesting orders for Eq 0
+Constructed interesting orders for Eq:1< r1:r1c4 r1:r1c5 r2:r2c5 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning empty interesting orders for Eq 0
+Constructed interesting orders for Eq:14< >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 14:
+Returning empty interesting orders for Eq 0
+Constructed interesting orders for Eq:1< r1:r1c4 r1:r1c5 r2:r2c5 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 1:
+< r1:r1c4 r1:r1c5 r2:r2c5 >< >Returning: Interesting orders for Eq 2:
+< r1:r1c4 r1:r1c5 r2:r2c5 >< >Returning: Interesting orders for Eq 4:
+< r1:r1c4 r1:r1c4 r1:r1c5 >< >< r1:r1c4 >< r1:r1c4 r1:r1c5 >Returning: Interesting orders for Eq 5:
+Returning empty interesting orders for Eq 0
+Constructed interesting orders for Eq:1< r1:r1c4 r1:r1c5 r2:r2c5 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning empty interesting orders for Eq 0
+Constructed interesting orders for Eq:14< >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 14:
+Returning empty interesting orders for Eq 0
+Constructed interesting orders for Eq:1< r1:r1c4 r1:r1c5 r2:r2c5 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 1:
+< r1:r1c4 r1:r1c5 r2:r2c5 >< >Returning: Interesting orders for Eq 2:
+Returning empty interesting orders for Eq 0
+Constructed interesting orders for Eq:1< r1:r1c4 r1:r1c5 r2:r2c5 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning empty interesting orders for Eq 0
+Constructed interesting orders for Eq:14< >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 14:
+Returning empty interesting orders for Eq 0
+Constructed interesting orders for Eq:1< r1:r1c4 r1:r1c5 r2:r2c5 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 1:
+< r1:r1c4 r1:r1c5 r2:r2c5 >< >Returning: Interesting orders for Eq 2:
+Returning empty interesting orders for Eq 0
+Constructed interesting orders for Eq:1< r1:r1c4 r1:r1c5 r2:r2c5 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning empty interesting orders for Eq 0
+Constructed interesting orders for Eq:14< >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 14:
+Returning empty interesting orders for Eq 0
+Constructed interesting orders for Eq:1< r1:r1c4 r1:r1c5 r2:r2c5 >DEBUG: Returning from Expre->GetInterestingOrders()
+Returning: Interesting orders for Eq 1:
+< r1:r1c4 r1:r1c5 r2:r2c5 >< >Returning: Interesting orders for Eq 2:

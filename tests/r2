@@ -1,0 +1,1139 @@
+ALGO Greedy
+Cost Limit = 1e+09
+LDAGUSR 420
+LDAGSYS 10
+PDAGUSR 2130
+PDAGSYS 70
+INITCOST 108783
+SHARCOUNT 667
+BESTCOST 44691.9
+NUMPROPS 1002
+PROPCOUNT 3502702
+RECOMP 1003
+NUMMAT 26
+Optimization Successful: Plan Cost = 21041.9 Cost Limit = 44691.9
+
+[EQCLASS162][PLANGRP0] UseCost = 33.0026 Plan Cost = 21041.9
+| [ALG26768] UNION Cost = 0
+| | [EQCLASS154][PLANGRP1] UseCost = 30.8998 Plan Cost = 18858
+| | | [ALG25506] UNION Cost = 0
+| | | | [EQCLASS146][PLANGRP2] UseCost = 28.8585 Plan Cost = 17565.7
+| | | | | [ALG24230] UNION Cost = 0
+| | | | | | [EQCLASS138][PLANGRP3] UseCost = 26.8772 Plan Cost = 16460
+| | | | | | | [ALG22935] UNION Cost = 0
+| | | | | | | | [EQCLASS130][PLANGRP4] UseCost = 24.9546 Plan Cost = 15366.8
+| | | | | | | | | [ALG21616] UNION Cost = 0
+| | | | | | | | | | [EQCLASS122][PLANGRP5] UseCost = 23.0891 Plan Cost = 14187.9
+| | | | | | | | | | | [ALG20274] UNION Cost = 0
+| | | | | | | | | | | | [EQCLASS114][PLANGRP6] UseCost = 21.2796 Plan Cost = 13095.8
+| | | | | | | | | | | | | [ALG18932] UNION Cost = 0
+| | | | | | | | | | | | | | [EQCLASS106][PLANGRP7] UseCost = 19.5245 Plan Cost = 12075.7
+| | | | | | | | | | | | | | | [ALG17590] UNION Cost = 0
+| | | | | | | | | | | | | | | | [EQCLASS98][PLANGRP8] UseCost = 17.8226 Plan Cost = 11067.3
+| | | | | | | | | | | | | | | | | [ALG16248] UNION Cost = 0
+| | | | | | | | | | | | | | | | | | [EQCLASS90][PLANGRP9] UseCost = 16.1725 Plan Cost = 10176
+| | | | | | | | | | | | | | | | | | | [ALG14906] UNION Cost = 0
+| | | | | | | | | | | | | | | | | | | | [EQCLASS82][PLANGRP10] UseCost = 14.5731 Plan Cost = 9294
+| | | | | | | | | | | | | | | | | | | | | [ALG13564] UNION Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS74][PLANGRP11] UseCost = 13.0231 Plan Cost = 8255.93
+| | | | | | | | | | | | | | | | | | | | | | | [ALG12222] UNION Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS66][PLANGRP12] UseCost = 11.5211 Plan Cost = 7246.6
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG10880] UNION Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS58][PLANGRP13] UseCost = 10.0662 Plan Cost = 6303.32
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG9538] UNION Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS50][PLANGRP14] UseCost = 8.65691 Plan Cost = 5321.41
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8196] UNION Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS42][PLANGRP15] UseCost = 7.29227 Plan Cost = 4343.65
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG6854] UNION Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS34][PLANGRP16] UseCost = 5.97108 Plan Cost = 3572.43
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5512] UNION Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS26][PLANGRP17] UseCost = 4.69223 Plan Cost = 2809.15
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG4170] UNION Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS18][PLANGRP18] UseCost = 3.45464 Plan Cost = 2143.14
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG2828] UNION Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS10][PLANGRP19] UseCost = 2.25722 Plan Cost = 1475.63
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1486] PROJECT< :psp1_selkey > Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS9][PLANGRP301] UseCost = 39.3255 Plan Cost = 1475.63
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1480] MERGEJOIN< :psp1_subpartkey == :psp2_partkey > Cost = 3.57504
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS211][PLANGRP292] UseCost = 57.0462 Plan Cost = 576.124
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF1315] SORT< partsubpart2:psp2_partkey > Cost = 5.18601
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS211][PLANGRP289] UseCost = 57.0462 Plan Cost = 570.938
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1300] MERGEJOIN< :psp2_subpartkey == :psp3_partkey > Cost = 5.18601
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS203][PLANGRP272] UseCost = 75.8729 Plan Cost = 475.976
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF1135] SORT< partsubpart3:psp3_partkey > Cost = 6.89753
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS203][PLANGRP266] UseCost = 75.8729 Plan Cost = 469.078
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1125] MERGEJOIN< :psp3_subpartkey == :psp4_partkey > Cost = 6.89753
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS198][PLANGRP243] UseCost = 91.0948 Plan Cost = 371.867
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF937] SORT< partsubpart4:psp4_partkey > Cost = 173.908
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS198][PLANGRP239] UseCost = 91.0948 Plan Cost = 197.959
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG930] MERGEJOIN< :psp4_subpartkey == :psp5_partkey > Cost = 8.28134
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS164][PLANGRP199] UseCost = 81.801 Plan Cost = 98.8262
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF717] SORT< partsubpart5:psp5_partkey > Cost = 7.43646
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS164][PLANGRP170] UseCost = 81.801 Plan Cost = 91.3897
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG596] SELECT< :psp5_selkey < 151 > Cost = 7.43646
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS463][PLANGRP996] UseCost = 0 Plan Cost = 1121.67 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF5545] INDEXSORT< partsubpart5:psp5_subpartkey > Cost = 232.98
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS463][PLANGRP173] UseCost = 83.9533 Plan Cost = 888.688
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG594] SELECT< :psp5_selkey < 155 > Cost = 7.63211
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS7][PLANGRP29] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG7] RELSCAN< partsubpart5 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS168][PLANGRP188] UseCost = 81.801 Plan Cost = 90.8517
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG651] SELECT< :psp4_selkey < 151 > Cost = 7.43646
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS391][PLANGRP772] UseCost = 0 Plan Cost = 1120.13 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF4203] INDEXSORT< partsubpart4:psp4_subpartkey > Cost = 231.487
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS391][PLANGRP108] UseCost = 83.4152 Plan Cost = 888.639
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG265] SELECT< :psp4_selkey < 154 > Cost = 7.5832
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS5][PLANGRP28] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5] RELSCAN< partsubpart4 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS172][PLANGRP120] UseCost = 81.801 Plan Cost = 90.3136
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG304] SELECT< :psp3_selkey < 151 > Cost = 7.43646
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS319][PLANGRP548] UseCost = 0 Plan Cost = 1118.58 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF2861] INDEXSORT< partsubpart3:psp3_subpartkey > Cost = 229.994
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS319][PLANGRP78] UseCost = 82.8772 Plan Cost = 888.59
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG126] SELECT< :psp3_selkey < 153 > Cost = 7.53429
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS3][PLANGRP27] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3] RELSCAN< partsubpart3 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS176][PLANGRP70] UseCost = 81.801 Plan Cost = 89.7756
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG106] SELECT< :psp2_selkey < 151 > Cost = 7.43646
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS247][PLANGRP324] UseCost = 0 Plan Cost = 967.335 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF1519] INDEXSORT< partsubpart2:psp2_subpartkey > Cost = 78.7934
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS247][PLANGRP56] UseCost = 82.3391 Plan Cost = 888.541
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG58] SELECT< :psp2_selkey < 152 > Cost = 7.48537
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1][PLANGRP26] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1] RELSCAN< partsubpart2 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS175][PLANGRP49] UseCost = 81.801 Plan Cost = 895.929
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF45] SORT< partsubpart1:psp1_subpartkey > Cost = 7.43646
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS175][PLANGRP45] UseCost = 81.801 Plan Cost = 888.492
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG37] SELECT< :psp1_selkey < 151 > Cost = 7.43646
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS0][PLANGRP25] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG0] RELSCAN< partsubpart1 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS17][PLANGRP304] UseCost = 2.29634 Plan Cost = 667.508
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG2827] PROJECT< :psp2_selkey > Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS16][PLANGRP525] UseCost = 40.618 Plan Cost = 667.508
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG2821] MERGEJOIN< :psp2_subpartkey == :psp3_partkey > Cost = 3.69254
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS283][PLANGRP516] UseCost = 58.5538 Plan Cost = 581.477
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF2656] SORT< partsubpart3:psp3_partkey > Cost = 5.32308
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS283][PLANGRP507] UseCost = 58.5538 Plan Cost = 576.154
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG2641] MERGEJOIN< :psp3_subpartkey == :psp4_partkey > Cost = 5.32308
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS275][PLANGRP496] UseCost = 77.3788 Plan Cost = 480.468
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF2476] SORT< partsubpart4:psp4_partkey > Cost = 7.03443
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS275][PLANGRP490] UseCost = 77.3788 Plan Cost = 473.433
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG2466] MERGEJOIN< :psp4_subpartkey == :psp5_partkey > Cost = 7.03443
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS270][PLANGRP467] UseCost = 92.2989 Plan Cost = 375.498
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF2278] SORT< partsubpart5:psp5_partkey > Cost = 176.207
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS270][PLANGRP463] UseCost = 92.2989 Plan Cost = 199.292
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG2271] MERGEJOIN< :psp5_subpartkey == :psp6_partkey > Cost = 8.39081
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS236][PLANGRP423] UseCost = 82.3391 Plan Cost = 99.4621
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF2058] SORT< partsubpart6:psp6_partkey > Cost = 7.48537
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS236][PLANGRP394] UseCost = 82.3391 Plan Cost = 91.9767
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1937] SELECT< :psp6_selkey < 152 > Cost = 7.48537
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS535][PLANGRP1220] UseCost = 0 Plan Cost = 1123.21 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF6887] INDEXSORT< partsubpart6:psp6_subpartkey > Cost = 234.473
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS535][PLANGRP397] UseCost = 84.4913 Plan Cost = 888.737
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1935] SELECT< :psp6_selkey < 156 > Cost = 7.68103
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS14][PLANGRP310] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1490] RELSCAN< partsubpart6 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS240][PLANGRP412] UseCost = 82.3391 Plan Cost = 91.4386
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1992] SELECT< :psp5_selkey < 152 > Cost = 7.48537
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS463][PLANGRP996] UseCost = 0 Plan Cost = 1121.67 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF5545] INDEXSORT< partsubpart5:psp5_subpartkey > Cost = 232.98
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS463][PLANGRP173] UseCost = 83.9533 Plan Cost = 888.688
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG594] SELECT< :psp5_selkey < 155 > Cost = 7.63211
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS7][PLANGRP29] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG7] RELSCAN< partsubpart5 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS244][PLANGRP191] UseCost = 82.3391 Plan Cost = 90.9006
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG657] SELECT< :psp4_selkey < 152 > Cost = 7.48537
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS391][PLANGRP772] UseCost = 0 Plan Cost = 1120.13 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF4203] INDEXSORT< partsubpart4:psp4_subpartkey > Cost = 231.487
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS391][PLANGRP108] UseCost = 83.4152 Plan Cost = 888.639
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG265] SELECT< :psp4_selkey < 154 > Cost = 7.5832
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS5][PLANGRP28] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5] RELSCAN< partsubpart4 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS248][PLANGRP122] UseCost = 82.3391 Plan Cost = 90.3625
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG306] SELECT< :psp3_selkey < 152 > Cost = 7.48537
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS319][PLANGRP548] UseCost = 0 Plan Cost = 1118.58 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF2861] INDEXSORT< partsubpart3:psp3_subpartkey > Cost = 229.994
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS319][PLANGRP78] UseCost = 82.8772 Plan Cost = 888.59
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG126] SELECT< :psp3_selkey < 153 > Cost = 7.53429
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS3][PLANGRP27] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3] RELSCAN< partsubpart3 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS247][PLANGRP324] UseCost = 0 Plan Cost = 967.335 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF1519] INDEXSORT< partsubpart2:psp2_subpartkey > Cost = 78.7934
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS247][PLANGRP56] UseCost = 82.3391 Plan Cost = 888.541
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG58] SELECT< :psp2_selkey < 152 > Cost = 7.48537
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1][PLANGRP26] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1] RELSCAN< partsubpart2 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS25][PLANGRP528] UseCost = 2.33652 Plan Cost = 666.011
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG4169] PROJECT< :psp3_selkey > Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS24][PLANGRP749] UseCost = 41.9451 Plan Cost = 666.011
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG4163] MERGEJOIN< :psp3_subpartkey == :psp4_partkey > Cost = 3.81319
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS355][PLANGRP740] UseCost = 60.0917 Plan Cost = 579.32
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF3998] SORT< partsubpart4:psp4_partkey > Cost = 5.46289
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS355][PLANGRP737] UseCost = 60.0917 Plan Cost = 573.858
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3983] MERGEJOIN< :psp4_subpartkey == :psp5_partkey > Cost = 5.46289
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS347][PLANGRP720] UseCost = 78.9047 Plan Cost = 477.445
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF3818] SORT< partsubpart5:psp5_partkey > Cost = 7.17316
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS347][PLANGRP714] UseCost = 78.9047 Plan Cost = 470.272
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3808] MERGEJOIN< :psp5_subpartkey == :psp6_partkey > Cost = 7.17316
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS342][PLANGRP691] UseCost = 93.511 Plan Cost = 371.611
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF3620] SORT< partsubpart6:psp6_partkey > Cost = 178.521
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS342][PLANGRP689] UseCost = 93.511 Plan Cost = 193.09
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3613] MERGEJOIN< :psp6_subpartkey == :psp7_partkey > Cost = 8.501
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS308][PLANGRP647] UseCost = 82.8772 Plan Cost = 92.5637
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3384] SELECT< :psp7_selkey < 153 > Cost = 7.53429
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS607][PLANGRP648] UseCost = 85.0294 Plan Cost = 1051.11 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF3383] SORT< partsubpart7:psp7_partkey > Cost = 162.329
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS607][PLANGRP621] UseCost = 85.0294 Plan Cost = 888.786
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3277] SELECT< :psp7_selkey < 157 > Cost = 7.72994
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS22][PLANGRP534] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG2832] RELSCAN< partsubpart7 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS312][PLANGRP636] UseCost = 82.8772 Plan Cost = 92.0256
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3334] SELECT< :psp6_selkey < 153 > Cost = 7.53429
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS535][PLANGRP1220] UseCost = 0 Plan Cost = 1123.21 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF6887] INDEXSORT< partsubpart6:psp6_subpartkey > Cost = 234.473
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS535][PLANGRP397] UseCost = 84.4913 Plan Cost = 888.737
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1935] SELECT< :psp6_selkey < 156 > Cost = 7.68103
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS14][PLANGRP310] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1490] RELSCAN< partsubpart6 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS316][PLANGRP415] UseCost = 82.8772 Plan Cost = 91.4875
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1998] SELECT< :psp5_selkey < 153 > Cost = 7.53429
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS463][PLANGRP996] UseCost = 0 Plan Cost = 1121.67 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF5545] INDEXSORT< partsubpart5:psp5_subpartkey > Cost = 232.98
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS463][PLANGRP173] UseCost = 83.9533 Plan Cost = 888.688
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG594] SELECT< :psp5_selkey < 155 > Cost = 7.63211
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS7][PLANGRP29] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG7] RELSCAN< partsubpart5 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS320][PLANGRP190] UseCost = 82.8772 Plan Cost = 90.9495
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG653] SELECT< :psp4_selkey < 153 > Cost = 7.53429
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS391][PLANGRP772] UseCost = 0 Plan Cost = 1120.13 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF4203] INDEXSORT< partsubpart4:psp4_subpartkey > Cost = 231.487
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS391][PLANGRP108] UseCost = 83.4152 Plan Cost = 888.639
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG265] SELECT< :psp4_selkey < 154 > Cost = 7.5832
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS5][PLANGRP28] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5] RELSCAN< partsubpart4 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS319][PLANGRP548] UseCost = 0 Plan Cost = 1118.58 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF2861] INDEXSORT< partsubpart3:psp3_subpartkey > Cost = 229.994
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS319][PLANGRP78] UseCost = 82.8772 Plan Cost = 888.59
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG126] SELECT< :psp3_selkey < 153 > Cost = 7.53429
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS3][PLANGRP27] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3] RELSCAN< partsubpart3 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS33][PLANGRP752] UseCost = 2.37777 Plan Cost = 763.285
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5511] PROJECT< :psp4_selkey > Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS32][PLANGRP973] UseCost = 43.3077 Plan Cost = 763.285
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5505] MERGEJOIN< :psp4_subpartkey == :psp5_partkey > Cost = 3.93706
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS427][PLANGRP964] UseCost = 61.6603 Plan Cost = 675.932
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF5340] SORT< partsubpart5:psp5_partkey > Cost = 5.60548
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS427][PLANGRP955] UseCost = 61.6603 Plan Cost = 670.327
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5325] MERGEJOIN< :psp5_subpartkey == :psp6_partkey > Cost = 5.60548
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS419][PLANGRP944] UseCost = 80.4509 Plan Cost = 573.185
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF5160] SORT< partsubpart6:psp6_partkey > Cost = 7.31372
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS419][PLANGRP938] UseCost = 80.4509 Plan Cost = 565.871
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5119] NLJOIN< :psp7_subpartkey == :psp8_partkey > Cost = 279.422
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS380][PLANGRP842] UseCost = 83.4152 Plan Cost = 93.1506
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG4621] SELECT< :psp8_selkey < 154 > Cost = 7.5832
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS679][PLANGRP1668] UseCost = 0 Plan Cost = 1126.29 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF9571] INDEXSORT< partsubpart8:psp8_subpartkey > Cost = 237.46
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS679][PLANGRP845] UseCost = 85.5674 Plan Cost = 888.835
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG4619] SELECT< :psp8_selkey < 158 > Cost = 7.77886
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS30][PLANGRP758] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG4174] RELSCAN< partsubpart8 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS398][PLANGRP817] UseCost = 94.7311 Plan Cost = 193.299
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG4439] MERGEJOIN< :psp6_subpartkey == :psp7_partkey > Cost = 8.61192
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS384][PLANGRP651] UseCost = 83.4152 Plan Cost = 92.6126
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3395] SELECT< :psp7_selkey < 154 > Cost = 7.5832
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS607][PLANGRP648] UseCost = 85.0294 Plan Cost = 1051.11 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF3383] SORT< partsubpart7:psp7_partkey > Cost = 162.329
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS607][PLANGRP621] UseCost = 85.0294 Plan Cost = 888.786
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3277] SELECT< :psp7_selkey < 157 > Cost = 7.72994
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS22][PLANGRP534] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG2832] RELSCAN< partsubpart7 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS388][PLANGRP639] UseCost = 83.4152 Plan Cost = 92.0745
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3340] SELECT< :psp6_selkey < 154 > Cost = 7.5832
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS535][PLANGRP1220] UseCost = 0 Plan Cost = 1123.21 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF6887] INDEXSORT< partsubpart6:psp6_subpartkey > Cost = 234.473
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS535][PLANGRP397] UseCost = 84.4913 Plan Cost = 888.737
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1935] SELECT< :psp6_selkey < 156 > Cost = 7.68103
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS14][PLANGRP310] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1490] RELSCAN< partsubpart6 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS392][PLANGRP414] UseCost = 83.4152 Plan Cost = 91.5365
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1994] SELECT< :psp5_selkey < 154 > Cost = 7.5832
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS463][PLANGRP996] UseCost = 0 Plan Cost = 1121.67 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF5545] INDEXSORT< partsubpart5:psp5_subpartkey > Cost = 232.98
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS463][PLANGRP173] UseCost = 83.9533 Plan Cost = 888.688
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG594] SELECT< :psp5_selkey < 155 > Cost = 7.63211
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS7][PLANGRP29] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG7] RELSCAN< partsubpart5 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS391][PLANGRP772] UseCost = 0 Plan Cost = 1120.13 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF4203] INDEXSORT< partsubpart4:psp4_subpartkey > Cost = 231.487
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS391][PLANGRP108] UseCost = 83.4152 Plan Cost = 888.639
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG265] SELECT< :psp4_selkey < 154 > Cost = 7.5832
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS5][PLANGRP28] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5] RELSCAN< partsubpart4 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS41][PLANGRP976] UseCost = 2.42011 Plan Cost = 771.215
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG6853] PROJECT< :psp5_selkey > Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS40][PLANGRP1189] UseCost = 44.7064 Plan Cost = 771.215
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG6706] MERGEJOIN< :psp8_subpartkey == :psp9_partkey > Cost = 4.06422
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS451][PLANGRP1082] UseCost = 63.2599 Plan Cost = 674.489
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF6061] SORT< partsubpart8:psp8_subpartkey > Cost = 5.7509
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS451][PLANGRP1063] UseCost = 63.2599 Plan Cost = 668.738
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5951] MERGEJOIN< :psp5_subpartkey == :psp6_partkey > Cost = 5.7509
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS475][PLANGRP1057] UseCost = 82.0174 Plan Cost = 579.034
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF5876] SORT< partsubpart6:psp6_partkey > Cost = 7.45613
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS475][PLANGRP1051] UseCost = 82.0174 Plan Cost = 571.578
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5835] NLJOIN< :psp7_subpartkey == :psp8_partkey > Cost = 284.87
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS456][PLANGRP1084] UseCost = 83.9533 Plan Cost = 93.1995
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG6018] SELECT< :psp8_selkey < 155 > Cost = 7.63211
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS679][PLANGRP1668] UseCost = 0 Plan Cost = 1126.29 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF9571] INDEXSORT< partsubpart8:psp8_subpartkey > Cost = 237.46
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS679][PLANGRP845] UseCost = 85.5674 Plan Cost = 888.835
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG4619] SELECT< :psp8_selkey < 158 > Cost = 7.77886
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS30][PLANGRP758] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG4174] RELSCAN< partsubpart8 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS520][PLANGRP1014] UseCost = 95.9593 Plan Cost = 193.508
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5640] MERGEJOIN< :psp6_subpartkey == :psp7_partkey > Cost = 8.72357
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS460][PLANGRP650] UseCost = 83.9533 Plan Cost = 92.6615
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3390] SELECT< :psp7_selkey < 155 > Cost = 7.63211
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS607][PLANGRP648] UseCost = 85.0294 Plan Cost = 1051.11 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF3383] SORT< partsubpart7:psp7_partkey > Cost = 162.329
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS607][PLANGRP621] UseCost = 85.0294 Plan Cost = 888.786
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3277] SELECT< :psp7_selkey < 157 > Cost = 7.72994
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS22][PLANGRP534] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG2832] RELSCAN< partsubpart7 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS464][PLANGRP638] UseCost = 83.9533 Plan Cost = 92.1234
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3336] SELECT< :psp6_selkey < 155 > Cost = 7.63211
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS535][PLANGRP1220] UseCost = 0 Plan Cost = 1123.21 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF6887] INDEXSORT< partsubpart6:psp6_subpartkey > Cost = 234.473
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS535][PLANGRP397] UseCost = 84.4913 Plan Cost = 888.737
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1935] SELECT< :psp6_selkey < 156 > Cost = 7.68103
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS14][PLANGRP310] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1490] RELSCAN< partsubpart6 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS463][PLANGRP996] UseCost = 0 Plan Cost = 1121.67 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF5545] INDEXSORT< partsubpart5:psp5_subpartkey > Cost = 232.98
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS463][PLANGRP173] UseCost = 83.9533 Plan Cost = 888.688
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG594] SELECT< :psp5_selkey < 155 > Cost = 7.63211
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS7][PLANGRP29] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG7] RELSCAN< partsubpart5 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS452][PLANGRP1095] UseCost = 83.9533 Plan Cost = 92.6615
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG6077] SELECT< :psp9_selkey < 155 > Cost = 7.63211
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS604][PLANGRP1453] UseCost = 0 Plan Cost = 329.802 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF8273] INDEXSORT< partsubpart9:psp9_partkey > Cost = 235.967
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS604][PLANGRP1075] UseCost = 85.0294 Plan Cost = 93.8354
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5982] SELECT< :psp9_selkey < 157 > Cost = 7.72994
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS751][PLANGRP1892] UseCost = 0 Plan Cost = 1127.84 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF10913] INDEXSORT< partsubpart9:psp9_subpartkey > Cost = 238.953
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS751][PLANGRP1069] UseCost = 86.1055 Plan Cost = 888.884
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5961] SELECT< :psp9_selkey < 159 > Cost = 7.82777
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS38][PLANGRP982] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5516] RELSCAN< partsubpart9 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS49][PLANGRP1200] UseCost = 2.46357 Plan Cost = 977.76
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8195] PROJECT< :psp6_selkey > Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS48][PLANGRP1413] UseCost = 46.1418 Plan Cost = 977.76
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8048] MERGEJOIN< :psp9_subpartkey == :psp10_partkey > Cost = 4.19471
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS523][PLANGRP1306] UseCost = 64.891 Plan Cost = 717.939
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF7403] SORT< partsubpart9:psp9_subpartkey > Cost = 5.89919
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS523][PLANGRP1213] UseCost = 64.891 Plan Cost = 712.04
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG7138] NLJOIN< :psp7_subpartkey == :psp8_partkey > Cost = 331.207
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS542][PLANGRP1265] UseCost = 97.1954 Plan Cost = 194.795
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG7123] MERGEJOIN< :psp8_subpartkey == :psp9_partkey > Cost = 8.83594
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS528][PLANGRP1099] UseCost = 84.4913 Plan Cost = 92.7104
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG6081] SELECT< :psp9_selkey < 156 > Cost = 7.68103
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS604][PLANGRP1453] UseCost = 0 Plan Cost = 329.802 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF8273] INDEXSORT< partsubpart9:psp9_partkey > Cost = 235.967
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS604][PLANGRP1075] UseCost = 85.0294 Plan Cost = 93.8354
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5982] SELECT< :psp9_selkey < 157 > Cost = 7.72994
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS751][PLANGRP1892] UseCost = 0 Plan Cost = 1127.84 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF10913] INDEXSORT< partsubpart9:psp9_subpartkey > Cost = 238.953
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS751][PLANGRP1069] UseCost = 86.1055 Plan Cost = 888.884
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5961] SELECT< :psp9_selkey < 159 > Cost = 7.82777
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS38][PLANGRP982] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5516] RELSCAN< partsubpart9 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS532][PLANGRP1087] UseCost = 84.4913 Plan Cost = 93.2485
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG6024] SELECT< :psp8_selkey < 156 > Cost = 7.68103
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS679][PLANGRP1668] UseCost = 0 Plan Cost = 1126.29 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF9571] INDEXSORT< partsubpart8:psp8_subpartkey > Cost = 237.46
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS679][PLANGRP845] UseCost = 85.5674 Plan Cost = 888.835
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG4619] SELECT< :psp8_selkey < 158 > Cost = 7.77886
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS30][PLANGRP758] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG4174] RELSCAN< partsubpart8 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS556][PLANGRP1224] UseCost = 97.1954 Plan Cost = 186.038
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG6914] MERGEJOIN< :psp6_subpartkey == :psp7_partkey > Cost = 8.83594
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS535][PLANGRP1220] UseCost = 0 Plan Cost = 1123.21 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF6887] INDEXSORT< partsubpart6:psp6_subpartkey > Cost = 234.473
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS535][PLANGRP397] UseCost = 84.4913 Plan Cost = 888.737
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1935] SELECT< :psp6_selkey < 156 > Cost = 7.68103
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS14][PLANGRP310] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG1490] RELSCAN< partsubpart6 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS536][PLANGRP649] UseCost = 84.4913 Plan Cost = 92.7104
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3386] SELECT< :psp7_selkey < 156 > Cost = 7.68103
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS607][PLANGRP648] UseCost = 85.0294 Plan Cost = 1051.11 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF3383] SORT< partsubpart7:psp7_partkey > Cost = 162.329
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS607][PLANGRP621] UseCost = 85.0294 Plan Cost = 888.786
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3277] SELECT< :psp7_selkey < 157 > Cost = 7.72994
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS22][PLANGRP534] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG2832] RELSCAN< partsubpart7 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS524][PLANGRP1319] UseCost = 84.4913 Plan Cost = 255.626
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF7426] SORT< partsubpart10:psp10_partkey > Cost = 161.302
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS524][PLANGRP1290] UseCost = 84.4913 Plan Cost = 94.3246
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG7305] SELECT< :psp10_selkey < 156 > Cost = 7.68103
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS823][PLANGRP2116] UseCost = 0 Plan Cost = 1129.38 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF12255] INDEXSORT< partsubpart10:psp10_subpartkey > Cost = 240.446
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS823][PLANGRP1293] UseCost = 86.6435 Plan Cost = 888.933
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG7303] SELECT< :psp10_selkey < 160 > Cost = 7.87669
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS46][PLANGRP1206] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG6858] RELSCAN< partsubpart10 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS57][PLANGRP1424] UseCost = 2.50816 Plan Cost = 981.91
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG9537] PROJECT< :psp7_selkey > Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS56][PLANGRP1645] UseCost = 47.6148 Plan Cost = 981.91
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG9531] MERGEJOIN< :psp7_subpartkey == :psp8_partkey > Cost = 4.32862
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS643][PLANGRP1636] UseCost = 66.554 Plan Cost = 730.224
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF9366] SORT< partsubpart8:psp8_partkey > Cost = 6.05036
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS643][PLANGRP1627] UseCost = 66.554 Plan Cost = 724.173
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG9282] NLJOIN< :psp9_subpartkey == :psp10_partkey > Cost = 339.74
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS630][PLANGRP1585] UseCost = 98.4395 Plan Cost = 197.158
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8981] MERGEJOIN< :psp10_subpartkey == :psp11_partkey > Cost = 8.94905
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS596][PLANGRP1543] UseCost = 85.0294 Plan Cost = 93.8354
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8761] SELECT< :psp11_selkey < 157 > Cost = 7.72994
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS748][PLANGRP1901] UseCost = 0 Plan Cost = 333.962 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF10957] INDEXSORT< partsubpart11:psp11_partkey > Cost = 238.953
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS748][PLANGRP1523] UseCost = 86.1055 Plan Cost = 95.0094
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8666] SELECT< :psp11_selkey < 159 > Cost = 7.82777
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS895][PLANGRP2340] UseCost = 0 Plan Cost = 1130.92 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF13597] INDEXSORT< partsubpart11:psp11_subpartkey > Cost = 241.939
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS895][PLANGRP1517] UseCost = 87.1816 Plan Cost = 888.982
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8645] SELECT< :psp11_selkey < 161 > Cost = 7.9256
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS54][PLANGRP1430] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8200] RELSCAN< partsubpart11 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS600][PLANGRP1532] UseCost = 85.0294 Plan Cost = 94.3735
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8702] SELECT< :psp10_selkey < 157 > Cost = 7.72994
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS823][PLANGRP2116] UseCost = 0 Plan Cost = 1129.38 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF12255] INDEXSORT< partsubpart10:psp10_subpartkey > Cost = 240.446
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS823][PLANGRP1293] UseCost = 86.6435 Plan Cost = 888.933
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG7303] SELECT< :psp10_selkey < 160 > Cost = 7.87669
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS46][PLANGRP1206] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG6858] RELSCAN< partsubpart10 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS664][PLANGRP1462] UseCost = 98.4395 Plan Cost = 187.276
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8324] MERGEJOIN< :psp8_subpartkey == :psp9_partkey > Cost = 8.94905
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS604][PLANGRP1453] UseCost = 0 Plan Cost = 329.802 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF8273] INDEXSORT< partsubpart9:psp9_partkey > Cost = 235.967
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS604][PLANGRP1075] UseCost = 85.0294 Plan Cost = 93.8354
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5982] SELECT< :psp9_selkey < 157 > Cost = 7.72994
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS751][PLANGRP1892] UseCost = 0 Plan Cost = 1127.84 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF10913] INDEXSORT< partsubpart9:psp9_subpartkey > Cost = 238.953
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS751][PLANGRP1069] UseCost = 86.1055 Plan Cost = 888.884
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5961] SELECT< :psp9_selkey < 159 > Cost = 7.82777
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS38][PLANGRP982] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5516] RELSCAN< partsubpart9 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS608][PLANGRP1086] UseCost = 85.0294 Plan Cost = 93.2974
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG6020] SELECT< :psp8_selkey < 157 > Cost = 7.72994
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS679][PLANGRP1668] UseCost = 0 Plan Cost = 1126.29 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF9571] INDEXSORT< partsubpart8:psp8_subpartkey > Cost = 237.46
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS679][PLANGRP845] UseCost = 85.5674 Plan Cost = 888.835
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG4619] SELECT< :psp8_selkey < 158 > Cost = 7.77886
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS30][PLANGRP758] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG4174] RELSCAN< partsubpart8 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS607][PLANGRP861] UseCost = 85.0294 Plan Cost = 247.358
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF4675] SORT< partsubpart7:psp7_subpartkey > Cost = 162.329
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS607][PLANGRP648] UseCost = 85.0294 Plan Cost = 5774.64 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG3382] SELECT< :psp7_selkey < 157 > Cost = 7.72994
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS22][PLANGRP540] UseCost = 881.056 Plan Cost = 5766.91 SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF2844] SORT< partsubpart7:psp7_partkey > Cost = 4885.86
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS22][PLANGRP534] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG2832] RELSCAN< partsubpart7 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS65][PLANGRP1648] UseCost = 2.55391 Plan Cost = 943.288
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG10879] PROJECT< :psp8_selkey > Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS64][PLANGRP1869] UseCost = 49.1261 Plan Cost = 943.288
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG10873] MERGEJOIN< :psp8_subpartkey == :psp9_partkey > Cost = 4.46601
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS715][PLANGRP1860] UseCost = 68.2493 Plan Cost = 853.255
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF10708] SORT< partsubpart9:psp9_partkey > Cost = 6.20448
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS715][PLANGRP1851] UseCost = 68.2493 Plan Cost = 847.05
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG10619] NLJOIN< :psp11_subpartkey == :psp12_partkey > Cost = 262.083
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS668][PLANGRP1738] UseCost = 85.5674 Plan Cost = 95.4985
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG9989] SELECT< :psp12_selkey < 158 > Cost = 7.77886
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS967][PLANGRP2564] UseCost = 0 Plan Cost = 1132.46 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF14939] INDEXSORT< partsubpart12:psp12_subpartkey > Cost = 243.433
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS967][PLANGRP1741] UseCost = 87.7196 Plan Cost = 889.031
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG9987] SELECT< :psp12_selkey < 162 > Cost = 7.97451
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS62][PLANGRP1654] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG9542] RELSCAN< partsubpart12 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS691][PLANGRP1726] UseCost = 86.8404 Plan Cost = 489.469
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG9892] MERGEJOIN< :psp9_subpartkey == :psp10_partkey > Cost = 7.89458
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS686][PLANGRP1715] UseCost = 99.6916 Plan Cost = 387.69
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF9814] SORT< partsubpart10:psp10_partkey > Cost = 190.32
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS686][PLANGRP1711] UseCost = 99.6916 Plan Cost = 197.37
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG9807] MERGEJOIN< :psp10_subpartkey == :psp11_partkey > Cost = 9.06288
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS672][PLANGRP1547] UseCost = 85.5674 Plan Cost = 93.8843
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8765] SELECT< :psp11_selkey < 158 > Cost = 7.77886
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS748][PLANGRP1901] UseCost = 0 Plan Cost = 333.962 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF10957] INDEXSORT< partsubpart11:psp11_partkey > Cost = 238.953
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS748][PLANGRP1523] UseCost = 86.1055 Plan Cost = 95.0094
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8666] SELECT< :psp11_selkey < 159 > Cost = 7.82777
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS895][PLANGRP2340] UseCost = 0 Plan Cost = 1130.92 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF13597] INDEXSORT< partsubpart11:psp11_subpartkey > Cost = 241.939
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS895][PLANGRP1517] UseCost = 87.1816 Plan Cost = 888.982
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8645] SELECT< :psp11_selkey < 161 > Cost = 7.9256
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS54][PLANGRP1430] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8200] RELSCAN< partsubpart11 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS676][PLANGRP1535] UseCost = 85.5674 Plan Cost = 94.4224
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8708] SELECT< :psp10_selkey < 158 > Cost = 7.77886
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS823][PLANGRP2116] UseCost = 0 Plan Cost = 1129.38 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF12255] INDEXSORT< partsubpart10:psp10_subpartkey > Cost = 240.446
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS823][PLANGRP1293] UseCost = 86.6435 Plan Cost = 888.933
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG7303] SELECT< :psp10_selkey < 160 > Cost = 7.87669
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS46][PLANGRP1206] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG6858] RELSCAN< partsubpart10 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS680][PLANGRP1310] UseCost = 85.5674 Plan Cost = 93.8843
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG7362] SELECT< :psp9_selkey < 158 > Cost = 7.77886
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS751][PLANGRP1892] UseCost = 0 Plan Cost = 1127.84 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF10913] INDEXSORT< partsubpart9:psp9_subpartkey > Cost = 238.953
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS751][PLANGRP1069] UseCost = 86.1055 Plan Cost = 888.884
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5961] SELECT< :psp9_selkey < 159 > Cost = 7.82777
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS38][PLANGRP982] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5516] RELSCAN< partsubpart9 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS679][PLANGRP1668] UseCost = 0 Plan Cost = 1126.29 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF9571] INDEXSORT< partsubpart8:psp8_subpartkey > Cost = 237.46
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS679][PLANGRP845] UseCost = 85.5674 Plan Cost = 888.835
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG4619] SELECT< :psp8_selkey < 158 > Cost = 7.77886
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS30][PLANGRP758] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG4174] RELSCAN< partsubpart8 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS73][PLANGRP1872] UseCost = 2.60085 Plan Cost = 1009.32
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG12221] PROJECT< :psp9_selkey > Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS72][PLANGRP2093] UseCost = 50.6763 Plan Cost = 1009.32
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG12215] MERGEJOIN< :psp9_subpartkey == :psp10_partkey > Cost = 4.60694
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS787][PLANGRP2084] UseCost = 69.9773 Plan Cost = 918.61
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF12050] SORT< partsubpart10:psp10_partkey > Cost = 6.36157
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS787][PLANGRP2075] UseCost = 69.9773 Plan Cost = 912.248
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG11966] NLJOIN< :psp11_subpartkey == :psp12_partkey > Cost = 357.3
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS774][PLANGRP2033] UseCost = 100.952 Plan Cost = 365.194
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG11665] MERGEJOIN< :psp12_subpartkey == :psp13_partkey > Cost = 9.17743
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS740][PLANGRP1991] UseCost = 86.1055 Plan Cost = 260.469
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF11452] SORT< partsubpart13:psp13_partkey > Cost = 164.383
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS740][PLANGRP1962] UseCost = 86.1055 Plan Cost = 96.0855
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG11331] SELECT< :psp13_selkey < 159 > Cost = 7.82777
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1039][PLANGRP2788] UseCost = 0 Plan Cost = 1134.01 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF16281] INDEXSORT< partsubpart13:psp13_subpartkey > Cost = 244.926
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1039][PLANGRP1965] UseCost = 88.2577 Plan Cost = 889.079
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG11329] SELECT< :psp13_selkey < 163 > Cost = 8.02343
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS70][PLANGRP1878] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG10884] RELSCAN< partsubpart13 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS744][PLANGRP1980] UseCost = 86.1055 Plan Cost = 95.5474
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG11386] SELECT< :psp12_selkey < 159 > Cost = 7.82777
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS967][PLANGRP2564] UseCost = 0 Plan Cost = 1132.46 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF14939] INDEXSORT< partsubpart12:psp12_subpartkey > Cost = 243.433
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS967][PLANGRP1741] UseCost = 87.7196 Plan Cost = 889.031
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG9987] SELECT< :psp12_selkey < 162 > Cost = 7.97451
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS62][PLANGRP1654] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG9542] RELSCAN< partsubpart12 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS808][PLANGRP1910] UseCost = 100.952 Plan Cost = 189.754
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG11008] MERGEJOIN< :psp10_subpartkey == :psp11_partkey > Cost = 9.17743
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS748][PLANGRP1901] UseCost = 0 Plan Cost = 333.962 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF10957] INDEXSORT< partsubpart11:psp11_partkey > Cost = 238.953
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS748][PLANGRP1523] UseCost = 86.1055 Plan Cost = 95.0094
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8666] SELECT< :psp11_selkey < 159 > Cost = 7.82777
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS895][PLANGRP2340] UseCost = 0 Plan Cost = 1130.92 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF13597] INDEXSORT< partsubpart11:psp11_subpartkey > Cost = 241.939
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS895][PLANGRP1517] UseCost = 87.1816 Plan Cost = 888.982
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8645] SELECT< :psp11_selkey < 161 > Cost = 7.9256
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS54][PLANGRP1430] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8200] RELSCAN< partsubpart11 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS752][PLANGRP1534] UseCost = 86.1055 Plan Cost = 94.4713
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8704] SELECT< :psp10_selkey < 159 > Cost = 7.82777
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS823][PLANGRP2116] UseCost = 0 Plan Cost = 1129.38 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF12255] INDEXSORT< partsubpart10:psp10_subpartkey > Cost = 240.446
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS823][PLANGRP1293] UseCost = 86.6435 Plan Cost = 888.933
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG7303] SELECT< :psp10_selkey < 160 > Cost = 7.87669
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS46][PLANGRP1206] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG6858] RELSCAN< partsubpart10 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS751][PLANGRP1892] UseCost = 0 Plan Cost = 1127.84 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF10913] INDEXSORT< partsubpart9:psp9_subpartkey > Cost = 238.953
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS751][PLANGRP1069] UseCost = 86.1055 Plan Cost = 888.884
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5961] SELECT< :psp9_selkey < 159 > Cost = 7.82777
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS38][PLANGRP982] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG5516] RELSCAN< partsubpart9 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS81][PLANGRP2096] UseCost = 2.64898 Plan Cost = 1038.07
+| | | | | | | | | | | | | | | | | | | | | | | [ALG13563] PROJECT< :psp10_selkey > Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS80][PLANGRP2317] UseCost = 52.2663 Plan Cost = 1038.07
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG13557] MERGEJOIN< :psp10_subpartkey == :psp11_partkey > Cost = 4.75148
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS859][PLANGRP2308] UseCost = 71.7383 Plan Cost = 946.675
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF13392] SORT< partsubpart11:psp11_partkey > Cost = 6.52167
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS859][PLANGRP2299] UseCost = 71.7383 Plan Cost = 940.153
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG13377] MERGEJOIN< :psp11_subpartkey == :psp12_partkey > Cost = 6.52167
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS851][PLANGRP2288] UseCost = 90.1598 Plan Cost = 838.573
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF13212] SORT< partsubpart12:psp12_partkey > Cost = 172.123
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS851][PLANGRP2282] UseCost = 90.1598 Plan Cost = 666.45
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG13202] MERGEJOIN< :psp12_subpartkey == :psp13_partkey > Cost = 8.19635
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS846][PLANGRP2259] UseCost = 102.22 Plan Cost = 562.657
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF13014] SORT< partsubpart13:psp13_partkey > Cost = 195.147
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS846][PLANGRP2257] UseCost = 102.22 Plan Cost = 367.51
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG13007] MERGEJOIN< :psp13_subpartkey == :psp14_partkey > Cost = 9.29272
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS812][PLANGRP2215] UseCost = 86.6435 Plan Cost = 262.083
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF12794] SORT< partsubpart14:psp14_partkey > Cost = 165.41
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS812][PLANGRP2186] UseCost = 86.6435 Plan Cost = 96.6724
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG12673] SELECT< :psp14_selkey < 160 > Cost = 7.87669
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1111][PLANGRP3012] UseCost = 0 Plan Cost = 1135.55 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF17623] INDEXSORT< partsubpart14:psp14_subpartkey > Cost = 246.419
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1111][PLANGRP2189] UseCost = 88.7958 Plan Cost = 889.128
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG12671] SELECT< :psp14_selkey < 164 > Cost = 8.07234
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS78][PLANGRP2102] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG12226] RELSCAN< partsubpart14 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS816][PLANGRP2204] UseCost = 86.6435 Plan Cost = 96.1344
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG12728] SELECT< :psp13_selkey < 160 > Cost = 7.87669
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1039][PLANGRP2788] UseCost = 0 Plan Cost = 1134.01 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF16281] INDEXSORT< partsubpart13:psp13_subpartkey > Cost = 244.926
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1039][PLANGRP1965] UseCost = 88.2577 Plan Cost = 889.079
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG11329] SELECT< :psp13_selkey < 163 > Cost = 8.02343
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS70][PLANGRP1878] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG10884] RELSCAN< partsubpart13 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS820][PLANGRP1983] UseCost = 86.6435 Plan Cost = 95.5963
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG11392] SELECT< :psp12_selkey < 160 > Cost = 7.87669
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS967][PLANGRP2564] UseCost = 0 Plan Cost = 1132.46 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF14939] INDEXSORT< partsubpart12:psp12_subpartkey > Cost = 243.433
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS967][PLANGRP1741] UseCost = 87.7196 Plan Cost = 889.031
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG9987] SELECT< :psp12_selkey < 162 > Cost = 7.97451
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS62][PLANGRP1654] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG9542] RELSCAN< partsubpart12 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS824][PLANGRP1758] UseCost = 86.6435 Plan Cost = 95.0583
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG10046] SELECT< :psp11_selkey < 160 > Cost = 7.87669
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS895][PLANGRP2340] UseCost = 0 Plan Cost = 1130.92 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF13597] INDEXSORT< partsubpart11:psp11_subpartkey > Cost = 241.939
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS895][PLANGRP1517] UseCost = 87.1816 Plan Cost = 888.982
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8645] SELECT< :psp11_selkey < 161 > Cost = 7.9256
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS54][PLANGRP1430] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8200] RELSCAN< partsubpart11 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS823][PLANGRP2116] UseCost = 0 Plan Cost = 1129.38 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF12255] INDEXSORT< partsubpart10:psp10_subpartkey > Cost = 240.446
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS823][PLANGRP1293] UseCost = 86.6435 Plan Cost = 888.933
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG7303] SELECT< :psp10_selkey < 160 > Cost = 7.87669
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS46][PLANGRP1206] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG6858] RELSCAN< partsubpart10 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | [EQCLASS89][PLANGRP2320] UseCost = 2.69834 Plan Cost = 881.955
+| | | | | | | | | | | | | | | | | | | | | [ALG14905] PROJECT< :psp11_selkey > Cost = 0
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS88][PLANGRP2541] UseCost = 53.8968 Plan Cost = 881.955
+| | | | | | | | | | | | | | | | | | | | | | | [ALG14899] MERGEJOIN< :psp11_subpartkey == :psp12_partkey > Cost = 4.89971
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS931][PLANGRP2532] UseCost = 73.533 Plan Cost = 789.873
+| | | | | | | | | | | | | | | | | | | | | | | | | [ENF14734] SORT< partsubpart12:psp12_partkey > Cost = 6.68482
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS931][PLANGRP2523] UseCost = 73.533 Plan Cost = 783.189
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14719] MERGEJOIN< :psp12_subpartkey == :psp13_partkey > Cost = 6.68482
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS923][PLANGRP2512] UseCost = 91.8512 Plan Cost = 680.859
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF14554] SORT< partsubpart13:psp13_partkey > Cost = 175.352
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS923][PLANGRP2506] UseCost = 91.8512 Plan Cost = 505.506
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14544] MERGEJOIN< :psp13_subpartkey == :psp14_partkey > Cost = 8.35011
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS918][PLANGRP2483] UseCost = 103.496 Plan Cost = 400.973
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF14356] SORT< partsubpart14:psp14_partkey > Cost = 197.583
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS918][PLANGRP2479] UseCost = 103.496 Plan Cost = 203.389
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14349] MERGEJOIN< :psp14_subpartkey == :psp15_partkey > Cost = 9.40873
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS884][PLANGRP2439] UseCost = 87.1816 Plan Cost = 97.2594
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14120] SELECT< :psp15_selkey < 161 > Cost = 7.9256
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1183][PLANGRP2440] UseCost = 89.3338 Plan Cost = 1059.72 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF14119] SORT< partsubpart15:psp15_partkey > Cost = 170.546
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1183][PLANGRP2413] UseCost = 89.3338 Plan Cost = 889.177
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14013] SELECT< :psp15_selkey < 165 > Cost = 8.12126
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS86][PLANGRP2326] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG13568] RELSCAN< partsubpart15 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS888][PLANGRP2428] UseCost = 87.1816 Plan Cost = 96.7214
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14070] SELECT< :psp14_selkey < 161 > Cost = 7.9256
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1111][PLANGRP3012] UseCost = 0 Plan Cost = 1135.55 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF17623] INDEXSORT< partsubpart14:psp14_subpartkey > Cost = 246.419
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1111][PLANGRP2189] UseCost = 88.7958 Plan Cost = 889.128
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG12671] SELECT< :psp14_selkey < 164 > Cost = 8.07234
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS78][PLANGRP2102] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG12226] RELSCAN< partsubpart14 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS892][PLANGRP2207] UseCost = 87.1816 Plan Cost = 96.1833
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG12734] SELECT< :psp13_selkey < 161 > Cost = 7.9256
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1039][PLANGRP2788] UseCost = 0 Plan Cost = 1134.01 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF16281] INDEXSORT< partsubpart13:psp13_subpartkey > Cost = 244.926
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1039][PLANGRP1965] UseCost = 88.2577 Plan Cost = 889.079
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG11329] SELECT< :psp13_selkey < 163 > Cost = 8.02343
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS70][PLANGRP1878] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG10884] RELSCAN< partsubpart13 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS896][PLANGRP1982] UseCost = 87.1816 Plan Cost = 95.6452
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG11388] SELECT< :psp12_selkey < 161 > Cost = 7.9256
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS967][PLANGRP2564] UseCost = 0 Plan Cost = 1132.46 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF14939] INDEXSORT< partsubpart12:psp12_subpartkey > Cost = 243.433
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS967][PLANGRP1741] UseCost = 87.7196 Plan Cost = 889.031
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG9987] SELECT< :psp12_selkey < 162 > Cost = 7.97451
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS62][PLANGRP1654] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG9542] RELSCAN< partsubpart12 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS895][PLANGRP2340] UseCost = 0 Plan Cost = 1130.92 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | [ENF13597] INDEXSORT< partsubpart11:psp11_subpartkey > Cost = 241.939
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS895][PLANGRP1517] UseCost = 87.1816 Plan Cost = 888.982
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8645] SELECT< :psp11_selkey < 161 > Cost = 7.9256
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS54][PLANGRP1430] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG8200] RELSCAN< partsubpart11 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | [EQCLASS97][PLANGRP2544] UseCost = 2.74895 Plan Cost = 891.319
+| | | | | | | | | | | | | | | | | | | [ALG16247] PROJECT< :psp12_selkey > Cost = 0
+| | | | | | | | | | | | | | | | | | | | [EQCLASS96][PLANGRP2757] UseCost = 55.5686 Plan Cost = 891.319
+| | | | | | | | | | | | | | | | | | | | | [ALG16100] MERGEJOIN< :psp15_subpartkey == :psp16_partkey > Cost = 5.05169
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS955][PLANGRP2650] UseCost = 75.3616 Plan Cost = 788.421
+| | | | | | | | | | | | | | | | | | | | | | | [ENF15455] SORT< partsubpart15:psp15_subpartkey > Cost = 6.85105
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS955][PLANGRP2631] UseCost = 75.3616 Plan Cost = 781.57
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG15345] MERGEJOIN< :psp12_subpartkey == :psp13_partkey > Cost = 6.85105
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS979][PLANGRP2625] UseCost = 93.5638 Plan Cost = 686.999
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF15270] SORT< partsubpart13:psp13_partkey > Cost = 178.622
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS979][PLANGRP2622] UseCost = 93.5638 Plan Cost = 508.377
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG15260] MERGEJOIN< :psp13_subpartkey == :psp14_partkey > Cost = 8.5058
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS974][PLANGRP2611] UseCost = 104.78 Plan Cost = 403.639
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF15182] SORT< partsubpart14:psp14_partkey > Cost = 200.035
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS974][PLANGRP2607] UseCost = 104.78 Plan Cost = 203.604
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG15175] MERGEJOIN< :psp14_subpartkey == :psp15_partkey > Cost = 9.52547
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS960][PLANGRP2443] UseCost = 87.7196 Plan Cost = 97.3083
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14131] SELECT< :psp15_selkey < 162 > Cost = 7.97451
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1183][PLANGRP2440] UseCost = 89.3338 Plan Cost = 1059.72 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF14119] SORT< partsubpart15:psp15_partkey > Cost = 170.546
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1183][PLANGRP2413] UseCost = 89.3338 Plan Cost = 889.177
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14013] SELECT< :psp15_selkey < 165 > Cost = 8.12126
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS86][PLANGRP2326] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG13568] RELSCAN< partsubpart15 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS964][PLANGRP2431] UseCost = 87.7196 Plan Cost = 96.7703
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14076] SELECT< :psp14_selkey < 162 > Cost = 7.97451
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1111][PLANGRP3012] UseCost = 0 Plan Cost = 1135.55 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF17623] INDEXSORT< partsubpart14:psp14_subpartkey > Cost = 246.419
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1111][PLANGRP2189] UseCost = 88.7958 Plan Cost = 889.128
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG12671] SELECT< :psp14_selkey < 164 > Cost = 8.07234
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS78][PLANGRP2102] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG12226] RELSCAN< partsubpart14 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS968][PLANGRP2206] UseCost = 87.7196 Plan Cost = 96.2322
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG12730] SELECT< :psp13_selkey < 162 > Cost = 7.97451
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1039][PLANGRP2788] UseCost = 0 Plan Cost = 1134.01 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF16281] INDEXSORT< partsubpart13:psp13_subpartkey > Cost = 244.926
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1039][PLANGRP1965] UseCost = 88.2577 Plan Cost = 889.079
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG11329] SELECT< :psp13_selkey < 163 > Cost = 8.02343
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS70][PLANGRP1878] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG10884] RELSCAN< partsubpart13 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS967][PLANGRP2564] UseCost = 0 Plan Cost = 1132.46 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF14939] INDEXSORT< partsubpart12:psp12_subpartkey > Cost = 243.433
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS967][PLANGRP1741] UseCost = 87.7196 Plan Cost = 889.031
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG9987] SELECT< :psp12_selkey < 162 > Cost = 7.97451
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS62][PLANGRP1654] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG9542] RELSCAN< partsubpart12 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS956][PLANGRP2663] UseCost = 87.7196 Plan Cost = 97.8464
+| | | | | | | | | | | | | | | | | | | | | | | [ALG15462] SELECT< :psp16_selkey < 162 > Cost = 7.97451
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1255][PLANGRP2664] UseCost = 89.8719 Plan Cost = 1060.8 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | [ENF15461] SORT< partsubpart16:psp16_partkey > Cost = 171.574
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1255][PLANGRP2637] UseCost = 89.8719 Plan Cost = 889.226
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG15355] SELECT< :psp16_selkey < 166 > Cost = 8.17017
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS94][PLANGRP2550] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14910] RELSCAN< partsubpart16 > Cost = 881.056
+| | | | | | | | | | | | | | | | [EQCLASS105][PLANGRP2768] UseCost = 2.80083 Plan Cost = 1008.45
+| | | | | | | | | | | | | | | | | [ALG17589] PROJECT< :psp13_selkey > Cost = 0
+| | | | | | | | | | | | | | | | | | [EQCLASS104][PLANGRP2989] UseCost = 57.2824 Plan Cost = 1008.45
+| | | | | | | | | | | | | | | | | | | [ALG17583] MERGEJOIN< :psp13_subpartkey == :psp14_partkey > Cost = 5.20749
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1075][PLANGRP2980] UseCost = 77.2246 Plan Cost = 914.981
+| | | | | | | | | | | | | | | | | | | | | [ENF17418] SORT< partsubpart14:psp14_partkey > Cost = 7.02042
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1075][PLANGRP2971] UseCost = 77.2246 Plan Cost = 907.961
+| | | | | | | | | | | | | | | | | | | | | | | [ALG17329] NLJOIN< :psp16_subpartkey == :psp17_partkey > Cost = 296.648
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1028][PLANGRP2858] UseCost = 88.2577 Plan Cost = 98.4334
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG16699] SELECT< :psp17_selkey < 163 > Cost = 8.02343
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1327][PLANGRP3684] UseCost = 0 Plan Cost = 1140.17 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF21649] INDEXSORT< partsubpart17:psp17_subpartkey > Cost = 250.898
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1327][PLANGRP2861] UseCost = 90.4099 Plan Cost = 889.275
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG16697] SELECT< :psp17_selkey < 167 > Cost = 8.21908
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS102][PLANGRP2774] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG16252] RELSCAN< partsubpart17 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1051][PLANGRP2845] UseCost = 95.2979 Plan Cost = 512.88
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG16588] MERGEJOIN< :psp15_subpartkey == :psp16_partkey > Cost = 8.66345
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1032][PLANGRP2667] UseCost = 88.2577 Plan Cost = 97.8953
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG15473] SELECT< :psp16_selkey < 163 > Cost = 8.02343
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1255][PLANGRP2664] UseCost = 89.8719 Plan Cost = 1060.8 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF15461] SORT< partsubpart16:psp16_partkey > Cost = 171.574
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1255][PLANGRP2637] UseCost = 89.8719 Plan Cost = 889.226
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG15355] SELECT< :psp16_selkey < 166 > Cost = 8.17017
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS94][PLANGRP2550] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14910] RELSCAN< partsubpart16 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1096][PLANGRP2817] UseCost = 106.072 Plan Cost = 406.321
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF16440] SORT< partsubpart15:psp15_subpartkey > Cost = 202.502
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1096][PLANGRP2804] UseCost = 106.072 Plan Cost = 203.819
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG16376] MERGEJOIN< :psp14_subpartkey == :psp15_partkey > Cost = 9.64293
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1036][PLANGRP2442] UseCost = 88.2577 Plan Cost = 97.3572
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14126] SELECT< :psp15_selkey < 163 > Cost = 8.02343
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1183][PLANGRP2440] UseCost = 89.3338 Plan Cost = 1059.72 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF14119] SORT< partsubpart15:psp15_partkey > Cost = 170.546
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1183][PLANGRP2413] UseCost = 89.3338 Plan Cost = 889.177
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14013] SELECT< :psp15_selkey < 165 > Cost = 8.12126
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS86][PLANGRP2326] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG13568] RELSCAN< partsubpart15 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1040][PLANGRP2430] UseCost = 88.2577 Plan Cost = 96.8192
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14072] SELECT< :psp14_selkey < 163 > Cost = 8.02343
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1111][PLANGRP3012] UseCost = 0 Plan Cost = 1135.55 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF17623] INDEXSORT< partsubpart14:psp14_subpartkey > Cost = 246.419
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1111][PLANGRP2189] UseCost = 88.7958 Plan Cost = 889.128
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG12671] SELECT< :psp14_selkey < 164 > Cost = 8.07234
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS78][PLANGRP2102] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG12226] RELSCAN< partsubpart14 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1039][PLANGRP2788] UseCost = 0 Plan Cost = 1134.01 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | [ENF16281] INDEXSORT< partsubpart13:psp13_subpartkey > Cost = 244.926
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1039][PLANGRP1965] UseCost = 88.2577 Plan Cost = 889.079
+| | | | | | | | | | | | | | | | | | | | | | | [ALG11329] SELECT< :psp13_selkey < 163 > Cost = 8.02343
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS70][PLANGRP1878] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG10884] RELSCAN< partsubpart13 > Cost = 881.056
+| | | | | | | | | | | | | | [EQCLASS113][PLANGRP2992] UseCost = 2.85402 Plan Cost = 1020.12
+| | | | | | | | | | | | | | | [ALG18931] PROJECT< :psp14_selkey > Cost = 0
+| | | | | | | | | | | | | | | | [EQCLASS112][PLANGRP3205] UseCost = 59.0391 Plan Cost = 1020.12
+| | | | | | | | | | | | | | | | | [ALG18784] MERGEJOIN< :psp17_subpartkey == :psp18_partkey > Cost = 5.36719
+| | | | | | | | | | | | | | | | | | [EQCLASS1099][PLANGRP3098] UseCost = 79.1224 Plan Cost = 917.343
+| | | | | | | | | | | | | | | | | | | [ENF18139] SORT< partsubpart17:psp17_subpartkey > Cost = 7.19295
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1099][PLANGRP3005] UseCost = 79.1224 Plan Cost = 910.15
+| | | | | | | | | | | | | | | | | | | | | [ALG17769] NLJOIN< :psp16_subpartkey == :psp17_partkey > Cost = 303.954
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1167][PLANGRP3033] UseCost = 97.0535 Plan Cost = 507.714
+| | | | | | | | | | | | | | | | | | | | | | | [ALG17746] MERGEJOIN< :psp15_subpartkey == :psp16_partkey > Cost = 8.82305
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1132][PLANGRP3019] UseCost = 107.372 Plan Cost = 400.947
+| | | | | | | | | | | | | | | | | | | | | | | | | [ENF17660] SORT< partsubpart15:psp15_subpartkey > Cost = 204.984
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1132][PLANGRP3011] UseCost = 107.372 Plan Cost = 195.963
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG17650] MERGEJOIN< :psp14_subpartkey == :psp15_partkey > Cost = 9.76113
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1111][PLANGRP3012] UseCost = 0 Plan Cost = 1135.55 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF17623] INDEXSORT< partsubpart14:psp14_subpartkey > Cost = 246.419
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1111][PLANGRP2189] UseCost = 88.7958 Plan Cost = 889.128
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG12671] SELECT< :psp14_selkey < 164 > Cost = 8.07234
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS78][PLANGRP2102] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG12226] RELSCAN< partsubpart14 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1112][PLANGRP2441] UseCost = 88.7958 Plan Cost = 97.4062
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14122] SELECT< :psp15_selkey < 164 > Cost = 8.07234
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1183][PLANGRP2440] UseCost = 89.3338 Plan Cost = 1059.72 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF14119] SORT< partsubpart15:psp15_partkey > Cost = 170.546
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1183][PLANGRP2413] UseCost = 89.3338 Plan Cost = 889.177
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14013] SELECT< :psp15_selkey < 165 > Cost = 8.12126
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS86][PLANGRP2326] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG13568] RELSCAN< partsubpart15 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1108][PLANGRP2666] UseCost = 88.7958 Plan Cost = 97.9442
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG15468] SELECT< :psp16_selkey < 164 > Cost = 8.07234
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1255][PLANGRP2664] UseCost = 89.8719 Plan Cost = 1060.8 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF15461] SORT< partsubpart16:psp16_partkey > Cost = 171.574
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1255][PLANGRP2637] UseCost = 89.8719 Plan Cost = 889.226
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG15355] SELECT< :psp16_selkey < 166 > Cost = 8.17017
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS94][PLANGRP2550] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14910] RELSCAN< partsubpart16 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1104][PLANGRP3100] UseCost = 88.7958 Plan Cost = 98.4823
+| | | | | | | | | | | | | | | | | | | | | | | [ALG18096] SELECT< :psp17_selkey < 164 > Cost = 8.07234
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1327][PLANGRP3684] UseCost = 0 Plan Cost = 1140.17 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | [ENF21649] INDEXSORT< partsubpart17:psp17_subpartkey > Cost = 250.898
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1327][PLANGRP2861] UseCost = 90.4099 Plan Cost = 889.275
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG16697] SELECT< :psp17_selkey < 167 > Cost = 8.21908
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS102][PLANGRP2774] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG16252] RELSCAN< partsubpart17 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | [EQCLASS1100][PLANGRP3111] UseCost = 88.7958 Plan Cost = 97.4062
+| | | | | | | | | | | | | | | | | | | [ALG18161] SELECT< :psp18_selkey < 164 > Cost = 8.07234
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1176][PLANGRP3266] UseCost = 0 Plan Cost = 346.981 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | [ENF19133] INDEXSORT< partsubpart18:psp18_partkey > Cost = 247.912
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1176][PLANGRP3094] UseCost = 89.3338 Plan Cost = 99.0692
+| | | | | | | | | | | | | | | | | | | | | | | [ALG18074] SELECT< :psp18_selkey < 165 > Cost = 8.12126
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1399][PLANGRP3904] UseCost = 0 Plan Cost = 1141.72 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | [ENF22968] INDEXSORT< partsubpart18:psp18_subpartkey > Cost = 252.392
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1399][PLANGRP3085] UseCost = 90.948 Plan Cost = 889.324
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG18039] SELECT< :psp18_selkey < 168 > Cost = 8.268
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS110][PLANGRP2998] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG17594] RELSCAN< partsubpart18 > Cost = 881.056
+| | | | | | | | | | | | [EQCLASS121][PLANGRP3216] UseCost = 2.90852 Plan Cost = 1092.1
+| | | | | | | | | | | | | [ALG20273] PROJECT< :psp15_selkey > Cost = 0
+| | | | | | | | | | | | | | [EQCLASS120][PLANGRP3429] UseCost = 60.8394 Plan Cost = 1092.1
+| | | | | | | | | | | | | | | [ALG20126] MERGEJOIN< :psp18_subpartkey == :psp19_partkey > Cost = 5.53086
+| | | | | | | | | | | | | | | | [EQCLASS1171][PLANGRP3322] UseCost = 81.0555 Plan Cost = 986.967
+| | | | | | | | | | | | | | | | | [ENF19481] SORT< partsubpart18:psp18_subpartkey > Cost = 7.36868
+| | | | | | | | | | | | | | | | | | [EQCLASS1171][PLANGRP3229] UseCost = 81.0555 Plan Cost = 979.598
+| | | | | | | | | | | | | | | | | | | [ALG19216] NLJOIN< :psp16_subpartkey == :psp17_partkey > Cost = 414.1
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1190][PLANGRP3281] UseCost = 108.681 Plan Cost = 197.745
+| | | | | | | | | | | | | | | | | | | | | [ALG19201] MERGEJOIN< :psp17_subpartkey == :psp18_partkey > Cost = 9.88005
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1176][PLANGRP3266] UseCost = 0 Plan Cost = 346.981 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | [ENF19133] INDEXSORT< partsubpart18:psp18_partkey > Cost = 247.912
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1176][PLANGRP3094] UseCost = 89.3338 Plan Cost = 99.0692
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG18074] SELECT< :psp18_selkey < 165 > Cost = 8.12126
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1399][PLANGRP3904] UseCost = 0 Plan Cost = 1141.72 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF22968] INDEXSORT< partsubpart18:psp18_subpartkey > Cost = 252.392
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1399][PLANGRP3085] UseCost = 90.948 Plan Cost = 889.324
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG18039] SELECT< :psp18_selkey < 168 > Cost = 8.268
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS110][PLANGRP2998] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG17594] RELSCAN< partsubpart18 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1180][PLANGRP3103] UseCost = 89.3338 Plan Cost = 98.5312
+| | | | | | | | | | | | | | | | | | | | | | | [ALG18102] SELECT< :psp17_selkey < 165 > Cost = 8.12126
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1327][PLANGRP3684] UseCost = 0 Plan Cost = 1140.17 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | [ENF21649] INDEXSORT< partsubpart17:psp17_subpartkey > Cost = 250.898
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1327][PLANGRP2861] UseCost = 90.4099 Plan Cost = 889.275
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG16697] SELECT< :psp17_selkey < 167 > Cost = 8.21908
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS102][PLANGRP2774] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG16252] RELSCAN< partsubpart17 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1204][PLANGRP3240] UseCost = 108.681 Plan Cost = 367.753
+| | | | | | | | | | | | | | | | | | | | | [ALG18992] MERGEJOIN< :psp15_subpartkey == :psp16_partkey > Cost = 9.88005
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1183][PLANGRP2653] UseCost = 89.3338 Plan Cost = 259.88
+| | | | | | | | | | | | | | | | | | | | | | | [ENF15411] SORT< partsubpart15:psp15_subpartkey > Cost = 170.546
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1183][PLANGRP2440] UseCost = 89.3338 Plan Cost = 5775.03 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG14118] SELECT< :psp15_selkey < 165 > Cost = 8.12126
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS86][PLANGRP2332] UseCost = 881.056 Plan Cost = 5766.91 SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF13580] SORT< partsubpart15:psp15_partkey > Cost = 4885.86
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS86][PLANGRP2326] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG13568] RELSCAN< partsubpart15 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1184][PLANGRP2665] UseCost = 89.3338 Plan Cost = 97.9931
+| | | | | | | | | | | | | | | | | | | | | | | [ALG15464] SELECT< :psp16_selkey < 165 > Cost = 8.12126
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1255][PLANGRP2664] UseCost = 89.8719 Plan Cost = 1060.8 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | [ENF15461] SORT< partsubpart16:psp16_partkey > Cost = 171.574
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1255][PLANGRP2637] UseCost = 89.8719 Plan Cost = 889.226
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG15355] SELECT< :psp16_selkey < 166 > Cost = 8.17017
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS94][PLANGRP2550] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG14910] RELSCAN< partsubpart16 > Cost = 881.056
+| | | | | | | | | | | | | | | | [EQCLASS1172][PLANGRP3335] UseCost = 89.3338 Plan Cost = 99.6073
+| | | | | | | | | | | | | | | | | [ALG19488] SELECT< :psp19_selkey < 165 > Cost = 8.12126
+| | | | | | | | | | | | | | | | | | [EQCLASS1471][PLANGRP3336] UseCost = 91.486 Plan Cost = 1064.03 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | [ENF19487] SORT< partsubpart19:psp19_partkey > Cost = 174.655
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1471][PLANGRP3309] UseCost = 91.486 Plan Cost = 889.373
+| | | | | | | | | | | | | | | | | | | | | [ALG19381] SELECT< :psp19_selkey < 169 > Cost = 8.31691
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS118][PLANGRP3222] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | [ALG18936] RELSCAN< partsubpart19 > Cost = 881.056
+| | | | | | | | | | [EQCLASS129][PLANGRP3440] UseCost = 2.96436 Plan Cost = 1178.86
+| | | | | | | | | | | [ALG21615] PROJECT< :psp16_selkey > Cost = 0
+| | | | | | | | | | | | [EQCLASS128][PLANGRP3441] UseCost = 62.6842 Plan Cost = 1178.86
+| | | | | | | | | | | | | [ALG21461] NLJOIN< :psp16_subpartkey == :psp17_partkey > Cost = 262.639
+| | | | | | | | | | | | | | [EQCLASS1291][PLANGRP3646] UseCost = 83.0242 Plan Cost = 826.349
+| | | | | | | | | | | | | | | [ALG21386] MERGEJOIN< :psp19_subpartkey == :psp20_partkey > Cost = 7.54766
+| | | | | | | | | | | | | | | | [EQCLASS1244][PLANGRP3559] UseCost = 89.8719 Plan Cost = 100.194
+| | | | | | | | | | | | | | | | | [ALG20830] SELECT< :psp20_selkey < 166 > Cost = 8.17017
+| | | | | | | | | | | | | | | | | | [EQCLASS1543][PLANGRP3560] UseCost = 92.0241 Plan Cost = 1065.1 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | [ENF20829] SORT< partsubpart20:psp20_partkey > Cost = 175.682
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1543][PLANGRP3533] UseCost = 92.0241 Plan Cost = 889.422
+| | | | | | | | | | | | | | | | | | | | | [ALG20723] SELECT< :psp20_selkey < 170 > Cost = 8.36583
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS126][PLANGRP3446] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | [ALG20278] RELSCAN< partsubpart20 > Cost = 881.056
+| | | | | | | | | | | | | | | | [EQCLASS1267][PLANGRP3557] UseCost = 100.63 Plan Cost = 718.607
+| | | | | | | | | | | | | | | | | [ENF20818] SORT< partsubpart19:psp19_subpartkey > Cost = 192.112
+| | | | | | | | | | | | | | | | | | [EQCLASS1267][PLANGRP3515] UseCost = 100.63 Plan Cost = 526.496
+| | | | | | | | | | | | | | | | | | | [ALG20628] MERGEJOIN< :psp17_subpartkey == :psp18_partkey > Cost = 9.14817
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1262][PLANGRP3507] UseCost = 109.997 Plan Cost = 418.768
+| | | | | | | | | | | | | | | | | | | | | [ENF20550] SORT< partsubpart18:psp18_partkey > Cost = 209.994
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1262][PLANGRP3503] UseCost = 109.997 Plan Cost = 208.774
+| | | | | | | | | | | | | | | | | | | | | | | [ALG20543] MERGEJOIN< :psp18_subpartkey == :psp19_partkey > Cost = 9.9997
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1248][PLANGRP3339] UseCost = 89.8719 Plan Cost = 99.6562
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG19499] SELECT< :psp19_selkey < 166 > Cost = 8.17017
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1471][PLANGRP3336] UseCost = 91.486 Plan Cost = 1064.03 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF19487] SORT< partsubpart19:psp19_partkey > Cost = 174.655
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1471][PLANGRP3309] UseCost = 91.486 Plan Cost = 889.373
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG19381] SELECT< :psp19_selkey < 169 > Cost = 8.31691
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS118][PLANGRP3222] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG18936] RELSCAN< partsubpart19 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1252][PLANGRP3327] UseCost = 89.8719 Plan Cost = 99.1181
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG19444] SELECT< :psp18_selkey < 166 > Cost = 8.17017
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1399][PLANGRP3904] UseCost = 0 Plan Cost = 1141.72 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF22968] INDEXSORT< partsubpart18:psp18_subpartkey > Cost = 252.392
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1399][PLANGRP3085] UseCost = 90.948 Plan Cost = 889.324
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG18039] SELECT< :psp18_selkey < 168 > Cost = 8.268
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS110][PLANGRP2998] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG17594] RELSCAN< partsubpart18 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1256][PLANGRP3102] UseCost = 89.8719 Plan Cost = 98.5801
+| | | | | | | | | | | | | | | | | | | | | [ALG18098] SELECT< :psp17_selkey < 166 > Cost = 8.17017
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1327][PLANGRP3684] UseCost = 0 Plan Cost = 1140.17 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | [ENF21649] INDEXSORT< partsubpart17:psp17_subpartkey > Cost = 250.898
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1327][PLANGRP2861] UseCost = 90.4099 Plan Cost = 889.275
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG16697] SELECT< :psp17_selkey < 167 > Cost = 8.21908
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS102][PLANGRP2774] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG16252] RELSCAN< partsubpart17 > Cost = 881.056
+| | | | | | | | | | | | | | [EQCLASS1255][PLANGRP2664] UseCost = 89.8719 Plan Cost = 1060.8 MARKED SHARED
+| | | | | | | | | | | | | | | [ENF15461] SORT< partsubpart16:psp16_partkey > Cost = 171.574
+| | | | | | | | | | | | | | | | [EQCLASS1255][PLANGRP2637] UseCost = 89.8719 Plan Cost = 889.226
+| | | | | | | | | | | | | | | | | [ALG15355] SELECT< :psp16_selkey < 166 > Cost = 8.17017
+| | | | | | | | | | | | | | | | | | [EQCLASS94][PLANGRP2550] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | [ALG14910] RELSCAN< partsubpart16 > Cost = 881.056
+| | | | | | | | [EQCLASS137][PLANGRP3664] UseCost = 3.02158 Plan Cost = 1093.24
+| | | | | | | | | [ALG22934] PROJECT< :psp17_selkey > Cost = 0
+| | | | | | | | | | [EQCLASS136][PLANGRP3873] UseCost = 64.5742 Plan Cost = 1093.24
+| | | | | | | | | | | [ALG22787] MERGEJOIN< :psp20_subpartkey == :psp21_partkey > Cost = 5.87038
+| | | | | | | | | | | | [EQCLASS1315][PLANGRP3767] UseCost = 85.0291 Plan Cost = 987.127
+| | | | | | | | | | | | | [ENF22148] SORT< partsubpart20:psp20_subpartkey > Cost = 162.328
+| | | | | | | | | | | | | | [EQCLASS1315][PLANGRP3746] UseCost = 85.0291 Plan Cost = 824.799
+| | | | | | | | | | | | | | | [ALG21998] MERGEJOIN< :psp19_subpartkey == :psp20_partkey > Cost = 7.72992
+| | | | | | | | | | | | | | | | [EQCLASS1383][PLANGRP3711] UseCost = 102.451 Plan Cost = 716.826
+| | | | | | | | | | | | | | | | | [ENF21812] SORT< partsubpart19:psp19_subpartkey > Cost = 195.588
+| | | | | | | | | | | | | | | | | | [EQCLASS1383][PLANGRP3707] UseCost = 102.451 Plan Cost = 521.237
+| | | | | | | | | | | | | | | | | | | [ALG21788] MERGEJOIN< :psp17_subpartkey == :psp18_partkey > Cost = 9.31372
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1384][PLANGRP3704] UseCost = 111.321 Plan Cost = 421.514
+| | | | | | | | | | | | | | | | | | | | | [ENF21753] SORT< partsubpart18:psp18_partkey > Cost = 212.522
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1384][PLANGRP3700] UseCost = 111.321 Plan Cost = 208.992
+| | | | | | | | | | | | | | | | | | | | | | | [ALG21744] MERGEJOIN< :psp18_subpartkey == :psp19_partkey > Cost = 10.1201
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1324][PLANGRP3338] UseCost = 90.4099 Plan Cost = 99.7051
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG19494] SELECT< :psp19_selkey < 167 > Cost = 8.21908
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1471][PLANGRP3336] UseCost = 91.486 Plan Cost = 1064.03 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF19487] SORT< partsubpart19:psp19_partkey > Cost = 174.655
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1471][PLANGRP3309] UseCost = 91.486 Plan Cost = 889.373
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG19381] SELECT< :psp19_selkey < 169 > Cost = 8.31691
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS118][PLANGRP3222] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG18936] RELSCAN< partsubpart19 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1328][PLANGRP3326] UseCost = 90.4099 Plan Cost = 99.1671
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG19440] SELECT< :psp18_selkey < 167 > Cost = 8.21908
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1399][PLANGRP3904] UseCost = 0 Plan Cost = 1141.72 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ENF22968] INDEXSORT< partsubpart18:psp18_subpartkey > Cost = 252.392
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1399][PLANGRP3085] UseCost = 90.948 Plan Cost = 889.324
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG18039] SELECT< :psp18_selkey < 168 > Cost = 8.268
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS110][PLANGRP2998] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG17594] RELSCAN< partsubpart18 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1327][PLANGRP3684] UseCost = 0 Plan Cost = 1140.17 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | [ENF21649] INDEXSORT< partsubpart17:psp17_subpartkey > Cost = 250.898
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1327][PLANGRP2861] UseCost = 90.4099 Plan Cost = 889.275
+| | | | | | | | | | | | | | | | | | | | | | | [ALG16697] SELECT< :psp17_selkey < 167 > Cost = 8.21908
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS102][PLANGRP2774] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG16252] RELSCAN< partsubpart17 > Cost = 881.056
+| | | | | | | | | | | | | | | | [EQCLASS1320][PLANGRP3563] UseCost = 90.4099 Plan Cost = 100.243
+| | | | | | | | | | | | | | | | | [ALG20841] SELECT< :psp20_selkey < 167 > Cost = 8.21908
+| | | | | | | | | | | | | | | | | | [EQCLASS1543][PLANGRP3560] UseCost = 92.0241 Plan Cost = 1065.1 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | [ENF20829] SORT< partsubpart20:psp20_partkey > Cost = 175.682
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1543][PLANGRP3533] UseCost = 92.0241 Plan Cost = 889.422
+| | | | | | | | | | | | | | | | | | | | | [ALG20723] SELECT< :psp20_selkey < 170 > Cost = 8.36583
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS126][PLANGRP3446] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | [ALG20278] RELSCAN< partsubpart20 > Cost = 881.056
+| | | | | | | | | | | | [EQCLASS1316][PLANGRP3780] UseCost = 90.4099 Plan Cost = 100.243
+| | | | | | | | | | | | | [ALG22155] SELECT< :psp21_selkey < 167 > Cost = 8.21908
+| | | | | | | | | | | | | | [EQCLASS1544][PLANGRP4330] UseCost = 0 Plan Cost = 1144.8 MARKED SHARED
+| | | | | | | | | | | | | | | [ENF25544] INDEXSORT< partsubpart21:psp21_partkey > Cost = 255.378
+| | | | | | | | | | | | | | | | [EQCLASS1544][PLANGRP3757] UseCost = 92.0241 Plan Cost = 889.422
+| | | | | | | | | | | | | | | | | [ALG22065] SELECT< :psp21_selkey < 170 > Cost = 8.36583
+| | | | | | | | | | | | | | | | | | [EQCLASS134][PLANGRP3670] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | [ALG21620] RELSCAN< partsubpart21 > Cost = 881.056
+| | | | | | [EQCLASS145][PLANGRP3884] UseCost = 3.0802 Plan Cost = 1105.66
+| | | | | | | [ALG24229] PROJECT< :psp18_selkey > Cost = 0
+| | | | | | | | [EQCLASS144][PLANGRP4088] UseCost = 66.5103 Plan Cost = 1105.66
+| | | | | | | | | [ALG24082] MERGEJOIN< :psp21_subpartkey == :psp22_partkey > Cost = 6.04639
+| | | | | | | | | | [EQCLASS1387][PLANGRP3984] UseCost = 87.0705 Plan Cost = 999.321
+| | | | | | | | | | | [ENF23448] SORT< partsubpart21:psp21_subpartkey > Cost = 166.226
+| | | | | | | | | | | | [EQCLASS1387][PLANGRP3966] UseCost = 87.0705 Plan Cost = 833.096
+| | | | | | | | | | | | | [ALG23317] MERGEJOIN< :psp20_subpartkey == :psp21_partkey > Cost = 7.9155
+| | | | | | | | | | | | | | [EQCLASS1455][PLANGRP3931] UseCost = 104.294 Plan Cost = 724.888
+| | | | | | | | | | | | | | | [ENF23131] SORT< partsubpart20:psp20_subpartkey > Cost = 199.107
+| | | | | | | | | | | | | | | | [EQCLASS1455][PLANGRP3902] UseCost = 104.294 Plan Cost = 525.781
+| | | | | | | | | | | | | | | | | [ALG23091] MERGEJOIN< :psp19_subpartkey == :psp20_partkey > Cost = 9.48127
+| | | | | | | | | | | | | | | | | | [EQCLASS1420][PLANGRP3911] UseCost = 112.653 Plan Cost = 416.008
+| | | | | | | | | | | | | | | | | | | [ENF23005] SORT< partsubpart19:psp19_subpartkey > Cost = 215.065
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1420][PLANGRP3908] UseCost = 112.653 Plan Cost = 200.943
+| | | | | | | | | | | | | | | | | | | | | [ALG22995] MERGEJOIN< :psp18_subpartkey == :psp19_partkey > Cost = 10.2412
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1399][PLANGRP3904] UseCost = 0 Plan Cost = 1141.72 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | [ENF22968] INDEXSORT< partsubpart18:psp18_subpartkey > Cost = 252.392
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1399][PLANGRP3085] UseCost = 90.948 Plan Cost = 889.324
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG18039] SELECT< :psp18_selkey < 168 > Cost = 8.268
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS110][PLANGRP2998] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG17594] RELSCAN< partsubpart18 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1400][PLANGRP3337] UseCost = 90.948 Plan Cost = 99.754
+| | | | | | | | | | | | | | | | | | | | | | | [ALG19490] SELECT< :psp19_selkey < 168 > Cost = 8.268
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1471][PLANGRP3336] UseCost = 91.486 Plan Cost = 1064.03 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | [ENF19487] SORT< partsubpart19:psp19_partkey > Cost = 174.655
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1471][PLANGRP3309] UseCost = 91.486 Plan Cost = 889.373
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG19381] SELECT< :psp19_selkey < 169 > Cost = 8.31691
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS118][PLANGRP3222] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG18936] RELSCAN< partsubpart19 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | [EQCLASS1396][PLANGRP3562] UseCost = 90.948 Plan Cost = 100.292
+| | | | | | | | | | | | | | | | | | | [ALG20836] SELECT< :psp20_selkey < 168 > Cost = 8.268
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1543][PLANGRP3560] UseCost = 92.0241 Plan Cost = 1065.1 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | [ENF20829] SORT< partsubpart20:psp20_partkey > Cost = 175.682
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1543][PLANGRP3533] UseCost = 92.0241 Plan Cost = 889.422
+| | | | | | | | | | | | | | | | | | | | | | | [ALG20723] SELECT< :psp20_selkey < 170 > Cost = 8.36583
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS126][PLANGRP3446] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG20278] RELSCAN< partsubpart20 > Cost = 881.056
+| | | | | | | | | | | | | | [EQCLASS1392][PLANGRP3783] UseCost = 90.948 Plan Cost = 100.292
+| | | | | | | | | | | | | | | [ALG22161] SELECT< :psp21_selkey < 168 > Cost = 8.268
+| | | | | | | | | | | | | | | | [EQCLASS1544][PLANGRP4330] UseCost = 0 Plan Cost = 1144.8 MARKED SHARED
+| | | | | | | | | | | | | | | | | [ENF25544] INDEXSORT< partsubpart21:psp21_partkey > Cost = 255.378
+| | | | | | | | | | | | | | | | | | [EQCLASS1544][PLANGRP3757] UseCost = 92.0241 Plan Cost = 889.422
+| | | | | | | | | | | | | | | | | | | [ALG22065] SELECT< :psp21_selkey < 170 > Cost = 8.36583
+| | | | | | | | | | | | | | | | | | | | [EQCLASS134][PLANGRP3670] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | [ALG21620] RELSCAN< partsubpart21 > Cost = 881.056
+| | | | | | | | | | [EQCLASS1388][PLANGRP3996] UseCost = 90.948 Plan Cost = 100.292
+| | | | | | | | | | | [ALG23455] SELECT< :psp22_selkey < 168 > Cost = 8.268
+| | | | | | | | | | | | [EQCLASS1540][PLANGRP4338] UseCost = 0 Plan Cost = 1144.8 MARKED SHARED
+| | | | | | | | | | | | | [ENF25583] INDEXSORT< partsubpart22:psp22_partkey > Cost = 255.378
+| | | | | | | | | | | | | | [EQCLASS1540][PLANGRP3977] UseCost = 92.0241 Plan Cost = 889.422
+| | | | | | | | | | | | | | | [ALG23384] SELECT< :psp22_selkey < 170 > Cost = 8.36583
+| | | | | | | | | | | | | | | | [EQCLASS142][PLANGRP3890] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | [ALG22939] RELSCAN< partsubpart22 > Cost = 881.056
+| | | | [EQCLASS153][PLANGRP4099] UseCost = 3.14023 Plan Cost = 1292.33
+| | | | | [ALG25505] PROJECT< :psp19_selkey > Cost = 0
+| | | | | | [EQCLASS152][PLANGRP4298] UseCost = 68.4934 Plan Cost = 1292.33
+| | | | | | | [ALG25358] MERGEJOIN< :psp22_subpartkey == :psp23_partkey > Cost = 6.22667
+| | | | | | | | [EQCLASS1459][PLANGRP4196] UseCost = 89.149 Plan Cost = 1185.77
+| | | | | | | | | [ENF24728] SORT< partsubpart22:psp22_subpartkey > Cost = 170.193
+| | | | | | | | | | [EQCLASS1459][PLANGRP4181] UseCost = 89.149 Plan Cost = 1015.57
+| | | | | | | | | | | [ALG24612] MERGEJOIN< :psp21_subpartkey == :psp22_partkey > Cost = 8.10445
+| | | | | | | | | | | | [EQCLASS1527][PLANGRP4146] UseCost = 106.159 Plan Cost = 907.128
+| | | | | | | | | | | | | [ENF24426] SORT< partsubpart21:psp21_subpartkey > Cost = 202.668
+| | | | | | | | | | | | | | [EQCLASS1527][PLANGRP4117] UseCost = 106.159 Plan Cost = 704.46
+| | | | | | | | | | | | | | | [ALG24386] MERGEJOIN< :psp20_subpartkey == :psp21_partkey > Cost = 9.65084
+| | | | | | | | | | | | | | | | [EQCLASS1492][PLANGRP4126] UseCost = 113.993 Plan Cost = 594.468
+| | | | | | | | | | | | | | | | | [ENF24300] SORT< partsubpart20:psp20_subpartkey > Cost = 217.623
+| | | | | | | | | | | | | | | | | | [EQCLASS1492][PLANGRP4123] UseCost = 113.993 Plan Cost = 376.845
+| | | | | | | | | | | | | | | | | | | [ALG24290] MERGEJOIN< :psp19_subpartkey == :psp20_partkey > Cost = 10.363
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1471][PLANGRP3549] UseCost = 91.486 Plan Cost = 266.141
+| | | | | | | | | | | | | | | | | | | | | [ENF20779] SORT< partsubpart19:psp19_subpartkey > Cost = 174.655
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1471][PLANGRP3336] UseCost = 91.486 Plan Cost = 5775.23 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | [ALG19486] SELECT< :psp19_selkey < 169 > Cost = 8.31691
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS118][PLANGRP3228] UseCost = 881.056 Plan Cost = 5766.91 SHARED
+| | | | | | | | | | | | | | | | | | | | | | | | | [ENF18948] SORT< partsubpart19:psp19_partkey > Cost = 4885.86
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS118][PLANGRP3222] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG18936] RELSCAN< partsubpart19 > Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1472][PLANGRP3561] UseCost = 91.486 Plan Cost = 100.341
+| | | | | | | | | | | | | | | | | | | | | [ALG20832] SELECT< :psp20_selkey < 169 > Cost = 8.31691
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS1543][PLANGRP3560] UseCost = 92.0241 Plan Cost = 1065.1 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | | | | | [ENF20829] SORT< partsubpart20:psp20_partkey > Cost = 175.682
+| | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS1543][PLANGRP3533] UseCost = 92.0241 Plan Cost = 889.422
+| | | | | | | | | | | | | | | | | | | | | | | | | [ALG20723] SELECT< :psp20_selkey < 170 > Cost = 8.36583
+| | | | | | | | | | | | | | | | | | | | | | | | | | [EQCLASS126][PLANGRP3446] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | | | | | [ALG20278] RELSCAN< partsubpart20 > Cost = 881.056
+| | | | | | | | | | | | | | | | [EQCLASS1468][PLANGRP3782] UseCost = 91.486 Plan Cost = 100.341
+| | | | | | | | | | | | | | | | | [ALG22157] SELECT< :psp21_selkey < 169 > Cost = 8.31691
+| | | | | | | | | | | | | | | | | | [EQCLASS1544][PLANGRP4330] UseCost = 0 Plan Cost = 1144.8 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | [ENF25544] INDEXSORT< partsubpart21:psp21_partkey > Cost = 255.378
+| | | | | | | | | | | | | | | | | | | | [EQCLASS1544][PLANGRP3757] UseCost = 92.0241 Plan Cost = 889.422
+| | | | | | | | | | | | | | | | | | | | | [ALG22065] SELECT< :psp21_selkey < 170 > Cost = 8.36583
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS134][PLANGRP3670] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | [ALG21620] RELSCAN< partsubpart21 > Cost = 881.056
+| | | | | | | | | | | | [EQCLASS1464][PLANGRP3998] UseCost = 91.486 Plan Cost = 100.341
+| | | | | | | | | | | | | [ALG23457] SELECT< :psp22_selkey < 169 > Cost = 8.31691
+| | | | | | | | | | | | | | [EQCLASS1540][PLANGRP4338] UseCost = 0 Plan Cost = 1144.8 MARKED SHARED
+| | | | | | | | | | | | | | | [ENF25583] INDEXSORT< partsubpart22:psp22_partkey > Cost = 255.378
+| | | | | | | | | | | | | | | | [EQCLASS1540][PLANGRP3977] UseCost = 92.0241 Plan Cost = 889.422
+| | | | | | | | | | | | | | | | | [ALG23384] SELECT< :psp22_selkey < 170 > Cost = 8.36583
+| | | | | | | | | | | | | | | | | | [EQCLASS142][PLANGRP3890] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | [ALG22939] RELSCAN< partsubpart22 > Cost = 881.056
+| | | | | | | | [EQCLASS1460][PLANGRP4207] UseCost = 91.486 Plan Cost = 100.341
+| | | | | | | | | [ALG24735] SELECT< :psp23_selkey < 169 > Cost = 8.31691
+| | | | | | | | | | [EQCLASS1536][PLANGRP4359] UseCost = 0 Plan Cost = 1144.8 MARKED SHARED
+| | | | | | | | | | | [ENF25707] INDEXSORT< partsubpart23:psp23_partkey > Cost = 255.378
+| | | | | | | | | | | | [EQCLASS1536][PLANGRP4192] UseCost = 92.0241 Plan Cost = 889.422
+| | | | | | | | | | | | | [ALG24679] SELECT< :psp23_selkey < 170 > Cost = 8.36583
+| | | | | | | | | | | | | | [EQCLASS150][PLANGRP4105] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | [ALG24234] RELSCAN< partsubpart23 > Cost = 881.056
+| | [EQCLASS161][PLANGRP4309] UseCost = 3.20171 Plan Cost = 2183.89
+| | | [ALG26767] PROJECT< :psp20_selkey > Cost = 0
+| | | | [EQCLASS160][PLANGRP4310] UseCost = 70.5242 Plan Cost = 2183.89
+| | | | | [ALG25955] NLJOIN< :psp23_subpartkey == :psp24_partkey > Cost = 295.618
+| | | | | | [EQCLASS1531][PLANGRP4391] UseCost = 91.2649 Plan Cost = 998.852
+| | | | | | | [ALG25888] MERGEJOIN< :psp22_subpartkey == :psp23_partkey > Cost = 8.29681
+| | | | | | | | [EQCLASS1599][PLANGRP4356] UseCost = 108.047 Plan Cost = 898.531
+| | | | | | | | | [ENF25702] SORT< partsubpart22:psp22_subpartkey > Cost = 206.271
+| | | | | | | | | | [EQCLASS1599][PLANGRP4350] UseCost = 108.047 Plan Cost = 692.26
+| | | | | | | | | | | [ALG25662] MERGEJOIN< :psp21_subpartkey == :psp22_partkey > Cost = 9.82244
+| | | | | | | | | | | | [EQCLASS1564][PLANGRP4336] UseCost = 115.341 Plan Cost = 590.413
+| | | | | | | | | | | | | [ENF25576] SORT< partsubpart21:psp21_subpartkey > Cost = 220.197
+| | | | | | | | | | | | | | [EQCLASS1564][PLANGRP4328] UseCost = 115.341 Plan Cost = 370.216
+| | | | | | | | | | | | | | | [ALG25566] MERGEJOIN< :psp20_subpartkey == :psp21_partkey > Cost = 10.4856
+| | | | | | | | | | | | | | | | [EQCLASS1543][PLANGRP3770] UseCost = 92.0241 Plan Cost = 267.706
+| | | | | | | | | | | | | | | | | [ENF22104] SORT< partsubpart20:psp20_subpartkey > Cost = 175.682
+| | | | | | | | | | | | | | | | | | [EQCLASS1543][PLANGRP3560] UseCost = 92.0241 Plan Cost = 5775.28 MARKED SHARED
+| | | | | | | | | | | | | | | | | | | [ALG20828] SELECT< :psp20_selkey < 170 > Cost = 8.36583
+| | | | | | | | | | | | | | | | | | | | [EQCLASS126][PLANGRP3452] UseCost = 881.056 Plan Cost = 5766.91 SHARED
+| | | | | | | | | | | | | | | | | | | | | [ENF20290] SORT< partsubpart20:psp20_partkey > Cost = 4885.86
+| | | | | | | | | | | | | | | | | | | | | | [EQCLASS126][PLANGRP3446] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | | | [ALG20278] RELSCAN< partsubpart20 > Cost = 881.056
+| | | | | | | | | | | | | | | | [EQCLASS1544][PLANGRP4330] UseCost = 0 Plan Cost = 1144.8 MARKED SHARED
+| | | | | | | | | | | | | | | | | [ENF25544] INDEXSORT< partsubpart21:psp21_partkey > Cost = 255.378
+| | | | | | | | | | | | | | | | | | [EQCLASS1544][PLANGRP3757] UseCost = 92.0241 Plan Cost = 889.422
+| | | | | | | | | | | | | | | | | | | [ALG22065] SELECT< :psp21_selkey < 170 > Cost = 8.36583
+| | | | | | | | | | | | | | | | | | | | [EQCLASS134][PLANGRP3670] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | | | | | [ALG21620] RELSCAN< partsubpart21 > Cost = 881.056
+| | | | | | | | | | | | [EQCLASS1540][PLANGRP4338] UseCost = 0 Plan Cost = 1144.8 MARKED SHARED
+| | | | | | | | | | | | | [ENF25583] INDEXSORT< partsubpart22:psp22_partkey > Cost = 255.378
+| | | | | | | | | | | | | | [EQCLASS1540][PLANGRP3977] UseCost = 92.0241 Plan Cost = 889.422
+| | | | | | | | | | | | | | | [ALG23384] SELECT< :psp22_selkey < 170 > Cost = 8.36583
+| | | | | | | | | | | | | | | | [EQCLASS142][PLANGRP3890] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | | | | | [ALG22939] RELSCAN< partsubpart22 > Cost = 881.056
+| | | | | | | | [EQCLASS1536][PLANGRP4359] UseCost = 0 Plan Cost = 1144.8 MARKED SHARED
+| | | | | | | | | [ENF25707] INDEXSORT< partsubpart23:psp23_partkey > Cost = 255.378
+| | | | | | | | | | [EQCLASS1536][PLANGRP4192] UseCost = 92.0241 Plan Cost = 889.422
+| | | | | | | | | | | [ALG24679] SELECT< :psp23_selkey < 170 > Cost = 8.36583
+| | | | | | | | | | | | [EQCLASS150][PLANGRP4105] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | | | | | [ALG24234] RELSCAN< partsubpart23 > Cost = 881.056
+| | | | | | [EQCLASS1532][PLANGRP4399] UseCost = 92.0241 Plan Cost = 889.422
+| | | | | | | [ALG25950] SELECT< :psp24_selkey < 170 > Cost = 8.36583
+| | | | | | | | [EQCLASS158][PLANGRP4315] UseCost = 881.056 Plan Cost = 881.056
+| | | | | | | | | [ALG25510] RELSCAN< partsubpart24 > Cost = 881.056
+
+

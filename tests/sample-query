@@ -1,0 +1,10 @@
+select max(sp.sp_sno)
+from s, sp
+where sp.sp_sno = s.s_no
+group by sp.sp_pno;
+
+select max(sp.sp_sno)
+from s, sp
+where sp.sp_sno = s.s_no
+group by sp.sp_pno, s.s_city;
+

@@ -1,0 +1,16 @@
+Optimization Successful: Plan Cost = 1800 Cost Limit = 1800
+
+[EQCLASS4][PLANGRP1][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1800 #Tuples = 1 #Blocks = 1
+| [ENF13][CC=1]SORT< lineitem:l_partkey lineitem:l_suppkey > Cost = 0
+| | [EQCLASS4][PLANGRP0][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1800 #Tuples = 1 #Blocks = 1
+| | | [ALG12][CC=1]PROJECT< :l_partkey :l_suppkey :l2_partkey > Cost = 0
+| | | | [EQCLASS3][PLANGRP2][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1800 #Tuples = 1 #Blocks = 1
+| | | | | [ALG9][CC=-1]MERGEJOIN< AND[ AND[ :l_partkey == :l2_partkey :l_suppkey == :l2_suppkey ] :l_orderkey == :l2_orderkey ] > Cost = 0.0004
+| | | | | | [EQCLASS0][PLANGRP10][CC=1] UseCost = 471.429 Plan Cost = 900.001 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | | | | | [ENF6][CC=1]PARTIAL SORT( < lineitem:l_suppkey >--> < lineitem:l_suppkey lineitem:l_partkey lineitem:l_orderkey >)  Cost = 428.572
+| | | | | | | | [EQCLASS0][PLANGRP11][CC=1] UseCost = 471.429 Plan Cost = 471.429 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | | | | | | | [ALG5][CC=1]RELSCAN< lineitem > Cost = 471.429
+| | | | | | [EQCLASS1][PLANGRP12][CC=1] UseCost = 471.429 Plan Cost = 900.001 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | | | | | [ENF8][CC=1]PARTIAL SORT( < lineitem2:l2_suppkey >--> < lineitem2:l2_suppkey lineitem2:l2_partkey lineitem2:l2_orderkey >)  Cost = 428.572
+| | | | | | | | [EQCLASS1][PLANGRP13][CC=1] UseCost = 471.429 Plan Cost = 471.429 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | | | | | | | [ALG7][CC=1]RELSCAN< lineitem2 > Cost = 471.429

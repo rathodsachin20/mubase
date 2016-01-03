@@ -1,0 +1,114 @@
+NumOfTuples(s) = 4000
+TuplesPerBlock(s) = 40
+
+DistinctAttr(s,s_no) = 4000
+AttrMinValue(s,s_no) = 1
+AttrMaxValue(s,s_no) = 4000
+AttrSize(s,s_no) = 8
+
+DistinctAttr(s,s_name) = 4000
+AttrSize(s,s_name) = 40
+
+DistinctAttr(s,s_status) = 5
+AttrMinValue(s,s_status) = 1
+AttrMaxValue(s,s_status) = 5
+AttrSize(s,s_status) = 1
+
+DistinctAttr(s,s_city) = 25
+AttrSize(s,s_city) = 20
+
+NumOfTuples(p) = 20000
+TuplesPerBlock(p) = 50
+
+DistinctAttr(p,p_no) = 20000
+AttrMinValue(p,p_no) = 1
+AttrMaxValue(p,p_no) = 20000
+AttrSize(p,p_no) = 8
+
+DistinctAttr(p,p_name) = 20000
+AttrSize(p,p_name) = 40
+
+DistinctAttr(p,p_weight) = 50
+AttrMinValue(p,p_weight) = 10
+AttrMaxValue(p,p_weight) = 500
+AttrSize(p,p_weight) = 4
+
+DistinctAttr(p,p_city) = 50
+AttrSize(p,p_city) = 20
+
+NumOfTuples(p1) = 20000
+TuplesPerBlock(p1) = 50
+
+DistinctAttr(p1,p1_no) = 20000
+AttrMinValue(p1,p1_no) = 1
+AttrMaxValue(p1,p1_no) = 20000
+AttrSize(p1,p1_no) = 8
+
+DistinctAttr(p1,p1_name) = 20000
+AttrSize(p1,p1_name) = 40
+
+DistinctAttr(p1,p1_weight) = 50
+AttrMinValue(p1,p1_weight) = 10
+AttrMaxValue(p1,p1_weight) = 500
+AttrSize(p1,p1_weight) = 4
+
+DistinctAttr(p1,p1_city) = 50
+AttrSize(p1,p1_city) = 20
+
+NumOfTuples(sp) = 60000
+TuplesPerBlock(sp) = 50
+
+DistinctAttr(sp,sp_sno) = 4000
+AttrMinValue(sp,sp_sno) = 1
+AttrMaxValue(sp,sp_sno) = 4000
+AttrSize(sp,sp_sno) = 8
+
+DistinctAttr(sp,sp_pno) = 20000
+AttrMinValue(sp,sp_pno) = 1
+AttrMaxValue(sp,sp_pno) = 20000
+AttrSize(sp,sp_pno) = 8
+
+NumOfTuples(sp1) = 60000
+TuplesPerBlock(sp1) = 50
+
+DistinctAttr(sp1,sp1_sno) = 4000
+AttrMinValue(sp1,sp1_sno) = 1
+AttrMaxValue(sp1,sp1_sno) = 4000
+AttrSize(sp1,sp1_sno) = 8
+
+DistinctAttr(sp1,sp1_pno) = 20000
+AttrMinValue(sp1,sp1_pno) = 1
+AttrMaxValue(sp1,sp1_pno) = 20000
+AttrSize(sp1,sp1_pno) = 8
+
+NumOfTuples(pp) = 5000
+TuplesPerBlock(pp) = 200
+
+DistinctAttr(pp,pp_no) = 5000
+AttrMinValue(pp,pp_no) = 1
+AttrMaxValue(pp,pp_no) = 5000
+AttrSize(pp,pp_no) = 8
+
+NumOfTuples(ss) = 8000
+TuplesPerBlock(ss) = 200
+
+DistinctAttr(ss,ss_no) = 8000
+AttrMinValue(ss,ss_no) = 1
+AttrMaxValue(ss,ss_no) = 8000
+AttrSize(ss,ss_no) = 8
+
+NumOfTuples(spsp) = 5000
+TuplesPerBlock(spsp) = 100
+
+DistinctAttr(spsp,spsp_no) = 5000
+AttrMinValue(spsp,spsp_no) = 1
+AttrMaxValue(spsp,spsp_no) = 5000
+AttrSize(spsp,spsp_no) = 8
+
+NumOfTuples(psps) = 2500
+TuplesPerBlock(psps) = 40
+
+DistinctAttr(psps,psps_no) = 2500
+AttrMinValue(psps,psps_no) = 1
+AttrMaxValue(psps,psps_no) = 2500
+AttrSize(psps,psps_no) = 8

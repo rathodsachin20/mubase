@@ -1,0 +1,13 @@
+#!/bin/sh -x 
+for algo in volcano volcano-sh volcano-ru greedy 
+do
+   for inp in q3 q5 q7 q9 q10
+   do	    
+	echo PROC $inp
+	../perfeval  "$algo" < TPCD/$inp
+	echo END
+        echo
+   done
+   echo
+done
+

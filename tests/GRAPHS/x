@@ -1,0 +1,132 @@
+                              Volcano         Volcano-SH      Volcano-RU      Greedy          
+
+COST:q2                       125.52          125.52          125.52          78.80           
+TIME:q2                       720             720             720             1270            
+PHYDAGSIZE:q2                 401             401             401             2723            
+LOGDAGSIZE:q2                 372             372             372             373             
+MEM:q2                        49864           49864           49864           133420          
+SHARCOUNT:q2                  0               -1              -1              0               
+PROPCOUNT:q2                  0               -1              -1              4116            
+NUMPROPS:q2                   0               0               0               131             
+
+COST:q2-decor                 91.05           46.50           46.29           46.29           
+TIME:q2-decor                 480             480             390             2500            
+PHYDAGSIZE:q2-decor           682             682             485             3994            
+LOGDAGSIZE:q2-decor           488             488             488             488             
+MEM:q2-decor                  81616           81616           67344           196336          
+SHARCOUNT:q2-decor            -1              -1              -1              254             
+PROPCOUNT:q2-decor            -1              -1              -1              15398           
+NUMPROPS:q2-decor             0               0               0               267             
+
+COST:q11                      194.81          101.80          101.80          98.05           
+TIME:q11                      10              10              10              30              
+PHYDAGSIZE:q11                76              76              76              183             
+LOGDAGSIZE:q11                36              36              36              36              
+MEM:q11                       8088            8088            8088            12088           
+SHARCOUNT:q11                 -1              -1              -1              31              
+PROPCOUNT:q11                 -1              -1              -1              307             
+NUMPROPS:q11                  0               0               0               26              
+
+COST:q15                      63.66           63.66           63.66           32.43           
+TIME:q15                      10              10              0               0               
+PHYDAGSIZE:q15                10              10              10              14              
+LOGDAGSIZE:q15                9               9               9               9               
+MEM:q15                       1284            1284            1284            1412            
+SHARCOUNT:q15                 -1              -1              -1              3               
+PROPCOUNT:q15                 -1              -1              -1              12              
+NUMPROPS:q15                  0               0               0               3               
+
+                              Volcano         Volcano-SH      Volcano-RU      Greedy          
+
+COST:bqr1                     100.86          100.85          100.85          58.98           
+TIME:bqr1                     40              45              50              280             
+PHYDAGSIZE:bqr1               216             216             235             907             
+LOGDAGSIZE:bqr1               139             139             139             139             
+MEM:bqr1                      25084           25084           25692           51228           
+SHARCOUNT:bqr1                0               -1              -1              80              
+PROPCOUNT:bqr1                0               -1              -1              1678            
+NUMPROPS:bqr1                 0               0               0               75              
+
+COST:bqr2                     204.62          204.62          204.62          94.18           
+TIME:bqr2                     70              65              75              565             
+PHYDAGSIZE:bqr2               306             306             332             1296            
+LOGDAGSIZE:bqr2               220             220             220             220             
+MEM:bqr2                      37360           37360           38208           73936           
+SHARCOUNT:bqr2                -1              -1              -1              115             
+PROPCOUNT:bqr2                -1              -1              -1              4237            
+NUMPROPS:bqr2                 0               0               0               125             
+
+COST:bqr3                     316.10          272.91          274.26          139.78          
+TIME:bqr3                     470             460             535             7020            
+PHYDAGSIZE:bqr3               873             873             936             8274            
+LOGDAGSIZE:bqr3               1047            1047            1047            1047            
+MEM:bqr3                      125380          125380          126836          403204          
+SHARCOUNT:bqr3                -1              -1              -1              373             
+PROPCOUNT:bqr3                -1              -1              -1              31929           
+NUMPROPS:bqr3                 0               0               0               389             
+
+COST:bqr4                     425.55          382.33          383.69          192.10          
+TIME:bqr4                     720             710             885             10905           
+PHYDAGSIZE:bqr4               1335            1335            1478            12920           
+LOGDAGSIZE:bqr4               1623            1623            1623            1623            
+MEM:bqr4                      194076          194076          198060          629484          
+SHARCOUNT:bqr4                -1              -1              -1              716             
+PROPCOUNT:bqr4                -1              -1              -1              46235           
+NUMPROPS:bqr4                 0               0               0               712             
+
+COST:bqr5                     730.93          687.71          689.06          471.01          
+TIME:bqr5                     1205            1205            1510            14815           
+PHYDAGSIZE:bqr5               1901            1901            2081            17843           
+LOGDAGSIZE:bqr5               2269            2269            2269            2269            
+MEM:bqr5                      276500          276500          281684          870756          
+SHARCOUNT:bqr5                -1              -1              -1              919             
+PROPCOUNT:bqr5                -1              -1              -1              60767           
+NUMPROPS:bqr5                 0               0               0               901             
+
+                              Volcano         Volcano-SH      Volcano-RU      Greedy          
+
+COST:stagr-2                  93.85           90.90           90.54           48.82           
+TIME:stagr-2                  200             200             285             1800            
+PHYDAGSIZE:stagr-2            500             500             555             3733            
+LOGDAGSIZE:stagr-2            574             574             574             574             
+MEM:stagr-2                   71952           71952           73696           199968          
+SHARCOUNT:stagr-2             0               -1              -1              225             
+PROPCOUNT:stagr-2             0               -1              -1              9382            
+NUMPROPS:stagr-2              0               0               0               251             
+
+COST:stagr-6                  288.57          273.14          262.12          142.92          
+TIME:stagr-6                  625             625             810             8160            
+PHYDAGSIZE:stagr-6            1431            1431            1592            10969           
+LOGDAGSIZE:stagr-6            1690            1690            1690            1690            
+MEM:stagr-6                   206720          206720          211856          583920          
+SHARCOUNT:stagr-6             -1              -1              -1              601             
+PROPCOUNT:stagr-6             -1              -1              -1              44669           
+NUMPROPS:stagr-6              0               0               0               762             
+
+COST:stagr-10                 475.80          451.47          427.31          243.78          
+TIME:stagr-10                 940             945             1245            16680           
+PHYDAGSIZE:stagr-10           2348            2348            2618            18205           
+LOGDAGSIZE:stagr-10           2806            2806            2806            2806            
+MEM:stagr-10                  341120          341120          349760          967872          
+SHARCOUNT:stagr-10            -1              -1              -1              977             
+PROPCOUNT:stagr-10            -1              -1              -1              90664           
+NUMPROPS:stagr-10             0               0               0               1273            
+
+COST:stagr-14                 670.97          637.18          600.96          332.53          
+TIME:stagr-14                 1325            1325            1740            25835           
+PHYDAGSIZE:stagr-14           3279            3279            3674            25441           
+LOGDAGSIZE:stagr-14           3922            3922            3922            3922            
+MEM:stagr-14                  475984          475984          488624          1351824         
+SHARCOUNT:stagr-14            -1              -1              -1              1353            
+PROPCOUNT:stagr-14            -1              -1              -1              134179          
+NUMPROPS:stagr-14             0               0               0               1746            
+
+COST:stagr-18                 865.70          819.42          772.20          426.97          
+TIME:stagr-18                 1705            1720            2250            35100           
+PHYDAGSIZE:stagr-18           4213            4213            4718            32677           
+LOGDAGSIZE:stagr-18           5038            5038            5038            5038            
+MEM:stagr-18                  610848          610848          627008          1735776         
+SHARCOUNT:stagr-18            -1              -1              -1              1729            
+PROPCOUNT:stagr-18            -1              -1              -1              179726          
+NUMPROPS:stagr-18             0               0               0               2257            
+

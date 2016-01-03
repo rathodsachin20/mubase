@@ -1,0 +1,27 @@
+Optimization Successful: Plan Cost = 21053.8 Cost Limit = 21053.8
+
+[EQCLASS8][PLANGRP0][CC=1][PSO=NULL] UseCost = 22000 Plan Cost = 21053.8 #Tuples = 2.56e+09 #Blocks = 1e+07
+| [ALG12][CC=1]PROJECT< :r1c1 :r1c2 :r2c1 :r2c2 > Cost = 0
+| | [EQCLASS7][PLANGRP1][CC=1][PSO=NULL] UseCost = 108308 Plan Cost = 21053.8 #Tuples = 2.56e+09 #Blocks = 4.92308e+07
+| | | [ALG10][CC=-1]MERGEJOIN< :r3c1 == :r4c1 > Cost = 19692.3
+| | | | [EQCLASS9][PLANGRP3][CC=1][PSO=NULL] UseCost = 204.059 Plan Cost = 1057.17 #Tuples = 6.4e+06 #Blocks = 92754
+| | | | | [ALG7][CC=-1]MERGEJOIN< :r2c1 == :r3c1 > Cost = 37.1016
+| | | | | | [EQCLASS12][PLANGRP5][CC=1][PSO=NULL] UseCost = 0.3432 Plan Cost = 715.78 #Tuples = 16000 #Blocks = 156
+| | | | | | | [ALG4][CC=-1]MERGEJOIN< AND[ :r1c1 == :r2c1 :r1c2 == :r2c2 ] > Cost = 0.0624
+| | | | | | | | [EQCLASS0][PLANGRP7][CC=1] UseCost = 471.429 Plan Cost = 600.001 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | | | | | | | [ENF1][CC=1]PARTIAL SORT( < r1:r1c1 >--> < r1:r1c1 r1:r1c2 >)  Cost = 128.572
+| | | | | | | | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 471.429 Plan Cost = 471.429 #Tuples = 6e+06 #Blocks = 214286 BUILTIN
+| | | | | | | | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 471.429
+| | | | | | | | [EQCLASS1][PLANGRP10][CC=1] UseCost = 47.1438 Plan Cost = 115.717 #Tuples = 600000 #Blocks = 21429 BUILTIN
+| | | | | | | | | [ENF3][CC=1]PARTIAL SORT( < r2:r2c1 >--> < r2:r2c1 r2:r2c2 >)  Cost = 68.5728
+| | | | | | | | | | [EQCLASS1][PLANGRP11][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429 BUILTIN
+| | | | | | | | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 47.1438
+| | | | | | [EQCLASS3][PLANGRP13][CC=1] UseCost = 47.1438 Plan Cost = 304.292 #Tuples = 600000 #Blocks = 21429
+| | | | | | | [ENF6][CC=1]SORT< r3:r3c1 > Cost = 257.148
+| | | | | | | | [EQCLASS3][PLANGRP12][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | | | | | [ALG5][CC=1]RELSCAN< r3 > Cost = 47.1438
+| | | | [EQCLASS5][PLANGRP17][CC=1] UseCost = 47.1438 Plan Cost = 304.292 #Tuples = 600000 #Blocks = 21429
+| | | | | [ENF9][CC=1]SORT< r4:r4c1 > Cost = 257.148
+| | | | | | [EQCLASS5][PLANGRP16][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | | | [ALG8][CC=1]RELSCAN< r4 > Cost = 47.1438
+

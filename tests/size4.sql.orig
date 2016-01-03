@@ -1,0 +1,1 @@
+select r1c1, r2c1 FROM r1, r2 WHERE r1c1 > 10 and r2c1 > 10 and r1c1=r2c1 AND r1c2=r2c2 AND r1c3=r2c3 AND r1c4=r2c4; 

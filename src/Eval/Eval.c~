@@ -1,0 +1,106 @@
+#include "Eval.h"
+#include "rm.h"
+#include "sort.h"
+
+void eval(Plan_t *plan){
+
+//Mubase initialisation
+
+cout << "\n STARTING MUBASE\n";
+
+
+    DiskManager::createDB("mydb.txt", 20);
+    StorageManager::initDB("mydb.txt");
+    DiskManager::openDB("mydb.txt");
+
+
+
+    short int numAttrs = 3;
+    short int attrType[3] = {1, 4, 1};
+    char *attrName[3] = {"idiii", "namei", "cgpai"};
+    short int sizeAttrs[3] = {4, 30, 4};
+
+    Schema *abc;
+    abc = new Schema(Relation::getSysObjSchema());
+    //abc->print();
+    Schema sch(numAttrs, attrType, attrName, sizeAttrs);
+    cout << "Pritning Schema of sch:\n";
+    sch.print();
+    cout<<endl;
+
+    cout << "\nCreating Relation\n";
+
+    Relation r("mydb.txt", "rel1", true, &sch);
+    Relation r2("mydb.txt", "rel2", true, &sch);
+
+    abc = Relation::readSchema("mydb.txt", "rel1");
+    //abc->print();
+
+    string recString1[3] = {"29", "sachin", "9"};
+    Record* recp1 = new Record(recString1, &sch, 3);
+    string recString2[3] = {"8", "chirag", "9"};
+    Record* recp2 = new Record(recString2, &sch, 3);
+    string recString3[3] = {"1", "ajaya", "9"};
+    Record* recp3 = new Record(recString3, &sch, 3);
+    string recString4[3] = {"30", "sameer", "9"};
+    Record* recp4 = new Record(recString4, &sch, 3);
+
+    int* id[4];
+    id[0] = new int[2];
+    id[1] = new int[2];
+    id[2] = new int[2];
+    id[3] = new int[2];
+    id[0] = r.addRecord(*recp1);
+    for (int i = 0; i < 10; i++)
+        r.addRecord(*recp1);
+    id[1] = r.addRecord(*recp2);
+    id[1] = r.addRecord(*recp3);
+    id[1] = r.addRecord(*recp4);
+
+    id[2] = r2.addRecord(*recp1);
+    id[2] = r2.addRecord(*recp1);
+    id[2] = r2.addRecord(*recp2);
+    id[2] = r2.addRecord(*recp3);
+    id[3] = r2.addRecord(*recp4);
+
+
+//End- Mubase initialisation
+    PhysicalOp_t * root = plan->Root();
+    
+    PrintOps(root,0 );
+    
+//close Mubase db
+DiskManager::closeDB("mydb.txt");    
+cout << "\nTHE END\n";
+}
+
+void PrintOps(PhysicalOp_t *phyOp, int ind){
+    if(!phyOp) return;
+    
+    for(int i=0; i<ind; i++)
+        cout<<"| ";
+    phyOp->PrintName();
+    cout<<endl;    
+    int n = phyOp->NumInputs();
+
+    for( int i = 0 ; i < n ; i++ ) {
+        const PlanGroup_t *inpPG = phyOp->ActualInput(i);
+        if( !inpPG ) 
+            inpPG = phyOp->Input(i);
+        assert(inpPG);
+
+        Plan_t *inpPlan = inpPG->BestPlan();
+        //Ravi: Could not understand the below logic.
+        if( !inpPlan )
+            inpPlan = inpPG->BestAlgPlan();
+        else if( inpPlan->IsFailed() )
+            inpPlan = inpPG->BestAlgPlan();
+        assert(inpPlan);
+        assert(!inpPlan->IsFailed());
+        
+        PrintOps(inpPlan->Root(), ind+1);
+        //inpPlan->PrintPlan(indentLevel+1);
+    }
+    
+}
+

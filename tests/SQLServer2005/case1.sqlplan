@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ShowPlanXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0" Build="9.00.1399.06" xmlns="http://schemas.microsoft.com/sqlserver/2004/07/showplan">
+  <BatchSequence>
+    <Batch>
+      <Statements>
+        <StmtSimple StatementCompId="1" StatementEstRows="6001200" StatementId="1" StatementOptmLevel="FULL" StatementSubTreeCost="3378.22" StatementText="select * from lineitem l inner merge join partsupp ps on (l.l_partkey=ps.ps_partkey and l.l_suppkey=ps.ps_suppkey) inner merge join supplier s on  l.l_suppkey=s.s_suppkey order by l.l_suppkey, l.l_partkey;" StatementType="SELECT">
+          <StatementSetOptions ANSI_NULLS="false" ANSI_PADDING="false" ANSI_WARNINGS="false" ARITHABORT="true" CONCAT_NULL_YIELDS_NULL="false" NUMERIC_ROUNDABORT="false" QUOTED_IDENTIFIER="false" />
+          <QueryPlan CachedPlanSize="68">
+            <RelOp AvgRowSize="402" EstimateCPU="155.74" EstimateIO="0" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="6001200" LogicalOp="Gather Streams" NodeId="0" Parallel="true" PhysicalOp="Parallelism" EstimatedTotalSubtreeCost="3378.22">
+              <OutputList>
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_ORDERKEY" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_PARTKEY" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SUPPKEY" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_LINENUMBER" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_QUANTITY" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_EXTENDEDPRICE" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_DISCOUNT" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_TAX" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_RETURNFLAG" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_LINESTATUS" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPDATE" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_COMMITDATE" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_RECEIPTDATE" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPINSTRUCT" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPMODE" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_COMMENT" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_PARTKEY" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SUPPKEY" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_AVAILQTY" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPLYCOST" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_COMMENT" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SUPPKEY" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_NAME" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_ADDRESS" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_NATIONKEY" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_PHONE" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_ACCTBAL" />
+                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_COMMENT" />
+              </OutputList>
+              <Parallelism>
+                <OrderBy>
+                  <OrderByColumn Ascending="true">
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SUPPKEY" />
+                  </OrderByColumn>
+                  <OrderByColumn Ascending="true">
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_PARTKEY" />
+                  </OrderByColumn>
+                </OrderBy>
+                <RelOp AvgRowSize="402" EstimateCPU="149.643" EstimateIO="1877.25" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="6001200" LogicalOp="Sort" NodeId="2" Parallel="true" PhysicalOp="Sort" EstimatedTotalSubtreeCost="3222.48">
+                  <OutputList>
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_ORDERKEY" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_PARTKEY" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SUPPKEY" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_LINENUMBER" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_QUANTITY" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_EXTENDEDPRICE" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_DISCOUNT" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_TAX" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_RETURNFLAG" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_LINESTATUS" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPDATE" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_COMMITDATE" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_RECEIPTDATE" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPINSTRUCT" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPMODE" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_COMMENT" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_AVAILQTY" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPLYCOST" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_COMMENT" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_NAME" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_ADDRESS" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_NATIONKEY" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_PHONE" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_ACCTBAL" />
+                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_COMMENT" />
+                  </OutputList>
+                  <MemoryFractions Input="0.689678" Output="1" />
+                  <Sort Distinct="false">
+                    <OrderBy>
+                      <OrderByColumn Ascending="true">
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SUPPKEY" />
+                      </OrderByColumn>
+                      <OrderByColumn Ascending="true">
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_PARTKEY" />
+                      </OrderByColumn>
+                    </OrderBy>
+                    <RelOp AvgRowSize="402" EstimateCPU="6.89044" EstimateIO="0.0400069" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="6001200" LogicalOp="Inner Join" NodeId="3" Parallel="true" PhysicalOp="Merge Join" EstimatedTotalSubtreeCost="1195.58">
+                      <OutputList>
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_ORDERKEY" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_PARTKEY" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SUPPKEY" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_LINENUMBER" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_QUANTITY" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_EXTENDEDPRICE" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_DISCOUNT" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_TAX" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_RETURNFLAG" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_LINESTATUS" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPDATE" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_COMMITDATE" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_RECEIPTDATE" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPINSTRUCT" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPMODE" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_COMMENT" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_PARTKEY" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPKEY" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_AVAILQTY" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPLYCOST" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_COMMENT" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_SUPPKEY" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_NAME" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_ADDRESS" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_NATIONKEY" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_PHONE" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_ACCTBAL" />
+                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_COMMENT" />
+                      </OutputList>
+                      <Merge ManyToMany="true">
+                        <InnerSideJoinColumns>
+                          <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_SUPPKEY" />
+                        </InnerSideJoinColumns>
+                        <OuterSideJoinColumns>
+                          <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPKEY" />
+                        </OuterSideJoinColumns>
+                        <Residual>
+                          <ScalarOperator ScalarString="[tpch1].[dbo].[SUPPLIER].[S_SUPPKEY] as [s].[S_SUPPKEY]=[tpch1].[dbo].[PARTSUPP].[PS_SUPPKEY] as [ps].[PS_SUPPKEY]">
+                            <Compare CompareOp="EQ">
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_SUPPKEY" />
+                                </Identifier>
+                              </ScalarOperator>
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPKEY" />
+                                </Identifier>
+                              </ScalarOperator>
+                            </Compare>
+                          </ScalarOperator>
+                        </Residual>
+                        <RelOp AvgRowSize="270" EstimateCPU="38.4945" EstimateIO="0.0195625" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="6001220" LogicalOp="Inner Join" NodeId="4" Parallel="true" PhysicalOp="Merge Join" EstimatedTotalSubtreeCost="1188.35">
+                          <OutputList>
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_ORDERKEY" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_PARTKEY" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SUPPKEY" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_LINENUMBER" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_QUANTITY" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_EXTENDEDPRICE" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_DISCOUNT" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_TAX" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_RETURNFLAG" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_LINESTATUS" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPDATE" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_COMMITDATE" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_RECEIPTDATE" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPINSTRUCT" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPMODE" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_COMMENT" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_PARTKEY" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPKEY" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_AVAILQTY" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPLYCOST" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_COMMENT" />
+                          </OutputList>
+                          <Merge ManyToMany="true">
+                            <InnerSideJoinColumns>
+                              <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPKEY" />
+                            </InnerSideJoinColumns>
+                            <OuterSideJoinColumns>
+                              <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SUPPKEY" />
+                            </OuterSideJoinColumns>
+                            <Residual>
+                              <ScalarOperator ScalarString="[tpch1].[dbo].[LINEITEM].[L_PARTKEY] as [l].[L_PARTKEY]=[tpch1].[dbo].[PARTSUPP].[PS_PARTKEY] as [ps].[PS_PARTKEY] AND [tpch1].[dbo].[LINEITEM].[L_SUPPKEY] as [l].[L_SUPPKEY]=[tpch1].[dbo].[PARTSUPP].[PS_SUPPKEY] as [ps].[PS_SUPPKEY]">
+                                <Logical Operation="AND">
+                                  <ScalarOperator>
+                                    <Compare CompareOp="EQ">
+                                      <ScalarOperator>
+                                        <Identifier>
+                                          <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_PARTKEY" />
+                                        </Identifier>
+                                      </ScalarOperator>
+                                      <ScalarOperator>
+                                        <Identifier>
+                                          <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_PARTKEY" />
+                                        </Identifier>
+                                      </ScalarOperator>
+                                    </Compare>
+                                  </ScalarOperator>
+                                  <ScalarOperator>
+                                    <Compare CompareOp="EQ">
+                                      <ScalarOperator>
+                                        <Identifier>
+                                          <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SUPPKEY" />
+                                        </Identifier>
+                                      </ScalarOperator>
+                                      <ScalarOperator>
+                                        <Identifier>
+                                          <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPKEY" />
+                                        </Identifier>
+                                      </ScalarOperator>
+                                    </Compare>
+                                  </ScalarOperator>
+                                </Logical>
+                              </ScalarOperator>
+                            </Residual>
+                            <RelOp AvgRowSize="147" EstimateCPU="149.643" EstimateIO="734.583" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="6001220" LogicalOp="Sort" NodeId="5" Parallel="true" PhysicalOp="Sort" EstimatedTotalSubtreeCost="1029.74">
+                              <OutputList>
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_ORDERKEY" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_PARTKEY" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SUPPKEY" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_LINENUMBER" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_QUANTITY" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_EXTENDEDPRICE" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_DISCOUNT" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_TAX" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_RETURNFLAG" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_LINESTATUS" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPDATE" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_COMMITDATE" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_RECEIPTDATE" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPINSTRUCT" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPMODE" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_COMMENT" />
+                              </OutputList>
+                              <MemoryFractions Input="0.892186" Output="0.276865" />
+                              <Sort Distinct="false">
+                                <OrderBy>
+                                  <OrderByColumn Ascending="true">
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SUPPKEY" />
+                                  </OrderByColumn>
+                                </OrderBy>
+                                <RelOp AvgRowSize="147" EstimateCPU="57.1158" EstimateIO="0" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="6001220" LogicalOp="Repartition Streams" NodeId="6" Parallel="true" PhysicalOp="Parallelism" EstimatedTotalSubtreeCost="145.512">
+                                  <OutputList>
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_ORDERKEY" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_PARTKEY" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SUPPKEY" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_LINENUMBER" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_QUANTITY" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_EXTENDEDPRICE" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_DISCOUNT" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_TAX" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_RETURNFLAG" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_LINESTATUS" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPDATE" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_COMMITDATE" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_RECEIPTDATE" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPINSTRUCT" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPMODE" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_COMMENT" />
+                                  </OutputList>
+                                  <Parallelism PartitioningType="Hash">
+                                    <PartitionColumns>
+                                      <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SUPPKEY" />
+                                    </PartitionColumns>
+                                    <RelOp AvgRowSize="147" EstimateCPU="3.30071" EstimateIO="85.0951" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="6001220" LogicalOp="Table Scan" NodeId="7" Parallel="true" PhysicalOp="Table Scan" EstimatedTotalSubtreeCost="88.3958">
+                                      <OutputList>
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_ORDERKEY" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_PARTKEY" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SUPPKEY" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_LINENUMBER" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_QUANTITY" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_EXTENDEDPRICE" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_DISCOUNT" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_TAX" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_RETURNFLAG" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_LINESTATUS" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPDATE" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_COMMITDATE" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_RECEIPTDATE" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPINSTRUCT" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPMODE" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_COMMENT" />
+                                      </OutputList>
+                                      <TableScan Ordered="false" ForcedIndex="false" NoExpandHint="false">
+                                        <DefinedValues>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_ORDERKEY" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_PARTKEY" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SUPPKEY" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_LINENUMBER" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_QUANTITY" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_EXTENDEDPRICE" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_DISCOUNT" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_TAX" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_RETURNFLAG" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_LINESTATUS" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPDATE" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_COMMITDATE" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_RECEIPTDATE" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPINSTRUCT" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_SHIPMODE" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" Column="L_COMMENT" />
+                                          </DefinedValue>
+                                        </DefinedValues>
+                                        <Object Database="[tpch1]" Schema="[dbo]" Table="[LINEITEM]" Alias="[l]" />
+                                      </TableScan>
+                                    </RelOp>
+                                  </Parallelism>
+                                </RelOp>
+                              </Sort>
+                            </RelOp>
+                            <RelOp AvgRowSize="131" EstimateCPU="14.6108" EstimateIO="88.3277" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="800000" LogicalOp="Sort" NodeId="8" Parallel="true" PhysicalOp="Sort" EstimatedTotalSubtreeCost="120.096">
+                              <OutputList>
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_PARTKEY" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPKEY" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_AVAILQTY" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPLYCOST" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_COMMENT" />
+                              </OutputList>
+                              <MemoryFractions Input="0.0334572" Output="0.0334572" />
+                              <Sort Distinct="false">
+                                <OrderBy>
+                                  <OrderByColumn Ascending="true">
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPKEY" />
+                                  </OrderByColumn>
+                                </OrderBy>
+                                <RelOp AvgRowSize="131" EstimateCPU="5.0718" EstimateIO="0" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="800000" LogicalOp="Repartition Streams" NodeId="9" Parallel="true" PhysicalOp="Parallelism" EstimatedTotalSubtreeCost="17.158">
+                                  <OutputList>
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_PARTKEY" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPKEY" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_AVAILQTY" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPLYCOST" />
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_COMMENT" />
+                                  </OutputList>
+                                  <Parallelism PartitioningType="Hash">
+                                    <PartitionColumns>
+                                      <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPKEY" />
+                                    </PartitionColumns>
+                                    <RelOp AvgRowSize="131" EstimateCPU="0.440078" EstimateIO="11.6461" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="800000" LogicalOp="Clustered Index Scan" NodeId="10" Parallel="true" PhysicalOp="Clustered Index Scan" EstimatedTotalSubtreeCost="12.0862">
+                                      <OutputList>
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_PARTKEY" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPKEY" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_AVAILQTY" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPLYCOST" />
+                                        <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_COMMENT" />
+                                      </OutputList>
+                                      <IndexScan Ordered="false" ForcedIndex="false" NoExpandHint="false">
+                                        <DefinedValues>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_PARTKEY" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPKEY" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_AVAILQTY" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_SUPPLYCOST" />
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Alias="[ps]" Column="PS_COMMENT" />
+                                          </DefinedValue>
+                                        </DefinedValues>
+                                        <Object Database="[tpch1]" Schema="[dbo]" Table="[PARTSUPP]" Index="[PK_PARTSUPP]" Alias="[ps]" />
+                                      </IndexScan>
+                                    </RelOp>
+                                  </Parallelism>
+                                </RelOp>
+                              </Sort>
+                            </RelOp>
+                          </Merge>
+                        </RelOp>
+                        <RelOp AvgRowSize="140" EstimateCPU="0.149476" EstimateIO="0" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="10000" LogicalOp="Repartition Streams" NodeId="12" Parallel="true" PhysicalOp="Parallelism" EstimatedTotalSubtreeCost="0.305587">
+                          <OutputList>
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_SUPPKEY" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_NAME" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_ADDRESS" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_NATIONKEY" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_PHONE" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_ACCTBAL" />
+                            <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_COMMENT" />
+                          </OutputList>
+                          <Parallelism PartitioningType="Hash">
+                            <PartitionColumns>
+                              <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_SUPPKEY" />
+                            </PartitionColumns>
+                            <OrderBy>
+                              <OrderByColumn Ascending="true">
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_SUPPKEY" />
+                              </OrderByColumn>
+                            </OrderBy>
+                            <RelOp AvgRowSize="140" EstimateCPU="0.0055785" EstimateIO="0.150532" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="10000" LogicalOp="Clustered Index Scan" NodeId="13" Parallel="true" PhysicalOp="Clustered Index Scan" EstimatedTotalSubtreeCost="0.156111">
+                              <OutputList>
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_SUPPKEY" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_NAME" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_ADDRESS" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_NATIONKEY" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_PHONE" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_ACCTBAL" />
+                                <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_COMMENT" />
+                              </OutputList>
+                              <IndexScan Ordered="true" ScanDirection="FORWARD" ForcedIndex="false" NoExpandHint="false">
+                                <DefinedValues>
+                                  <DefinedValue>
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_SUPPKEY" />
+                                  </DefinedValue>
+                                  <DefinedValue>
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_NAME" />
+                                  </DefinedValue>
+                                  <DefinedValue>
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_ADDRESS" />
+                                  </DefinedValue>
+                                  <DefinedValue>
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_NATIONKEY" />
+                                  </DefinedValue>
+                                  <DefinedValue>
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_PHONE" />
+                                  </DefinedValue>
+                                  <DefinedValue>
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_ACCTBAL" />
+                                  </DefinedValue>
+                                  <DefinedValue>
+                                    <ColumnReference Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Alias="[s]" Column="S_COMMENT" />
+                                  </DefinedValue>
+                                </DefinedValues>
+                                <Object Database="[tpch1]" Schema="[dbo]" Table="[SUPPLIER]" Index="[PK__SUPPLIER__3C69FB99]" Alias="[s]" />
+                              </IndexScan>
+                            </RelOp>
+                          </Parallelism>
+                        </RelOp>
+                      </Merge>
+                    </RelOp>
+                  </Sort>
+                </RelOp>
+              </Parallelism>
+            </RelOp>
+          </QueryPlan>
+        </StmtSimple>
+      </Statements>
+    </Batch>
+  </BatchSequence>
+</ShowPlanXML>

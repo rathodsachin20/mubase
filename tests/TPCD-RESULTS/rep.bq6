@@ -1,0 +1,35 @@
+NumBuffers = 1500
+ALGO Greedy
+RelThreshold = 0
+AbsThreshold = 0.005
+LDAGUSR 1510
+LDAGSYS 0
+PDAGUSR 7520
+PDAGSYS 70
+INITCOST 869.223
+VOLCANOCOST 869.223
+Sharable Nodes computed using separate algo
+SHARCOUNT 1994
+Sharing [1223:58] Benefit = 129.455
+Sharing [1221:40] Benefit = 74.9515
+Sharing [126:291] Benefit = 69.3235
+Sharing [1229:1576] Benefit = 53.504
+Sharing [121:258] Benefit = 21.889
+Sharing [507:2300] Benefit = 19.6373
+Sharing [312:1027] Benefit = 4.22519
+Sharing [1220:194] Benefit = 1.54803
+Sharing [69:55] Benefit = 0.688995
+Sharing [83:92] Benefit = 0.498016
+Sharing [228:749] Benefit = 0.00241089
+BESTCOST 493.5
+NUMPROPS 2229
+PROPCOUNT 422850
+RECOMP 2230
+NUMMAT 11
+COST 493.5
+USRT 139930
+SYST 510
+PHYOPNODES 62447
+PHYEQNODES 5364
+LOGOPNODES 6972
+EQUIVNODES 730

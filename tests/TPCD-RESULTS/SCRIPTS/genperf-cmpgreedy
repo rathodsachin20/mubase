@@ -1,0 +1,12 @@
+#!/bin/sh -x 
+for algo in greedy greedy-unifshar
+do
+   for inp in q2 q2-decor q11 q15 
+   do
+	echo PROC $inp
+	../perfeval "$algo" < TPCD/$inp
+	echo END
+        echo
+   done
+   echo
+done

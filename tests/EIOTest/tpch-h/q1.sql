@@ -1,0 +1,1 @@
+select s_suppkey, n_nationkey, p_partkey from part, supplier, partsupp, nation, region where p_partkey=ps_partkey and s_suppkey=ps_suppkey and p_size=10 and p_type=10 and s_nationkey=n_nationkey and n_regionkey=r_regionkey and r_name=20 and ps_supplycost=20;

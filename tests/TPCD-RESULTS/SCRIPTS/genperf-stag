@@ -1,0 +1,12 @@
+#!/bin/sh -x 
+for algo in volcano volcano-sh volcano-ru greedy
+do
+   for inp in stag-2 stagr-2 stag-6 stagr-6 stag-10 stagr-10 stag-14 stagr-14 stag-18 stagr-18
+   do	    
+	echo PROC $inp
+	../perfeval "$algo" < STAG/$inp
+	echo END
+        echo
+   done
+   echo
+done

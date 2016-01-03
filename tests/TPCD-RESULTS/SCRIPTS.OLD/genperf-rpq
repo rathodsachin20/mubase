@@ -1,0 +1,36 @@
+#!/bin/bash 
+for algo in volcano volcano-sh volcano-mq greedy
+do
+   for inp in rpq-1 rpq-2 rpq-3 rpq-4 rpq-5 rpq-6 rpq-7 rpq-8 rpq-9
+   do	    
+	echo PROC $inp
+	../perfeval "$algo" < RPQ/$inp
+	echo END
+        echo
+   done
+   echo
+done
+
+for algo in cached-exhaustive
+do
+   for inp in rpq-1 rpq-2 rpq-3 rpq-4 rpq-5 rpq-6 rpq-7 rpq-8 rpq-9
+   do	    
+	echo PROC $inp
+	../perfeval "$algo" < RPQ/$inp
+	echo END
+        echo
+   done
+   echo
+done
+
+for algo in exhaustive
+do
+   for inp in rpq-1 rpq-2 rpq-3 rpq-4 rpq-5 rpq-6 rpq-7 rpq-8 rpq-9
+   do	    
+	echo PROC $inp
+	../perfeval "$algo" < RPQ/$inp
+	echo END
+        echo
+   done
+   echo
+done

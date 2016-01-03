@@ -1,0 +1,1770 @@
+ALGO Volcano
+Disabling NLJ
+Disabling Index NLJ
+Created eq 0
+Schema: r1c5 NUMBER ClassHead : r1c5, r1c4 NUMBER ClassHead : r1c4, r1c3 NUMBER ClassHead : r1c3, r1c2 NUMBER ClassHead : r1c2, r1c1 NUMBER ClassHead : r1c1Adding child logExpr 4 to 0
+Created eq 1
+Schema: r2c5 NUMBER ClassHead : r2c5, r2c4 NUMBER ClassHead : r2c4, r2c3 NUMBER ClassHead : r2c3, r2c2 NUMBER ClassHead : r2c2, r2c1 NUMBER ClassHead : r2c1Adding child logExpr 5 to 1
+Adding parent logExpr 3 to 0
+Adding parent logExpr 3 to 1
+Created eq 2
+Schema: r1c5 NUMBER ClassHead : r1c5, r1c4 NUMBER ClassHead : r1c4, r1c3 NUMBER ClassHead : r1c3, r1c2 NUMBER ClassHead : r1c2, r1c1 NUMBER ClassHead : r1c1, r2c5 NUMBER ClassHead : r2c5, r2c4 NUMBER ClassHead : r2c4, r2c3 NUMBER ClassHead : r2c3, r2c2 NUMBER ClassHead : r2c2, r2c1 NUMBER ClassHead : r2c1Adding child logExpr 3 to 2
+Created eq 3
+Schema: r3c5 NUMBER ClassHead : r3c5, r3c4 NUMBER ClassHead : r3c4, r3c3 NUMBER ClassHead : r3c3, r3c2 NUMBER ClassHead : r3c2, r3c1 NUMBER ClassHead : r3c1Adding child logExpr 6 to 3
+Adding parent logExpr 2 to 2
+Adding parent logExpr 2 to 3
+Created eq 4
+Schema: r1c5 NUMBER ClassHead : r1c5, r1c4 NUMBER ClassHead : r1c4, r1c3 NUMBER ClassHead : r1c3, r1c2 NUMBER ClassHead : r1c2, r1c1 NUMBER ClassHead : r1c1, r2c5 NUMBER ClassHead : r2c5, r2c4 NUMBER ClassHead : r2c4, r2c3 NUMBER ClassHead : r2c3, r2c2 NUMBER ClassHead : r2c2, r2c1 NUMBER ClassHead : r2c1, r3c5 NUMBER ClassHead : r3c5, r3c4 NUMBER ClassHead : r3c4, r3c3 NUMBER ClassHead : r3c3, r3c2 NUMBER ClassHead : r3c2, r3c1 NUMBER ClassHead : r3c1Adding child logExpr 2 to 4
+Adding parent logExpr 1 to 4
+Created eq 5
+Schema: r1c5 NUMBER ClassHead : r3c5, r1c4 NUMBER ClassHead : r3c4, r1c3 NUMBER ClassHead : r1c3, r1c2 NUMBER ClassHead : r1c2, r1c1 NUMBER ClassHead : r3c1, r2c5 NUMBER ClassHead : r3c5, r2c4 NUMBER ClassHead : r3c4, r2c3 NUMBER ClassHead : r1c3, r2c2 NUMBER ClassHead : r2c2, r2c1 NUMBER ClassHead : r2c1, r3c5 NUMBER ClassHead : r3c5, r3c4 NUMBER ClassHead : r3c4, r3c3 NUMBER ClassHead : r3c3, r3c2 NUMBER ClassHead : r3c2, r3c1 NUMBER ClassHead : r3c1Adding child logExpr 1 to 5
+Adding parent logExpr 0 to 5
+Created eq 6
+Schema: r1c1 NUMBER ClassHead : r1c1, r2c1 NUMBER ClassHead : r2c1, r3c1 NUMBER ClassHead : r1c1Adding child logExpr 0 to 6
+Initial Query Graph
+[EQCLASS6]
+| [LOGEXP0]PROJECT :r1c1 :r2c1 :r3c1 
+| | [EQCLASS5]
+| | | [LOGEXP1]SELECT< AND[ AND[ AND[ AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] :r3c1 == :r1c1 ] :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] >
+| | | | [EQCLASS4]
+| | | | | [LOGEXP2]JOIN TRUE
+| | | | | | [EQCLASS2]
+| | | | | | | [LOGEXP3]JOIN TRUE
+| | | | | | | | [EQCLASS0]
+| | | | | | | | | [LOGEXP4]r1
+| | | | | | | | [EQCLASS1]
+| | | | | | | | | [LOGEXP5]r2
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+Cost Limit = 10000
+
+Expanding SubDAG for eq 6
+
+Expanding SubDAG for eq 5
+
+Expanding SubDAG for eq 4
+
+Expanding SubDAG for eq 2
+
+Expanding SubDAG for eq 0
+
+Expanding logexpr 4 eqclass = 0
+
+
+[EQCLASS0]
+| [LOGEXP4]r1
+Finished Expanding logexpr 4 eqclass = 0
+
+Finished Expanding SubDAG for eq 0
+
+
+Expanding SubDAG for eq 1
+
+Expanding logexpr 5 eqclass = 1
+
+
+[EQCLASS1]
+| [LOGEXP5]r2
+Finished Expanding logexpr 5 eqclass = 1
+
+Finished Expanding SubDAG for eq 1
+
+
+Expanding logexpr 3 eqclass = 2
+
+
+[EQCLASS2]
+| [LOGEXP3]JOIN TRUE
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+Finished Expanding logexpr 3 eqclass = 2
+
+Finished Expanding SubDAG for eq 2
+
+
+Expanding SubDAG for eq 3
+
+Expanding logexpr 6 eqclass = 3
+
+
+[EQCLASS3]
+| [LOGEXP6]r3
+Finished Expanding logexpr 6 eqclass = 3
+
+Finished Expanding SubDAG for eq 3
+
+
+Expanding logexpr 2 eqclass = 4
+
+
+[EQCLASS4]
+| [LOGEXP2]JOIN TRUE
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+Finished Expanding logexpr 2 eqclass = 4
+
+Finished Expanding SubDAG for eq 4
+
+
+Expanding logexpr 1 eqclass = 5
+
+SelectPushPred_t::Apply Iterating over 4
+Adding parent logExpr 7 to 2
+Adding parent logExpr 7 to 3
+Adding child logExpr 7 to 5
+SelectPushPred_t::Apply Finished Iterating over 4
+
+Applying Transformation: NestedPredToApplyOp.
+On Select_t node: 1
+
+No nested predicate in logexpr: 1
+
+[EQCLASS5]
+| [LOGEXP1]SELECT< AND[ AND[ AND[ AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] :r3c1 == :r1c1 ] :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] >
+| | [EQCLASS4]
+| | | [LOGEXP2]JOIN TRUE
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| [LOGEXP7]JOIN AND[ AND[ AND[ AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] :r3c1 == :r1c1 ] :r3c4 == :r1c4 ] :r3c5 == :r1c5 ]
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+Finished Expanding logexpr 1 eqclass = 5
+
+
+Expanding logexpr 7 eqclass = 5
+
+Adding parent logExpr 8 to 2
+Created eq 7
+Schema: r1c5 NUMBER ClassHead : r1c5, r1c4 NUMBER ClassHead : r1c4, r1c3 NUMBER ClassHead : r1c3, r1c2 NUMBER ClassHead : r1c2, r1c1 NUMBER ClassHead : r1c1, r2c5 NUMBER ClassHead : r1c5, r2c4 NUMBER ClassHead : r1c4, r2c3 NUMBER ClassHead : r1c3, r2c2 NUMBER ClassHead : r2c2, r2c1 NUMBER ClassHead : r2c1Adding child logExpr 8 to 7
+Adding parent logExpr 9 to 7
+Adding parent logExpr 9 to 3
+Adding child logExpr 9 to 5
+Adding parent logExpr 10 to 2
+Deleting parent logExpr 10 from 2
+Adding parent logExpr 11 to 7
+Adding parent logExpr 11 to 3
+Deleting parent logExpr 11 from 7
+Deleting parent logExpr 11 from 3
+JoinAssoc_t::Apply Iterating over 3
+JoinAssoc_t::Apply Finished Iterating over 3
+JoinAssoc_t::Apply Iterating over 2
+Adding parent logExpr 12 to 3
+Adding parent logExpr 12 to 0
+Created eq 8
+Schema: r3c5 NUMBER ClassHead : r3c5, r3c4 NUMBER ClassHead : r3c4, r3c3 NUMBER ClassHead : r3c3, r3c2 NUMBER ClassHead : r3c2, r3c1 NUMBER ClassHead : r3c1, r1c5 NUMBER ClassHead : r3c5, r1c4 NUMBER ClassHead : r3c4, r1c3 NUMBER ClassHead : r1c3, r1c2 NUMBER ClassHead : r1c2, r1c1 NUMBER ClassHead : r3c1Adding child logExpr 12 to 8
+Adding parent logExpr 13 to 8
+Adding parent logExpr 13 to 1
+Adding child logExpr 13 to 5
+JoinAssoc_t::Apply Finished Iterating over 2
+JoinExchange_t::Apply Iterating over 2
+JoinExchange_t::Apply Finished Iterating over 2
+
+[EQCLASS5]
+| [LOGEXP1]SELECT< AND[ AND[ AND[ AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] :r3c1 == :r1c1 ] :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] >
+| | [EQCLASS4]
+| | | [LOGEXP2]JOIN TRUE
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| [LOGEXP7]JOIN AND[ AND[ AND[ AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] :r3c1 == :r1c1 ] :r3c4 == :r1c4 ] :r3c5 == :r1c5 ]
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| [LOGEXP9]JOIN AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ]
+| | [EQCLASS7]
+| | | [LOGEXP8]SELECT< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] >
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| [LOGEXP13]JOIN AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ]
+| | [EQCLASS8]
+| | | [LOGEXP12]JOIN AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ]
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+Finished Expanding logexpr 7 eqclass = 5
+
+
+Expanding SubDAG for eq 7
+
+Expanding logexpr 8 eqclass = 7
+
+SelectPushPred_t::Apply Iterating over 2
+Adding parent logExpr 14 to 0
+Adding parent logExpr 14 to 1
+Adding child logExpr 14 to 7
+SelectPushPred_t::Apply Finished Iterating over 2
+
+Applying Transformation: NestedPredToApplyOp.
+On Select_t node: 8
+
+No nested predicate in logexpr: 8
+
+[EQCLASS7]
+| [LOGEXP8]SELECT< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] >
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| [LOGEXP14]JOIN AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ]
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+Finished Expanding logexpr 8 eqclass = 7
+
+
+Expanding logexpr 14 eqclass = 7
+
+JoinAssoc_t::Apply Iterating over 1
+JoinAssoc_t::Apply Finished Iterating over 1
+JoinAssoc_t::Apply Iterating over 0
+JoinAssoc_t::Apply Finished Iterating over 0
+JoinExchange_t::Apply Iterating over 0
+JoinExchange_t::Apply Finished Iterating over 0
+
+[EQCLASS7]
+| [LOGEXP8]SELECT< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] >
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| [LOGEXP14]JOIN AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ]
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+Finished Expanding logexpr 14 eqclass = 7
+
+Finished Expanding SubDAG for eq 7
+
+
+Expanding logexpr 9 eqclass = 5
+
+JoinAssoc_t::Apply Iterating over 3
+JoinAssoc_t::Apply Finished Iterating over 3
+JoinAssoc_t::Apply Iterating over 7
+Adding parent logExpr 15 to 3
+Adding parent logExpr 15 to 0
+Deleting parent logExpr 15 from 3
+Deleting parent logExpr 15 from 0
+Adding parent logExpr 16 to 8
+Adding parent logExpr 16 to 1
+Deleting parent logExpr 16 from 8
+Deleting parent logExpr 16 from 1
+JoinAssoc_t::Apply Finished Iterating over 7
+JoinExchange_t::Apply Iterating over 7
+JoinExchange_t::Apply Finished Iterating over 7
+
+[EQCLASS5]
+| [LOGEXP1]SELECT< AND[ AND[ AND[ AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] :r3c1 == :r1c1 ] :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] >
+| | [EQCLASS4]
+| | | [LOGEXP2]JOIN TRUE
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| [LOGEXP7]JOIN AND[ AND[ AND[ AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] :r3c1 == :r1c1 ] :r3c4 == :r1c4 ] :r3c5 == :r1c5 ]
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| [LOGEXP9]JOIN AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ]
+| | [EQCLASS7]
+| | | [LOGEXP8]SELECT< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] >
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | [LOGEXP14]JOIN AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ]
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| [LOGEXP13]JOIN AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ]
+| | [EQCLASS8]
+| | | [LOGEXP12]JOIN AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ]
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+Finished Expanding logexpr 9 eqclass = 5
+
+
+Expanding SubDAG for eq 8
+
+Expanding logexpr 12 eqclass = 8
+
+JoinAssoc_t::Apply Iterating over 0
+JoinAssoc_t::Apply Finished Iterating over 0
+JoinAssoc_t::Apply Iterating over 3
+JoinAssoc_t::Apply Finished Iterating over 3
+JoinExchange_t::Apply Iterating over 3
+JoinExchange_t::Apply Finished Iterating over 3
+
+[EQCLASS8]
+| [LOGEXP12]JOIN AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ]
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| | [EQCLASS0]
+| | | [LOGEXP4]r1
+Finished Expanding logexpr 12 eqclass = 8
+
+Finished Expanding SubDAG for eq 8
+
+
+Expanding logexpr 13 eqclass = 5
+
+
+[EQCLASS5]
+| [LOGEXP1]SELECT< AND[ AND[ AND[ AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] :r3c1 == :r1c1 ] :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] >
+| | [EQCLASS4]
+| | | [LOGEXP2]JOIN TRUE
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| [LOGEXP7]JOIN AND[ AND[ AND[ AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] :r3c1 == :r1c1 ] :r3c4 == :r1c4 ] :r3c5 == :r1c5 ]
+| | [EQCLASS2]
+| | | [LOGEXP3]JOIN TRUE
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| [LOGEXP9]JOIN AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ]
+| | [EQCLASS7]
+| | | [LOGEXP8]SELECT< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] >
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | [LOGEXP14]JOIN AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ]
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+| | [EQCLASS3]
+| | | [LOGEXP6]r3
+| [LOGEXP13]JOIN AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ]
+| | [EQCLASS8]
+| | | [LOGEXP12]JOIN AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ]
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | | [EQCLASS0]
+| | | | | [LOGEXP4]r1
+| | [EQCLASS1]
+| | | [LOGEXP5]r2
+Finished Expanding logexpr 13 eqclass = 5
+
+Finished Expanding SubDAG for eq 5
+
+
+Expanding logexpr 0 eqclass = 6
+
+
+[EQCLASS6]
+| [LOGEXP0]PROJECT :r1c1 :r2c1 :r3c1 
+| | [EQCLASS5]
+| | | [LOGEXP1]SELECT< AND[ AND[ AND[ AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] :r3c1 == :r1c1 ] :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] >
+| | | | [EQCLASS4]
+| | | | | [LOGEXP2]JOIN TRUE
+| | | | | | [EQCLASS2]
+| | | | | | | [LOGEXP3]JOIN TRUE
+| | | | | | | | [EQCLASS0]
+| | | | | | | | | [LOGEXP4]r1
+| | | | | | | | [EQCLASS1]
+| | | | | | | | | [LOGEXP5]r2
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | [LOGEXP7]JOIN AND[ AND[ AND[ AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] :r3c1 == :r1c1 ] :r3c4 == :r1c4 ] :r3c5 == :r1c5 ]
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | [LOGEXP9]JOIN AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ]
+| | | | [EQCLASS7]
+| | | | | [LOGEXP8]SELECT< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] >
+| | | | | | [EQCLASS2]
+| | | | | | | [LOGEXP3]JOIN TRUE
+| | | | | | | | [EQCLASS0]
+| | | | | | | | | [LOGEXP4]r1
+| | | | | | | | [EQCLASS1]
+| | | | | | | | | [LOGEXP5]r2
+| | | | | [LOGEXP14]JOIN AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ]
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | [LOGEXP13]JOIN AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ]
+| | | | [EQCLASS8]
+| | | | | [LOGEXP12]JOIN AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ]
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+Finished Expanding logexpr 0 eqclass = 6
+
+Finished Expanding SubDAG for eq 6
+
+Setting parameter logical props for Eq = 6
+Setting outerVarLogProp for Op = 0
+Setting parameter logical props for Eq = 5
+Setting outerVarLogProp for Op = 1
+Setting parameter logical props for Eq = 4
+Setting outerVarLogProp for Op = 2
+Setting parameter logical props for Eq = 2
+Setting outerVarLogProp for Op = 3
+Setting parameter logical props for Eq = 0
+Setting outerVarLogProp for Op = 4
+Setting outerVarLogProp for Op = 4 Done
+Setting paramLogProp for Eq = 0 Done
+Setting parameter logical props for Eq = 1
+Setting outerVarLogProp for Op = 5
+Setting outerVarLogProp for Op = 5 Done
+Setting paramLogProp for Eq = 1 Done
+Setting outerVarLogProp for Op = 3 Done
+Setting paramLogProp for Eq = 2 Done
+Setting parameter logical props for Eq = 3
+Setting outerVarLogProp for Op = 6
+Setting outerVarLogProp for Op = 6 Done
+Setting paramLogProp for Eq = 3 Done
+Setting outerVarLogProp for Op = 2 Done
+Setting paramLogProp for Eq = 4 Done
+Setting outerVarLogProp for Op = 1 Done
+Setting outerVarLogProp for Op = 7
+Setting outerVarLogProp for Op = 7 Done
+Setting outerVarLogProp for Op = 9
+Setting parameter logical props for Eq = 7
+Setting outerVarLogProp for Op = 8
+Setting outerVarLogProp for Op = 8 Done
+Setting outerVarLogProp for Op = 14
+Setting outerVarLogProp for Op = 14 Done
+Setting paramLogProp for Eq = 7 Done
+Setting outerVarLogProp for Op = 9 Done
+Setting outerVarLogProp for Op = 13
+Setting parameter logical props for Eq = 8
+Setting outerVarLogProp for Op = 12
+Setting outerVarLogProp for Op = 12 Done
+Setting paramLogProp for Eq = 8 Done
+Setting outerVarLogProp for Op = 13 Done
+Setting paramLogProp for Eq = 5 Done
+Setting outerVarLogProp for Op = 0 Done
+Setting paramLogProp for Eq = 6 Done
+Expanded LQDAG
+<EQCLASS id="6" isCorrelated="false">
+  <LOGEXP id="0" op="PROJECT"> 
+<PROJ_EXPRS>
+<RelArgRef relarg=":r1c1"/>
+<RelArgRef relarg=":r2c1"/>
+<RelArgRef relarg=":r3c1"/>
+</PROJ_EXPRS>
+    <EQCLASS id="5" isCorrelated="false">
+      <LOGEXP id="1" op="SELECT">
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c3"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c1"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+        <EQCLASS id="4" isCorrelated="false">
+          <LOGEXP id="2" op="JOIN"> 
+<TRUE/>
+            <EQCLASS id="2" isCorrelated="false">
+              <LOGEXP id="3" op="JOIN"> 
+<TRUE/>
+                <EQCLASS id="0" isCorrelated="false">
+         <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+                <EQCLASS id="1" isCorrelated="false">
+         <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="3" isCorrelated="false">
+       <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="7" op="JOIN"> 
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c3"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c1"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+        <EQCLASS id="2" isCorrelated="false">
+          <LOGEXP id="3" op="JOIN"> 
+<TRUE/>
+            <EQCLASS id="0" isCorrelated="false">
+       <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="1" isCorrelated="false">
+       <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="3" isCorrelated="false">
+     <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="9" op="JOIN"> 
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c1"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+        <EQCLASS id="7" isCorrelated="false">
+          <LOGEXP id="8" op="SELECT">
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c3"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+            <EQCLASS id="2" isCorrelated="false">
+              <LOGEXP id="3" op="JOIN"> 
+<TRUE/>
+                <EQCLASS id="0" isCorrelated="false">
+         <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+                <EQCLASS id="1" isCorrelated="false">
+         <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+          <LOGEXP id="14" op="JOIN"> 
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c3"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+            <EQCLASS id="0" isCorrelated="false">
+       <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="1" isCorrelated="false">
+       <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="3" isCorrelated="false">
+     <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+      <LOGEXP id="13" op="JOIN"> 
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c3"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c3"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r1c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r2c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+        <EQCLASS id="8" isCorrelated="false">
+          <LOGEXP id="12" op="JOIN"> 
+<AND>
+<LHS>
+<AND>
+<LHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c1"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c1"/>
+</RHS>
+</EQEQ>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c4"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c4"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+</LHS>
+<RHS>
+<EQEQ>
+<LHS>
+<RelArgRef relarg=":r3c5"/>
+</LHS>
+<RHS>
+<RelArgRef relarg=":r1c5"/>
+</RHS>
+</EQEQ>
+</RHS>
+</AND>
+            <EQCLASS id="3" isCorrelated="false">
+       <LOGEXP id="6" op="r3">
+</LOGEXP>
+</EQCLASS>
+            <EQCLASS id="0" isCorrelated="false">
+       <LOGEXP id="4" op="r1">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+        <EQCLASS id="1" isCorrelated="false">
+     <LOGEXP id="5" op="r2">
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+</LOGEXP>
+</EQCLASS>
+End of Expanded LQDAG
+Getting interesting props for Eq = 6
+Getting interesting props for Op = 0
+Getting interesting props for Eq = 5
+Getting interesting props for Op = 1
+Getting interesting props for Eq = 4
+Getting interesting props for Op = 2
+Getting interesting props for Eq = 2
+Getting interesting props for Op = 3
+Getting interesting props for Eq = 0
+Getting interesting props for Eq = 1
+Getting interesting props for Eq = 3
+Getting interesting props for Op = 7
+Getting interesting props for Eq = 2
+Getting interesting props for Op = 3
+Getting interesting props for Eq = 0
+Getting interesting props for Eq = 1
+Getting interesting props for Eq = 3
+Getting interesting props for Op = 9
+Getting interesting props for Eq = 7
+Getting interesting props for Op = 8
+Getting interesting props for Eq = 2
+Getting interesting props for Op = 3
+Getting interesting props for Eq = 0
+Getting interesting props for Eq = 1
+Getting interesting props for Op = 14
+Getting interesting props for Eq = 0
+Getting interesting props for Eq = 1
+Getting interesting props for Eq = 3
+Getting interesting props for Op = 13
+Getting interesting props for Eq = 8
+Getting interesting props for Op = 12
+Getting interesting props for Eq = 3
+Getting interesting props for Eq = 0
+Getting interesting props for Eq = 1
+Computed the favorable orders for Eq 0
+Computed the favorable orders for Eq 1
+Computed the favorable orders for Eq 2
+Computed the favorable orders for Eq 3
+Computed the favorable orders for Eq 4
+Computed the favorable orders for Eq 7
+Computed the favorable orders for Eq 8
+Computed the favorable orders for Eq 5
+Computed the favorable orders for Eq 6
+LDAGUSR 0
+LDAGSYS 4
+Deleting logexpr 8
+Deleting child logExpr 8 from 7
+Before Deletion
+[8][14]
+After Deletion
+[14]
+Deleting parent logExpr 8 from 2
+Applying logical subsumption at SubDAG for eq 6
+Applying logical subsumption at SubDAG for eq 5
+Applying logical subsumption at SubDAG for eq 4
+Applying logical subsumption at SubDAG for eq 2
+Applying logical subsumption at SubDAG for eq 0
+Applying logical subsumption at SubDAG for eq 0
+Finished Applying logical subsumption at SubDAG for eq 0
+Finished Applying logical subsumption at SubDAG for eq 0
+
+Applying logical subsumption at SubDAG for eq 1
+Applying logical subsumption at SubDAG for eq 1
+Finished Applying logical subsumption at SubDAG for eq 1
+Finished Applying logical subsumption at SubDAG for eq 1
+
+Applying logical subsumption at SubDAG for eq 2
+Finished Applying logical subsumption at SubDAG for eq 2
+Finished Applying logical subsumption at SubDAG for eq 2
+
+Applying logical subsumption at SubDAG for eq 3
+Applying logical subsumption at SubDAG for eq 3
+Finished Applying logical subsumption at SubDAG for eq 3
+Finished Applying logical subsumption at SubDAG for eq 3
+
+Applying logical subsumption at SubDAG for eq 4
+Finished Applying logical subsumption at SubDAG for eq 4
+Finished Applying logical subsumption at SubDAG for eq 4
+
+Applying logical subsumption at SubDAG for eq 7
+Applying logical subsumption at SubDAG for eq 7
+Finished Applying logical subsumption at SubDAG for eq 7
+Finished Applying logical subsumption at SubDAG for eq 7
+
+Applying logical subsumption at SubDAG for eq 8
+Applying logical subsumption at SubDAG for eq 8
+Finished Applying logical subsumption at SubDAG for eq 8
+Finished Applying logical subsumption at SubDAG for eq 8
+
+Applying logical subsumption at SubDAG for eq 5
+Finished Applying logical subsumption at SubDAG for eq 5
+Finished Applying logical subsumption at SubDAG for eq 5
+
+Applying logical subsumption at SubDAG for eq 6
+Finished Applying logical subsumption at SubDAG for eq 6
+Finished Applying logical subsumption at SubDAG for eq 6
+
+Optimizing Eq: 6
+FindBestPlan Eq: 6
+Volcano_t::FindBestAlgPlan Iterating over 6 for PlanGroup = 0
+Eq = 6 PlanGroup = 0 LogExpr = 0
+FindBestPlan Eq: 5
+Volcano_t::FindBestAlgPlan Iterating over 5 for PlanGroup = 1
+Eq = 5 PlanGroup = 1 LogExpr = 1
+Added new plan group id = 3 for eq id = 4
+Number of properties = 1
+< 2 >
+
+FindBestPlan Eq: 4
+Volcano_t::FindBestAlgPlan Iterating over 4 for PlanGroup = 3
+Eq = 4 PlanGroup = 3 LogExpr = 2
+Volcano_t::FindBestAlgPlan Finished Iterating over 4 for PlanGroup = 3
+CPU Blocks = 7.30435e+18
+Segment Sort Cost=4.47536e+15Distincts = 1Finished FindBestPlan Eq: 4
+Eq = 5 PlanGroup = 1 LogExpr = 7
+Generating interesting orders - FavOrd approach
+JoinAttrSetSize = 3
+ Number of interesting orders for LogOp 7 : 1
+< r3:r3c1 r3:r3c4 r3:r3c5 >
+Order reqd from EqNode: 2< r1:r1c1 r1:r1c4 r1:r1c5 >
+Order reqd from EqNode: 3< r3:r3c1 r3:r3c4 r3:r3c5 >Added new plan group id = 5 for eq id = 2
+Number of properties = 1
+< 4 1 0 >
+
+FindBestPlan Eq: 2
+Volcano_t::FindBestAlgPlan Iterating over 2 for PlanGroup = 5
+Eq = 2 PlanGroup = 5 LogExpr = 3
+Volcano_t::FindBestAlgPlan Finished Iterating over 2 for PlanGroup = 5
+CPU Blocks = 1.63107e+12
+Segment Sort Cost=8.69903e+08Distincts = 1Finished FindBestPlan Eq: 2
+Eq = 5 PlanGroup = 1 LogExpr = 9
+Generating interesting orders - FavOrd approach
+JoinAttrSetSize = 3
+ Number of interesting orders for LogOp 9 : 1
+< r3:r3c1 r3:r3c4 r3:r3c5 >
+Order reqd from EqNode: 7< r1:r1c1 r1:r1c4 r1:r1c5 >
+Order reqd from EqNode: 3< r3:r3c1 r3:r3c4 r3:r3c5 >Added new plan group id = 7 for eq id = 7
+Number of properties = 1
+< 4 1 0 >
+
+FindBestPlan Eq: 7
+Volcano_t::FindBestAlgPlan Iterating over 7 for PlanGroup = 7
+Eq = 7 PlanGroup = 7 LogExpr = 14
+Generating interesting orders - FavOrd approach
+JoinAttrSetSize = 3
+ Number of interesting orders for LogOp 14 : 1
+< r1:r1c3 r1:r1c4 r1:r1c5 >Volcano_t::FindBestAlgPlan Finished Iterating over 7 for PlanGroup = 7
+FindBestAlgPlan Eq: 7
+Volcano_t::FindBestAlgPlan Iterating over 7 for PlanGroup = 6
+Eq = 7 PlanGroup = 6 LogExpr = 14
+Generating interesting orders - FavOrd approach
+JoinAttrSetSize = 3
+ Number of interesting orders for LogOp 14 : 1
+< r1:r1c3 r1:r1c4 r1:r1c5 >
+Order reqd from EqNode: 0< r1:r1c3 r1:r1c4 r1:r1c5 >
+Order reqd from EqNode: 1< r2:r2c3 r2:r2c4 r2:r2c5 >Added new plan group id = 9 for eq id = 0
+Number of properties = 1
+< 2 1 0 >
+
+FindBestPlan Eq: 0
+Volcano_t::FindBestAlgPlan Iterating over 0 for PlanGroup = 9
+Eq = 0 PlanGroup = 9 LogExpr = 4
+Volcano_t::FindBestAlgPlan Finished Iterating over 0 for PlanGroup = 9
+CPU Blocks = 840000
+Segment Sort Cost=488Distincts = 1FindBestAlgPlan Eq: 0
+Volcano_t::FindBestAlgPlan Iterating over 0 for PlanGroup = 8
+Eq = 0 PlanGroup = 8 LogExpr = 4
+[EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 0 for PlanGroup = 8
+Finished FindBestAlgPlan Eq: 0
+[EQCLASS0][PLANGRP9][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| [ENF1][CC=1]SORT< r1:r1c3 r1:r1c4 r1:r1c5 > Cost = 488
+| | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+
+
+Finished FindBestPlan Eq: 0
+Added new plan group id = 11 for eq id = 1
+Number of properties = 1
+< 2 1 0 >
+
+FindBestPlan Eq: 1
+Volcano_t::FindBestAlgPlan Iterating over 1 for PlanGroup = 11
+Eq = 1 PlanGroup = 11 LogExpr = 5
+Volcano_t::FindBestAlgPlan Finished Iterating over 1 for PlanGroup = 11
+CPU Blocks = 840000
+Segment Sort Cost=488Distincts = 1FindBestAlgPlan Eq: 1
+Volcano_t::FindBestAlgPlan Iterating over 1 for PlanGroup = 10
+Eq = 1 PlanGroup = 10 LogExpr = 5
+[EQCLASS1][PLANGRP10][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| [ALG2][CC=1]RELSCAN< r2 > Cost = 88
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 1 for PlanGroup = 10
+Finished FindBestAlgPlan Eq: 1
+[EQCLASS1][PLANGRP11][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| [ENF3][CC=1]SORT< r2:r2c3 r2:r2c4 r2:r2c5 > Cost = 488
+| | [EQCLASS1][PLANGRP10][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | [ALG2][CC=1]RELSCAN< r2 > Cost = 88
+
+
+Finished FindBestPlan Eq: 1
+[EQCLASS7][PLANGRP6][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| [ALG4][CC=-1]MERGEJOIN< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] > Cost = 0.0004
+| | [EQCLASS0][PLANGRP9][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF1][CC=1]SORT< r1:r1c3 r1:r1c4 r1:r1c5 > Cost = 488
+| | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+| | [EQCLASS1][PLANGRP11][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF3][CC=1]SORT< r2:r2c3 r2:r2c4 r2:r2c5 > Cost = 488
+| | | | [EQCLASS1][PLANGRP10][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 88
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 7 for PlanGroup = 6
+Added new plan group id = 12 for eq id = 7
+Number of properties = 1
+< 2 >
+
+FindBestAlgPlan Eq: 7
+Volcano_t::FindBestAlgPlan Iterating over 7 for PlanGroup = 12
+Eq = 7 PlanGroup = 12 LogExpr = 14
+Generating interesting orders - FavOrd approach
+JoinAttrSetSize = 3
+ Number of interesting orders for LogOp 14 : 1
+< r1:r1c3 r1:r1c4 >
+Order reqd from EqNode: 0< r1:r1c3 r1:r1c4 >
+Order reqd from EqNode: 1< r2:r2c3 r2:r2c4 >Added new plan group id = 13 for eq id = 0
+Number of properties = 1
+< 2 1 >
+
+FindBestPlan Eq: 0
+Volcano_t::FindBestAlgPlan Iterating over 0 for PlanGroup = 13
+Eq = 0 PlanGroup = 13 LogExpr = 4
+Volcano_t::FindBestAlgPlan Finished Iterating over 0 for PlanGroup = 13
+CPU Blocks = 840000
+Segment Sort Cost=488Distincts = 1FindBestAlgPlan Eq: 0
+Finished FindBestAlgPlan Eq: 0
+[EQCLASS0][PLANGRP13][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| [ENF5][CC=1]SORT< r1:r1c3 r1:r1c4 > Cost = 488
+| | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+
+
+Finished FindBestPlan Eq: 0
+Added new plan group id = 14 for eq id = 1
+Number of properties = 1
+< 2 1 >
+
+FindBestPlan Eq: 1
+Volcano_t::FindBestAlgPlan Iterating over 1 for PlanGroup = 14
+Eq = 1 PlanGroup = 14 LogExpr = 5
+Volcano_t::FindBestAlgPlan Finished Iterating over 1 for PlanGroup = 14
+CPU Blocks = 840000
+Segment Sort Cost=488Distincts = 1FindBestAlgPlan Eq: 1
+Finished FindBestAlgPlan Eq: 1
+[EQCLASS1][PLANGRP14][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| [ENF6][CC=1]SORT< r2:r2c3 r2:r2c4 > Cost = 488
+| | [EQCLASS1][PLANGRP10][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | [ALG2][CC=1]RELSCAN< r2 > Cost = 88
+
+
+Finished FindBestPlan Eq: 1
+[EQCLASS7][PLANGRP12][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| [ALG7][CC=-1]MERGEJOIN< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] > Cost = 0.0004
+| | [EQCLASS0][PLANGRP13][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF5][CC=1]SORT< r1:r1c3 r1:r1c4 > Cost = 488
+| | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+| | [EQCLASS1][PLANGRP14][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF6][CC=1]SORT< r2:r2c3 r2:r2c4 > Cost = 488
+| | | | [EQCLASS1][PLANGRP10][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 88
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 7 for PlanGroup = 12
+Finished FindBestAlgPlan Eq: 7
+[EQCLASS7][PLANGRP6][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| [ALG7][CC=-1]MERGEJOIN< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] > Cost = 0.0004
+| | [EQCLASS0][PLANGRP13][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF5][CC=1]SORT< r1:r1c3 r1:r1c4 > Cost = 488
+| | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+| | [EQCLASS1][PLANGRP14][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF6][CC=1]SORT< r2:r2c3 r2:r2c4 > Cost = 488
+| | | | [EQCLASS1][PLANGRP10][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 88
+
+
+Finished FindBestAlgPlan Eq: 7
+[EQCLASS7][PLANGRP7][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| [ENF8][CC=1]SORT< r1:r1c1 r1:r1c4 r1:r1c5 > Cost = 0
+| | [EQCLASS7][PLANGRP6][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | [ALG7][CC=-1]MERGEJOIN< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] > Cost = 0.0004
+| | | | [EQCLASS0][PLANGRP13][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ENF5][CC=1]SORT< r1:r1c3 r1:r1c4 > Cost = 488
+| | | | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+| | | | [EQCLASS1][PLANGRP14][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ENF6][CC=1]SORT< r2:r2c3 r2:r2c4 > Cost = 488
+| | | | | | [EQCLASS1][PLANGRP10][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 88
+
+
+Finished FindBestPlan Eq: 7
+Added new plan group id = 16 for eq id = 3
+Number of properties = 1
+< 4 1 0 >
+
+FindBestPlan Eq: 3
+Volcano_t::FindBestAlgPlan Iterating over 3 for PlanGroup = 16
+Eq = 3 PlanGroup = 16 LogExpr = 6
+Volcano_t::FindBestAlgPlan Finished Iterating over 3 for PlanGroup = 16
+CPU Blocks = 840000
+Segment Sort Cost=488Distincts = 1FindBestAlgPlan Eq: 3
+Volcano_t::FindBestAlgPlan Iterating over 3 for PlanGroup = 15
+Eq = 3 PlanGroup = 15 LogExpr = 6
+[EQCLASS3][PLANGRP15][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| [ALG9][CC=1]RELSCAN< r3 > Cost = 88
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 3 for PlanGroup = 15
+Finished FindBestAlgPlan Eq: 3
+[EQCLASS3][PLANGRP16][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| [ENF10][CC=1]SORT< r3:r3c1 r3:r3c4 r3:r3c5 > Cost = 488
+| | [EQCLASS3][PLANGRP15][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | [ALG9][CC=1]RELSCAN< r3 > Cost = 88
+
+
+Finished FindBestPlan Eq: 3
+[EQCLASS5][PLANGRP1][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1728 #Tuples = 1 #Blocks = 1
+| [ALG11][CC=-1]MERGEJOIN< AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] > Cost = 0.0004
+| | [EQCLASS7][PLANGRP7][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | [ENF8][CC=1]SORT< r1:r1c1 r1:r1c4 r1:r1c5 > Cost = 0
+| | | | [EQCLASS7][PLANGRP6][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | | | [ALG7][CC=-1]MERGEJOIN< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] > Cost = 0.0004
+| | | | | | [EQCLASS0][PLANGRP13][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ENF5][CC=1]SORT< r1:r1c3 r1:r1c4 > Cost = 488
+| | | | | | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+| | | | | | [EQCLASS1][PLANGRP14][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ENF6][CC=1]SORT< r2:r2c3 r2:r2c4 > Cost = 488
+| | | | | | | | [EQCLASS1][PLANGRP10][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 88
+| | [EQCLASS3][PLANGRP16][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF10][CC=1]SORT< r3:r3c1 r3:r3c4 r3:r3c5 > Cost = 488
+| | | | [EQCLASS3][PLANGRP15][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG9][CC=1]RELSCAN< r3 > Cost = 88
+
+
+Eq = 5 PlanGroup = 1 LogExpr = 13
+Generating interesting orders - FavOrd approach
+JoinAttrSetSize = 3
+ Number of interesting orders for LogOp 13 : 1
+< r1:r1c3 r3:r3c4 r3:r3c5 >
+Order reqd from EqNode: 8< r1:r1c3 r3:r3c4 r3:r3c5 >
+Order reqd from EqNode: 1< r2:r2c3 r2:r2c4 r2:r2c5 >Added new plan group id = 18 for eq id = 8
+Number of properties = 1
+< 7 1 0 >
+
+FindBestPlan Eq: 8
+Volcano_t::FindBestAlgPlan Iterating over 8 for PlanGroup = 18
+Eq = 8 PlanGroup = 18 LogExpr = 12
+Generating interesting orders - FavOrd approach
+JoinAttrSetSize = 3
+ Number of interesting orders for LogOp 12 : 1
+< r3:r3c1 r3:r3c4 r3:r3c5 >Volcano_t::FindBestAlgPlan Finished Iterating over 8 for PlanGroup = 18
+FindBestAlgPlan Eq: 8
+Volcano_t::FindBestAlgPlan Iterating over 8 for PlanGroup = 17
+Eq = 8 PlanGroup = 17 LogExpr = 12
+Generating interesting orders - FavOrd approach
+JoinAttrSetSize = 3
+ Number of interesting orders for LogOp 12 : 1
+< r3:r3c1 r3:r3c4 r3:r3c5 >
+Order reqd from EqNode: 3< r3:r3c1 r3:r3c4 r3:r3c5 >
+Order reqd from EqNode: 0< r1:r1c1 r1:r1c4 r1:r1c5 >FindBestPlan Eq: 3
+Finished FindBestPlan Eq: 3
+Added new plan group id = 19 for eq id = 0
+Number of properties = 1
+< 4 1 0 >
+
+FindBestPlan Eq: 0
+Volcano_t::FindBestAlgPlan Iterating over 0 for PlanGroup = 19
+Eq = 0 PlanGroup = 19 LogExpr = 4
+Volcano_t::FindBestAlgPlan Finished Iterating over 0 for PlanGroup = 19
+CPU Blocks = 840000
+Segment Sort Cost=488Distincts = 1FindBestAlgPlan Eq: 0
+Finished FindBestAlgPlan Eq: 0
+[EQCLASS0][PLANGRP19][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| [ENF12][CC=1]SORT< r1:r1c1 r1:r1c4 r1:r1c5 > Cost = 488
+| | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+
+
+Finished FindBestPlan Eq: 0
+[EQCLASS8][PLANGRP17][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| [ALG13][CC=-1]MERGEJOIN< AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] > Cost = 0.0004
+| | [EQCLASS3][PLANGRP16][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF10][CC=1]SORT< r3:r3c1 r3:r3c4 r3:r3c5 > Cost = 488
+| | | | [EQCLASS3][PLANGRP15][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG9][CC=1]RELSCAN< r3 > Cost = 88
+| | [EQCLASS0][PLANGRP19][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF12][CC=1]SORT< r1:r1c1 r1:r1c4 r1:r1c5 > Cost = 488
+| | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 8 for PlanGroup = 17
+Added new plan group id = 20 for eq id = 8
+Number of properties = 1
+< 4 >
+
+FindBestAlgPlan Eq: 8
+Volcano_t::FindBestAlgPlan Iterating over 8 for PlanGroup = 20
+Eq = 8 PlanGroup = 20 LogExpr = 12
+Generating interesting orders - FavOrd approach
+JoinAttrSetSize = 3
+ Number of interesting orders for LogOp 12 : 1
+< r3:r3c1 r3:r3c4 >
+Order reqd from EqNode: 3< r3:r3c1 r3:r3c4 >
+Order reqd from EqNode: 0< r1:r1c1 r1:r1c4 >Added new plan group id = 21 for eq id = 3
+Number of properties = 1
+< 4 1 >
+
+FindBestPlan Eq: 3
+Volcano_t::FindBestAlgPlan Iterating over 3 for PlanGroup = 21
+Eq = 3 PlanGroup = 21 LogExpr = 6
+Volcano_t::FindBestAlgPlan Finished Iterating over 3 for PlanGroup = 21
+CPU Blocks = 840000
+Segment Sort Cost=488Distincts = 1FindBestAlgPlan Eq: 3
+Finished FindBestAlgPlan Eq: 3
+[EQCLASS3][PLANGRP21][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| [ENF14][CC=1]SORT< r3:r3c1 r3:r3c4 > Cost = 488
+| | [EQCLASS3][PLANGRP15][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | [ALG9][CC=1]RELSCAN< r3 > Cost = 88
+
+
+Finished FindBestPlan Eq: 3
+Added new plan group id = 22 for eq id = 0
+Number of properties = 1
+< 4 1 >
+
+FindBestPlan Eq: 0
+Volcano_t::FindBestAlgPlan Iterating over 0 for PlanGroup = 22
+Eq = 0 PlanGroup = 22 LogExpr = 4
+Volcano_t::FindBestAlgPlan Finished Iterating over 0 for PlanGroup = 22
+CPU Blocks = 840000
+Segment Sort Cost=488Distincts = 1FindBestAlgPlan Eq: 0
+Finished FindBestAlgPlan Eq: 0
+[EQCLASS0][PLANGRP22][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| [ENF15][CC=1]SORT< r1:r1c1 r1:r1c4 > Cost = 488
+| | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+
+
+Finished FindBestPlan Eq: 0
+[EQCLASS8][PLANGRP20][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| [ALG16][CC=-1]MERGEJOIN< AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] > Cost = 0.0004
+| | [EQCLASS3][PLANGRP21][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF14][CC=1]SORT< r3:r3c1 r3:r3c4 > Cost = 488
+| | | | [EQCLASS3][PLANGRP15][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG9][CC=1]RELSCAN< r3 > Cost = 88
+| | [EQCLASS0][PLANGRP22][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF15][CC=1]SORT< r1:r1c1 r1:r1c4 > Cost = 488
+| | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 8 for PlanGroup = 20
+Finished FindBestAlgPlan Eq: 8
+[EQCLASS8][PLANGRP17][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| [ALG16][CC=-1]MERGEJOIN< AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] > Cost = 0.0004
+| | [EQCLASS3][PLANGRP21][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF14][CC=1]SORT< r3:r3c1 r3:r3c4 > Cost = 488
+| | | | [EQCLASS3][PLANGRP15][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG9][CC=1]RELSCAN< r3 > Cost = 88
+| | [EQCLASS0][PLANGRP22][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF15][CC=1]SORT< r1:r1c1 r1:r1c4 > Cost = 488
+| | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+
+
+Finished FindBestAlgPlan Eq: 8
+[EQCLASS8][PLANGRP18][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| [ENF17][CC=1]SORT< r1:r1c3 r3:r3c4 r3:r3c5 > Cost = 0
+| | [EQCLASS8][PLANGRP17][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | [ALG16][CC=-1]MERGEJOIN< AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] > Cost = 0.0004
+| | | | [EQCLASS3][PLANGRP21][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ENF14][CC=1]SORT< r3:r3c1 r3:r3c4 > Cost = 488
+| | | | | | [EQCLASS3][PLANGRP15][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ALG9][CC=1]RELSCAN< r3 > Cost = 88
+| | | | [EQCLASS0][PLANGRP22][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ENF15][CC=1]SORT< r1:r1c1 r1:r1c4 > Cost = 488
+| | | | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+
+
+Finished FindBestPlan Eq: 8
+FindBestPlan Eq: 1
+Finished FindBestPlan Eq: 1
+[EQCLASS5][PLANGRP1][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1728 #Tuples = 1 #Blocks = 1
+| [ALG18][CC=-1]MERGEJOIN< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] > Cost = 0.0004
+| | [EQCLASS8][PLANGRP18][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | [ENF17][CC=1]SORT< r1:r1c3 r3:r3c4 r3:r3c5 > Cost = 0
+| | | | [EQCLASS8][PLANGRP17][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | | | [ALG16][CC=-1]MERGEJOIN< AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] > Cost = 0.0004
+| | | | | | [EQCLASS3][PLANGRP21][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ENF14][CC=1]SORT< r3:r3c1 r3:r3c4 > Cost = 488
+| | | | | | | | [EQCLASS3][PLANGRP15][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ALG9][CC=1]RELSCAN< r3 > Cost = 88
+| | | | | | [EQCLASS0][PLANGRP22][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ENF15][CC=1]SORT< r1:r1c1 r1:r1c4 > Cost = 488
+| | | | | | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+| | [EQCLASS1][PLANGRP11][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF3][CC=1]SORT< r2:r2c3 r2:r2c4 r2:r2c5 > Cost = 488
+| | | | [EQCLASS1][PLANGRP10][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 88
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 5 for PlanGroup = 1
+Added new plan group id = 23 for eq id = 5
+Number of properties = 1
+< 14 >
+
+FindBestAlgPlan Eq: 5
+Volcano_t::FindBestAlgPlan Iterating over 5 for PlanGroup = 23
+Eq = 5 PlanGroup = 23 LogExpr = 1
+Eq = 5 PlanGroup = 23 LogExpr = 7
+Generating interesting orders - FavOrd approach
+JoinAttrSetSize = 3
+ Number of interesting orders for LogOp 7 : 1
+< r3:r3c1 r3:r3c4 r3:r3c5 >
+Order reqd from EqNode: 2< r1:r1c1 r1:r1c4 r1:r1c5 >
+Order reqd from EqNode: 3< r3:r3c1 r3:r3c4 r3:r3c5 >FindBestPlan Eq: 2
+Finished FindBestPlan Eq: 2
+Eq = 5 PlanGroup = 23 LogExpr = 9
+Generating interesting orders - FavOrd approach
+JoinAttrSetSize = 3
+ Number of interesting orders for LogOp 9 : 1
+< r3:r3c1 r3:r3c4 r3:r3c5 >
+Order reqd from EqNode: 7< r1:r1c1 r1:r1c4 r1:r1c5 >
+Order reqd from EqNode: 3< r3:r3c1 r3:r3c4 r3:r3c5 >FindBestPlan Eq: 7
+Finished FindBestPlan Eq: 7
+FindBestPlan Eq: 3
+Finished FindBestPlan Eq: 3
+[EQCLASS5][PLANGRP23][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1728 #Tuples = 1 #Blocks = 1
+| [ALG19][CC=-1]MERGEJOIN< AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] > Cost = 0.0004
+| | [EQCLASS7][PLANGRP7][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | [ENF8][CC=1]SORT< r1:r1c1 r1:r1c4 r1:r1c5 > Cost = 0
+| | | | [EQCLASS7][PLANGRP6][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | | | [ALG7][CC=-1]MERGEJOIN< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] > Cost = 0.0004
+| | | | | | [EQCLASS0][PLANGRP13][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ENF5][CC=1]SORT< r1:r1c3 r1:r1c4 > Cost = 488
+| | | | | | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+| | | | | | [EQCLASS1][PLANGRP14][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ENF6][CC=1]SORT< r2:r2c3 r2:r2c4 > Cost = 488
+| | | | | | | | [EQCLASS1][PLANGRP10][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 88
+| | [EQCLASS3][PLANGRP16][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF10][CC=1]SORT< r3:r3c1 r3:r3c4 r3:r3c5 > Cost = 488
+| | | | [EQCLASS3][PLANGRP15][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG9][CC=1]RELSCAN< r3 > Cost = 88
+
+
+Eq = 5 PlanGroup = 23 LogExpr = 13
+Generating interesting orders - FavOrd approach
+JoinAttrSetSize = 3
+ Number of interesting orders for LogOp 13 : 1
+< r1:r1c3 r3:r3c4 r3:r3c5 >Volcano_t::FindBestAlgPlan Finished Iterating over 5 for PlanGroup = 23
+Finished FindBestAlgPlan Eq: 5
+[EQCLASS5][PLANGRP1][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1728 #Tuples = 1 #Blocks = 1
+| [ALG19][CC=-1]MERGEJOIN< AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] > Cost = 0.0004
+| | [EQCLASS7][PLANGRP7][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | [ENF8][CC=1]SORT< r1:r1c1 r1:r1c4 r1:r1c5 > Cost = 0
+| | | | [EQCLASS7][PLANGRP6][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | | | [ALG7][CC=-1]MERGEJOIN< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] > Cost = 0.0004
+| | | | | | [EQCLASS0][PLANGRP13][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ENF5][CC=1]SORT< r1:r1c3 r1:r1c4 > Cost = 488
+| | | | | | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+| | | | | | [EQCLASS1][PLANGRP14][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ENF6][CC=1]SORT< r2:r2c3 r2:r2c4 > Cost = 488
+| | | | | | | | [EQCLASS1][PLANGRP10][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 88
+| | [EQCLASS3][PLANGRP16][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF10][CC=1]SORT< r3:r3c1 r3:r3c4 r3:r3c5 > Cost = 488
+| | | | [EQCLASS3][PLANGRP15][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG9][CC=1]RELSCAN< r3 > Cost = 88
+
+
+FindBestAlgPlan Eq: 5
+Finished FindBestAlgPlan Eq: 5
+[EQCLASS5][PLANGRP1][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1728 #Tuples = 1 #Blocks = 1
+| [ALG19][CC=-1]MERGEJOIN< AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] > Cost = 0.0004
+| | [EQCLASS7][PLANGRP7][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | [ENF8][CC=1]SORT< r1:r1c1 r1:r1c4 r1:r1c5 > Cost = 0
+| | | | [EQCLASS7][PLANGRP6][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | | | [ALG7][CC=-1]MERGEJOIN< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] > Cost = 0.0004
+| | | | | | [EQCLASS0][PLANGRP13][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ENF5][CC=1]SORT< r1:r1c3 r1:r1c4 > Cost = 488
+| | | | | | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+| | | | | | [EQCLASS1][PLANGRP14][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ENF6][CC=1]SORT< r2:r2c3 r2:r2c4 > Cost = 488
+| | | | | | | | [EQCLASS1][PLANGRP10][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 88
+| | [EQCLASS3][PLANGRP16][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF10][CC=1]SORT< r3:r3c1 r3:r3c4 r3:r3c5 > Cost = 488
+| | | | [EQCLASS3][PLANGRP15][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG9][CC=1]RELSCAN< r3 > Cost = 88
+
+
+Added new plan group id = 24 for eq id = 5
+Number of properties = 1
+< 2 >
+
+FindBestAlgPlan Eq: 5
+Volcano_t::FindBestAlgPlan Iterating over 5 for PlanGroup = 24
+Eq = 5 PlanGroup = 24 LogExpr = 1
+Eq = 5 PlanGroup = 24 LogExpr = 7
+Generating interesting orders - FavOrd approach
+JoinAttrSetSize = 3
+ Number of interesting orders for LogOp 7 : 1
+< r3:r3c1 r3:r3c4 r3:r3c5 >Eq = 5 PlanGroup = 24 LogExpr = 9
+Generating interesting orders - FavOrd approach
+JoinAttrSetSize = 3
+ Number of interesting orders for LogOp 9 : 1
+< r3:r3c1 r3:r3c4 r3:r3c5 >Eq = 5 PlanGroup = 24 LogExpr = 13
+Generating interesting orders - FavOrd approach
+JoinAttrSetSize = 3
+ Number of interesting orders for LogOp 13 : 1
+< r1:r1c3 r3:r3c4 r3:r3c5 >
+Order reqd from EqNode: 8< r1:r1c3 r3:r3c4 r3:r3c5 >
+Order reqd from EqNode: 1< r2:r2c3 r2:r2c4 r2:r2c5 >FindBestPlan Eq: 8
+Finished FindBestPlan Eq: 8
+FindBestPlan Eq: 1
+Finished FindBestPlan Eq: 1
+[EQCLASS5][PLANGRP24][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1728 #Tuples = 1 #Blocks = 1
+| [ALG20][CC=-1]MERGEJOIN< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] > Cost = 0.0004
+| | [EQCLASS8][PLANGRP18][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | [ENF17][CC=1]SORT< r1:r1c3 r3:r3c4 r3:r3c5 > Cost = 0
+| | | | [EQCLASS8][PLANGRP17][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | | | [ALG16][CC=-1]MERGEJOIN< AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] > Cost = 0.0004
+| | | | | | [EQCLASS3][PLANGRP21][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ENF14][CC=1]SORT< r3:r3c1 r3:r3c4 > Cost = 488
+| | | | | | | | [EQCLASS3][PLANGRP15][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ALG9][CC=1]RELSCAN< r3 > Cost = 88
+| | | | | | [EQCLASS0][PLANGRP22][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ENF15][CC=1]SORT< r1:r1c1 r1:r1c4 > Cost = 488
+| | | | | | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+| | [EQCLASS1][PLANGRP11][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF3][CC=1]SORT< r2:r2c3 r2:r2c4 r2:r2c5 > Cost = 488
+| | | | [EQCLASS1][PLANGRP10][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 88
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 5 for PlanGroup = 24
+Finished FindBestAlgPlan Eq: 5
+[EQCLASS5][PLANGRP1][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1728 #Tuples = 1 #Blocks = 1
+| [ALG20][CC=-1]MERGEJOIN< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] > Cost = 0.0004
+| | [EQCLASS8][PLANGRP18][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | [ENF17][CC=1]SORT< r1:r1c3 r3:r3c4 r3:r3c5 > Cost = 0
+| | | | [EQCLASS8][PLANGRP17][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | | | [ALG16][CC=-1]MERGEJOIN< AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] > Cost = 0.0004
+| | | | | | [EQCLASS3][PLANGRP21][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ENF14][CC=1]SORT< r3:r3c1 r3:r3c4 > Cost = 488
+| | | | | | | | [EQCLASS3][PLANGRP15][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ALG9][CC=1]RELSCAN< r3 > Cost = 88
+| | | | | | [EQCLASS0][PLANGRP22][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ENF15][CC=1]SORT< r1:r1c1 r1:r1c4 > Cost = 488
+| | | | | | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+| | [EQCLASS1][PLANGRP11][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | [ENF3][CC=1]SORT< r2:r2c3 r2:r2c4 r2:r2c5 > Cost = 488
+| | | | [EQCLASS1][PLANGRP10][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 88
+
+
+Finished FindBestPlan Eq: 5
+[EQCLASS6][PLANGRP0][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1728 #Tuples = 1 #Blocks = 1
+| [ALG21][CC=1]PROJECT< :r1c1 :r2c1 :r3c1 > Cost = 0
+| | [EQCLASS5][PLANGRP1][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1728 #Tuples = 1 #Blocks = 1
+| | | [ALG20][CC=-1]MERGEJOIN< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] > Cost = 0.0004
+| | | | [EQCLASS8][PLANGRP18][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | | | [ENF17][CC=1]SORT< r1:r1c3 r3:r3c4 r3:r3c5 > Cost = 0
+| | | | | | [EQCLASS8][PLANGRP17][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | | | | | [ALG16][CC=-1]MERGEJOIN< AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] > Cost = 0.0004
+| | | | | | | | [EQCLASS3][PLANGRP21][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ENF14][CC=1]SORT< r3:r3c1 r3:r3c4 > Cost = 488
+| | | | | | | | | | [EQCLASS3][PLANGRP15][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | | | [ALG9][CC=1]RELSCAN< r3 > Cost = 88
+| | | | | | | | [EQCLASS0][PLANGRP22][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ENF15][CC=1]SORT< r1:r1c1 r1:r1c4 > Cost = 488
+| | | | | | | | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+| | | | [EQCLASS1][PLANGRP11][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ENF3][CC=1]SORT< r2:r2c3 r2:r2c4 r2:r2c5 > Cost = 488
+| | | | | | [EQCLASS1][PLANGRP10][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 88
+
+
+Volcano_t::FindBestAlgPlan Finished Iterating over 6 for PlanGroup = 0
+Finished FindBestPlan Eq: 6
+Done Optimizing Eq: 6
+
+Optimization Successful: Plan Cost = 1728 Cost Limit = 1728
+
+[EQCLASS6][PLANGRP0][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1728 #Tuples = 1 #Blocks = 1
+| [ALG21][CC=1]PROJECT< :r1c1 :r2c1 :r3c1 > Cost = 0
+| | [EQCLASS5][PLANGRP1][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1728 #Tuples = 1 #Blocks = 1
+| | | [ALG20][CC=-1]MERGEJOIN< AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] > Cost = 0.0004
+| | | | [EQCLASS8][PLANGRP18][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | | | [ENF17][CC=1]SORT< r1:r1c3 r3:r3c4 r3:r3c5 > Cost = 0
+| | | | | | [EQCLASS8][PLANGRP17][CC=1][PSO=NULL] UseCost = 0.0022 Plan Cost = 1152 #Tuples = 1 #Blocks = 1
+| | | | | | | [ALG16][CC=-1]MERGEJOIN< AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] > Cost = 0.0004
+| | | | | | | | [EQCLASS3][PLANGRP21][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ENF14][CC=1]SORT< r3:r3c1 r3:r3c4 > Cost = 488
+| | | | | | | | | | [EQCLASS3][PLANGRP15][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | | | [ALG9][CC=1]RELSCAN< r3 > Cost = 88
+| | | | | | | | [EQCLASS0][PLANGRP22][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | [ENF15][CC=1]SORT< r1:r1c1 r1:r1c4 > Cost = 488
+| | | | | | | | | | [EQCLASS0][PLANGRP8][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | | | | | [ALG0][CC=1]RELSCAN< r1 > Cost = 88
+| | | | [EQCLASS1][PLANGRP11][CC=1] UseCost = 88 Plan Cost = 576 #Tuples = 2e+06 #Blocks = 40000
+| | | | | [ENF3][CC=1]SORT< r2:r2c3 r2:r2c4 r2:r2c5 > Cost = 488
+| | | | | | [EQCLASS1][PLANGRP10][CC=1] UseCost = 88 Plan Cost = 88 #Tuples = 2e+06 #Blocks = 40000
+| | | | | | | [ALG2][CC=1]RELSCAN< r2 > Cost = 88
+
+
+Expression DAG:
+[EQCLASS6]
+| [LOGEXP0]PROJECT :r1c1 :r2c1 :r3c1 
+| | [EQCLASS5]
+| | | [LOGEXP1]SELECT< AND[ AND[ AND[ AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] :r3c1 == :r1c1 ] :r3c4 == :r1c4 ] :r3c5 == :r1c5 ] >
+| | | | [EQCLASS4]
+| | | | | [LOGEXP2]JOIN TRUE
+| | | | | | [EQCLASS2]
+| | | | | | | [LOGEXP3]JOIN TRUE
+| | | | | | | | [EQCLASS0]
+| | | | | | | | | [LOGEXP4]r1
+| | | | | | | | [EQCLASS1]
+| | | | | | | | | [LOGEXP5]r2
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | [LOGEXP7]JOIN AND[ AND[ AND[ AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ] :r3c1 == :r1c1 ] :r3c4 == :r1c4 ] :r3c5 == :r1c5 ]
+| | | | [EQCLASS2]
+| | | | | [LOGEXP3]JOIN TRUE
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | [LOGEXP9]JOIN AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ]
+| | | | [EQCLASS7]
+| | | | | [LOGEXP14]JOIN AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ]
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | | | [EQCLASS1]
+| | | | | | | [LOGEXP5]r2
+| | | | [EQCLASS3]
+| | | | | [LOGEXP6]r3
+| | | [LOGEXP13]JOIN AND[ AND[ :r1c3 == :r2c3 :r1c4 == :r2c4 ] :r1c5 == :r2c5 ]
+| | | | [EQCLASS8]
+| | | | | [LOGEXP12]JOIN AND[ AND[ :r3c1 == :r1c1 :r3c4 == :r1c4 ] :r3c5 == :r1c5 ]
+| | | | | | [EQCLASS3]
+| | | | | | | [LOGEXP6]r3
+| | | | | | [EQCLASS0]
+| | | | | | | [LOGEXP4]r1
+| | | | [EQCLASS1]
+| | | | | [LOGEXP5]r2
+
+Deleted eq 6
+Deleting parent logExpr 0 from 5
+Deleted eq 5
+Deleting parent logExpr 1 from 4
+Deleted eq 4
+Deleting parent logExpr 2 from 2
+Deleting parent logExpr 2 from 3
+Deleting parent logExpr 7 from 2
+Deleted eq 2
+Deleting parent logExpr 3 from 0
+Deleting parent logExpr 3 from 1
+Deleting parent logExpr 7 from 3
+Deleting parent logExpr 9 from 7
+Deleted eq 7
+Deleting parent logExpr 14 from 0
+Deleting parent logExpr 14 from 1
+Deleting parent logExpr 9 from 3
+Deleting parent logExpr 13 from 8
+Deleted eq 8
+Deleting parent logExpr 12 from 3
+Deleted eq 3
+Deleting parent logExpr 12 from 0
+Deleted eq 0
+Deleting parent logExpr 13 from 1
+Deleted eq 1

@@ -1,0 +1,977 @@
+NumOfTuples(R1) = 200
+TuplesPerBlock(R1) = 25
+
+DistinctAttr(R1,r1c1) = 200
+AttrMinValue(R1,r1c1) = 1
+AttrMaxValue(R1,r1c1) = 200
+AttrSize(R1,r1c1) = 4
+
+DistinctAttr(R1,r1c2) = 200
+AttrMinValue(R1,r1c2) = 1
+AttrMaxValue(R1,r1c2) = 200
+AttrSize(R1,r1c2) = 4
+
+DistinctAttr(R1,r1c3) = 200
+AttrMinValue(R1,r1c3) = 1
+AttrMaxValue(R1,r1c3) = 200
+AttrSize(R1,r1c3) = 4
+
+DistinctAttr(R1,r1c4) = 200
+AttrMinValue(R1,r1c4) = 1
+AttrMaxValue(R1,r1c4) = 200
+AttrSize(R1,r1c4) = 4
+
+DistinctAttr(R1,r1c5) = 200
+AttrMinValue(R1,r1c5) = 1
+AttrMaxValue(R1,r1c5) = 200
+AttrSize(R1,r1c5) = 4
+
+DistinctAttr(R1,r1c6) = 200
+AttrMinValue(R1,r1c6) = 1
+AttrMaxValue(R1,r1c6) = 200
+AttrSize(R1,r1c6) = 4
+
+DistinctAttr(R1,r1c7) = 200
+AttrMinValue(R1,r1c7) = 1
+AttrMaxValue(R1,r1c7) = 200
+AttrSize(R1,r1c7) = 4
+
+DistinctAttr(R1,r1c8) = 200
+AttrMinValue(R1,r1c8) = 1
+AttrMaxValue(R1,r1c8) = 200
+AttrSize(R1,r1c8) = 4
+
+DistinctAttr(R1,r1c9) = 200
+AttrMinValue(R1,r1c9) = 1
+AttrMaxValue(R1,r1c9) = 200
+AttrSize(R1,r1c9) = 4
+
+NumOfTuples(R2) = 200
+TuplesPerBlock(R2) = 25
+
+DistinctAttr(R2,r2c1) = 200
+AttrMinValue(R2,r2c1) = 1
+AttrMaxValue(R2,r2c1) = 200
+AttrSize(R2,r2c1) = 4
+
+DistinctAttr(R2,r2c2) = 200
+AttrMinValue(R2,r2c2) = 1
+AttrMaxValue(R2,r2c2) = 200
+AttrSize(R2,r2c2) = 4
+
+DistinctAttr(R2,r2c3) = 200
+AttrMinValue(R2,r2c3) = 1
+AttrMaxValue(R2,r2c3) = 200
+AttrSize(R2,r2c3) = 4
+
+DistinctAttr(R2,r2c4) = 200
+AttrMinValue(R2,r2c4) = 1
+AttrMaxValue(R2,r2c4) = 200
+AttrSize(R2,r2c4) = 4
+
+DistinctAttr(R2,r2c5) = 200
+AttrMinValue(R2,r2c5) = 1
+AttrMaxValue(R2,r2c5) = 200
+AttrSize(R2,r2c5) = 4
+
+DistinctAttr(R2,r2c6) = 200
+AttrMinValue(R2,r2c6) = 1
+AttrMaxValue(R2,r2c6) = 200
+AttrSize(R2,r2c6) = 4
+
+DistinctAttr(R2,r2c7) = 200
+AttrMinValue(R2,r2c7) = 1
+AttrMaxValue(R2,r2c7) = 200
+AttrSize(R2,r2c7) = 4
+
+DistinctAttr(R2,r2c8) = 200
+AttrMinValue(R2,r2c8) = 1
+AttrMaxValue(R2,r2c8) = 200
+AttrSize(R2,r2c8) = 4
+
+DistinctAttr(R2,r2c9) = 200
+AttrMinValue(R2,r2c9) = 1
+AttrMaxValue(R2,r2c9) = 200
+AttrSize(R2,r2c9) = 4
+
+
+NumOfTuples(R3) = 200
+TuplesPerBlock(R3) = 25
+
+DistinctAttr(R3,r3c1) = 200
+AttrMinValue(R3,r3c1) = 1
+AttrMaxValue(R3,r3c1) = 200
+AttrSize(R3,r3c1) = 4
+
+DistinctAttr(R3,r3c2) = 200
+AttrMinValue(R3,r3c2) = 1
+AttrMaxValue(R3,r3c2) = 200
+AttrSize(R3,r3c2) = 4
+
+DistinctAttr(R3,r3c3) = 200
+AttrMinValue(R3,r3c3) = 1
+AttrMaxValue(R3,r3c3) = 200
+AttrSize(R3,r3c3) = 4
+
+DistinctAttr(R3,r3c4) = 200
+AttrMinValue(R3,r3c4) = 1
+AttrMaxValue(R3,r3c4) = 200
+AttrSize(R3,r3c4) = 4
+
+DistinctAttr(R3,r3c5) = 200
+AttrMinValue(R3,r3c5) = 1
+AttrMaxValue(R3,r3c5) = 200
+AttrSize(R3,r3c5) = 4
+
+DistinctAttr(R3,r3c6) = 200
+AttrMinValue(R3,r3c6) = 1
+AttrMaxValue(R3,r3c6) = 200
+AttrSize(R3,r3c6) = 4
+
+DistinctAttr(R3,r3c7) = 200
+AttrMinValue(R3,r3c7) = 1
+AttrMaxValue(R3,r3c7) = 200
+AttrSize(R3,r3c7) = 4
+
+DistinctAttr(R3,r3c8) = 200
+AttrMinValue(R3,r3c8) = 1
+AttrMaxValue(R3,r3c8) = 200
+AttrSize(R3,r3c8) = 4
+
+DistinctAttr(R3,r3c9) = 200
+AttrMinValue(R3,r3c9) = 1
+AttrMaxValue(R3,r3c9) = 200
+AttrSize(R3,r3c9) = 4
+
+
+NumOfTuples(R4) = 200
+TuplesPerBlock(R4) = 25
+
+DistinctAttr(R4,r4c1) = 200
+AttrMinValue(R4,r4c1) = 1
+AttrMaxValue(R4,r4c1) = 200
+AttrSize(R4,r4c1) = 4
+
+DistinctAttr(R4,r4c2) = 200
+AttrMinValue(R4,r4c2) = 1
+AttrMaxValue(R4,r4c2) = 200
+AttrSize(R4,r4c2) = 4
+
+DistinctAttr(R4,r4c3) = 200
+AttrMinValue(R4,r4c3) = 1
+AttrMaxValue(R4,r4c3) = 200
+AttrSize(R4,r4c3) = 4
+
+DistinctAttr(R4,r4c4) = 200
+AttrMinValue(R4,r4c4) = 1
+AttrMaxValue(R4,r4c4) = 200
+AttrSize(R4,r4c4) = 4
+
+DistinctAttr(R4,r4c5) = 200
+AttrMinValue(R4,r4c5) = 1
+AttrMaxValue(R4,r4c5) = 200
+AttrSize(R4,r4c5) = 4
+
+DistinctAttr(R4,r4c6) = 200
+AttrMinValue(R4,r4c6) = 1
+AttrMaxValue(R4,r4c6) = 200
+AttrSize(R4,r4c6) = 4
+
+DistinctAttr(R4,r4c7) = 200
+AttrMinValue(R4,r4c7) = 1
+AttrMaxValue(R4,r4c7) = 200
+AttrSize(R4,r4c7) = 4
+
+DistinctAttr(R4,r4c8) = 200
+AttrMinValue(R4,r4c8) = 1
+AttrMaxValue(R4,r4c8) = 200
+AttrSize(R4,r4c8) = 4
+
+DistinctAttr(R4,r4c9) = 200
+AttrMinValue(R4,r4c9) = 1
+AttrMaxValue(R4,r4c9) = 200
+AttrSize(R4,r4c9) = 4
+
+
+NumOfTuples(R5) = 200
+TuplesPerBlock(R5) = 25
+
+DistinctAttr(R5,r5c1) = 200
+AttrMinValue(R5,r5c1) = 1
+AttrMaxValue(R5,r5c1) = 200
+AttrSize(R5,r5c1) = 4
+
+DistinctAttr(R5,r5c2) = 200
+AttrMinValue(R5,r5c2) = 1
+AttrMaxValue(R5,r5c2) = 200
+AttrSize(R5,r5c2) = 4
+
+DistinctAttr(R5,r5c3) = 200
+AttrMinValue(R5,r5c3) = 1
+AttrMaxValue(R5,r5c3) = 200
+AttrSize(R5,r5c3) = 4
+
+DistinctAttr(R5,r5c4) = 200
+AttrMinValue(R5,r5c4) = 1
+AttrMaxValue(R5,r5c4) = 200
+AttrSize(R5,r5c4) = 4
+
+DistinctAttr(R5,r5c5) = 200
+AttrMinValue(R5,r5c5) = 1
+AttrMaxValue(R5,r5c5) = 200
+AttrSize(R5,r5c5) = 4
+
+DistinctAttr(R5,r5c6) = 200
+AttrMinValue(R5,r5c6) = 1
+AttrMaxValue(R5,r5c6) = 200
+AttrSize(R5,r5c6) = 4
+
+DistinctAttr(R5,r5c7) = 200
+AttrMinValue(R5,r5c7) = 1
+AttrMaxValue(R5,r5c7) = 200
+AttrSize(R5,r5c7) = 4
+
+DistinctAttr(R5,r5c8) = 200
+AttrMinValue(R5,r5c8) = 1
+AttrMaxValue(R5,r5c8) = 200
+AttrSize(R5,r5c8) = 4
+
+DistinctAttr(R5,r5c9) = 200
+AttrMinValue(R5,r5c9) = 1
+AttrMaxValue(R5,r5c9) = 200
+AttrSize(R5,r5c9) = 4
+
+
+NumOfTuples(R6) = 200
+TuplesPerBlock(R6) = 25
+
+DistinctAttr(R6,r6c1) = 200
+AttrMinValue(R6,r6c1) = 1
+AttrMaxValue(R6,r6c1) = 200
+AttrSize(R6,r6c1) = 4
+
+DistinctAttr(R6,r6c2) = 200
+AttrMinValue(R6,r6c2) = 1
+AttrMaxValue(R6,r6c2) = 200
+AttrSize(R6,r6c2) = 4
+
+DistinctAttr(R6,r6c3) = 200
+AttrMinValue(R6,r6c3) = 1
+AttrMaxValue(R6,r6c3) = 200
+AttrSize(R6,r6c3) = 4
+
+DistinctAttr(R6,r6c4) = 200
+AttrMinValue(R6,r6c4) = 1
+AttrMaxValue(R6,r6c4) = 200
+AttrSize(R6,r6c4) = 4
+
+DistinctAttr(R6,r6c5) = 200
+AttrMinValue(R6,r6c5) = 1
+AttrMaxValue(R6,r6c5) = 200
+AttrSize(R6,r6c5) = 4
+
+DistinctAttr(R6,r6c6) = 200
+AttrMinValue(R6,r6c6) = 1
+AttrMaxValue(R6,r6c6) = 200
+AttrSize(R6,r6c6) = 4
+
+DistinctAttr(R6,r6c7) = 200
+AttrMinValue(R6,r6c7) = 1
+AttrMaxValue(R6,r6c7) = 200
+AttrSize(R6,r6c7) = 4
+
+DistinctAttr(R6,r6c8) = 200
+AttrMinValue(R6,r6c8) = 1
+AttrMaxValue(R6,r6c8) = 200
+AttrSize(R6,r6c8) = 4
+
+DistinctAttr(R6,r6c9) = 200
+AttrMinValue(R6,r6c9) = 1
+AttrMaxValue(R6,r6c9) = 200
+AttrSize(R6,r6c9) = 4
+
+
+NumOfTuples(R7) = 200
+TuplesPerBlock(R7) = 25
+
+DistinctAttr(R7,r7c1) = 200
+AttrMinValue(R7,r7c1) = 1
+AttrMaxValue(R7,r7c1) = 200
+AttrSize(R7,r7c1) = 4
+
+DistinctAttr(R7,r7c2) = 200
+AttrMinValue(R7,r7c2) = 1
+AttrMaxValue(R7,r7c2) = 200
+AttrSize(R7,r7c2) = 4
+
+DistinctAttr(R7,r7c3) = 200
+AttrMinValue(R7,r7c3) = 1
+AttrMaxValue(R7,r7c3) = 200
+AttrSize(R7,r7c3) = 4
+
+DistinctAttr(R7,r7c4) = 200
+AttrMinValue(R7,r7c4) = 1
+AttrMaxValue(R7,r7c4) = 200
+AttrSize(R7,r7c4) = 4
+
+DistinctAttr(R7,r7c5) = 200
+AttrMinValue(R7,r7c5) = 1
+AttrMaxValue(R7,r7c5) = 200
+AttrSize(R7,r7c5) = 4
+
+DistinctAttr(R7,r7c6) = 200
+AttrMinValue(R7,r7c6) = 1
+AttrMaxValue(R7,r7c6) = 200
+AttrSize(R7,r7c6) = 4
+
+DistinctAttr(R7,r7c7) = 200
+AttrMinValue(R7,r7c7) = 1
+AttrMaxValue(R7,r7c7) = 200
+AttrSize(R7,r7c7) = 4
+
+DistinctAttr(R7,r7c8) = 200
+AttrMinValue(R7,r7c8) = 1
+AttrMaxValue(R7,r7c8) = 200
+AttrSize(R7,r7c8) = 4
+
+DistinctAttr(R7,r7c9) = 200
+AttrMinValue(R7,r7c9) = 1
+AttrMaxValue(R7,r7c9) = 200
+AttrSize(R7,r7c9) = 4
+
+
+NumOfTuples(R8) = 200
+TuplesPerBlock(R8) = 25
+
+DistinctAttr(R8,r8c1) = 200
+AttrMinValue(R8,r8c1) = 1
+AttrMaxValue(R8,r8c1) = 200
+AttrSize(R8,r8c1) = 4
+
+DistinctAttr(R8,r8c2) = 200
+AttrMinValue(R8,r8c2) = 1
+AttrMaxValue(R8,r8c2) = 200
+AttrSize(R8,r8c2) = 4
+
+DistinctAttr(R8,r8c3) = 200
+AttrMinValue(R8,r8c3) = 1
+AttrMaxValue(R8,r8c3) = 200
+AttrSize(R8,r8c3) = 4
+
+DistinctAttr(R8,r8c4) = 200
+AttrMinValue(R8,r8c4) = 1
+AttrMaxValue(R8,r8c4) = 200
+AttrSize(R8,r8c4) = 4
+
+DistinctAttr(R8,r8c5) = 200
+AttrMinValue(R8,r8c5) = 1
+AttrMaxValue(R8,r8c5) = 200
+AttrSize(R8,r8c5) = 4
+
+DistinctAttr(R8,r8c6) = 200
+AttrMinValue(R8,r8c6) = 1
+AttrMaxValue(R8,r8c6) = 200
+AttrSize(R8,r8c6) = 4
+
+DistinctAttr(R8,r8c7) = 200
+AttrMinValue(R8,r8c7) = 1
+AttrMaxValue(R8,r8c7) = 200
+AttrSize(R8,r8c7) = 4
+
+DistinctAttr(R8,r8c8) = 200
+AttrMinValue(R8,r8c8) = 1
+AttrMaxValue(R8,r8c8) = 200
+AttrSize(R8,r8c8) = 4
+
+DistinctAttr(R8,r8c9) = 200
+AttrMinValue(R8,r8c9) = 1
+AttrMaxValue(R8,r8c9) = 200
+AttrSize(R8,r8c9) = 4
+
+
+NumOfTuples(R9) = 200
+TuplesPerBlock(R9) = 25
+
+DistinctAttr(R9,r9c1) = 200
+AttrMinValue(R9,r9c1) = 1
+AttrMaxValue(R9,r9c1) = 200
+AttrSize(R9,r9c1) = 4
+
+DistinctAttr(R9,r9c2) = 200
+AttrMinValue(R9,r9c2) = 1
+AttrMaxValue(R9,r9c2) = 200
+AttrSize(R9,r9c2) = 4
+
+DistinctAttr(R9,r9c3) = 200
+AttrMinValue(R9,r9c3) = 1
+AttrMaxValue(R9,r9c3) = 200
+AttrSize(R9,r9c3) = 4
+
+DistinctAttr(R9,r9c4) = 200
+AttrMinValue(R9,r9c4) = 1
+AttrMaxValue(R9,r9c4) = 200
+AttrSize(R9,r9c4) = 4
+
+DistinctAttr(R9,r9c5) = 200
+AttrMinValue(R9,r9c5) = 1
+AttrMaxValue(R9,r9c5) = 200
+AttrSize(R9,r9c5) = 4
+
+DistinctAttr(R9,r9c6) = 200
+AttrMinValue(R9,r9c6) = 1
+AttrMaxValue(R9,r9c6) = 200
+AttrSize(R9,r9c6) = 4
+
+DistinctAttr(R9,r9c7) = 200
+AttrMinValue(R9,r9c7) = 1
+AttrMaxValue(R9,r9c7) = 200
+AttrSize(R9,r9c7) = 4
+
+DistinctAttr(R9,r9c8) = 200
+AttrMinValue(R9,r9c8) = 1
+AttrMaxValue(R9,r9c8) = 200
+AttrSize(R9,r9c8) = 4
+
+DistinctAttr(R9,r9c9) = 200
+AttrMinValue(R9,r9c9) = 1
+AttrMaxValue(R9,r9c9) = 200
+AttrSize(R9,r9c9) = 4
+
+
+NumOfTuples(R10) = 200
+TuplesPerBlock(R10) = 25
+
+DistinctAttr(R10,r10c1) = 200
+AttrMinValue(R10,r10c1) = 1
+AttrMaxValue(R10,r10c1) = 200
+AttrSize(R10,r10c1) = 4
+
+DistinctAttr(R10,r10c2) = 200
+AttrMinValue(R10,r10c2) = 1
+AttrMaxValue(R10,r10c2) = 200
+AttrSize(R10,r10c2) = 4
+
+DistinctAttr(R10,r10c3) = 200
+AttrMinValue(R10,r10c3) = 1
+AttrMaxValue(R10,r10c3) = 200
+AttrSize(R10,r10c3) = 4
+
+DistinctAttr(R10,r10c4) = 200
+AttrMinValue(R10,r10c4) = 1
+AttrMaxValue(R10,r10c4) = 200
+AttrSize(R10,r10c4) = 4
+
+DistinctAttr(R10,r10c5) = 200
+AttrMinValue(R10,r10c5) = 1
+AttrMaxValue(R10,r10c5) = 200
+AttrSize(R10,r10c5) = 4
+
+DistinctAttr(R10,r10c6) = 200
+AttrMinValue(R10,r10c6) = 1
+AttrMaxValue(R10,r10c6) = 200
+AttrSize(R10,r10c6) = 4
+
+DistinctAttr(R10,r10c7) = 200
+AttrMinValue(R10,r10c7) = 1
+AttrMaxValue(R10,r10c7) = 200
+AttrSize(R10,r10c7) = 4
+
+DistinctAttr(R10,r10c8) = 200
+AttrMinValue(R10,r10c8) = 1
+AttrMaxValue(R10,r10c8) = 200
+AttrSize(R10,r10c8) = 4
+
+DistinctAttr(R10,r10c9) = 200
+AttrMinValue(R10,r10c9) = 1
+AttrMaxValue(R10,r10c9) = 200
+AttrSize(R10,r10c9) = 4
+
+
+NumOfTuples(R11) = 200
+TuplesPerBlock(R11) = 25
+
+DistinctAttr(R11,r11c1) = 200
+AttrMinValue(R11,r11c1) = 1
+AttrMaxValue(R11,r11c1) = 200
+AttrSize(R11,r11c1) = 4
+
+DistinctAttr(R11,r11c2) = 200
+AttrMinValue(R11,r11c2) = 1
+AttrMaxValue(R11,r11c2) = 200
+AttrSize(R11,r11c2) = 4
+
+DistinctAttr(R11,r11c3) = 200
+AttrMinValue(R11,r11c3) = 1
+AttrMaxValue(R11,r11c3) = 200
+AttrSize(R11,r11c3) = 4
+
+DistinctAttr(R11,r11c4) = 200
+AttrMinValue(R11,r11c4) = 1
+AttrMaxValue(R11,r11c4) = 200
+AttrSize(R11,r11c4) = 4
+
+DistinctAttr(R11,r11c5) = 200
+AttrMinValue(R11,r11c5) = 1
+AttrMaxValue(R11,r11c5) = 200
+AttrSize(R11,r11c5) = 4
+
+DistinctAttr(R11,r11c6) = 200
+AttrMinValue(R11,r11c6) = 1
+AttrMaxValue(R11,r11c6) = 200
+AttrSize(R11,r11c6) = 4
+
+DistinctAttr(R11,r11c7) = 200
+AttrMinValue(R11,r11c7) = 1
+AttrMaxValue(R11,r11c7) = 200
+AttrSize(R11,r11c7) = 4
+
+DistinctAttr(R11,r11c8) = 200
+AttrMinValue(R11,r11c8) = 1
+AttrMaxValue(R11,r11c8) = 200
+AttrSize(R11,r11c8) = 4
+
+DistinctAttr(R11,r11c9) = 200
+AttrMinValue(R11,r11c9) = 1
+AttrMaxValue(R11,r11c9) = 200
+AttrSize(R11,r11c9) = 4
+
+
+NumOfTuples(R12) = 200
+TuplesPerBlock(R12) = 25
+
+DistinctAttr(R12,r12c1) = 200
+AttrMinValue(R12,r12c1) = 1
+AttrMaxValue(R12,r12c1) = 200
+AttrSize(R12,r12c1) = 4
+
+DistinctAttr(R12,r12c2) = 200
+AttrMinValue(R12,r12c2) = 1
+AttrMaxValue(R12,r12c2) = 200
+AttrSize(R12,r12c2) = 4
+
+DistinctAttr(R12,r12c3) = 200
+AttrMinValue(R12,r12c3) = 1
+AttrMaxValue(R12,r12c3) = 200
+AttrSize(R12,r12c3) = 4
+
+DistinctAttr(R12,r12c4) = 200
+AttrMinValue(R12,r12c4) = 1
+AttrMaxValue(R12,r12c4) = 200
+AttrSize(R12,r12c4) = 4
+
+DistinctAttr(R12,r12c5) = 200
+AttrMinValue(R12,r12c5) = 1
+AttrMaxValue(R12,r12c5) = 200
+AttrSize(R12,r12c5) = 4
+
+DistinctAttr(R12,r12c6) = 200
+AttrMinValue(R12,r12c6) = 1
+AttrMaxValue(R12,r12c6) = 200
+AttrSize(R12,r12c6) = 4
+
+DistinctAttr(R12,r12c7) = 200
+AttrMinValue(R12,r12c7) = 1
+AttrMaxValue(R12,r12c7) = 200
+AttrSize(R12,r12c7) = 4
+
+DistinctAttr(R12,r12c8) = 200
+AttrMinValue(R12,r12c8) = 1
+AttrMaxValue(R12,r12c8) = 200
+AttrSize(R12,r12c8) = 4
+
+DistinctAttr(R12,r12c9) = 200
+AttrMinValue(R12,r12c9) = 1
+AttrMaxValue(R12,r12c9) = 200
+AttrSize(R12,r12c9) = 4
+
+
+NumOfTuples(R13) = 200
+TuplesPerBlock(R13) = 25
+
+DistinctAttr(R13,r13c1) = 200
+AttrMinValue(R13,r13c1) = 1
+AttrMaxValue(R13,r13c1) = 200
+AttrSize(R13,r13c1) = 4
+
+DistinctAttr(R13,r13c2) = 200
+AttrMinValue(R13,r13c2) = 1
+AttrMaxValue(R13,r13c2) = 200
+AttrSize(R13,r13c2) = 4
+
+DistinctAttr(R13,r13c3) = 200
+AttrMinValue(R13,r13c3) = 1
+AttrMaxValue(R13,r13c3) = 200
+AttrSize(R13,r13c3) = 4
+
+DistinctAttr(R13,r13c4) = 200
+AttrMinValue(R13,r13c4) = 1
+AttrMaxValue(R13,r13c4) = 200
+AttrSize(R13,r13c4) = 4
+
+DistinctAttr(R13,r13c5) = 200
+AttrMinValue(R13,r13c5) = 1
+AttrMaxValue(R13,r13c5) = 200
+AttrSize(R13,r13c5) = 4
+
+DistinctAttr(R13,r13c6) = 200
+AttrMinValue(R13,r13c6) = 1
+AttrMaxValue(R13,r13c6) = 200
+AttrSize(R13,r13c6) = 4
+
+DistinctAttr(R13,r13c7) = 200
+AttrMinValue(R13,r13c7) = 1
+AttrMaxValue(R13,r13c7) = 200
+AttrSize(R13,r13c7) = 4
+
+DistinctAttr(R13,r13c8) = 200
+AttrMinValue(R13,r13c8) = 1
+AttrMaxValue(R13,r13c8) = 200
+AttrSize(R13,r13c8) = 4
+
+DistinctAttr(R13,r13c9) = 200
+AttrMinValue(R13,r13c9) = 1
+AttrMaxValue(R13,r13c9) = 200
+AttrSize(R13,r13c9) = 4
+
+
+NumOfTuples(R14) = 200
+TuplesPerBlock(R14) = 25
+
+DistinctAttr(R14,r14c1) = 200
+AttrMinValue(R14,r14c1) = 1
+AttrMaxValue(R14,r14c1) = 200
+AttrSize(R14,r14c1) = 4
+
+DistinctAttr(R14,r14c2) = 200
+AttrMinValue(R14,r14c2) = 1
+AttrMaxValue(R14,r14c2) = 200
+AttrSize(R14,r14c2) = 4
+
+DistinctAttr(R14,r14c3) = 200
+AttrMinValue(R14,r14c3) = 1
+AttrMaxValue(R14,r14c3) = 200
+AttrSize(R14,r14c3) = 4
+
+DistinctAttr(R14,r14c4) = 200
+AttrMinValue(R14,r14c4) = 1
+AttrMaxValue(R14,r14c4) = 200
+AttrSize(R14,r14c4) = 4
+
+DistinctAttr(R14,r14c5) = 200
+AttrMinValue(R14,r14c5) = 1
+AttrMaxValue(R14,r14c5) = 200
+AttrSize(R14,r14c5) = 4
+
+DistinctAttr(R14,r14c6) = 200
+AttrMinValue(R14,r14c6) = 1
+AttrMaxValue(R14,r14c6) = 200
+AttrSize(R14,r14c6) = 4
+
+DistinctAttr(R14,r14c7) = 200
+AttrMinValue(R14,r14c7) = 1
+AttrMaxValue(R14,r14c7) = 200
+AttrSize(R14,r14c7) = 4
+
+DistinctAttr(R14,r14c8) = 200
+AttrMinValue(R14,r14c8) = 1
+AttrMaxValue(R14,r14c8) = 200
+AttrSize(R14,r14c8) = 4
+
+DistinctAttr(R14,r14c9) = 200
+AttrMinValue(R14,r14c9) = 1
+AttrMaxValue(R14,r14c9) = 200
+AttrSize(R14,r14c9) = 4
+
+
+NumOfTuples(R15) = 200
+TuplesPerBlock(R15) = 25
+
+DistinctAttr(R15,r15c1) = 200
+AttrMinValue(R15,r15c1) = 1
+AttrMaxValue(R15,r15c1) = 200
+AttrSize(R15,r15c1) = 4
+
+DistinctAttr(R15,r15c2) = 200
+AttrMinValue(R15,r15c2) = 1
+AttrMaxValue(R15,r15c2) = 200
+AttrSize(R15,r15c2) = 4
+
+DistinctAttr(R15,r15c3) = 200
+AttrMinValue(R15,r15c3) = 1
+AttrMaxValue(R15,r15c3) = 200
+AttrSize(R15,r15c3) = 4
+
+DistinctAttr(R15,r15c4) = 200
+AttrMinValue(R15,r15c4) = 1
+AttrMaxValue(R15,r15c4) = 200
+AttrSize(R15,r15c4) = 4
+
+DistinctAttr(R15,r15c5) = 200
+AttrMinValue(R15,r15c5) = 1
+AttrMaxValue(R15,r15c5) = 200
+AttrSize(R15,r15c5) = 4
+
+DistinctAttr(R15,r15c6) = 200
+AttrMinValue(R15,r15c6) = 1
+AttrMaxValue(R15,r15c6) = 200
+AttrSize(R15,r15c6) = 4
+
+DistinctAttr(R15,r15c7) = 200
+AttrMinValue(R15,r15c7) = 1
+AttrMaxValue(R15,r15c7) = 200
+AttrSize(R15,r15c7) = 4
+
+DistinctAttr(R15,r15c8) = 200
+AttrMinValue(R15,r15c8) = 1
+AttrMaxValue(R15,r15c8) = 200
+AttrSize(R15,r15c8) = 4
+
+DistinctAttr(R15,r15c9) = 200
+AttrMinValue(R15,r15c9) = 1
+AttrMaxValue(R15,r15c9) = 200
+AttrSize(R15,r15c9) = 4
+
+
+NumOfTuples(R16) = 200
+TuplesPerBlock(R16) = 25
+
+DistinctAttr(R16,r16c1) = 200
+AttrMinValue(R16,r16c1) = 1
+AttrMaxValue(R16,r16c1) = 200
+AttrSize(R16,r16c1) = 4
+
+DistinctAttr(R16,r16c2) = 200
+AttrMinValue(R16,r16c2) = 1
+AttrMaxValue(R16,r16c2) = 200
+AttrSize(R16,r16c2) = 4
+
+DistinctAttr(R16,r16c3) = 200
+AttrMinValue(R16,r16c3) = 1
+AttrMaxValue(R16,r16c3) = 200
+AttrSize(R16,r16c3) = 4
+
+DistinctAttr(R16,r16c4) = 200
+AttrMinValue(R16,r16c4) = 1
+AttrMaxValue(R16,r16c4) = 200
+AttrSize(R16,r16c4) = 4
+
+DistinctAttr(R16,r16c5) = 200
+AttrMinValue(R16,r16c5) = 1
+AttrMaxValue(R16,r16c5) = 200
+AttrSize(R16,r16c5) = 4
+
+DistinctAttr(R16,r16c6) = 200
+AttrMinValue(R16,r16c6) = 1
+AttrMaxValue(R16,r16c6) = 200
+AttrSize(R16,r16c6) = 4
+
+DistinctAttr(R16,r16c7) = 200
+AttrMinValue(R16,r16c7) = 1
+AttrMaxValue(R16,r16c7) = 200
+AttrSize(R16,r16c7) = 4
+
+DistinctAttr(R16,r16c8) = 200
+AttrMinValue(R16,r16c8) = 1
+AttrMaxValue(R16,r16c8) = 200
+AttrSize(R16,r16c8) = 4
+
+DistinctAttr(R16,r16c9) = 200
+AttrMinValue(R16,r16c9) = 1
+AttrMaxValue(R16,r16c9) = 200
+AttrSize(R16,r16c9) = 4
+
+
+NumOfTuples(R17) = 200
+TuplesPerBlock(R17) = 25
+
+DistinctAttr(R17,r17c1) = 200
+AttrMinValue(R17,r17c1) = 1
+AttrMaxValue(R17,r17c1) = 200
+AttrSize(R17,r17c1) = 4
+
+DistinctAttr(R17,r17c2) = 200
+AttrMinValue(R17,r17c2) = 1
+AttrMaxValue(R17,r17c2) = 200
+AttrSize(R17,r17c2) = 4
+
+DistinctAttr(R17,r17c3) = 200
+AttrMinValue(R17,r17c3) = 1
+AttrMaxValue(R17,r17c3) = 200
+AttrSize(R17,r17c3) = 4
+
+DistinctAttr(R17,r17c4) = 200
+AttrMinValue(R17,r17c4) = 1
+AttrMaxValue(R17,r17c4) = 200
+AttrSize(R17,r17c4) = 4
+
+DistinctAttr(R17,r17c5) = 200
+AttrMinValue(R17,r17c5) = 1
+AttrMaxValue(R17,r17c5) = 200
+AttrSize(R17,r17c5) = 4
+
+DistinctAttr(R17,r17c6) = 200
+AttrMinValue(R17,r17c6) = 1
+AttrMaxValue(R17,r17c6) = 200
+AttrSize(R17,r17c6) = 4
+
+DistinctAttr(R17,r17c7) = 200
+AttrMinValue(R17,r17c7) = 1
+AttrMaxValue(R17,r17c7) = 200
+AttrSize(R17,r17c7) = 4
+
+DistinctAttr(R17,r17c8) = 200
+AttrMinValue(R17,r17c8) = 1
+AttrMaxValue(R17,r17c8) = 200
+AttrSize(R17,r17c8) = 4
+
+DistinctAttr(R17,r17c9) = 200
+AttrMinValue(R17,r17c9) = 1
+AttrMaxValue(R17,r17c9) = 200
+AttrSize(R17,r17c9) = 4
+
+
+NumOfTuples(R18) = 200
+TuplesPerBlock(R18) = 25
+
+DistinctAttr(R18,r18c1) = 200
+AttrMinValue(R18,r18c1) = 1
+AttrMaxValue(R18,r18c1) = 200
+AttrSize(R18,r18c1) = 4
+
+DistinctAttr(R18,r18c2) = 200
+AttrMinValue(R18,r18c2) = 1
+AttrMaxValue(R18,r18c2) = 200
+AttrSize(R18,r18c2) = 4
+
+DistinctAttr(R18,r18c3) = 200
+AttrMinValue(R18,r18c3) = 1
+AttrMaxValue(R18,r18c3) = 200
+AttrSize(R18,r18c3) = 4
+
+DistinctAttr(R18,r18c4) = 200
+AttrMinValue(R18,r18c4) = 1
+AttrMaxValue(R18,r18c4) = 200
+AttrSize(R18,r18c4) = 4
+
+DistinctAttr(R18,r18c5) = 200
+AttrMinValue(R18,r18c5) = 1
+AttrMaxValue(R18,r18c5) = 200
+AttrSize(R18,r18c5) = 4
+
+DistinctAttr(R18,r18c6) = 200
+AttrMinValue(R18,r18c6) = 1
+AttrMaxValue(R18,r18c6) = 200
+AttrSize(R18,r18c6) = 4
+
+DistinctAttr(R18,r18c7) = 200
+AttrMinValue(R18,r18c7) = 1
+AttrMaxValue(R18,r18c7) = 200
+AttrSize(R18,r18c7) = 4
+
+DistinctAttr(R18,r18c8) = 200
+AttrMinValue(R18,r18c8) = 1
+AttrMaxValue(R18,r18c8) = 200
+AttrSize(R18,r18c8) = 4
+
+DistinctAttr(R18,r18c9) = 200
+AttrMinValue(R18,r18c9) = 1
+AttrMaxValue(R18,r18c9) = 200
+AttrSize(R18,r18c9) = 4
+
+
+NumOfTuples(R19) = 200
+TuplesPerBlock(R19) = 25
+
+DistinctAttr(R19,r19c1) = 200
+AttrMinValue(R19,r19c1) = 1
+AttrMaxValue(R19,r19c1) = 200
+AttrSize(R19,r19c1) = 4
+
+DistinctAttr(R19,r19c2) = 200
+AttrMinValue(R19,r19c2) = 1
+AttrMaxValue(R19,r19c2) = 200
+AttrSize(R19,r19c2) = 4
+
+DistinctAttr(R19,r19c3) = 200
+AttrMinValue(R19,r19c3) = 1
+AttrMaxValue(R19,r19c3) = 200
+AttrSize(R19,r19c3) = 4
+
+DistinctAttr(R19,r19c4) = 200
+AttrMinValue(R19,r19c4) = 1
+AttrMaxValue(R19,r19c4) = 200
+AttrSize(R19,r19c4) = 4
+
+DistinctAttr(R19,r19c5) = 200
+AttrMinValue(R19,r19c5) = 1
+AttrMaxValue(R19,r19c5) = 200
+AttrSize(R19,r19c5) = 4
+
+DistinctAttr(R19,r19c6) = 200
+AttrMinValue(R19,r19c6) = 1
+AttrMaxValue(R19,r19c6) = 200
+AttrSize(R19,r19c6) = 4
+
+DistinctAttr(R19,r19c7) = 200
+AttrMinValue(R19,r19c7) = 1
+AttrMaxValue(R19,r19c7) = 200
+AttrSize(R19,r19c7) = 4
+
+DistinctAttr(R19,r19c8) = 200
+AttrMinValue(R19,r19c8) = 1
+AttrMaxValue(R19,r19c8) = 200
+AttrSize(R19,r19c8) = 4
+
+DistinctAttr(R19,r19c9) = 200
+AttrMinValue(R19,r19c9) = 1
+AttrMaxValue(R19,r19c9) = 200
+AttrSize(R19,r19c9) = 4
+
+
+NumOfTuples(R20) = 200
+TuplesPerBlock(R20) = 25
+
+DistinctAttr(R20,r20c1) = 200
+AttrMinValue(R20,r20c1) = 1
+AttrMaxValue(R20,r20c1) = 200
+AttrSize(R20,r20c1) = 4
+
+DistinctAttr(R20,r20c2) = 200
+AttrMinValue(R20,r20c2) = 1
+AttrMaxValue(R20,r20c2) = 200
+AttrSize(R20,r20c2) = 4
+
+DistinctAttr(R20,r20c3) = 200
+AttrMinValue(R20,r20c3) = 1
+AttrMaxValue(R20,r20c3) = 200
+AttrSize(R20,r20c3) = 4
+
+DistinctAttr(R20,r20c4) = 200
+AttrMinValue(R20,r20c4) = 1
+AttrMaxValue(R20,r20c4) = 200
+AttrSize(R20,r20c4) = 4
+
+DistinctAttr(R20,r20c5) = 200
+AttrMinValue(R20,r20c5) = 1
+AttrMaxValue(R20,r20c5) = 200
+AttrSize(R20,r20c5) = 4
+
+DistinctAttr(R20,r20c6) = 200
+AttrMinValue(R20,r20c6) = 1
+AttrMaxValue(R20,r20c6) = 200
+AttrSize(R20,r20c6) = 4
+
+DistinctAttr(R20,r20c7) = 200
+AttrMinValue(R20,r20c7) = 1
+AttrMaxValue(R20,r20c7) = 200
+AttrSize(R20,r20c7) = 4
+
+DistinctAttr(R20,r20c8) = 200
+AttrMinValue(R20,r20c8) = 1
+AttrMaxValue(R20,r20c8) = 200
+AttrSize(R20,r20c8) = 4
+
+DistinctAttr(R20,r20c9) = 200
+AttrMinValue(R20,r20c9) = 1
+AttrMaxValue(R20,r20c9) = 200
+AttrSize(R20,r20c9) = 4

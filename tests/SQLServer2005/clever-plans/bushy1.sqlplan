@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ShowPlanXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0" Build="9.00.1399.06" xmlns="http://schemas.microsoft.com/sqlserver/2004/07/showplan">
+  <BatchSequence>
+    <Batch>
+      <Statements>
+        <StmtSimple StatementCompId="1" StatementEstRows="1" StatementId="1" StatementOptmLevel="FULL" StatementOptmEarlyAbortReason="GoodEnoughPlanFound" StatementSubTreeCost="0.0765157" StatementText="select * from R1 inner merge join R2 on (R1.c3=R2.c3 and R1.c4=R2.c4 and R1.c5=R2.c5 and R1.c6=R2.c6 and R1.c1=R2.c1 and R1.c2=R2.c2) inner merge join (R3 inner merge join R4 on (R3.c1=R4.c1 and R3.c2=R4.c2 and R3.c3=R4.c3 and R3.c4=R4.c4 and R3.c5=R4.c5 and R3.c6=R4.c6)) on (R1.c3=R4.c3 and R1.c4=R4.c4 and R1.c1=R4.c1 and R1.c2=R4.c2 and R1.c5=R4.c5 and R1.c6=R4.c6)" StatementType="SELECT">
+          <StatementSetOptions ANSI_NULLS="false" ANSI_PADDING="false" ANSI_WARNINGS="false" ARITHABORT="true" CONCAT_NULL_YIELDS_NULL="false" NUMERIC_ROUNDABORT="false" QUOTED_IDENTIFIER="false" />
+          <QueryPlan CachedPlanSize="44">
+            <RelOp AvgRowSize="105" EstimateCPU="0.00564738" EstimateIO="0.000313" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="1" LogicalOp="Inner Join" NodeId="0" Parallel="false" PhysicalOp="Merge Join" EstimatedTotalSubtreeCost="0.0765157">
+              <OutputList>
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c1" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c2" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c3" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c4" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c5" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c6" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c1" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c2" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c3" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c4" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c5" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c6" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c1" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c2" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c3" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c4" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c5" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c6" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c1" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c2" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c3" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c4" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c5" />
+                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c6" />
+              </OutputList>
+              <Merge ManyToMany="true">
+                <InnerSideJoinColumns>
+                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c3" />
+                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c4" />
+                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c5" />
+                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c6" />
+                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c1" />
+                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c2" />
+                </InnerSideJoinColumns>
+                <OuterSideJoinColumns>
+                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c3" />
+                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c4" />
+                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c5" />
+                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c6" />
+                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c1" />
+                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c2" />
+                </OuterSideJoinColumns>
+                <Residual>
+                  <ScalarOperator ScalarString="[eiotest].[dbo].[R4].[c3]=[eiotest].[dbo].[R2].[c3] AND [eiotest].[dbo].[R4].[c4]=[eiotest].[dbo].[R2].[c4] AND [eiotest].[dbo].[R4].[c5]=[eiotest].[dbo].[R2].[c5] AND [eiotest].[dbo].[R4].[c6]=[eiotest].[dbo].[R2].[c6] AND [eiotest].[dbo].[R4].[c1]=[eiotest].[dbo].[R2].[c1] AND [eiotest].[dbo].[R4].[c2]=[eiotest].[dbo].[R2].[c2]">
+                    <Logical Operation="AND">
+                      <ScalarOperator>
+                        <Compare CompareOp="EQ">
+                          <ScalarOperator>
+                            <Identifier>
+                              <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c3" />
+                            </Identifier>
+                          </ScalarOperator>
+                          <ScalarOperator>
+                            <Identifier>
+                              <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c3" />
+                            </Identifier>
+                          </ScalarOperator>
+                        </Compare>
+                      </ScalarOperator>
+                      <ScalarOperator>
+                        <Compare CompareOp="EQ">
+                          <ScalarOperator>
+                            <Identifier>
+                              <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c4" />
+                            </Identifier>
+                          </ScalarOperator>
+                          <ScalarOperator>
+                            <Identifier>
+                              <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c4" />
+                            </Identifier>
+                          </ScalarOperator>
+                        </Compare>
+                      </ScalarOperator>
+                      <ScalarOperator>
+                        <Compare CompareOp="EQ">
+                          <ScalarOperator>
+                            <Identifier>
+                              <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c5" />
+                            </Identifier>
+                          </ScalarOperator>
+                          <ScalarOperator>
+                            <Identifier>
+                              <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c5" />
+                            </Identifier>
+                          </ScalarOperator>
+                        </Compare>
+                      </ScalarOperator>
+                      <ScalarOperator>
+                        <Compare CompareOp="EQ">
+                          <ScalarOperator>
+                            <Identifier>
+                              <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c6" />
+                            </Identifier>
+                          </ScalarOperator>
+                          <ScalarOperator>
+                            <Identifier>
+                              <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c6" />
+                            </Identifier>
+                          </ScalarOperator>
+                        </Compare>
+                      </ScalarOperator>
+                      <ScalarOperator>
+                        <Compare CompareOp="EQ">
+                          <ScalarOperator>
+                            <Identifier>
+                              <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c1" />
+                            </Identifier>
+                          </ScalarOperator>
+                          <ScalarOperator>
+                            <Identifier>
+                              <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c1" />
+                            </Identifier>
+                          </ScalarOperator>
+                        </Compare>
+                      </ScalarOperator>
+                      <ScalarOperator>
+                        <Compare CompareOp="EQ">
+                          <ScalarOperator>
+                            <Identifier>
+                              <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c2" />
+                            </Identifier>
+                          </ScalarOperator>
+                          <ScalarOperator>
+                            <Identifier>
+                              <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c2" />
+                            </Identifier>
+                          </ScalarOperator>
+                        </Compare>
+                      </ScalarOperator>
+                    </Logical>
+                  </ScalarOperator>
+                </Residual>
+                <RelOp AvgRowSize="56" EstimateCPU="0.00564738" EstimateIO="0.000313" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="1" LogicalOp="Inner Join" NodeId="1" Parallel="false" PhysicalOp="Merge Join" EstimatedTotalSubtreeCost="0.0352682">
+                  <OutputList>
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c1" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c2" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c3" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c4" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c5" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c6" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c1" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c2" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c3" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c4" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c5" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c6" />
+                  </OutputList>
+                  <Merge ManyToMany="true">
+                    <InnerSideJoinColumns>
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c3" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c4" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c5" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c6" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c1" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c2" />
+                    </InnerSideJoinColumns>
+                    <OuterSideJoinColumns>
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c3" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c4" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c5" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c6" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c1" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c2" />
+                    </OuterSideJoinColumns>
+                    <Residual>
+                      <ScalarOperator ScalarString="[eiotest].[dbo].[R1].[c3]=[eiotest].[dbo].[R2].[c3] AND [eiotest].[dbo].[R1].[c4]=[eiotest].[dbo].[R2].[c4] AND [eiotest].[dbo].[R1].[c5]=[eiotest].[dbo].[R2].[c5] AND [eiotest].[dbo].[R1].[c6]=[eiotest].[dbo].[R2].[c6] AND [eiotest].[dbo].[R1].[c1]=[eiotest].[dbo].[R2].[c1] AND [eiotest].[dbo].[R1].[c2]=[eiotest].[dbo].[R2].[c2]">
+                        <Logical Operation="AND">
+                          <ScalarOperator>
+                            <Compare CompareOp="EQ">
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c3" />
+                                </Identifier>
+                              </ScalarOperator>
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c3" />
+                                </Identifier>
+                              </ScalarOperator>
+                            </Compare>
+                          </ScalarOperator>
+                          <ScalarOperator>
+                            <Compare CompareOp="EQ">
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c4" />
+                                </Identifier>
+                              </ScalarOperator>
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c4" />
+                                </Identifier>
+                              </ScalarOperator>
+                            </Compare>
+                          </ScalarOperator>
+                          <ScalarOperator>
+                            <Compare CompareOp="EQ">
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c5" />
+                                </Identifier>
+                              </ScalarOperator>
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c5" />
+                                </Identifier>
+                              </ScalarOperator>
+                            </Compare>
+                          </ScalarOperator>
+                          <ScalarOperator>
+                            <Compare CompareOp="EQ">
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c6" />
+                                </Identifier>
+                              </ScalarOperator>
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c6" />
+                                </Identifier>
+                              </ScalarOperator>
+                            </Compare>
+                          </ScalarOperator>
+                          <ScalarOperator>
+                            <Compare CompareOp="EQ">
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c1" />
+                                </Identifier>
+                              </ScalarOperator>
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c1" />
+                                </Identifier>
+                              </ScalarOperator>
+                            </Compare>
+                          </ScalarOperator>
+                          <ScalarOperator>
+                            <Compare CompareOp="EQ">
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c2" />
+                                </Identifier>
+                              </ScalarOperator>
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c2" />
+                                </Identifier>
+                              </ScalarOperator>
+                            </Compare>
+                          </ScalarOperator>
+                        </Logical>
+                      </ScalarOperator>
+                    </Residual>
+                    <RelOp AvgRowSize="31" EstimateCPU="0.000100031" EstimateIO="0.0112613" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="1" LogicalOp="Sort" NodeId="2" Parallel="false" PhysicalOp="Sort" EstimatedTotalSubtreeCost="0.0146444">
+                      <OutputList>
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c1" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c2" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c3" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c4" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c5" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c6" />
+                      </OutputList>
+                      <MemoryFractions Input="1" Output="0.25" />
+                      <Sort Distinct="false">
+                        <OrderBy>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c3" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c4" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c5" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c6" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c1" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c2" />
+                          </OrderByColumn>
+                        </OrderBy>
+                        <RelOp AvgRowSize="31" EstimateCPU="0.0001581" EstimateIO="0.003125" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="1" LogicalOp="Table Scan" NodeId="3" Parallel="false" PhysicalOp="Table Scan" EstimatedTotalSubtreeCost="0.0032831">
+                          <OutputList>
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c1" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c2" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c3" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c4" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c5" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c6" />
+                          </OutputList>
+                          <TableScan Ordered="false" ForcedIndex="false" NoExpandHint="false">
+                            <DefinedValues>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c1" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c2" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c3" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c4" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c5" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R1]" Column="c6" />
+                              </DefinedValue>
+                            </DefinedValues>
+                            <Object Database="[eiotest]" Schema="[dbo]" Table="[R1]" />
+                          </TableScan>
+                        </RelOp>
+                      </Sort>
+                    </RelOp>
+                    <RelOp AvgRowSize="31" EstimateCPU="0.000100031" EstimateIO="0.0112613" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="1" LogicalOp="Sort" NodeId="4" Parallel="false" PhysicalOp="Sort" EstimatedTotalSubtreeCost="0.0146444">
+                      <OutputList>
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c1" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c2" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c3" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c4" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c5" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c6" />
+                      </OutputList>
+                      <MemoryFractions Input="0.25" Output="0.25" />
+                      <Sort Distinct="false">
+                        <OrderBy>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c3" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c4" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c5" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c6" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c1" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c2" />
+                          </OrderByColumn>
+                        </OrderBy>
+                        <RelOp AvgRowSize="31" EstimateCPU="0.0001581" EstimateIO="0.003125" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="1" LogicalOp="Table Scan" NodeId="5" Parallel="false" PhysicalOp="Table Scan" EstimatedTotalSubtreeCost="0.0032831">
+                          <OutputList>
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c1" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c2" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c3" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c4" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c5" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c6" />
+                          </OutputList>
+                          <TableScan Ordered="false" ForcedIndex="false" NoExpandHint="false">
+                            <DefinedValues>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c1" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c2" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c3" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c4" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c5" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R2]" Column="c6" />
+                              </DefinedValue>
+                            </DefinedValues>
+                            <Object Database="[eiotest]" Schema="[dbo]" Table="[R2]" />
+                          </TableScan>
+                        </RelOp>
+                      </Sort>
+                    </RelOp>
+                  </Merge>
+                </RelOp>
+                <RelOp AvgRowSize="56" EstimateCPU="0.00564738" EstimateIO="0.000313" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="1" LogicalOp="Inner Join" NodeId="7" Parallel="false" PhysicalOp="Merge Join" EstimatedTotalSubtreeCost="0.0352682">
+                  <OutputList>
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c1" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c2" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c3" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c4" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c5" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c6" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c1" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c2" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c3" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c4" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c5" />
+                    <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c6" />
+                  </OutputList>
+                  <Merge ManyToMany="true">
+                    <InnerSideJoinColumns>
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c3" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c4" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c5" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c6" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c1" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c2" />
+                    </InnerSideJoinColumns>
+                    <OuterSideJoinColumns>
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c3" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c4" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c5" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c6" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c1" />
+                      <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c2" />
+                    </OuterSideJoinColumns>
+                    <Residual>
+                      <ScalarOperator ScalarString="[eiotest].[dbo].[R3].[c3]=[eiotest].[dbo].[R4].[c3] AND [eiotest].[dbo].[R3].[c4]=[eiotest].[dbo].[R4].[c4] AND [eiotest].[dbo].[R3].[c5]=[eiotest].[dbo].[R4].[c5] AND [eiotest].[dbo].[R3].[c6]=[eiotest].[dbo].[R4].[c6] AND [eiotest].[dbo].[R3].[c1]=[eiotest].[dbo].[R4].[c1] AND [eiotest].[dbo].[R3].[c2]=[eiotest].[dbo].[R4].[c2]">
+                        <Logical Operation="AND">
+                          <ScalarOperator>
+                            <Compare CompareOp="EQ">
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c3" />
+                                </Identifier>
+                              </ScalarOperator>
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c3" />
+                                </Identifier>
+                              </ScalarOperator>
+                            </Compare>
+                          </ScalarOperator>
+                          <ScalarOperator>
+                            <Compare CompareOp="EQ">
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c4" />
+                                </Identifier>
+                              </ScalarOperator>
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c4" />
+                                </Identifier>
+                              </ScalarOperator>
+                            </Compare>
+                          </ScalarOperator>
+                          <ScalarOperator>
+                            <Compare CompareOp="EQ">
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c5" />
+                                </Identifier>
+                              </ScalarOperator>
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c5" />
+                                </Identifier>
+                              </ScalarOperator>
+                            </Compare>
+                          </ScalarOperator>
+                          <ScalarOperator>
+                            <Compare CompareOp="EQ">
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c6" />
+                                </Identifier>
+                              </ScalarOperator>
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c6" />
+                                </Identifier>
+                              </ScalarOperator>
+                            </Compare>
+                          </ScalarOperator>
+                          <ScalarOperator>
+                            <Compare CompareOp="EQ">
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c1" />
+                                </Identifier>
+                              </ScalarOperator>
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c1" />
+                                </Identifier>
+                              </ScalarOperator>
+                            </Compare>
+                          </ScalarOperator>
+                          <ScalarOperator>
+                            <Compare CompareOp="EQ">
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c2" />
+                                </Identifier>
+                              </ScalarOperator>
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c2" />
+                                </Identifier>
+                              </ScalarOperator>
+                            </Compare>
+                          </ScalarOperator>
+                        </Logical>
+                      </ScalarOperator>
+                    </Residual>
+                    <RelOp AvgRowSize="31" EstimateCPU="0.000100031" EstimateIO="0.0112613" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="1" LogicalOp="Sort" NodeId="8" Parallel="false" PhysicalOp="Sort" EstimatedTotalSubtreeCost="0.0146444">
+                      <OutputList>
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c1" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c2" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c3" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c4" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c5" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c6" />
+                      </OutputList>
+                      <MemoryFractions Input="0.5" Output="0.25" />
+                      <Sort Distinct="false">
+                        <OrderBy>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c3" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c4" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c5" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c6" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c1" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c2" />
+                          </OrderByColumn>
+                        </OrderBy>
+                        <RelOp AvgRowSize="31" EstimateCPU="0.0001581" EstimateIO="0.003125" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="1" LogicalOp="Table Scan" NodeId="9" Parallel="false" PhysicalOp="Table Scan" EstimatedTotalSubtreeCost="0.0032831">
+                          <OutputList>
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c1" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c2" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c3" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c4" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c5" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c6" />
+                          </OutputList>
+                          <TableScan Ordered="false" ForcedIndex="false" NoExpandHint="false">
+                            <DefinedValues>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c1" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c2" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c3" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c4" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c5" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R3]" Column="c6" />
+                              </DefinedValue>
+                            </DefinedValues>
+                            <Object Database="[eiotest]" Schema="[dbo]" Table="[R3]" />
+                          </TableScan>
+                        </RelOp>
+                      </Sort>
+                    </RelOp>
+                    <RelOp AvgRowSize="31" EstimateCPU="0.000100031" EstimateIO="0.0112613" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="1" LogicalOp="Sort" NodeId="10" Parallel="false" PhysicalOp="Sort" EstimatedTotalSubtreeCost="0.0146444">
+                      <OutputList>
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c1" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c2" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c3" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c4" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c5" />
+                        <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c6" />
+                      </OutputList>
+                      <MemoryFractions Input="0.25" Output="0.25" />
+                      <Sort Distinct="false">
+                        <OrderBy>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c3" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c4" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c5" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c6" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c1" />
+                          </OrderByColumn>
+                          <OrderByColumn Ascending="true">
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c2" />
+                          </OrderByColumn>
+                        </OrderBy>
+                        <RelOp AvgRowSize="31" EstimateCPU="0.0001581" EstimateIO="0.003125" EstimateRebinds="0" EstimateRewinds="0" EstimateRows="1" LogicalOp="Table Scan" NodeId="11" Parallel="false" PhysicalOp="Table Scan" EstimatedTotalSubtreeCost="0.0032831">
+                          <OutputList>
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c1" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c2" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c3" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c4" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c5" />
+                            <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c6" />
+                          </OutputList>
+                          <TableScan Ordered="false" ForcedIndex="false" NoExpandHint="false">
+                            <DefinedValues>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c1" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c2" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c3" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c4" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c5" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Database="[eiotest]" Schema="[dbo]" Table="[R4]" Column="c6" />
+                              </DefinedValue>
+                            </DefinedValues>
+                            <Object Database="[eiotest]" Schema="[dbo]" Table="[R4]" />
+                          </TableScan>
+                        </RelOp>
+                      </Sort>
+                    </RelOp>
+                  </Merge>
+                </RelOp>
+              </Merge>
+            </RelOp>
+          </QueryPlan>
+        </StmtSimple>
+      </Statements>
+    </Batch>
+  </BatchSequence>
+</ShowPlanXML>

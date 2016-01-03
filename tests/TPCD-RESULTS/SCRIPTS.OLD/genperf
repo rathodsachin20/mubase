@@ -1,0 +1,36 @@
+#!/bin/bash 
+for algo in volcano-exp volcano-exp-sh volcano-app volcano-app-sh volcano-exp-mq volcano-app-mq greedy
+do
+   for inp in disjoint-1 disjoint-2 overlap-1 overlap-2 overlap-3 overlap-4 repeat-1 repeat-2 subset-1 subset-2 subset-3 subset-4 superset-1 superset-2 superset-3 superset-4 pred-1
+   do	    
+	echo PROC $inp
+	../perfeval "$algo" < Queries/$inp
+	echo END
+        echo
+   done
+   echo
+done
+
+for algo in cached-exhaustive
+do
+   for inp in disjoint-1 disjoint-2 overlap-1  subset-3 subset-4 # superset-1 pred-1 subset-1 subset-2 overlap-2 repeat-2 repeat-1 
+   do	    
+	echo PROC $inp
+	../perfeval "$algo" < Queries/$inp
+	echo END
+        echo
+   done
+   echo
+done
+
+for algo in exhaustive
+do
+   for inp in disjoint-1 disjoint-2 overlap-1 subset-3 subset-4 # superset-1 pred-1 subset-1 subset-2 overlap-2 repeat-2 repeat-1  
+   do	    
+	echo PROC $inp
+	../perfeval "$algo" < Queries/$inp
+	echo END
+        echo
+   done
+   echo
+done

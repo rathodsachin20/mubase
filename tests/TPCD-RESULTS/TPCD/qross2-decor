@@ -1,0 +1,11 @@
+select ps_partkey, ps_supplycost 
+from partsupp, supplier
+where s_suppkey = ps_suppkey
+and s_nationkey <> 13 ;
+
+select ps_partkey
+from partsupp,  qross2decorr
+where ps_partkey <= 20000
+  and ps_selkey < 50
+  and ps_supplycost = d_supplycost;
+	  

@@ -1,0 +1,8 @@
+select  min(l_selkey)
+from lineitem
+group by l_const;
+
+select min(l_selkey)
+from lineitem
+group by l_const, l_suppkey;
+

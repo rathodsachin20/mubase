@@ -1,0 +1,13 @@
+cat q10 > bq1
+cat q10 q3 > bq2
+cat q10 q3 q5 > bq3
+cat q10 q3 q5 q7 > bq4
+cat q10 q3 q5 q7 q9 > bq5
+cat q10 q3 q5 q7 q9 q8 > bq6
+
+cat q10 > bqr1
+cat q3 q10 > bqr2
+cat q5 q3 q10 > bqr3
+cat q7 q5 q3 q10 > bqr4
+cat q9 q7 q5 q3 q10 > bqr5
+cat q8 q9 q7 q5 q3 q10 > bqr6

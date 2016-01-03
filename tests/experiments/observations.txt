@@ -1,0 +1,102 @@
+1. Postgres does a good job of inferring o/p order from merge joins. In fact,
+   it chooses a good permutation of the join columns so as to help a parent
+   order by.
+
+# create index idx_R1_321 on R1(c3,c2,c1);
+CREATE INDEX
+#  cluster idx_R1_321 on R1;
+CLUSTER
+
+# create index idx_R2_321 on R2(c3,c2,c1);
+CREATE INDEX
+# cluster idx_R2_321 on R2;
+CLUSTER
+
+#  explain select * from R1, R2, R3, R4 where R1.c1=R2.c1 and R1.c2=R2.c2 and R1.c3=R2.c3 and R1.c4=R2.c4 and R3.c3=R1.c3 and R3.c1=R1.c1 and R3.c2=R1.c2 and R3.c5=R4.c5 and R3.c6=R4.c6 order by R1.c3, R1.c2, R1.c1;
+                                                 QUERY PLAN
+-------------------------------------------------------------------------------------------------------------
+ Merge Join  (cost=155.53..274.82 rows=1 width=72)
+   Merge Cond: (("outer".c3 = "inner".c3) AND ("outer".c2 = "inner".c2) AND ("outer".c1 = "inner".c1))
+   Join Filter: ("outer".c4 = "inner".c4)
+   ->  Merge Join  (cost=155.53..215.30 rows=1 width=56)
+         Merge Cond: (("outer".c3 = "inner".c3) AND ("outer".c2 = "inner".c2) AND ("outer".c1 = "inner".c1))
+         ->  Index Scan using idx_r1_321 on r1  (cost=0.00..52.00 rows=1000 width=16)
+         ->  Sort  (cost=155.53..155.59 rows=26 width=40)
+               Sort Key: r3.c3, r3.c2, r3.c1
+               ->  Merge Join  (cost=139.66..154.92 rows=26 width=40)
+                     Merge Cond: (("outer".c6 = "inner".c6) AND ("outer".c5 = "inner".c5))
+                     ->  Sort  (cost=69.83..72.33 rows=1000 width=20)
+                           Sort Key: r3.c6, r3.c5
+                           ->  Seq Scan on r3  (cost=0.00..20.00 rows=1000 width=20)
+                     ->  Sort  (cost=69.83..72.33 rows=1000 width=20)
+                           Sort Key: r4.c6, r4.c5
+                           ->  Seq Scan on r4  (cost=0.00..20.00 rows=1000 width=20)
+   ->  Index Scan using idx_r2_321 on r2  (cost=0.00..52.00 rows=1000 width=16)
+
+
+*** In fact, it even reorders the joins to suit an o/p order!! Check by changing the order by to R1.c1, R1.c2, R1.c3
+
+2. However, it does not take into account sort order that is partially satisfied.
+
+eiotest=# explain select * from R1, R2 where R1.c3=R2.c3 order by R2.c3, R2.c1, R2.c2;
+                                      QUERY PLAN
+--------------------------------------------------------------------------------------
+ Sort  (cost=1285.31..1318.52 rows=13284 width=32)
+   Sort Key: r2.c3, r2.c1, r2.c2
+   ->  Merge Join  (cost=113.27..375.53 rows=13284 width=32)
+         Merge Cond: ("outer".c3 = "inner".c3)
+         ->  Index Scan using idx_r2_321 on r2  (cost=0.00..58.93 rows=1630 width=16)
+         ->  Sort  (cost=113.27..117.34 rows=1630 width=16)
+               Sort Key: r1.c3
+               ->  Seq Scan on r1  (cost=0.00..26.30 rows=1630 width=16)
+
+
+3. It's logic of when it uses a clustered index to get the desired ordering is
+   not clear. e.g., a self merge-join on the clustering column uses the index
+   scan for one input and seq scan for the other!
+
+explain select * from bidstab1 bt1, bidstab1 bt2 where bt1.year=bt2.year;
+
+                                           QUERY PLAN
+-------------------------------------------------------------------------------------------------
+ Merge Join  (cost=56596.64..600063584.64 rows=40000000000 width=240)
+   Merge Cond: ("outer"."year" = "inner"."year")
+   ->  Index Scan using idx_bt1_year on bidstab1 bt1  (cost=0.00..6488.00 rows=200000 width=120)
+   ->  Sort  (cost=56596.64..57096.64 rows=200000 width=120)
+         Sort Key: bt2."year"
+         ->  Seq Scan on bidstab1 bt2  (cost=0.00..5847.00 rows=200000 width=120)
+                                                                                                                             
+4. With merge-join if one input is clustered on the join columns, it seems
+   to always sort the other i/p to match this order. Good, but not always.
+   When tried with
+
+5. Makes a gorss mistake in estimating join size when a foreign key
+   has more than one columns. It does make the right calculation when the
+   FK has a single column.
+   e.g., lineitem JOIN partsupp with l(partkey, suppkey) FK to
+   ps(partkey, suppkey) estimates the join size as 2K where as
+   the actual is 8 Million (# of lineitem).
+
+   Have asked the optimizer to make its best using:
+   - set default_statistics_target=1000;
+   - vacuum full analyze;
+
+
+    alter table lineitem add constraint l_partsupp_fk foreign key(l_partkey, l_suppkey) references 
+                                                      partsupp(ps_partkey,ps_suppkey);
+    vacuum full analyze;
+
+    explain select * from partsupp ps, lineitem l where ps.ps_partkey=l.l_partkey and ps.ps_suppkey=l.l_suppkey;
+
+                                           QUERY PLAN
+-------------------------------------------------------------------------------------------------
+Merge Join  (cost=3884489.20..3935521.73 rows=2401 width=302)
+   Merge Cond: (("outer".ps_partkey = "inner".l_partkey) AND ("outer".ps_suppkey = "inner".l_suppkey))
+   ->  Sort  (cost=363939.56..365939.56 rows=800000 width=150)
+         Sort Key: ps.ps_partkey, ps.ps_suppkey
+         ->  Seq Scan on partsupp ps  (cost=0.00..26316.00 rows=800000 width=150)
+   ->  Sort  (cost=3520549.64..3535552.67 rows=6001215 width=152)
+         Sort Key: l.l_partkey, l.l_suppkey
+         ->  Seq Scan on lineitem l  (cost=0.00..213648.15 rows=6001215 width=152)
+
+

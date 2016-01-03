@@ -1,0 +1,33 @@
+Optimization Successful: Plan Cost = 1169.25 Cost Limit = 1169.25
+
+[EQCLASS8][PLANGRP0][CC=1][PSO=NULL] UseCost = 0.0088 Plan Cost = 1169.25 #Tuples = 4001 #Blocks = 4
+| [ALG42][CC=1]PROJECT< r1:r1c1 > Cost = 0
+| | [EQCLASS7][PLANGRP1][CC=1][PSO=NULL] UseCost = 0.044 Plan Cost = 1169.25 #Tuples = 4001 #Blocks = 20
+| | | [ALG41][CC=1]BASICAPPLY< LeftSemiJoin > Cost = 0.012
+| | | | [EQCLASS9][PLANGRP21][CC=1][PSO=NULL] UseCost = 0.044 Plan Cost = 51.4818 #Tuples = 4001 #Blocks = 20
+| | | | | [ENF7][CC=1]SORT< r1:r1c4 > Cost = 0.0482
+| | | | | | [EQCLASS9][PLANGRP20][CC=1][PSO=NULL] UseCost = 0.044 Plan Cost = 51.4336 #Tuples = 4001 #Blocks = 20
+| | | | | | | [ALG6][CC=1]SELECT (state_retain=0)< r1:r1c2 == 100 > Cost = 4.2898
+| | | | | | | | [EQCLASS6][PLANGRP18][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | | | | | [ALG3][CC=1]RELSCAN< r1 > Cost = 47.1438
+| | | | [EQCLASS5][PLANGRP52][CC=150][PSO=< r1:r1c4 >] UseCost = 0.088 Plan Cost = 1117.76 #Tuples = 40001 #Blocks = 40 CORRELATED
+| | | | | [ALG40][CC=150]PROJECT< r2:r2c1 > Cost = 0
+| | | | | | [EQCLASS4][PLANGRP53][CC=150][PSO=< r1:r1c4 >] UseCost = 0.4312 Plan Cost = 1117.76 #Tuples = 40001 #Blocks = 196 CORRELATED
+| | | | | | | [ALG39][CC=150]BASICAPPLY< LeftSemiJoin > Cost = 5.91
+| | | | | | | | [EQCLASS11][PLANGRP55][CC=150][PSO=< r1:r1c4 >] UseCost = 0.4312 Plan Cost = 1000.41 #Tuples = 40001 #Blocks = 196 CORRELATED
+| | | | | | | | | [ALG35][CC=150]SELECT (state_retain=1)< AND[ r2:r2c3 == r1:r1c4 TRUE ] > Cost = 648.75
+| | | | | | | | | | [EQCLASS3][PLANGRP57][CC=1] UseCost = 47.1438 Plan Cost = 351.661 #Tuples = 600000 #Blocks = 21429
+| | | | | | | | | | | [ENF34][CC=1]INDEX< r2:r2c3 > Cost = 90.2274
+| | | | | | | | | | | | [EQCLASS3][PLANGRP59][CC=1] UseCost = 47.1438 Plan Cost = 261.434 #Tuples = 600000 #Blocks = 21429
+| | | | | | | | | | | | | [ENF33][CC=1]SORT< r2:r2c3 > Cost = 214.29
+| | | | | | | | | | | | | | [EQCLASS3][PLANGRP60][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429
+| | | | | | | | | | | | | | | [ALG32][CC=1]RELSCAN< r2 > Cost = 47.1438
+| | | | | | | | [EQCLASS2][PLANGRP67][CC=15][PSO=< r2:r2c3 >] UseCost = 0.0022 Plan Cost = 111.437 #Tuples = 400 #Blocks = 1 CORRELATED
+| | | | | | | | | [ALG38][CC=15]PROJECT< r3:r3c1 > Cost = 0
+| | | | | | | | | | [EQCLASS1][PLANGRP68][CC=15][PSO=< r2:r2c3 >] UseCost = 0.0044 Plan Cost = 111.437 #Tuples = 400 #Blocks = 2 CORRELATED
+| | | | | | | | | | | [ALG37][CC=15]SELECT (state_retain=1)< r3:r3c2 == r2:r2c3 > Cost = 64.293
+| | | | | | | | | | | | [EQCLASS0][PLANGRP70][CC=1] UseCost = 47.1438 Plan Cost = 47.1438 #Tuples = 600000 #Blocks = 21429 BUILTIN
+| | | | | | | | | | | | | [ALG36][CC=1]RELSCAN< r3 > Cost = 47.1438
+
+
+

@@ -1,0 +1,1385 @@
+rm -rf ./obj/*.o ./bin/exec ./bin/test.txt 
+g++ -c -I./include -o ./obj/dm.o ./src/dm.cpp 
+g++ -c -I./include -o ./obj/bm.o ./src/bm.cpp
+g++ -c -I./include -o ./obj/sm.o ./src/sm.cpp
+g++ -c -I./include -o ./obj/smutil.o ./src/smutil.cpp
+g++ -c -I./include -o ./obj/bt.o ./src/bt.cpp
+g++ -c -I./include -o ./obj/sputil.o ./src/sputil.c
+g++ -c -I./include -o ./obj/sp.o ./src/sp.cpp
+g++ -c -I./include -o ./obj/rm.o ./src/rm.cpp
+g++ -c -I./include -o ./obj/iter.o ./src/iter.cpp
+g++ -c -I./include -o ./obj/main.o ./src/main.cpp
+g++ ./obj/dm.o ./obj/bm.o ./obj/sm.o ./obj/smutil.o ./obj/bt.o ./obj/sputil.o ./obj/sp.o ./obj/rm.o ./obj/iter.o ./obj/main.o -o ./bin/exec -I./include
+cp input/test.txt bin
+
+ ENGINE STARTING 
+20
+
+AttrName | AttrType | SizeAttrs 
+ObjectName:4:50
+type:1:4
+arity:1:4
+
+AttrName | AttrType | SizeAttrs 
+idiii:1:4
+namei:4:30
+cgpai:1:4
+
+Creating Relation
+ nofObjects 0
+Object Not found
+
+initialising system tables
+ nofObjects 1
+Searchin for :sysObjects
+Current Object = sysObjects
+Matched.. returning
+ nofObjects 2
+Searchin for :sysColumns
+Current Object = sysObjects
+Searchin for :sysColumns
+Current Object = sysColumns
+Matched.. returning
+ nofObjects 2
+Searchin for :rel1
+Current Object = sysObjects
+Searchin for :rel1
+Current Object = sysColumns
+Object Not found
+ nofObjects 3
+Searchin for :sysObjects
+Current Object = sysObjects
+Matched.. returning
+inside create
+data Offset is 5 : numNullBytes : 1 : numVarAttrs : 1
+DataOffset afet REC bytes 17
+L! is 17
+sys obj created : 
+will print rec1
+ : rel1 : 1 : 3
+ l :17
+inserted in sysobj slhyhuyhuyhuyhyuot 0
+slot num is 0
+ nofObjects 3
+Searchin for :sysColumns
+Current Object = sysObjects
+Searchin for :sysColumns
+Current Object = sysColumns
+Matched.. returning
+getting systemcol schema
+
+
+
+AttrName | AttrType | SizeAttrs 
+ObjectName:4:50
+index:1:4
+colname:4:50
+coltype:1:4
+colsize:1:4
+attrType : 4
+data Offset is 9 : numNullBytes : 1 : numVarAttrs : 2
+DataOffset afet REC bytes 30
+Bytes is : 0 : 1 : 4 : 25
+Record is : 0 : 1 : 4 : 25
+will print schema and rec2
+
+AttrName | AttrType | SizeAttrs 
+ObjectName:4:50
+index:1:4
+colname:4:50
+coltype:1:4
+colsize:1:4
+ : rel1 : 0 : idiii : 1 : 4
+ SLOTNUM2 = 0
+attrType : 30
+data Offset is 9 : numNullBytes : 1 : numVarAttrs : 2
+DataOffset afet REC bytes 30
+Bytes is : 1 : 4 : 30 : 25
+Record is : 1 : 4 : 30 : 25
+will print schema and rec2
+
+AttrName | AttrType | SizeAttrs 
+ObjectName:4:50
+index:1:4
+colname:4:50
+coltype:1:4
+colsize:1:4
+ : rel1 : 1 : namei : 4 : 30
+ SLOTNUM2 = 1
+attrType : 4
+data Offset is 9 : numNullBytes : 1 : numVarAttrs : 2
+DataOffset afet REC bytes 30
+Bytes is : 2 : 1 : 4 : 25
+Record is : 2 : 1 : 4 : 25
+will print schema and rec2
+
+AttrName | AttrType | SizeAttrs 
+ObjectName:4:50
+index:1:4
+colname:4:50
+coltype:1:4
+colsize:1:4
+ : rel1 : 2 : cgpai : 1 : 4
+ SLOTNUM2 = 2
+ nofObjects 3
+Searchin for :rel1
+Current Object = sysObjects
+Searchin for :rel1
+Current Object = sysColumns
+Searchin for :rel1
+Current Object = rel1
+Matched.. returning
+Relation rel1 created
+
+
+
+ nofObjects 3
+Searchin for :sysObjects
+Current Object = sysObjects
+Matched.. returning
+ nofObjects 3
+Searchin for :rel2
+Current Object = sysObjects
+Searchin for :rel2
+Current Object = sysColumns
+Searchin for :rel2
+Current Object = rel1
+Object Not found
+ nofObjects 4
+Searchin for :sysObjects
+Current Object = sysObjects
+Matched.. returning
+inside create
+data Offset is 5 : numNullBytes : 1 : numVarAttrs : 1
+DataOffset afet REC bytes 17
+L! is 17
+sys obj created : 
+will print rec1
+ : rel2 : 1 : 3
+ l :17
+inserted in sysobj slhyhuyhuyhuyhyuot 1
+slot num is 1
+ nofObjects 4
+Searchin for :sysColumns
+Current Object = sysObjects
+Searchin for :sysColumns
+Current Object = sysColumns
+Matched.. returning
+getting systemcol schema
+
+
+
+AttrName | AttrType | SizeAttrs 
+ObjectName:4:50
+index:1:4
+colname:4:50
+coltype:1:4
+colsize:1:4
+attrType : 4
+data Offset is 9 : numNullBytes : 1 : numVarAttrs : 2
+DataOffset afet REC bytes 30
+Bytes is : 0 : 1 : 4 : 25
+Record is : 0 : 1 : 4 : 25
+will print schema and rec2
+
+AttrName | AttrType | SizeAttrs 
+ObjectName:4:50
+index:1:4
+colname:4:50
+coltype:1:4
+colsize:1:4
+ : rel2 : 0 : idiii : 1 : 4
+ SLOTNUM2 = 3
+attrType : 30
+data Offset is 9 : numNullBytes : 1 : numVarAttrs : 2
+DataOffset afet REC bytes 30
+Bytes is : 1 : 4 : 30 : 25
+Record is : 1 : 4 : 30 : 25
+will print schema and rec2
+
+AttrName | AttrType | SizeAttrs 
+ObjectName:4:50
+index:1:4
+colname:4:50
+coltype:1:4
+colsize:1:4
+ : rel2 : 1 : namei : 4 : 30
+ SLOTNUM2 = 4
+attrType : 4
+data Offset is 9 : numNullBytes : 1 : numVarAttrs : 2
+DataOffset afet REC bytes 30
+Bytes is : 2 : 1 : 4 : 25
+Record is : 2 : 1 : 4 : 25
+will print schema and rec2
+
+AttrName | AttrType | SizeAttrs 
+ObjectName:4:50
+index:1:4
+colname:4:50
+coltype:1:4
+colsize:1:4
+ : rel2 : 2 : cgpai : 1 : 4
+ SLOTNUM2 = 5
+ nofObjects 4
+Searchin for :rel2
+Current Object = sysObjects
+Searchin for :rel2
+Current Object = sysColumns
+Searchin for :rel2
+Current Object = rel1
+Searchin for :rel2
+Current Object = rel2
+Matched.. returning
+Relation rel2 created
+
+
+
+Read schema called
+ nofObjects 4
+Searchin for :sysObjects
+Current Object = sysObjects
+Matched.. returning
+ nofObjects 4
+Searchin for :sysColumns
+Current Object = sysObjects
+Searchin for :sysColumns
+Current Object = sysColumns
+Matched.. returning
+ going in sysObj
+getting recBytes from sp slot0
+REBYTE = 13  4  1  3
+ Current Rec  =  : rel1 : 1 : 3
+NAME in recored:rel1NAME TO FIND:rel1 INT is:1
+equal hai
+ out of sysobj.... RelArity=3
+SLOTS IN SYSCOLS =6
+ : rel1 : 0 : idiii : 1 : 4
+ : rel1 : 1 : namei : 4 : 30
+ : rel1 : 2 : cgpai : 1 : 4
+currColCount = 3 relArity=3
+
+AttrName | AttrType | SizeAttrs 
+idiii:1:4
+namei:4:30
+cgpai:1:4
+data Offset is 5 : numNullBytes : 1 : numVarAttrs : 1
+DataOffset afet REC bytes 19
+data Offset is 5 : numNullBytes : 1 : numVarAttrs : 1
+DataOffset afet REC bytes 19
+data Offset is 5 : numNullBytes : 1 : numVarAttrs : 1
+DataOffset afet REC bytes 18
+data Offset is 5 : numNullBytes : 1 : numVarAttrs : 1
+DataOffset afet REC bytes 19
+ nofObjects 4
+Searchin for :rel1
+Current Object = sysObjects
+Searchin for :rel1
+Current Object = sysColumns
+Searchin for :rel1
+Current Object = rel1
+Matched.. returning
+ nofObjects 4
+Searchin for :rel2
+Current Object = sysObjects
+Searchin for :rel2
+Current Object = sysColumns
+Searchin for :rel2
+Current Object = rel1
+Searchin for :rel2
+Current Object = rel2
+Matched.. returning
+ recid 3 0
+
+
+ recid 9 116
+
+
+ recid 4 0
+
+
+ recid 4 1
+
+
+Read schema called
+ nofObjects 4
+Searchin for :sysObjects
+Current Object = sysObjects
+Matched.. returning
+ nofObjects 4
+Searchin for :sysColumns
+Current Object = sysObjects
+Searchin for :sysColumns
+Current Object = sysColumns
+Matched.. returning
+ going in sysObj
+getting recBytes from sp slot0
+REBYTE = 13  4  1  3
+ Current Rec  =  : rel1 : 1 : 3
+NAME in recored:rel1NAME TO FIND:rel1 INT is:1
+equal hai
+ out of sysobj.... RelArity=3
+SLOTS IN SYSCOLS =6
+ : rel1 : 0 : idiii : 1 : 4
+ : rel1 : 1 : namei : 4 : 30
+ : rel1 : 2 : cgpai : 1 : 4
+currColCount = 3 relArity=3
+ nofObjects 4
+Searchin for :rel1
+Current Object = sysObjects
+Searchin for :rel1
+Current Object = sysColumns
+Searchin for :rel1
+Current Object = rel1
+Matched.. returning
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 29 : sachin : 9
+RECORD: : 8 : chirag : 9
+Read schema called
+ nofObjects 4
+Searchin for :sysObjects
+Current Object = sysObjects
+Matched.. returning
+ nofObjects 4
+Searchin for :sysColumns
+Current Object = sysObjects
+Searchin for :sysColumns
+Current Object = sysColumns
+Matched.. returning
+ going in sysObj
+getting recBytes from sp slot0
+REBYTE = 13  4  1  3
+ Current Rec  =  : rel1 : 1 : 3
+NAME in recored:rel1NAME TO FIND:rel2 INT is:1
+getting recBytes from sp slot1
+REBYTE = 13  4  1  3
+ Current Rec  =  : rel2 : 1 : 3
+NAME in recored:rel2NAME TO FIND:rel2 INT is:1
+equal hai
+ out of sysobj.... RelArity=3
+SLOTS IN SYSCOLS =6
+ : rel1 : 0 : idiii : 1 : 4
+ : rel1 : 1 : namei : 4 : 30
+ : rel1 : 2 : cgpai : 1 : 4
+ : rel2 : 0 : idiii : 1 : 4
+ : rel2 : 1 : namei : 4 : 30
+ : rel2 : 2 : cgpai : 1 : 4
+currColCount = 3 relArity=3
+ nofObjects 4
+Searchin for :rel2
+Current Object = sysObjects
+Searchin for :rel2
+Current Object = sysColumns
+Searchin for :rel2
+Current Object = rel1
+Searchin for :rel2
+Current Object = rel2
+Matched.. returning
+RECORD:1: : 1 : ajaya : 9
+RECORD:2: : 30 : sameer : 9
+last block=9
+
+THE END

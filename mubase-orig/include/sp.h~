@@ -1,0 +1,82 @@
+#ifndef SP_H
+#define SP_H
+
+/** ----------------------------------------------------
+ * CS3010: Introduction to Database Systems
+ * Department of Computer Science and Engineering
+ * IIT Hyderabad
+ *
+ * File: sp.h
+ * Header files for the class SlottedPage
+ * Implementation to be provided in spimpl.cpp
+ * -----------------------------------------------------
+ */
+
+#define BLOCKSIZE 128
+#define MAX_INPUT_REC_SIZE 120
+
+class SlottedPage {
+    private:
+    char *block;  // The underlying buffer block, to which this 
+                  // class is a wrapper.
+    public:
+
+    // Constructor.
+    SlottedPage(char *buffPage) {
+        this->block = buffPage;
+    }
+
+    /**
+     * Initialize (format) the block.
+     */
+    void initBlock();
+
+    /**
+     * Retrieve a record at the given slot number. Length gets stored in 'l'
+     * Returns -1 if the slot number is invalid.
+     */
+    //char *getRecord(short slotNum);
+    char *getRecord(short slotNum, int& l);
+
+    /**
+     * Stores a record if there is enough space.  Returns the 
+     * slot number for the new record, and -1 if not enough space.
+     */
+     //short storeRecord(char *rec);
+     short storeRecord(char* record, int length);
+
+    /**
+     * Delete a record given its slot number and returns the
+     * space available.
+     */
+    short deleteRecord(short slotNum);
+
+    /**
+     * Display the contents of the block
+     */ 
+    void display();
+    
+    /**
+    *  Returns total number of slot entries in the page
+    */
+    short getTotalNoOfSlots();
+    
+    /**
+    *  Returns next Block-id, returns -1 if there is no next block
+    */
+    short getNextBlockId();
+    
+    /**
+    *  Write next Block-id
+    */
+    void writeNextBlockId(short nextBlockId);
+    
+    /**
+    *  Swaps records i.e. their slot numbers
+    */
+    void swapSlots(short slot1, short slot2);
+    
+    
+};
+
+#endif
