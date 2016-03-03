@@ -90,7 +90,7 @@ public:
     // insert an element
     void Insert(T& newdata)
     {
-        ListEntry_t<T> *p = NewListEntry(newdata);
+        ListEntry_t<T> *p = this->NewListEntry(newdata);
 
         p->next = NULL;
         if( last )
@@ -139,7 +139,7 @@ public:
     // insert element at the start of the list
     void Insert(T& newdata)
     {
-        ListEntry_t<T> *p = NewListEntry(newdata);
+        ListEntry_t<T> *p = this->NewListEntry(newdata);
 
         // prepend
         p->next = first;

@@ -2,7 +2,7 @@
 # The following gets in all the standard dependencies, compilers, etc,
 # defined in Make.include
 ####################
-OPTPATH =/home/sysad/Desktop/sachin4/PYRO
+OPTPATH =..
 LIBPATH = $(OPTPATH)/lib
 DALIPARSERPATH = $(OPTPATH)/src/DaliParser
 
@@ -248,7 +248,7 @@ parser.h parser.c:  $(DALIPARSERPATH)/parser.y
 	mv $(DALIPARSERPATH)/parser.tab.h parser.h
 
 clean:   
-	rm -f *.o "mydb.txt" ../lib/*.a
+	rm -f *.o "mydb.txt" ../lib/*.a perfeval driver
 
 backup: clean
 	(cd ~; tar cvf - Optimizer | gzip -9 > Archive/Optimizer.tar.gz)
